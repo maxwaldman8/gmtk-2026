@@ -44,3 +44,5 @@ text = "Google
 GAMES"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[connection signal="gui_input" from="TestIcon" to="." method="_on_test_icon_gui_input"]

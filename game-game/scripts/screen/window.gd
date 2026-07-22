@@ -1,3 +1,4 @@
+class_name GameWindow
 extends Control
 
 # Will be changing types once get textures/whatnot
