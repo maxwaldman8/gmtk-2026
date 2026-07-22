@@ -2,6 +2,14 @@
 
 [ext_resource type="Script" uid="uid://ccymnofn6ccr6" path="res://scripts/screen/screen.gd" id="1_6ukd0"]
 [ext_resource type="PackedScene" uid="uid://b5yslbaif30nv" path="res://scenes/screen/application.tscn" id="2_2d861"]
+[ext_resource type="Script" uid="uid://dommextr4ctrb" path="res://scripts/screen/window_layer.gd" id="3_6ukd0"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6ukd0"]
+noise_type = 2
+frequency = 0.0145
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fpww7"]
+noise = SubResource("FastNoiseLite_6ukd0")
 
 [node name="Screen" type="Control" unique_id=2111894068]
 layout_mode = 3
@@ -14,7 +22,7 @@ script = ExtResource("1_6ukd0")
 
 [node name="WallpaperLayer" type="CanvasLayer" parent="." unique_id=945818577]
 
-[node name="Wallpaper" type="ColorRect" parent="WallpaperLayer" unique_id=878542767]
+[node name="Wallpaper" type="TextureRect" parent="WallpaperLayer" unique_id=1156495158]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,7 +30,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
+texture = SubResource("NoiseTexture2D_fpww7")
 metadata/_edit_use_anchors_ = true
 
 [node name="ApplicationLayer" type="CanvasLayer" parent="." unique_id=868816806]
@@ -42,7 +50,7 @@ offset_top = 172.0
 offset_right = 166.0
 offset_bottom = 242.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "default_window"
+window_name = "blue_window"
 
 [node name="Application3" parent="ApplicationLayer" unique_id=920115880 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
 offset_left = 113.0
@@ -50,7 +58,8 @@ offset_top = 273.0
 offset_right = 163.0
 offset_bottom = 343.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "default_window"
+window_name = "browser_window"
 
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
 layer = 3
+script = ExtResource("3_6ukd0")

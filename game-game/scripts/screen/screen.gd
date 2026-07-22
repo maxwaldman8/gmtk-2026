@@ -11,5 +11,5 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_parent().get_parent().visible = false
 		gui.visible = true
 
-# window layering: clicked one is first
 # tween window with mouse
+# window pos offset for minimal overlap

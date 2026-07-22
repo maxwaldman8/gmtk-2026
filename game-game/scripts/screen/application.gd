@@ -1,8 +1,9 @@
 class_name Application
 extends Control
 
-@export var window_layer : CanvasLayer
+@export var window_layer : WindowLayer
 @export var window_name : String
+@export var name_label : Label
 var is_opened : bool = false
 var is_default_opened : bool = true
 var window_instance : GameWindow
@@ -12,6 +13,7 @@ const WINDOW_SCENE = preload("res://scenes/screen/window.tscn")
 func _ready() -> void:
 	if is_default_opened:
 		_open_window()
+	name_label.text = window_name
 
 
 func set_up(w_name: String = "default", w_is_def_open: bool = true):
@@ -22,7 +24,7 @@ func set_up(w_name: String = "default", w_is_def_open: bool = true):
 func _open_window():
 	window_instance = WINDOW_SCENE.instantiate()
 	window_instance.set_up(func(): is_opened = false, window_name)
-	window_layer.add_child(window_instance)
+	window_layer.add_to_window_list(window_instance)
 	is_opened = true
 
 

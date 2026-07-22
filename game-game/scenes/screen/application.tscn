@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://byn3xshur1hia" path="res://scripts/screen/application.gd" id="1_vj7jk"]
 
-[node name="Application" type="Control" unique_id=473881616]
+[node name="Application" type="Control" unique_id=473881616 node_paths=PackedStringArray("name_label")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -25.0
@@ -10,6 +10,7 @@ offset_top = -35.0
 offset_right = 25.0
 offset_bottom = 35.0
 script = ExtResource("1_vj7jk")
+name_label = NodePath("NameLabel")
 
 [node name="TestIcon" type="ColorRect" parent="." unique_id=1016756199]
 layout_mode = 1
