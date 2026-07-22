@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dbalyj3yfg0"]
+
+[ext_resource type="Texture2D" uid="uid://cl727gvapxdpb" path="res://sprites/screen/X Test.png" id="1_jqdkl"]
+[ext_resource type="Script" uid="uid://6n0f00gm5fho" path="res://scripts/screen/window.gd" id="1_mml0h"]
+
+[node name="Window" type="Control" unique_id=234651246]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mml0h")
+
+[node name="TitleBar" type="ColorRect" parent="." unique_id=893196152]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.0
+offset_top = -20.0
+offset_right = 170.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.57301015, 0.56965506, 0.5746491, 1)
+
+[node name="XButton" type="TextureButton" parent="TitleBar" unique_id=839667492]
+texture_filter = 3
+layout_mode = 0
+offset_left = 306.0
+offset_top = 11.0
+offset_right = 315.0
+offset_bottom = 20.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_jqdkl")
+
+[node name="WindowBody" type="ColorRect" parent="." unique_id=1507924228]
+layout_mode = 0
+offset_left = -167.0
+offset_top = 21.0
+offset_right = 170.0
+offset_bottom = 287.0
+
+[connection signal="pressed" from="TitleBar/XButton" to="." method="_on_x_button_pressed"]

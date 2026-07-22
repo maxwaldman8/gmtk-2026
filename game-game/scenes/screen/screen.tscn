@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bm5ae52p08ktu"]
+
+[ext_resource type="PackedScene" uid="uid://dbalyj3yfg0" path="res://scenes/screen/window.tscn" id="1_mip77"]
+[ext_resource type="PackedScene" uid="uid://b5yslbaif30nv" path="res://scenes/screen/application.tscn" id="2_2d861"]
+
+[node name="Screen" type="Control" unique_id=2111894068]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Wallpaper" type="ColorRect" parent="." unique_id=878542767]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="Window" parent="." unique_id=234651246 instance=ExtResource("1_mip77")]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 145.0
+offset_right = 530.0
+offset_bottom = 145.0
+
+[node name="Application" parent="." unique_id=473881616 instance=ExtResource("2_2d861")]
+layout_mode = 1
+offset_left = 153.0
+offset_top = 83.0
+offset_right = 153.0
+offset_bottom = 83.0
