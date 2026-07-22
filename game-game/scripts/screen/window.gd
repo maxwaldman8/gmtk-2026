@@ -8,7 +8,7 @@ signal closed
 @onready var window_body : ColorRect
 var body_scene : PackedScene
 var body_name : String
-var dimensions : Vector2i: set = _set_dimensions
+var dimensions : Vector2: set = _set_dimensions
 
 var body_instance
 
@@ -21,27 +21,33 @@ const TITLE_BAR_THICKNESS = 20
 # Window bodies will be differing scenes that are loaded in (title bar with X is common functionality)
 
 func _ready() -> void:
-	dimensions = body_instance.size
+	dimensions = body_instance.size + Vector2(0, TITLE_BAR_THICKNESS)
+	pivot_offset = dimensions / 2
 
 
 func set_up(app_close_fn, w_body_name = "default_window"):
 	body_name = w_body_name
 	body_scene = load("res://scenes/screen/windows/" + body_name + ".tscn")
 	body_instance = body_scene.instantiate()
+	body_instance.position.y += TITLE_BAR_THICKNESS
 	add_child(body_instance)
 	global_position = Vector2i(500, 300)
 	closed.connect(app_close_fn)
 
 
 func _set_dimensions(new_dimensions: Vector2i) -> void:
+	dimensions = new_dimensions
 	title_bar.size = Vector2i(new_dimensions.x, TITLE_BAR_THICKNESS)
-	# positions too
 
 
 #region title bar
 
 func _on_x_button_pressed() -> void:
 	# closing animation?, sound
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_ELASTIC)
+	tween.tween_property(self, "scale", Vector2(0,0), 0.5)
+	await tween.finished
 	queue_free()
 	closed.emit()
 
@@ -62,6 +68,7 @@ func _process(_delta: float) -> void:
 	elif Input.is_action_pressed("left_click"):
 		# holding click
 		if is_following_mouse:
-			global_position = get_global_mouse_position() - offset
+			var unclamped_pos : Vector2 = get_global_mouse_position() - offset
+			global_position = unclamped_pos.clamp(Vector2.ZERO, get_viewport_rect().size - dimensions)
 
 #endregion

@@ -46,3 +46,4 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [connection signal="gui_input" from="TestIcon" to="." method="_on_test_icon_gui_input"]
+[connection signal="gui_input" from="NameLabel" to="." method="_on_name_label_gui_input"]

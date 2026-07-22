@@ -12,16 +12,11 @@ const WINDOW_SCENE = preload("res://scenes/screen/window.tscn")
 func _ready() -> void:
 	if is_default_opened:
 		_open_window()
-		
+
 
 func set_up(w_name: String = "default", w_is_def_open: bool = true):
 	window_name = w_name
 	is_default_opened = w_is_def_open
-
-
-func _input(event: InputEvent) -> void:
-	if event.is_pressed() and event.is_action_pressed("left_click") and event.double_click:
-		pass
 
 
 func _open_window():
@@ -34,7 +29,8 @@ func _open_window():
 # on double tap:
 	# not is_opened: open window by connected window name
 	# is_opened: have window scale animation, go to front
-func _on_test_icon_gui_input(event: InputEvent) -> void:
+
+func _handle_clicking_input(event: InputEvent):
 	if event is InputEventMouseButton and event.is_action_pressed("left_click"):
 		if event.double_click:
 			if is_opened:
@@ -44,4 +40,11 @@ func _on_test_icon_gui_input(event: InputEvent) -> void:
 				_open_window()
 		else:
 			# become selected
-			print("single click")
+			pass
+
+func _on_test_icon_gui_input(event: InputEvent) -> void:
+	_handle_clicking_input(event)
+
+
+func _on_name_label_gui_input(event: InputEvent) -> void:
+	_handle_clicking_input(event)
