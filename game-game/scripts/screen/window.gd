@@ -56,6 +56,7 @@ func _on_x_button_pressed() -> void:
 
 
 func _on_title_bar_mouse_entered() -> void:
+	print(body_name + " entered")
 	is_hovered = true
 
 

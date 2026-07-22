@@ -3,29 +3,28 @@
 [node name="BrowserWindow" type="Control" unique_id=1699168601]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 400.0
-offset_bottom = 400.0
+offset_right = 482.0
+offset_bottom = 552.0
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1816412757]
-visible = false
+propagate_maximum_size = true
 layout_mode = 1
-offset_right = 400.0
-offset_bottom = 400.0
+offset_right = 482.0
+offset_bottom = 552.0
 color = Color(0.4027634, 0.46064627, 0.67970765, 1)
 
 [node name="TabContainer" type="TabContainer" parent="." unique_id=754288331]
 layout_mode = 0
-offset_right = 400.0
-offset_bottom = 400.0
+offset_right = 482.0
+offset_bottom = 552.0
 current_tab = 0
 
 [node name="Tab 1" type="MarginContainer" parent="TabContainer" unique_id=1549954506]
 layout_mode = 2
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 40
 metadata/_tab_index = 0
 
 [node name="ColorRect" type="ColorRect" parent="TabContainer/Tab 1" unique_id=141905893]
-visible = false
 layout_mode = 2
 
 [node name="ColorRect2" type="ColorRect" parent="TabContainer" unique_id=1327130752]
@@ -33,14 +32,14 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="TextEdit" type="TextEdit" parent="." unique_id=1661086281]
+[node name="TextEdit" type="LineEdit" parent="." unique_id=696103115]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -185.0
-offset_top = 46.0
-offset_right = 185.0
-offset_bottom = 86.0
+offset_left = -237.0
+offset_top = 35.0
+offset_right = 237.0
+offset_bottom = 67.0
 grow_horizontal = 2
 placeholder_text = "search"
