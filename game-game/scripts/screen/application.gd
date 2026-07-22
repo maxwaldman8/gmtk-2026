@@ -24,9 +24,8 @@ func _input(event: InputEvent) -> void:
 
 
 func _open_window():
-	pass
-	#window_instance = window_scene.instantiate()
-	#window_instance.set_up()
+	window_instance = WINDOW_SCENE.instantiate()
+	window_instance.set_up(window_name)
 
 
 # on double tap:
