@@ -9,6 +9,8 @@ const JUMP_VELOCITY = 4.5
 @onready var camera := $Camera3D
 @onready var raycast := $Camera3D/RayCast3D
 
+@export var screen: Control
+
 #func _ready() -> void:
 	#Input.set_custom_mouse_cursor()
 	
@@ -27,11 +29,17 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func handle_raycast():
 	if raycast.is_colliding():
-		var area: Area3D = raycast.get_collider()
+		var area: Node3D = raycast.get_collider()
 		match area.name:
 			"ScreenArea":
-				# TODO: transition to screen
-				print("enter screen")
+				switch_to_screen()
+
+func switch_to_screen():
+	self.process_mode = Node.PROCESS_MODE_DISABLED
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	screen.get_parent().get_parent().visible = true
+	screen.set_focus_mode(Control.FOCUS_CLICK)
+	screen.grab_focus()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
