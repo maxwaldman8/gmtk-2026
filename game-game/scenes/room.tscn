@@ -4,6 +4,9 @@
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_nrlmu"]
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_nrlmu"]
+size = Vector2(200, 200)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_nrlmu"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nrlmu"]
@@ -21,11 +24,14 @@ sky = SubResource("Sky_36trf")
 
 [node name="Player" parent="." unique_id=1813622507 instance=ExtResource("1_36trf")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=985006338]
+[node name="Floor" type="StaticBody3D" parent="." unique_id=985006338]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5671682, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1185273312]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1185273312]
 shape = SubResource("WorldBoundaryShape3D_nrlmu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1452108025]
+mesh = SubResource("PlaneMesh_nrlmu")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1942975526]
 transform = Transform3D(1, 0, 0, 0, 0.8226461, 0.56855375, 0, -0.56855375, 0.8226461, 0, 2.9246159, 6.8063064)
