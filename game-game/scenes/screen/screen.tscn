@@ -24,6 +24,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="ApplicationLayer" type="CanvasLayer" parent="." unique_id=868816806]
 layer = 2
@@ -33,6 +34,7 @@ offset_left = 119.0
 offset_top = 76.0
 offset_right = 169.0
 offset_bottom = 146.0
+metadata/_edit_use_anchors_ = true
 
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
 layer = 3

@@ -18,8 +18,9 @@ const TITLE_BAR_THICKNESS = 20
 
 
 func set_up(w_dimensions = Vector2i(50, 50), w_body_name = "some default"):
-	dimensions = w_dimensions
-	body_name = w_body_name
+	#dimensions = w_dimensions
+	#body_name = w_body_name
+	pass
 
 
 func _set_dimensions(new_dimensions: Vector2i) -> void:
