@@ -7,6 +7,7 @@ offset_right = 400.0
 offset_bottom = 400.0
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1816412757]
+visible = false
 layout_mode = 1
 offset_right = 400.0
 offset_bottom = 400.0
@@ -16,15 +17,19 @@ color = Color(0.4027634, 0.46064627, 0.67970765, 1)
 layout_mode = 0
 offset_right = 400.0
 offset_bottom = 400.0
-current_tab = 1
+current_tab = 0
 
-[node name="ColorRect" type="ColorRect" parent="TabContainer" unique_id=141905893]
-visible = false
+[node name="Tab 1" type="MarginContainer" parent="TabContainer" unique_id=1549954506]
 layout_mode = 2
-color = Color(0.53541774, 0.59187496, 0.7925149, 1)
+theme_override_constants/margin_top = 10
 metadata/_tab_index = 0
 
+[node name="ColorRect" type="ColorRect" parent="TabContainer/Tab 1" unique_id=141905893]
+visible = false
+layout_mode = 2
+
 [node name="ColorRect2" type="ColorRect" parent="TabContainer" unique_id=1327130752]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 

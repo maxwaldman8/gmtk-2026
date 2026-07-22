@@ -35,6 +35,15 @@ grow_horizontal = 0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("1_jqdkl")
 
+[node name="TitleLabel" type="Label" parent="TitleBar" unique_id=388950284]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 68.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 12
+text = "TITLE"
+
 [node name="WindowBody" type="ColorRect" parent="." unique_id=1507924228]
 visible = false
 layout_mode = 0
