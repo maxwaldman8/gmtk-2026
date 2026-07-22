@@ -8,10 +8,6 @@
 [sub_resource type="PlaneMesh" id="PlaneMesh_nrlmu"]
 size = Vector2(200, 200)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_nrlmu"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_nrlmu"]
-
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ffxv4"]
 
 [sub_resource type="Sky" id="Sky_36trf"]
@@ -39,15 +35,6 @@ mesh = SubResource("PlaneMesh_nrlmu")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1942975526]
 transform = Transform3D(1, 0, 0, 0, 0.8226461, 0.56855375, 0, -0.56855375, 0.8226461, 0, 2.9246159, 6.8063064)
-
-[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=848438178]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=536629812]
-shape = SubResource("BoxShape3D_nrlmu")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=1382151757]
-mesh = SubResource("BoxMesh_nrlmu")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=942846619]
 environment = SubResource("Environment_nrlmu")
