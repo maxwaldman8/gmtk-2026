@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b8fihxtag443g" path="res://scenes/player.tscn" id="1_36trf"]
 [ext_resource type="ArrayMesh" uid="uid://co206ettiprmy" path="res://statues/room.obj" id="2_ffxv4"]
 [ext_resource type="PackedScene" uid="uid://bm5ae52p08ktu" path="res://scenes/screen/screen.tscn" id="3_14vil"]
+[ext_resource type="Texture2D" uid="uid://bx0hpkmnnefxj" path="res://sprites/Crosshair Draft.png" id="4_14vil"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_nrlmu"]
 
@@ -53,7 +54,7 @@ mesh = ExtResource("2_ffxv4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, -3.2)
 shape = SubResource("ConcavePolygonShape3D_ffxv4")
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=187814192]
+[node name="ScreenSprite" type="Sprite3D" parent="." unique_id=187814192]
 transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0.004466966, 1.6515527, -3.0239866)
 texture = SubResource("ViewportTexture_14vil")
 
@@ -62,3 +63,11 @@ disable_3d = true
 size = Vector2i(1152, 648)
 
 [node name="Screen" parent="SubViewport" unique_id=2111894068 instance=ExtResource("3_14vil")]
+
+[node name="GUI" type="CanvasLayer" parent="." unique_id=1432570367]
+
+[node name="Crosshair" type="Sprite2D" parent="GUI" unique_id=1771887073]
+texture_filter = 1
+position = Vector2(576.00006, 324)
+scale = Vector2(3, 3)
+texture = ExtResource("4_14vil")

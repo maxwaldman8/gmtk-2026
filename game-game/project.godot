@@ -17,8 +17,8 @@ config/icon="res://sprites/icon.svg"
 
 [display]
 
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
 
 [input]
 
