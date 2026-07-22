@@ -36,5 +36,21 @@ offset_bottom = 146.0
 window_layer = NodePath("../../WindowLayer")
 window_name = "default_window"
 
+[node name="Application2" parent="ApplicationLayer" unique_id=775416395 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
+offset_left = 116.0
+offset_top = 172.0
+offset_right = 166.0
+offset_bottom = 242.0
+window_layer = NodePath("../../WindowLayer")
+window_name = "default_window"
+
+[node name="Application3" parent="ApplicationLayer" unique_id=920115880 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
+offset_left = 113.0
+offset_top = 273.0
+offset_right = 163.0
+offset_bottom = 343.0
+window_layer = NodePath("../../WindowLayer")
+window_name = "default_window"
+
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
 layer = 3

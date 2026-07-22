@@ -1,6 +1,8 @@
 class_name GameWindow
 extends Control
 
+signal closed
+
 # Will be changing types once get textures/whatnot
 @onready var title_bar : ColorRect = $TitleBar
 @onready var window_body : ColorRect
@@ -12,6 +14,7 @@ var body_instance
 
 var is_hovered : bool
 var is_following_mouse : bool = false
+var offset : Vector2
 const TITLE_BAR_THICKNESS = 20
 
 # Make window draggable by title bar
@@ -21,12 +24,13 @@ func _ready() -> void:
 	dimensions = body_instance.size
 
 
-func set_up(w_body_name = "default_window"):
+func set_up(app_close_fn, w_body_name = "default_window"):
 	body_name = w_body_name
 	body_scene = load("res://scenes/screen/windows/" + body_name + ".tscn")
 	body_instance = body_scene.instantiate()
 	add_child(body_instance)
 	global_position = Vector2i(500, 300)
+	closed.connect(app_close_fn)
 
 
 func _set_dimensions(new_dimensions: Vector2i) -> void:
@@ -39,6 +43,7 @@ func _set_dimensions(new_dimensions: Vector2i) -> void:
 func _on_x_button_pressed() -> void:
 	# closing animation?, sound
 	queue_free()
+	closed.emit()
 
 
 func _on_title_bar_mouse_entered() -> void:
@@ -53,9 +58,10 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("left_click"):
 		# just clicked
 		is_following_mouse = is_hovered
+		offset = get_local_mouse_position()
 	elif Input.is_action_pressed("left_click"):
 		# holding click
 		if is_following_mouse:
-			global_position = get_global_mouse_position()
+			global_position = get_global_mouse_position() - offset
 
 #endregion

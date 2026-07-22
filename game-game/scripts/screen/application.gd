@@ -26,8 +26,9 @@ func _input(event: InputEvent) -> void:
 
 func _open_window():
 	window_instance = WINDOW_SCENE.instantiate()
-	window_instance.set_up(window_name)
+	window_instance.set_up(func(): is_opened = false, window_name)
 	window_layer.add_child(window_instance)
+	is_opened = true
 
 
 # on double tap:
@@ -36,7 +37,11 @@ func _open_window():
 func _on_test_icon_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_action_pressed("left_click"):
 		if event.double_click:
-			_open_window()
+			if is_opened:
+				# animation
+				pass
+			else:
+				_open_window()
 		else:
 			# become selected
 			print("single click")

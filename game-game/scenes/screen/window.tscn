@@ -15,21 +15,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -167.0
 offset_top = -20.0
-offset_right = 170.0
-offset_bottom = 21.0
+offset_right = 337.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.57301015, 0.56965506, 0.5746491, 1)
 
 [node name="XButton" type="TextureButton" parent="TitleBar" unique_id=839667492]
 texture_filter = 3
-layout_mode = 0
-offset_left = 306.0
-offset_top = 11.0
-offset_right = 315.0
-offset_bottom = 20.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -19.0
+offset_top = 1.0
+offset_right = -10.0
+offset_bottom = 10.0
+grow_horizontal = 0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("1_jqdkl")
 
