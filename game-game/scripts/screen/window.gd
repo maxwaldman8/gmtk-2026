@@ -4,26 +4,34 @@ extends Control
 # Will be changing types once get textures/whatnot
 @onready var title_bar : ColorRect = $TitleBar
 @onready var window_body : ColorRect
-
-var dimensions : Vector2i: set = _set_dimensions
+var body_scene : PackedScene
 var body_name : String
+var dimensions : Vector2i: set = _set_dimensions
+
+var body_instance
 
 var is_hovered : bool
 var is_following_mouse : bool = false
-
 const TITLE_BAR_THICKNESS = 20
 
 # Make window draggable by title bar
 # Window bodies will be differing scenes that are loaded in (title bar with X is common functionality)
 
+func _ready() -> void:
+	dimensions = body_instance.size
 
-func set_up(w_dimensions = Vector2i(50, 50), w_body_name = "some default"):
-	dimensions = w_dimensions
+
+func set_up(w_body_name = "default_window"):
 	body_name = w_body_name
+	body_scene = load("res://scenes/screen/windows/" + body_name + ".tscn")
+	body_instance = body_scene.instantiate()
+	add_child(body_instance)
+	global_position = Vector2i(500, 300)
 
 
 func _set_dimensions(new_dimensions: Vector2i) -> void:
 	title_bar.size = Vector2i(new_dimensions.x, TITLE_BAR_THICKNESS)
+	# positions too
 
 
 #region title bar

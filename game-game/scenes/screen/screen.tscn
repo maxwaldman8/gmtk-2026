@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bm5ae52p08ktu"]
 
 [ext_resource type="Script" uid="uid://ccymnofn6ccr6" path="res://scripts/screen/screen.gd" id="1_6ukd0"]
-[ext_resource type="PackedScene" uid="uid://dbalyj3yfg0" path="res://scenes/screen/window.tscn" id="1_mip77"]
 [ext_resource type="PackedScene" uid="uid://b5yslbaif30nv" path="res://scenes/screen/application.tscn" id="2_2d861"]
 
 [node name="Screen" type="Control" unique_id=2111894068]
@@ -28,17 +27,13 @@ color = Color(0, 0, 0, 1)
 [node name="ApplicationLayer" type="CanvasLayer" parent="." unique_id=868816806]
 layer = 2
 
-[node name="Application" parent="ApplicationLayer" unique_id=473881616 instance=ExtResource("2_2d861")]
+[node name="Application" parent="ApplicationLayer" unique_id=473881616 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
 offset_left = 119.0
 offset_top = 76.0
 offset_right = 169.0
 offset_bottom = 146.0
+window_layer = NodePath("../../WindowLayer")
+window_name = "default_window"
 
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
 layer = 3
-
-[node name="Window" parent="WindowLayer" unique_id=234651246 instance=ExtResource("1_mip77")]
-offset_left = 530.0
-offset_top = 145.0
-offset_right = 530.0
-offset_bottom = 145.0

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://coqlgqs1q7kat"]
+
+[node name="DefaultWindow" type="Control" unique_id=521389708]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 173.0
+offset_bottom = 106.5
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2103473406]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.5
+offset_top = -53.25
+offset_right = 86.5
+offset_bottom = 53.25
+grow_horizontal = 2
+grow_vertical = 2

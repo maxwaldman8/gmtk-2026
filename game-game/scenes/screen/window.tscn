@@ -34,6 +34,7 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("1_jqdkl")
 
 [node name="WindowBody" type="ColorRect" parent="." unique_id=1507924228]
+visible = false
 layout_mode = 0
 offset_left = -167.0
 offset_top = 21.0

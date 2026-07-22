@@ -1,7 +1,8 @@
 class_name Application
 extends Control
 
-var window_name : String
+@export var window_layer : CanvasLayer
+@export var window_name : String
 var is_opened : bool = false
 var is_default_opened : bool = true
 var window_instance : GameWindow
@@ -26,6 +27,7 @@ func _input(event: InputEvent) -> void:
 func _open_window():
 	window_instance = WINDOW_SCENE.instantiate()
 	window_instance.set_up(window_name)
+	window_layer.add_child(window_instance)
 
 
 # on double tap:
