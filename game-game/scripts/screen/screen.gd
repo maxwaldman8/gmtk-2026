@@ -6,7 +6,9 @@ extends Control
 
 @export var time_label: Label
 
-var time: float = 48 * 60
+var time: float = 49 * 60
+
+var tutorial: bool = true
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
@@ -16,8 +18,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		gui.visible = true
 
 func _process(delta: float) -> void:
-	time += delta
-	time_label.text = "11:" + floor(time / 60) + ":" + floor(time) % 60
+	if !tutorial:
+		time += delta
+		if int(floor(time)) % 60 < 10:
+			time_label.text = "11:" + str(int(floor(int(floor(time)) / 60))) + ":0" + str(int(floor(time)) % 60)
+		else:
+			time_label.text = "11:" + str(int(floor(int(floor(time)) / 60))) + ":" + str(int(floor(time)) % 60)
+	else:
+		time_label.text = "11:48"
 
 # window layering: clicked one is first
 # tween window with mouse
