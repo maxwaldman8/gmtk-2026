@@ -25,9 +25,13 @@ data = PackedVector3Array(-6.3999996, -1.5999999, -6.3999996, -6.3999996, -1.4, 
 [sub_resource type="ViewportTexture" id="ViewportTexture_14vil"]
 viewport_path = NodePath("SubViewport")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_14vil"]
+size = Vector3(12, 6.75, 1)
+
 [node name="Room" type="Node3D" unique_id=553723905]
 
 [node name="Player" parent="." unique_id=1813622507 instance=ExtResource("1_36trf")]
+sensitivity = 0.005
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=985006338]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5671682, 0)
@@ -57,6 +61,13 @@ shape = SubResource("ConcavePolygonShape3D_ffxv4")
 [node name="ScreenSprite" type="Sprite3D" parent="." unique_id=187814192]
 transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0.004466966, 1.6515527, -3.0239866)
 texture = SubResource("ViewportTexture_14vil")
+
+[node name="ScreenArea" type="Area3D" parent="ScreenSprite" unique_id=581195088]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ScreenSprite/ScreenArea" unique_id=417812857]
+shape = SubResource("BoxShape3D_14vil")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=801404176]
 disable_3d = true
