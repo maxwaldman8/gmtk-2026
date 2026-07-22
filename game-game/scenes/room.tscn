@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://brdtnepdbfuid"]
 
 [ext_resource type="PackedScene" uid="uid://b8fihxtag443g" path="res://scenes/player.tscn" id="1_36trf"]
+[ext_resource type="ArrayMesh" uid="uid://co206ettiprmy" path="res://statues/room.obj" id="2_ffxv4"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_nrlmu"]
 
@@ -47,3 +48,7 @@ mesh = SubResource("BoxMesh_nrlmu")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=942846619]
 environment = SubResource("Environment_nrlmu")
+
+[node name="Room" type="MeshInstance3D" parent="." unique_id=2049584463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, -3.2)
+mesh = ExtResource("2_ffxv4")
