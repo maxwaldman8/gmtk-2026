@@ -10,6 +10,7 @@ const JUMP_VELOCITY = 4.5
 @onready var raycast := $Camera3D/RayCast3D
 
 @export var screen: Control
+@export var gui: CanvasLayer
 
 #func _ready() -> void:
 	#Input.set_custom_mouse_cursor()
@@ -36,6 +37,7 @@ func handle_raycast():
 
 func switch_to_screen():
 	self.process_mode = Node.PROCESS_MODE_DISABLED
+	gui.visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	screen.get_parent().get_parent().visible = true
 	screen.set_focus_mode(Control.FOCUS_CLICK)
