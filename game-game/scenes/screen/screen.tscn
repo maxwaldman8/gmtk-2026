@@ -33,6 +33,33 @@ size_flags_vertical = 3
 texture = SubResource("NoiseTexture2D_fpww7")
 metadata/_edit_use_anchors_ = true
 
+[node name="BottomBar" type="ColorRect" parent="WallpaperLayer" unique_id=1223447574]
+anchors_preset = -1
+anchor_top = 0.95
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.4000244
+offset_bottom = 0.4000244
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.1584723, 0.15847233, 0.1584723, 1)
+
+[node name="Time" type="Label" parent="WallpaperLayer/BottomBar" unique_id=1720766815]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.983
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "11:48:00"
+
 [node name="ApplicationLayer" type="CanvasLayer" parent="." unique_id=868816806]
 layer = 2
 
