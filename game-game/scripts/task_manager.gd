@@ -7,6 +7,7 @@ var pos: float = 10
 
 @export var player_speed = 10.0
 @export var bullet_speed = 20.0
+@export var enemy_speed = 5.0
 
 @export var bullet: PackedScene
 @export var enemy: PackedScene
@@ -19,6 +20,7 @@ func _ready() -> void:
 		add_child(new_enemy)
 		new_enemy.position.y = 50
 		new_enemy.position.x = 60 + 40 * i
+		new_enemy.set_speed(enemy_speed)
 		enemies.append(new_enemy)
 
 func _input(event: InputEvent) -> void:
