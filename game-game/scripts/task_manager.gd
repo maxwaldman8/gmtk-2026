@@ -8,6 +8,7 @@ var pos: float = 10
 @export var player_speed = 10.0
 @export var bullet_speed = 5.0
 @export var enemy_speed = 1.0
+@export var enemy_acceleration = 1.0
 @export var cooldown_time = 0.5
 
 @export var bullet: PackedScene
@@ -50,6 +51,7 @@ func _physics_process(delta: float) -> void:
 			to_delete.append(i)
 			enemies.remove_at(enemies.find(area))
 			area.queue_free()
+			enemy_speed += enemy_acceleration
 		if bullets[i].position.y <= 0:
 			to_delete.append(i)
 	for i in to_delete:
@@ -68,3 +70,6 @@ func _physics_process(delta: float) -> void:
 			enemies[i].position.x = 350
 			enemies[i].going_right = false
 			enemies[i].position.y += 40
+		if enemies[i].position.y >= 550:
+			# Game over
+			get_parent().close()

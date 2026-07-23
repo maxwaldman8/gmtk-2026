@@ -14,6 +14,8 @@ var dimensions : Vector2: set = _set_dimensions
 
 var body_instance
 
+var closing = false
+
 var is_hovered : bool
 var is_following_mouse : bool = false
 var offset : Vector2
@@ -54,14 +56,20 @@ func _on_title_bar_mouse_exited() -> void:
 	
 
 func _on_x_button_pressed() -> void:
-	# closing animation?, sound
-	var tween = create_tween()
-	tween.set_trans(Tween.TRANS_SPRING)
-	tween.tween_property(self, "scale", Vector2(0,0), 0.5)
-	await tween.finished
-	closed.emit()
-	window_layer.remove_window(self)
-	queue_free()
+	close()
+
+
+func close() -> void:
+	if !closing:
+		closing = true
+		# closing animation?, sound
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_SPRING)
+		tween.tween_property(self, "scale", Vector2(0,0), 0.5)
+		await tween.finished
+		closed.emit()
+		window_layer.remove_window(self)
+		queue_free()
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("left_click") and is_hovered:
