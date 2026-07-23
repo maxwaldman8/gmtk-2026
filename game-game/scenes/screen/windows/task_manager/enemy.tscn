@@ -5,6 +5,7 @@
 
 [node name="Enemy" type="Area2D" unique_id=1774869807]
 scale = Vector2(3, 3)
+collision_layer = 2
 script = ExtResource("1_tyvvd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=107973961]

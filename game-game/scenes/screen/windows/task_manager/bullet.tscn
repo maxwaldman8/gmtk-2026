@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://5jfcblwwwa5r"]
 
-[ext_resource type="Script" uid="uid://j26rx068xxsj" path="res://scripts/bullet.gd" id="1_msd5f"]
 [ext_resource type="Texture2D" uid="uid://ctqfrvcyok0dj" path="res://sprites/icon.svg" id="1_nldbr"]
 
 [node name="Bullet" type="Area2D" unique_id=1385499249]
-script = ExtResource("1_msd5f")
+collision_layer = 2
+collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=935505462]
 texture_filter = 1
