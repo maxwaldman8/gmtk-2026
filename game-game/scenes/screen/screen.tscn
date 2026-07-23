@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://ccymnofn6ccr6" path="res://scripts/screen/screen.gd" id="1_6ukd0"]
 [ext_resource type="PackedScene" uid="uid://b5yslbaif30nv" path="res://scenes/screen/application.tscn" id="2_2d861"]
 [ext_resource type="Script" uid="uid://dommextr4ctrb" path="res://scripts/screen/window_layer.gd" id="3_6ukd0"]
-[ext_resource type="Texture2D" uid="uid://bk47fr3syf046" path="res://sprites/logo_4.png" id="3_ir3ut"]
-[ext_resource type="Texture2D" uid="uid://dbt6uewfy4mcc" path="res://sprites/logo_0.png" id="3_nnrwk"]
+[ext_resource type="Texture2D" uid="uid://bk47fr3syf046" path="res://sprites/screen/logo_4.png" id="3_ir3ut"]
+[ext_resource type="Texture2D" uid="uid://dbt6uewfy4mcc" path="res://sprites/screen/logo_0.png" id="3_nnrwk"]
 
 [sub_resource type="Gradient" id="Gradient_vj7jk"]
 offsets = PackedFloat32Array(0.27006173, 1)
@@ -78,7 +78,7 @@ offset_top = 76.0
 offset_right = 169.0
 offset_bottom = 146.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "default_window"
+window_name = "ad_video_player_window"
 
 [node name="Application2" parent="ApplicationLayer" unique_id=775416395 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
 offset_left = 116.0
@@ -107,7 +107,7 @@ offset_top = 366.0
 offset_right = 166.0
 offset_bottom = 436.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "task_manager_window_game"
+window_name = "task_manager_game_window"
 
 [node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Application4" unique_id=1949997502]
 texture_filter = 1
