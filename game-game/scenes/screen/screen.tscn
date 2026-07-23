@@ -79,6 +79,7 @@ offset_right = 169.0
 offset_bottom = 146.0
 window_layer = NodePath("../../WindowLayer")
 window_name = "ad_video_player_window"
+is_default_opened = false
 
 [node name="Application2" parent="ApplicationLayer" unique_id=775416395 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
 offset_left = 116.0
@@ -87,6 +88,7 @@ offset_right = 166.0
 offset_bottom = 242.0
 window_layer = NodePath("../../WindowLayer")
 window_name = "blue_window"
+is_default_opened = false
 
 [node name="Application3" parent="ApplicationLayer" unique_id=920115880 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
 offset_left = 113.0
@@ -107,7 +109,7 @@ offset_top = 366.0
 offset_right = 166.0
 offset_bottom = 436.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "task_manager_window_game"
+window_name = "task_manager_game_window"
 is_default_opened = false
 
 [node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Application4" unique_id=1949997502]
@@ -116,10 +118,10 @@ position = Vector2(25, 25)
 texture = ExtResource("3_nnrwk")
 
 [node name="Application5" parent="ApplicationLayer" unique_id=3382 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
-offset_left = 232.0
-offset_top = 81.0
-offset_right = 282.0
-offset_bottom = 151.0
+offset_left = 258.0
+offset_top = 87.0
+offset_right = 308.0
+offset_bottom = 157.0
 window_layer = NodePath("../../WindowLayer")
 window_name = "helpful_websites"
 
