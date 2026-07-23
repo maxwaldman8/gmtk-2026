@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cpoxl8kwbed0s"]
 
 [ext_resource type="Script" uid="uid://bu6l3xayttk7b" path="res://scripts/ad_video_player_window.gd" id="1_di36k"]
+[ext_resource type="VideoStream" uid="uid://cyctia2jgoavc" path="res://shows/question_video.ogv" id="2_cvf6d"]
+[ext_resource type="PackedScene" uid="uid://dqpa6g00gagdd" path="res://scenes/screen/windows/video_player/stop_indicator.tscn" id="3_i2qop"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvf6d"]
 bg_color = Color(0.6, 0.6, 0.6, 0.31764707)
@@ -15,6 +17,9 @@ anchors_preset = 0
 offset_right = 150.0
 offset_bottom = 100.0
 script = ExtResource("1_di36k")
+ad_percentages = Array[float]([50.0])
+ads = Array[VideoStream]([ExtResource("2_cvf6d")])
+stop_indicator = ExtResource("3_i2qop")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2103473406]
 layout_mode = 1
@@ -32,6 +37,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+stream = ExtResource("2_cvf6d")
+autoplay = true
+expand = true
 
 [node name="ProgressBar" type="ProgressBar" parent="VideoStreamPlayer" unique_id=789357986]
 layout_mode = 1
@@ -45,5 +53,21 @@ grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_cvf6d")
 theme_override_styles/fill = SubResource("StyleBoxFlat_i2qop")
 show_percentage = false
+
+[node name="TimeLeft" type="Label" parent="VideoStreamPlayer/ProgressBar" unique_id=595106265]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -42.0
+offset_top = -25.0
+offset_right = 39.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Time Left: "
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

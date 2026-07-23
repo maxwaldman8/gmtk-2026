@@ -5,7 +5,7 @@ extends Control
 # 10 to 140
 var pos: float = 10
 
-@export var player_speed = 10.0
+@export var player_speed = 0.03
 @export var bullet_speed = 5.0
 @export var enemy_speed = 1.0
 @export var enemy_acceleration = 1.0
@@ -41,7 +41,7 @@ func shoot():
 
 func _physics_process(delta: float) -> void:
 	cooldown_time_left = clamp(cooldown_time_left - delta, 0, cooldown_time)
-	pos += Input.get_axis("left", "right") * player_speed
+	pos = pos + (clamp(get_local_mouse_position().x, 60, 350) - pos) * player_speed
 	pos = clamp(pos, 60, 350)
 	player.position.x = round(pos)
 	var to_delete = []

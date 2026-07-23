@@ -6,6 +6,7 @@ extends Control
 @export var indicator_width = 27
 @export var stop_indicator: PackedScene
 
+var stop_indicators: Array[Control]
 var saved_video_stream
 var saved_percentage = 0
 var ad_playing: bool = false
@@ -14,6 +15,7 @@ var ad_playing: bool = false
 @onready var indicator_width_percentage = indicator_width / full_width * 100.0
 @onready var video := $VideoStreamPlayer
 @onready var progress_bar := $VideoStreamPlayer/ProgressBar
+@onready var time_left = $VideoStreamPlayer/ProgressBar/TimeLeft
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("jump"):
@@ -26,17 +28,22 @@ func _ready() -> void:
 	for ad in ad_percentages:
 		var new_indicator = stop_indicator.instantiate()
 		add_child(new_indicator)
+		stop_indicators.append(new_indicator)
 		new_indicator.position.y = 515
 		new_indicator.position.x = (ad / 100.0) * full_width
 
 func _physics_process(delta: float) -> void:
-	var percentage: float = video.get_stream_position() / video.get_stream_length() * 100.0
+	var percentage: float = video.stream_position / video.get_stream_length() * 100.0
 	progress_bar.value = percentage
-	if abs(percentage - ad_percentages[0]) < indicator_width_percentage / 2.0:
+	time_left.text = "Time Left: " + str(int(video.get_stream_length() - video.stream_position)) + "s"
+	if !ad_playing and abs(percentage - ad_percentages[0]) < indicator_width_percentage / 2.0:
 		saved_percentage = ad_percentages[0] + (indicator_width_percentage / 2.0)
 		saved_video_stream = video.stream
 		ad_playing = true
 		video.stream = ads[0]
+		for indicator in stop_indicators:
+			indicator.visible = false
+		video.play()
 
 func _on_video_stream_player_finished() -> void:
 	if ad_playing:
@@ -45,6 +52,9 @@ func _on_video_stream_player_finished() -> void:
 		ad_playing = false
 		ads.remove_at(0)
 		ad_percentages.remove_at(0)
+		stop_indicators.remove_at(0)
+		for indicator in stop_indicators:
+			indicator.visible = true
 		video.play()
 	else:
 		get_parent().close()
