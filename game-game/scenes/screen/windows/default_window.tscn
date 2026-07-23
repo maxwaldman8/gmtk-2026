@@ -20,3 +20,4 @@ offset_right = 75.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2

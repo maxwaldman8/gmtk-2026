@@ -6,12 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://bk47fr3syf046" path="res://sprites/logo_4.png" id="3_ir3ut"]
 [ext_resource type="Texture2D" uid="uid://dbt6uewfy4mcc" path="res://sprites/logo_0.png" id="3_nnrwk"]
 
+[sub_resource type="Gradient" id="Gradient_vj7jk"]
+offsets = PackedFloat32Array(0.27006173, 1)
+colors = PackedColorArray(0.23137255, 0.3529412, 0.5372549, 1, 0, 0.019607844, 0.43137255, 1)
+
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6ukd0"]
 noise_type = 2
-frequency = 0.0145
+frequency = 0.0131
+fractal_octaves = 3
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fpww7"]
 noise = SubResource("FastNoiseLite_6ukd0")
+color_ramp = SubResource("Gradient_vj7jk")
 
 [node name="Screen" type="Control" unique_id=2111894068 node_paths=PackedStringArray("time_label")]
 layout_mode = 3
@@ -47,7 +53,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0.1584723, 0.15847233, 0.1584723, 1)
+color = Color(0.15686275, 0.15686275, 0.15686275, 0.74509805)
 
 [node name="Time" type="Label" parent="WallpaperLayer/BottomBar" unique_id=1720766815]
 layout_mode = 1

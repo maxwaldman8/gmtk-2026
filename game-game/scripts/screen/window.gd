@@ -68,8 +68,8 @@ func close() -> void:
 		tween.tween_property(self, "scale", Vector2(0,0), 0.5)
 		await tween.finished
 		closed.emit()
-		window_layer.remove_window(self)
 		queue_free()
+
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("left_click") and is_hovered:

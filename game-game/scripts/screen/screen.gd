@@ -29,6 +29,5 @@ func _process(delta: float) -> void:
 	else:
 		time_label.text = "11:48 PM"
 
-# window layering: clicked one is first
 # tween window with mouse
 # window pos offset for minimal overlap
