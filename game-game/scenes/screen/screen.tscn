@@ -94,7 +94,7 @@ offset_top = 366.0
 offset_right = 166.0
 offset_bottom = 436.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "task_manager_window"
+window_name = "task_manager_window_game"
 
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
 layer = 3

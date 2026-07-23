@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bm5ae52p08ktu" path="res://scenes/screen/screen.tscn" id="3_14vil"]
 [ext_resource type="Script" uid="uid://b61uvfxw46b5h" path="res://scripts/sub_viewport.gd" id="3_jxe34"]
 [ext_resource type="Texture2D" uid="uid://bx0hpkmnnefxj" path="res://sprites/Crosshair Draft.png" id="4_14vil"]
+[ext_resource type="AudioStream" uid="uid://eoakja1lmewf" path="res://sounds/real_1159.mp3" id="6_qvc4m"]
+[ext_resource type="AudioStream" uid="uid://dkrptts3myo2u" path="res://sounds/digital_1159.mp3" id="7_7dqbv"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_nrlmu"]
 
@@ -94,3 +96,15 @@ texture_filter = 1
 position = Vector2(576.00006, 324)
 scale = Vector2(3, 3)
 texture = ExtResource("4_14vil")
+
+[node name="RealMusic" type="AudioStreamPlayer3D" parent="." unique_id=1004856047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6641552, -1.3832506)
+stream = ExtResource("6_qvc4m")
+attenuation_model = 3
+autoplay = true
+
+[node name="DigitalMusic" type="AudioStreamPlayer3D" parent="." unique_id=1013461513]
+stream = ExtResource("7_7dqbv")
+attenuation_model = 3
+volume_db = -80.0
+autoplay = true

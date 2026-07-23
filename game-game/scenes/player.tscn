@@ -24,3 +24,5 @@ current = true
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1074174173]
 target_position = Vector3(0, 0, -5)
 collide_with_areas = true
+
+[node name="AudioListener3D" type="AudioListener3D" parent="." unique_id=2052657953]
