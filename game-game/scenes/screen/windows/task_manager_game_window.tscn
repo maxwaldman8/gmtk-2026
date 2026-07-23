@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://olq2bgh6py3k"]
 
-[ext_resource type="Script" uid="uid://dcrnp077sp1ic" path="res://scripts/task_manager.gd" id="1_1sw7c"]
-[ext_resource type="PackedScene" uid="uid://5jfcblwwwa5r" path="res://scenes/screen/windows/task_manager/bullet.tscn" id="2_aytpe"]
-[ext_resource type="PackedScene" uid="uid://bx2aw2024feq" path="res://scenes/screen/windows/task_manager/enemy.tscn" id="3_u6ovh"]
-[ext_resource type="Texture2D" uid="uid://ctqfrvcyok0dj" path="res://sprites/icon.svg" id="4_esyv8"]
+[ext_resource type="Script" uid="uid://dcrnp077sp1ic" path="res://scripts/screen/task_manager.gd" id="1_0pfnm"]
+[ext_resource type="PackedScene" uid="uid://5jfcblwwwa5r" path="res://scenes/screen/windows/task_manager/bullet.tscn" id="2_lxtte"]
+[ext_resource type="PackedScene" uid="uid://bx2aw2024feq" path="res://scenes/screen/windows/task_manager/enemy.tscn" id="3_mi4qd"]
+[ext_resource type="Texture2D" uid="uid://ctqfrvcyok0dj" path="res://sprites/icon.svg" id="4_8rcaq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrlmu"]
 size = Vector2(128, 128)

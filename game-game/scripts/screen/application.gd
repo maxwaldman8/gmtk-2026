@@ -4,8 +4,8 @@ extends Control
 @export var window_layer : WindowLayer
 @export var window_name : String
 @export var name_label : Label
+@export var is_default_opened : bool = true
 var is_opened : bool = false
-var is_default_opened : bool = true
 var window_instance : GameWindow
 const WINDOW_SCENE = preload("res://scenes/screen/window.tscn")
 
@@ -23,7 +23,7 @@ func set_up(w_name: String = "default", w_is_def_open: bool = true):
 
 func _open_window():
 	window_instance = WINDOW_SCENE.instantiate()
-	window_instance.set_up(func(): is_opened = false, window_name)
+	window_instance.set_up(window_name, self)
 	window_layer.add_to_window_list(window_instance)
 	is_opened = true
 
@@ -36,8 +36,8 @@ func _handle_clicking_input(event: InputEvent):
 	if event is InputEventMouseButton and event.is_action_pressed("left_click"):
 		if event.double_click:
 			if is_opened:
-				# animation
-				pass
+				window_layer.move_window_to_front(window_instance)
+				# animation?
 			else:
 				_open_window()
 		else:

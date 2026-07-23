@@ -107,12 +107,21 @@ offset_top = 366.0
 offset_right = 166.0
 offset_bottom = 436.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "task_manager_game_window"
+window_name = "task_manager_window_game"
+is_default_opened = false
 
 [node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Application4" unique_id=1949997502]
 texture_filter = 1
 position = Vector2(25, 25)
 texture = ExtResource("3_nnrwk")
+
+[node name="Application5" parent="ApplicationLayer" unique_id=3382 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
+offset_left = 232.0
+offset_top = 81.0
+offset_right = 282.0
+offset_bottom = 151.0
+window_layer = NodePath("../../WindowLayer")
+window_name = "helpful_websites"
 
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
 layer = 3

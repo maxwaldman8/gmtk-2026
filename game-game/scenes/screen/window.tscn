@@ -8,6 +8,14 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_mml0h")
 
+[node name="Shadow" type="ColorRect" parent="." unique_id=1677875584]
+layout_mode = 1
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 346.0
+offset_bottom = 46.0
+color = Color(0, 0, 0, 0.078431375)
+
 [node name="TitleBar" type="ColorRect" parent="." unique_id=893196152]
 layout_mode = 1
 anchors_preset = 8
