@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dr2nc405c85di"]
+
+[node name="Assignment" type="Control" unique_id=70326265]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 336.0
+offset_bottom = 182.0

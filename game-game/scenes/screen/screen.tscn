@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dbt6uewfy4mcc" path="res://sprites/screen/logo_0.png" id="3_nnrwk"]
 
 [sub_resource type="Gradient" id="Gradient_vj7jk"]
-offsets = PackedFloat32Array(0.27006173, 1)
-colors = PackedColorArray(0.23137255, 0.3529412, 0.5372549, 1, 0, 0.019607844, 0.43137255, 1)
+offsets = PackedFloat32Array(0.0077160494, 1)
+colors = PackedColorArray(0.2591549, 0.25516734, 0.5960623, 1, 0, 0.019607844, 0.43137255, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6ukd0"]
 noise_type = 2
