@@ -43,8 +43,8 @@ func set_up(w_body_name = "default_window", parent = get_parent()):
 	if body_name == "browser_window":
 		body_instance.tab_container.window = self
 	add_child(body_instance)
-	# pos will be set in window layer later
-	global_position = Vector2i(500, 300)
+	## pos will be set in window layer later
+	#global_position = Vector2i(500, 300)
 	application = parent
 
 

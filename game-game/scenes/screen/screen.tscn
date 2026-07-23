@@ -128,3 +128,5 @@ window_name = "helpful_websites"
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
 layer = 3
 script = ExtResource("3_6ukd0")
+
+[node name="MovedAppLayer" type="CanvasLayer" parent="." unique_id=975754738]

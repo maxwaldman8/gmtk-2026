@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://olq2bgh6py3k"]
 
-[ext_resource type="Script" uid="uid://dcrnp077sp1ic" path="res://scripts/task_manager.gd" id="1_1sw7c"]
+[ext_resource type="Script" uid="uid://dcrnp077sp1ic" path="res://scripts/screen/task_manager.gd" id="1_1sw7c"]
 [ext_resource type="PackedScene" uid="uid://5jfcblwwwa5r" path="res://scenes/screen/windows/task_manager/bullet.tscn" id="2_aytpe"]
 [ext_resource type="PackedScene" uid="uid://bx2aw2024feq" path="res://scenes/screen/windows/task_manager/enemy.tscn" id="3_u6ovh"]
 [ext_resource type="Texture2D" uid="uid://ctqfrvcyok0dj" path="res://sprites/icon.svg" id="4_esyv8"]
@@ -9,7 +9,7 @@
 size = Vector2(128, 128)
 
 [node name="TaskManager" type="Control" unique_id=521389708]
-custom_minimum_size = Vector2(400, 648)
+custom_minimum_size = Vector2(400, 600)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 150.0
@@ -28,7 +28,7 @@ grow_vertical = 2
 color = Color(0.21050721, 0.21050721, 0.21050721, 1)
 
 [node name="Player" type="Area2D" parent="." unique_id=564165194]
-position = Vector2(221, 576)
+position = Vector2(199, 500)
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1418189180]
 scale = Vector2(0.25, 0.25)

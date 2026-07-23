@@ -28,16 +28,15 @@ func _open_window():
 	is_opened = true
 
 
-# on double tap:
-	# not is_opened: open window by connected window name
-	# is_opened: have window scale animation, go to front
-
 func _handle_clicking_input(event: InputEvent):
 	if event is InputEventMouseButton and event.is_action_pressed("left_click"):
 		if event.double_click:
 			if is_opened:
 				window_layer.move_window_to_front(window_instance)
-				# animation?
+				var tween = create_tween()
+				tween.set_trans(Tween.TRANS_SPRING)
+				tween.tween_property(window_instance, "scale", Vector2(1.2,1.2), 0.25)
+				tween.tween_property(window_instance, "scale", Vector2(1,1), 0.25)
 			else:
 				_open_window()
 		else:
