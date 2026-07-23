@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d235j0xeov3jw" path="res://scripts/screen/tab_container.gd" id="1_ojoi2"]
 [ext_resource type="Script" uid="uid://da4t5unp5na8h" path="res://scripts/screen/browser_window.gd" id="1_pype7"]
 [ext_resource type="PackedScene" uid="uid://b8mwqxja6bdnw" path="res://scenes/screen/windows/browser websites/new_tab_website.tscn" id="3_gfr7o"]
+[ext_resource type="PackedScene" uid="uid://bwi71p458pe2" path="res://scenes/screen/windows/browser websites/submission_website.tscn" id="4_f5310"]
 
 [node name="BrowserWindow" type="Control" unique_id=1699168601 node_paths=PackedStringArray("tab_container")]
 layout_mode = 3
@@ -34,6 +35,15 @@ theme_override_constants/margin_top = 40
 metadata/_tab_index = 0
 
 [node name="NewTabWebsite" parent="TabContainer/New Tab" unique_id=1344016726 instance=ExtResource("3_gfr7o")]
+layout_mode = 2
+
+[node name="Submit" type="MarginContainer" parent="TabContainer" unique_id=2144486131]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_top = 40
+metadata/_tab_index = 1
+
+[node name="SubmissionWebsite" parent="TabContainer/Submit" unique_id=687981471 instance=ExtResource("4_f5310")]
 layout_mode = 2
 
 [node name="TextEdit" type="LineEdit" parent="." unique_id=696103115]

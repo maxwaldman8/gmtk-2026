@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bwi71p458pe2"]
 
-[ext_resource type="Script" uid="uid://cf1w6gqmfhwty" path="res://scenes/screen/windows/browser websites/submission_website.gd" id="1_nkkqr"]
+[ext_resource type="Script" uid="uid://cf1w6gqmfhwty" path="res://scripts/screen/browser websites/submission_website.gd" id="1_nkkqr"]
 
-[node name="SubmissionWebsite" type="Control" unique_id=1344016726]
+[node name="SubmissionWebsite" type="Control" unique_id=1344016726 node_paths=PackedStringArray("assignments_list")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 482.0
@@ -10,22 +10,41 @@ offset_bottom = 481.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nkkqr")
+assignments_list = NodePath("ScrollContainer/AssignmentsList")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2113614690]
 layout_mode = 0
 offset_right = 482.0
 offset_bottom = 481.0
 
+[node name="Line2D" type="Line2D" parent="." unique_id=1363779345]
+position = Vector2(7.1955056, 58)
+scale = Vector2(1.0651685, 1)
+points = PackedVector2Array(5, -1, 434, -1)
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+
 [node name="Label" type="Label" parent="." unique_id=585499873]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -175.5
-offset_top = 56.0
-offset_right = 175.5
-offset_bottom = 144.0
+offset_left = -226.0
+offset_top = 9.0
+offset_right = -108.5
+offset_bottom = 54.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 64
-text = "Bookmarks"
+theme_override_font_sizes/font_size = 32
+text = "TO DO"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1483619525]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 70.0
+offset_right = 466.0
+offset_bottom = 465.0
+
+[node name="AssignmentsList" type="VBoxContainer" parent="ScrollContainer" unique_id=930600370]
+layout_mode = 2
+theme_override_constants/separation = 8
