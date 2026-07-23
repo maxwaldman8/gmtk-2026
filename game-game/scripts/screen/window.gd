@@ -54,16 +54,6 @@ func _on_x_button_pressed() -> void:
 	window_layer.remove_window(self)
 	queue_free()
 
-
-func _on_title_bar_mouse_entered() -> void:
-	print(body_name + " entered")
-	is_hovered = true
-
-
-func _on_title_bar_mouse_exited() -> void:
-	is_hovered = false
-
-
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("left_click") and is_hovered:
 		# just clicked

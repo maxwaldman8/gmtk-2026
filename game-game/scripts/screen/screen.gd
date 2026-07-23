@@ -21,9 +21,9 @@ func _process(delta: float) -> void:
 	if !tutorial:
 		time += delta
 		if int(floor(time)) % 60 < 10:
-			time_label.text = "11:" + str(int(floor(int(floor(time)) / 60))) + ":0" + str(int(floor(time)) % 60) + " PM"
+			time_label.text = "11:" + str(int(time / 60.0)) + ":0" + str(int(time) % 60) + " PM"
 		else:
-			time_label.text = "11:" + str(int(floor(int(floor(time)) / 60))) + ":" + str(int(floor(time)) % 60) + " PM"
+			time_label.text = "11:" + str(int(time / 60.0)) + ":" + str(int(time) % 60) + " PM"
 	else:
 		time_label.text = "11:48 PM"
 

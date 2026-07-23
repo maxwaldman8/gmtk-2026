@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bx2aw2024feq"]
+
+[ext_resource type="Texture2D" uid="uid://cl727gvapxdpb" path="res://sprites/screen/X Test.png" id="1_4kg8h"]
+
+[node name="Enemy" type="Area2D" unique_id=1774869807]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=107973961]
+texture_filter = 1
+texture = ExtResource("1_4kg8h")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1174004177]
+polygon = PackedVector2Array(-4.5, -4.5, -4.5, 4.5, 4.5, 4.5, 4.5, -4.5)

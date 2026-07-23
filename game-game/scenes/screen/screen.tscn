@@ -88,6 +88,14 @@ offset_bottom = 343.0
 window_layer = NodePath("../../WindowLayer")
 window_name = "browser_window"
 
+[node name="Application4" parent="ApplicationLayer" unique_id=113608717 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
+offset_left = 116.0
+offset_top = 366.0
+offset_right = 166.0
+offset_bottom = 436.0
+window_layer = NodePath("../../WindowLayer")
+window_name = "task_manager_window"
+
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
 layer = 3
 script = ExtResource("3_6ukd0")
