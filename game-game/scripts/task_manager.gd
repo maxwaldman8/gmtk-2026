@@ -8,12 +8,15 @@ var pos: float = 10
 @export var player_speed = 10.0
 @export var bullet_speed = 5.0
 @export var enemy_speed = 1.0
+@export var cooldown_time = 0.5
 
 @export var bullet: PackedScene
 @export var enemy: PackedScene
 
 var bullets: Array[Area2D]
 var enemies: Array[Area2D]
+
+var cooldown_time_left = 0.0
 
 func _ready() -> void:
 	for i in range(0, 8):
@@ -28,12 +31,15 @@ func _input(event: InputEvent) -> void:
 		shoot()
 
 func shoot():
-	var new_bullet = bullet.instantiate()
-	add_child(new_bullet)
-	new_bullet.position = Vector2(player.position.x, player.position.y - 20)
-	bullets.append(new_bullet)
+	if cooldown_time_left <= 0.0:
+		var new_bullet = bullet.instantiate()
+		add_child(new_bullet)
+		new_bullet.position = Vector2(player.position.x, player.position.y - 20)
+		bullets.append(new_bullet)
+		cooldown_time_left = 0.5
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
+	cooldown_time_left = clamp(cooldown_time_left - delta, 0, cooldown_time)
 	pos += Input.get_axis("left", "right") * player_speed
 	pos = clamp(pos, 60, 350)
 	player.position.x = round(pos)
