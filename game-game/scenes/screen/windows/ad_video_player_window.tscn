@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bu6l3xayttk7b" path="res://scripts/screen/ad_video_player_window.gd" id="1_di36k"]
 [ext_resource type="VideoStream" uid="uid://cyctia2jgoavc" path="res://shows/question_video.ogv" id="2_cvf6d"]
 [ext_resource type="PackedScene" uid="uid://dqpa6g00gagdd" path="res://scenes/screen/windows/video_player/stop_indicator.tscn" id="3_i2qop"]
+[ext_resource type="VideoStream" uid="uid://cragwy1xog5g" path="res://shows/ad_video.ogv" id="4_ykbvw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvf6d"]
 bg_color = Color(0.6, 0.6, 0.6, 0.31764707)
@@ -17,7 +18,7 @@ anchors_preset = 0
 offset_right = 150.0
 offset_bottom = 100.0
 script = ExtResource("1_di36k")
-ad_percentages = Array[float]([50.0])
+ad_percentages = Array[float]([33.3])
 ads = Array[VideoStream]([ExtResource("2_cvf6d")])
 stop_indicator = ExtResource("3_i2qop")
 
@@ -37,7 +38,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_cvf6d")
+stream = ExtResource("4_ykbvw")
 autoplay = true
 expand = true
 

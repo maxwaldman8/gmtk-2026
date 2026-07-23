@@ -2,22 +2,10 @@
 
 [ext_resource type="Script" uid="uid://ccymnofn6ccr6" path="res://scripts/screen/screen.gd" id="1_6ukd0"]
 [ext_resource type="PackedScene" uid="uid://b5yslbaif30nv" path="res://scenes/screen/application.tscn" id="2_2d861"]
+[ext_resource type="Texture2D" uid="uid://msxjnxygjblq" path="res://sprites/screen/wallpaper.png" id="2_pwv6y"]
 [ext_resource type="Script" uid="uid://dommextr4ctrb" path="res://scripts/screen/window_layer.gd" id="3_6ukd0"]
 [ext_resource type="Texture2D" uid="uid://bk47fr3syf046" path="res://sprites/screen/logo_4.png" id="3_ir3ut"]
 [ext_resource type="Texture2D" uid="uid://dbt6uewfy4mcc" path="res://sprites/screen/logo_0.png" id="3_nnrwk"]
-
-[sub_resource type="Gradient" id="Gradient_vj7jk"]
-offsets = PackedFloat32Array(0.0077160494, 1)
-colors = PackedColorArray(0.2591549, 0.25516734, 0.5960623, 1, 0, 0.019607844, 0.43137255, 1)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_6ukd0"]
-noise_type = 2
-frequency = 0.0131
-fractal_octaves = 3
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_fpww7"]
-noise = SubResource("FastNoiseLite_6ukd0")
-color_ramp = SubResource("Gradient_vj7jk")
 
 [node name="Screen" type="Control" unique_id=2111894068 node_paths=PackedStringArray("time_label")]
 layout_mode = 3
@@ -39,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = SubResource("NoiseTexture2D_fpww7")
+texture = ExtResource("2_pwv6y")
 metadata/_edit_use_anchors_ = true
 
 [node name="BottomBar" type="ColorRect" parent="WallpaperLayer" unique_id=1223447574]
