@@ -38,9 +38,9 @@ func _ready() -> void:
 	body_instance.process_mode = PROCESS_MODE_ALWAYS
 
 
-func set_up(w_body_name = "default_window", parent = get_parent()):
+func set_up(body_scene_name, w_body_name = "default_window", parent = get_parent()):
 	body_name = w_body_name
-	body_scene = load("res://scenes/screen/windows/" + body_name + ".tscn")
+	body_scene = load("res://scenes/screen/windows/" + body_scene_name + ".tscn")
 	body_instance = body_scene.instantiate()
 	body_instance.position.y += TITLE_BAR_THICKNESS
 	if body_name == "browser_window":

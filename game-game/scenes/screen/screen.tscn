@@ -78,7 +78,8 @@ offset_top = 76.0
 offset_right = 169.0
 offset_bottom = 146.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "ad_video_player_window"
+window_name = "Castlevania"
+window_scene_name = "ad_video_player_window"
 is_default_opened = false
 
 [node name="Application2" parent="ApplicationLayer" unique_id=775416395 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
@@ -87,7 +88,8 @@ offset_top = 172.0
 offset_right = 166.0
 offset_bottom = 242.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "blue_window"
+window_name = "Blue Window"
+window_scene_name = "blue_window"
 is_default_opened = false
 
 [node name="Application3" parent="ApplicationLayer" unique_id=920115880 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
@@ -96,7 +98,8 @@ offset_top = 273.0
 offset_right = 163.0
 offset_bottom = 343.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "browser_window"
+window_name = "HotDog Browser"
+window_scene_name = "browser_window"
 
 [node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Application3" unique_id=2038866431]
 texture_filter = 1
@@ -109,7 +112,8 @@ offset_top = 366.0
 offset_right = 166.0
 offset_bottom = 436.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "task_manager_game_window"
+window_name = "Task Manager"
+window_scene_name = "task_manager_game_window"
 is_default_opened = false
 
 [node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Application4" unique_id=1949997502]
@@ -123,7 +127,8 @@ offset_top = 87.0
 offset_right = 308.0
 offset_bottom = 157.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "helpful_websites"
+window_name = "helpful_websites.txt"
+window_scene_name = "helpful_websites"
 
 [node name="Application6" parent="ApplicationLayer" unique_id=1622758456 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
 offset_left = 284.0
@@ -131,7 +136,8 @@ offset_top = 254.0
 offset_right = 334.0
 offset_bottom = 324.0
 window_layer = NodePath("../../WindowLayer")
-window_name = "maze_window"
+window_name = "My Drive"
+window_scene_name = "maze_window"
 is_default_opened = false
 
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
