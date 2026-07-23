@@ -140,6 +140,16 @@ window_name = "My Drive"
 window_scene_name = "maze_window"
 is_default_opened = false
 
+[node name="Application7" parent="ApplicationLayer" unique_id=882876864 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
+offset_left = 243.0
+offset_top = 404.0
+offset_right = 293.0
+offset_bottom = 474.0
+window_layer = NodePath("../../WindowLayer")
+window_name = "Game Design Homework"
+window_scene_name = "question_video_player_window"
+is_default_opened = false
+
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
 layer = 3
 script = ExtResource("3_6ukd0")
