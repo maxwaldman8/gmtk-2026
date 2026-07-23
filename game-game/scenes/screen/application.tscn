@@ -13,6 +13,7 @@ script = ExtResource("1_vj7jk")
 name_label = NodePath("NameLabel")
 
 [node name="TestIcon" type="ColorRect" parent="." unique_id=1016756199]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

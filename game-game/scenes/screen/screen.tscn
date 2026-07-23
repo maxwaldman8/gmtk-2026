@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://ccymnofn6ccr6" path="res://scripts/screen/screen.gd" id="1_6ukd0"]
 [ext_resource type="PackedScene" uid="uid://b5yslbaif30nv" path="res://scenes/screen/application.tscn" id="2_2d861"]
 [ext_resource type="Script" uid="uid://dommextr4ctrb" path="res://scripts/screen/window_layer.gd" id="3_6ukd0"]
+[ext_resource type="Texture2D" uid="uid://bk47fr3syf046" path="res://sprites/logo_4.png" id="3_ir3ut"]
+[ext_resource type="Texture2D" uid="uid://dbt6uewfy4mcc" path="res://sprites/logo_0.png" id="3_nnrwk"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_6ukd0"]
 noise_type = 2
@@ -88,6 +90,11 @@ offset_bottom = 343.0
 window_layer = NodePath("../../WindowLayer")
 window_name = "browser_window"
 
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Application3" unique_id=2038866431]
+texture_filter = 1
+position = Vector2(25, 25)
+texture = ExtResource("3_ir3ut")
+
 [node name="Application4" parent="ApplicationLayer" unique_id=113608717 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
 offset_left = 116.0
 offset_top = 366.0
@@ -95,6 +102,11 @@ offset_right = 166.0
 offset_bottom = 436.0
 window_layer = NodePath("../../WindowLayer")
 window_name = "task_manager_window"
+
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Application4" unique_id=1949997502]
+texture_filter = 1
+position = Vector2(25, 25)
+texture = ExtResource("3_nnrwk")
 
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
 layer = 3
