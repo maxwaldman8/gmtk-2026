@@ -32,6 +32,7 @@ size = Vector3(12, 6.75, 1)
 [node name="Room" type="Node3D" unique_id=553723905]
 
 [node name="Player" parent="." unique_id=1813622507 node_paths=PackedStringArray("screen", "gui") instance=ExtResource("1_36trf")]
+JUMP_VELOCITY = 4.0
 screen = NodePath("../SubViewportContainer/SubViewport/Screen")
 gui = NodePath("../GUI")
 
