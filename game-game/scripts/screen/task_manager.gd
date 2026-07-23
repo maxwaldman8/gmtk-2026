@@ -40,6 +40,7 @@ func shoot():
 		cooldown_time_left = 0.5
 
 func _physics_process(delta: float) -> void:
+	$TasksRunning.text = "TASKS RUNNING\n" + str(enemies.size())
 	cooldown_time_left = clamp(cooldown_time_left - delta, 0, cooldown_time)
 	pos = pos + (clamp(get_local_mouse_position().x, 60, 350) - pos) * player_speed
 	pos = clamp(pos, 60, 350)

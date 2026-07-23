@@ -32,7 +32,7 @@ func _ready() -> void:
 		new_indicator.position.y = 515
 		new_indicator.position.x = (ad / 100.0) * full_width
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var percentage: float = video.stream_position / video.get_stream_length() * 100.0
 	progress_bar.value = percentage
 	time_left.text = "Time Left: " + str(int(video.get_stream_length() - video.stream_position)) + "s"
