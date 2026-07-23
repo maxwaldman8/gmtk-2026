@@ -125,6 +125,15 @@ offset_bottom = 157.0
 window_layer = NodePath("../../WindowLayer")
 window_name = "helpful_websites"
 
+[node name="Application6" parent="ApplicationLayer" unique_id=1622758456 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
+offset_left = 284.0
+offset_top = 254.0
+offset_right = 334.0
+offset_bottom = 324.0
+window_layer = NodePath("../../WindowLayer")
+window_name = "maze_window"
+is_default_opened = false
+
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
 layer = 3
 script = ExtResource("3_6ukd0")

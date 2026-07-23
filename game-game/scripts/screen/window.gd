@@ -29,10 +29,13 @@ func _ready() -> void:
 	pivot_offset = dimensions / 2
 	title_label.text = body_name
 	scale = Vector2.ZERO
+	body_instance.process_mode = PROCESS_MODE_DISABLED
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_SPRING)
 	tween.tween_property(self, "scale", Vector2(1, 1), 0.5)
 	shadow.size = dimensions + Vector2(4, 4)
+	await tween.finished
+	body_instance.process_mode = PROCESS_MODE_ALWAYS
 
 
 func set_up(w_body_name = "default_window", parent = get_parent()):
