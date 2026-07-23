@@ -6,7 +6,7 @@ extends Control
 var pos: float = 10
 
 @export var player_speed = 10.0
-@export var bullet_speed = 10.0
+@export var bullet_speed = 20.0
 
 @export var bullet: PackedScene
 @export var enemy: PackedScene
@@ -14,11 +14,11 @@ var pos: float = 10
 var enemies: Array[Area2D]
 
 func _ready() -> void:
-	for i in range(0, 10):
+	for i in range(0, 8):
 		var new_enemy = enemy.instantiate()
 		add_child(new_enemy)
-		new_enemy.position.y = 10
-		new_enemy.position.x = 10 + 20 * i
+		new_enemy.position.y = 50
+		new_enemy.position.x = 60 + 40 * i
 		enemies.append(new_enemy)
 
 func _input(event: InputEvent) -> void:
