@@ -12,6 +12,8 @@ var tutorial: bool = true
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
+		get_tree().root.get_node("Room").get_node("RealMusic").volume_db = 0
+		get_tree().root.get_node("Room").get_node("DigitalMusic").volume_db = -80
 		player.process_mode = Node.PROCESS_MODE_ALWAYS
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		get_parent().get_parent().visible = false
