@@ -28,14 +28,14 @@ grow_vertical = 2
 color = Color(0.21050721, 0.21050721, 0.21050721, 1)
 
 [node name="Player" type="Area2D" parent="." unique_id=564165194]
-position = Vector2(83, 86)
+position = Vector2(60, 575)
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1418189180]
-scale = Vector2(0.125, 0.125)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_kwmpk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=251055969]
-scale = Vector2(0.125, 0.125)
+scale = Vector2(0.25, 0.25)
 shape = SubResource("RectangleShape2D_nrlmu")
 
 [node name="Enemy" parent="." unique_id=1774869807 instance=ExtResource("4_w4qx4")]
