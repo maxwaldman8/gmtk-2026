@@ -17,15 +17,21 @@ var pos: float = 10
 var bullets: Array[Area2D]
 var enemies: Array[Area2D]
 
+var wave = 0
+
 var cooldown_time_left = 0.0
 
 func _ready() -> void:
+	spawn_wave()
+
+func spawn_wave() -> void:
 	for i in range(0, 8):
 		var new_enemy = enemy.instantiate()
 		add_child(new_enemy)
 		new_enemy.position.y = 50
 		new_enemy.position.x = 60 + 40 * i
 		enemies.append(new_enemy)
+	wave += 1
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_click"):
@@ -40,7 +46,14 @@ func shoot():
 		cooldown_time_left = 0.5
 
 func _physics_process(delta: float) -> void:
-	$TasksRunning.text = "TASKS RUNNING\n" + str(enemies.size())
+	if enemies.size() == 0:
+		if wave < 3:
+			spawn_wave()
+			enemy_speed = 1.0 + wave * 2.0
+		else:
+			# Game won
+			get_parent().close()
+	$TasksRunning.text = "TASKS RUNNING\n" + str(enemies.size() + 8 * (3 - wave))
 	cooldown_time_left = clamp(cooldown_time_left - delta, 0, cooldown_time)
 	pos = pos + (clamp(get_local_mouse_position().x, 60, 350) - pos) * player_speed
 	pos = clamp(pos, 60, 350)

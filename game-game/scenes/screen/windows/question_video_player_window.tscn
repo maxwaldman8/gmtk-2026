@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b65v5aufs425f"]
 
-[ext_resource type="Script" uid="uid://biiasptbey1vn" path="res://scripts/question_video_player_window.gd" id="1_ksig2"]
+[ext_resource type="Script" uid="uid://biiasptbey1vn" path="res://scripts/screen/question_video_player_window.gd" id="1_ksig2"]
 [ext_resource type="VideoStream" uid="uid://cyctia2jgoavc" path="res://shows/question_video.ogv" id="2_g7fcs"]
 [ext_resource type="PackedScene" uid="uid://dqpa6g00gagdd" path="res://scenes/screen/windows/video_player/stop_indicator.tscn" id="3_stv16"]
 

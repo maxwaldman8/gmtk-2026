@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bslf03m55t170"]
 
-[ext_resource type="Script" uid="uid://d7figj8ssqmw" path="res://scripts/maze.gd" id="1_5yjth"]
+[ext_resource type="Script" uid="uid://d7figj8ssqmw" path="res://scripts/screen/maze.gd" id="1_5yjth"]
 [ext_resource type="PackedScene" uid="uid://bfp7ji65ap2n6" path="res://scenes/screen/windows/maze/player.tscn" id="1_ma1v2"]
 [ext_resource type="PackedScene" uid="uid://cd7va2xejca4w" path="res://scenes/screen/windows/maze/tile.tscn" id="3_viudw"]
 [ext_resource type="PackedScene" uid="uid://bum8geakonusi" path="res://scenes/screen/windows/maze/end_tile.tscn" id="4_fm3fn"]
