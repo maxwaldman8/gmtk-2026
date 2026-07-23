@@ -44,6 +44,15 @@ func _set_dimensions(new_dimensions: Vector2i) -> void:
 
 #region title bar
 
+func _on_title_bar_mouse_entered() -> void:
+	print(body_name + " entered")
+	is_hovered = true
+
+
+func _on_title_bar_mouse_exited() -> void:
+	is_hovered = false
+	
+
 func _on_x_button_pressed() -> void:
 	# closing animation?, sound
 	var tween = create_tween()
@@ -64,7 +73,7 @@ func _process(_delta: float) -> void:
 		# holding click
 		if is_following_mouse:
 			var unclamped_pos : Vector2 = get_global_mouse_position() - offset
-			global_position = unclamped_pos.clamp(Vector2.ZERO, get_viewport_rect().size - dimensions)
+			global_position = unclamped_pos.clamp(Vector2.ZERO, get_viewport_rect().size - title_bar.size)
 	elif Input.is_action_just_released("left_click"):
 		is_following_mouse = false
 
