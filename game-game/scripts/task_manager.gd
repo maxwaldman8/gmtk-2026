@@ -21,9 +21,9 @@ func _ready() -> void:
 		new_enemy.position.x = 10 + 20 * i
 		enemies.append(new_enemy)
 
-#func _input(event: InputEvent) -> void:
-	#if event.is_action_pressed("left_click"):
-		#shoot()
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("left_click"):
+		shoot()
 
 func shoot():
 	var new_bullet = bullet.instantiate()
