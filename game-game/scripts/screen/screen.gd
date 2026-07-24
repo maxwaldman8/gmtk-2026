@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 # Finishing tasks functions
 func insert_drive():
 	var maze_num = randi_range(1, 5)
-	get_node("ApplicationLayer/Maze" + str(maze_num)).visible = true
+	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = true
 
 # tween window with mouse
 # window pos offset for minimal overlap

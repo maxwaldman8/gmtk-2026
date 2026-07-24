@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cr4urr343pa4l"]
 
-[ext_resource type="Script" path="res://scripts/screen/browser websites/assignment_page.gd" id="1_bip1p"]
+[ext_resource type="Script" uid="uid://jgqbsa5x3pbm" path="res://scripts/screen/browser websites/assignment_page.gd" id="1_bip1p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpww7"]
+size = Vector2(158, 166)
 
 [node name="AssignmentPage" type="Control" unique_id=1344016726 node_paths=PackedStringArray("name_label", "due_time_label", "desc_label", "button")]
 layout_mode = 3
@@ -77,5 +80,41 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 1
 text = "this is an assignment"
 autowrap_mode = 2
+
+[node name="SubmissionDrop" type="Control" parent="." unique_id=914190020]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="SubmissionDrop" unique_id=147974413]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 251.0
+offset_right = 215.0
+offset_bottom = 417.0
+color = Color(0.6317153, 0.63171524, 0.63171524, 1)
+
+[node name="Area2D" type="Area2D" parent="SubmissionDrop" unique_id=1880813161]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubmissionDrop/Area2D" unique_id=1073033309]
+position = Vector2(136, 334)
+shape = SubResource("RectangleShape2D_fpww7")
+
+[node name="Button" type="Button" parent="SubmissionDrop" unique_id=1586558969]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 375.0
+offset_right = 368.0
+offset_bottom = 406.0
+text = "SUBMIT"
+
+[node name="SubmissionStatus" type="Label" parent="SubmissionDrop" unique_id=1923703181]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 267.0
+offset_right = 400.0
+offset_bottom = 290.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "NOT SUBMITTED"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
