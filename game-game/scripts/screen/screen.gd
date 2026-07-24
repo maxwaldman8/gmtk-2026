@@ -10,6 +10,12 @@ var time: float = 49 * 60
 
 var tutorial: bool = true
 
+# Randomly generated stuff
+var messaging_password: String
+
+func _ready() -> void:
+	messaging_password = "egg" + str(randi_range(0, 1000))
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
 		get_tree().root.get_node("Room").get_node("RealMusic").volume_db = 0
