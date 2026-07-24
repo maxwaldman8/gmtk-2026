@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://eoakja1lmewf" path="res://sounds/real_1159.mp3" id="6_qvc4m"]
 [ext_resource type="AudioStream" uid="uid://dkrptts3myo2u" path="res://sounds/digital_1159.mp3" id="7_7dqbv"]
 [ext_resource type="ArrayMesh" uid="uid://bj5hjsbjubowk" path="res://statues/cat2.obj" id="7_dynfe"]
+[ext_resource type="Texture2D" uid="uid://dkc200e6mqx0u" path="res://sprites/screen/note.png" id="9_3j2fx"]
 [ext_resource type="Material" uid="uid://ca5do0p6rx780" path="res://moon.tres" id="14_23wr2"]
 
 [sub_resource type="Environment" id="Environment_nrlmu"]
@@ -114,6 +115,16 @@ mesh = ExtResource("6_3j2fx")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.228128, 2.099999, -2.5706587)
 material_override = SubResource("StandardMaterial3D_dynfe")
 mesh = ExtResource("7_dynfe")
+
+[node name="PasswordNote" type="Sprite3D" parent="Room" unique_id=559663739]
+transform = Transform3D(8, 0, 0, 0, 7.969558, -0.6972459, 0, 0.6972459, 7.969558, 0, 1.6, -2.65)
+texture_filter = 0
+texture = ExtResource("9_3j2fx")
+
+[node name="TVNote" type="Sprite3D" parent="Room" unique_id=1533847124]
+transform = Transform3D(-8, -6.095517e-08, -6.9672086e-07, 0, 7.969558, -0.6972459, 6.993822e-07, -0.6972459, -7.969558, -6.4, 3.5, -9.35)
+texture_filter = 0
+texture = ExtResource("9_3j2fx")
 
 [node name="ScreenSprite" type="Sprite3D" parent="." unique_id=187814192]
 transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0.004466966, 1.6515527, -1.4412645)

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cg2o2dr6xrcb5"]
+
+[ext_resource type="Texture2D" uid="uid://2ikgfgyn8kxs" path="res://sprites/screen/numbers/num_00.png" id="1_jexxx"]
+
+[node name="Tile" type="StaticBody2D" unique_id=345370934]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Num00" type="Sprite2D" parent="." unique_id=194198047]
+texture_filter = 1
+texture = ExtResource("1_jexxx")
