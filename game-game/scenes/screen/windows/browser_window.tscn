@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://6212hxac2yb3"]
 
-[node name="BrowserWindow" type="Control" unique_id=1699168601]
+[ext_resource type="Script" uid="uid://d235j0xeov3jw" path="res://scripts/screen/tab_container.gd" id="1_ojoi2"]
+[ext_resource type="Script" uid="uid://da4t5unp5na8h" path="res://scripts/screen/browser_window.gd" id="1_pype7"]
+[ext_resource type="PackedScene" uid="uid://b8mwqxja6bdnw" path="res://scenes/screen/windows/browser websites/new_tab_website.tscn" id="3_gfr7o"]
+[ext_resource type="PackedScene" uid="uid://bwi71p458pe2" path="res://scenes/screen/windows/browser websites/submission_website.tscn" id="4_f5310"]
+
+[node name="BrowserWindow" type="Control" unique_id=1699168601 node_paths=PackedStringArray("tab_container")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 482.0
 offset_bottom = 552.0
+script = ExtResource("1_pype7")
+tab_container = NodePath("TabContainer")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1816412757]
 propagate_maximum_size = true
@@ -13,24 +20,31 @@ offset_right = 482.0
 offset_bottom = 552.0
 color = Color(0.4027634, 0.46064627, 0.67970765, 1)
 
-[node name="TabContainer" type="TabContainer" parent="." unique_id=754288331]
+[node name="TabContainer" type="TabContainer" parent="." unique_id=754288331 node_paths=PackedStringArray("tab_add_button")]
 layout_mode = 0
 offset_right = 482.0
 offset_bottom = 552.0
 current_tab = 0
+drag_to_rearrange_enabled = true
+script = ExtResource("1_ojoi2")
+tab_add_button = NodePath("../TabAddButton")
 
-[node name="Tab 1" type="MarginContainer" parent="TabContainer" unique_id=1549954506]
+[node name="New Tab" type="MarginContainer" parent="TabContainer" unique_id=1549954506]
 layout_mode = 2
 theme_override_constants/margin_top = 40
 metadata/_tab_index = 0
 
-[node name="ColorRect" type="ColorRect" parent="TabContainer/Tab 1" unique_id=141905893]
+[node name="NewTabWebsite" parent="TabContainer/New Tab" unique_id=1344016726 instance=ExtResource("3_gfr7o")]
 layout_mode = 2
 
-[node name="ColorRect2" type="ColorRect" parent="TabContainer" unique_id=1327130752]
+[node name="Submit" type="MarginContainer" parent="TabContainer" unique_id=2144486131]
 visible = false
 layout_mode = 2
+theme_override_constants/margin_top = 40
 metadata/_tab_index = 1
+
+[node name="SubmissionWebsite" parent="TabContainer/Submit" unique_id=687981471 instance=ExtResource("4_f5310")]
+layout_mode = 2
 
 [node name="TextEdit" type="LineEdit" parent="." unique_id=696103115]
 layout_mode = 1
@@ -43,3 +57,14 @@ offset_right = 237.0
 offset_bottom = 67.0
 grow_horizontal = 2
 placeholder_text = "search"
+
+[node name="TabAddButton" type="Button" parent="." unique_id=5560633]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 3.0
+offset_right = 192.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 12
+text = "+"
+
+[connection signal="pressed" from="TabAddButton" to="TabContainer" method="_on_tab_add_button_pressed"]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dqpa6g00gagdd"]
+
+[ext_resource type="Texture2D" uid="uid://cl727gvapxdpb" path="res://sprites/screen/X Test.png" id="1_rhway"]
+
+[node name="StopIndicator" type="Control" unique_id=858273873]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=798115413]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_rhway")
