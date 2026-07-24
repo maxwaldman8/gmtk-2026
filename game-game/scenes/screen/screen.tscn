@@ -119,14 +119,58 @@ window_layer = NodePath("../../WindowLayer")
 window_name = "helpful_websites.txt"
 window_scene_name = "helpful_websites"
 
-[node name="Application6" parent="ApplicationLayer" unique_id=1622758456 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
+[node name="Maze1" parent="ApplicationLayer" unique_id=1622758456 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
+visible = false
 offset_left = 284.0
 offset_top = 254.0
 offset_right = 334.0
 offset_bottom = 324.0
 window_layer = NodePath("../../WindowLayer")
 window_name = "My Drive"
-window_scene_name = "maze_window"
+window_scene_name = "maze_1_window"
+is_default_opened = false
+
+[node name="Maze2" parent="ApplicationLayer" unique_id=878895024 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
+visible = false
+offset_left = 284.0
+offset_top = 254.0
+offset_right = 334.0
+offset_bottom = 324.0
+window_layer = NodePath("../../WindowLayer")
+window_name = "My Drive"
+window_scene_name = "maze_2_window"
+is_default_opened = false
+
+[node name="Maze3" parent="ApplicationLayer" unique_id=206566243 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
+visible = false
+offset_left = 284.0
+offset_top = 254.0
+offset_right = 334.0
+offset_bottom = 324.0
+window_layer = NodePath("../../WindowLayer")
+window_name = "My Drive"
+window_scene_name = "maze_3_window"
+is_default_opened = false
+
+[node name="Maze4" parent="ApplicationLayer" unique_id=1592390834 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
+visible = false
+offset_left = 284.0
+offset_top = 254.0
+offset_right = 334.0
+offset_bottom = 324.0
+window_layer = NodePath("../../WindowLayer")
+window_name = "My Drive"
+window_scene_name = "maze_4_window"
+is_default_opened = false
+
+[node name="Maze5" parent="ApplicationLayer" unique_id=523909177 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
+offset_left = 284.0
+offset_top = 254.0
+offset_right = 334.0
+offset_bottom = 324.0
+window_layer = NodePath("../../WindowLayer")
+window_name = "My Drive"
+window_scene_name = "maze_5_window"
 is_default_opened = false
 
 [node name="Application7" parent="ApplicationLayer" unique_id=882876864 node_paths=PackedStringArray("window_layer") instance=ExtResource("2_2d861")]
