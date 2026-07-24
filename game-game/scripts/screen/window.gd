@@ -8,11 +8,9 @@ signal closed
 @onready var title_label : Label = $TitleBar/TitleLabel
 @onready var window_body : ColorRect
 @onready var window_layer : WindowLayer = get_parent()
-@onready var shadow : ColorRect = $Shadow
 var body_scene : PackedScene
 var body_name : String
 var dimensions : Vector2: set = _set_dimensions
-var application : Application
 
 var body_instance
 
@@ -28,27 +26,17 @@ func _ready() -> void:
 	dimensions = body_instance.size + Vector2(0, TITLE_BAR_THICKNESS)
 	pivot_offset = dimensions / 2
 	title_label.text = body_name
-	scale = Vector2.ZERO
-	body_instance.process_mode = PROCESS_MODE_DISABLED
-	var tween = create_tween()
-	tween.set_trans(Tween.TRANS_SPRING)
-	tween.tween_property(self, "scale", Vector2(1, 1), 0.5)
-	shadow.size = dimensions + Vector2(4, 4)
-	await tween.finished
-	body_instance.process_mode = PROCESS_MODE_ALWAYS
 
 
-func set_up(body_scene_name, w_body_name = "default_window", parent = get_parent()):
+func set_up(app_close_fn, w_body_name = "default_window"):
 	body_name = w_body_name
-	body_scene = load("res://scenes/screen/windows/" + body_scene_name + ".tscn")
+	body_scene = load("res://scenes/screen/windows/" + body_name + ".tscn")
 	body_instance = body_scene.instantiate()
 	body_instance.position.y += TITLE_BAR_THICKNESS
-	if body_name == "browser_window":
-		body_instance.tab_container.window = self
 	add_child(body_instance)
-	## pos will be set in window layer later
-	#global_position = Vector2i(500, 300)
-	application = parent
+	# pos will be set in window layer later
+	global_position = Vector2i(500, 300)
+	closed.connect(app_close_fn)
 
 
 func _set_dimensions(new_dimensions: Vector2i) -> void:
@@ -59,6 +47,7 @@ func _set_dimensions(new_dimensions: Vector2i) -> void:
 #region title bar
 
 func _on_title_bar_mouse_entered() -> void:
+	print(body_name + " entered")
 	is_hovered = true
 
 
@@ -78,7 +67,6 @@ func close() -> void:
 		tween.set_trans(Tween.TRANS_SPRING)
 		tween.tween_property(self, "scale", Vector2(0,0), 0.5)
 		await tween.finished
-		application.is_opened = false
 		closed.emit()
 		queue_free()
 

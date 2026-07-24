@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bx2aw2024feq"]
 
 [ext_resource type="Texture2D" uid="uid://cl727gvapxdpb" path="res://sprites/screen/X Test.png" id="1_4kg8h"]
-[ext_resource type="Script" uid="uid://ch7jyjq01uv6r" path="res://scripts/screen/enemy.gd" id="1_tyvvd"]
+[ext_resource type="Script" uid="uid://ch7jyjq01uv6r" path="res://scripts/enemy.gd" id="1_tyvvd"]
 
 [node name="Enemy" type="Area2D" unique_id=1774869807]
 scale = Vector2(3, 3)

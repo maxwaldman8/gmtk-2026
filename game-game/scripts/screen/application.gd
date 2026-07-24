@@ -3,10 +3,9 @@ extends Control
 
 @export var window_layer : WindowLayer
 @export var window_name : String
-@export var window_scene_name: String
 @export var name_label : Label
-@export var is_default_opened : bool = true
 var is_opened : bool = false
+var is_default_opened : bool = true
 var window_instance : GameWindow
 const WINDOW_SCENE = preload("res://scenes/screen/window.tscn")
 
@@ -24,20 +23,21 @@ func set_up(w_name: String = "default", w_is_def_open: bool = true):
 
 func _open_window():
 	window_instance = WINDOW_SCENE.instantiate()
-	window_instance.set_up(window_scene_name, window_name, self)
+	window_instance.set_up(func(): is_opened = false, window_name)
 	window_layer.add_to_window_list(window_instance)
 	is_opened = true
 
+
+# on double tap:
+	# not is_opened: open window by connected window name
+	# is_opened: have window scale animation, go to front
 
 func _handle_clicking_input(event: InputEvent):
 	if event is InputEventMouseButton and event.is_action_pressed("left_click"):
 		if event.double_click:
 			if is_opened:
-				window_layer.move_window_to_front(window_instance)
-				var tween = create_tween()
-				tween.set_trans(Tween.TRANS_SPRING)
-				tween.tween_property(window_instance, "scale", Vector2(1.2,1.2), 0.25)
-				tween.tween_property(window_instance, "scale", Vector2(1,1), 0.25)
+				# animation
+				pass
 			else:
 				_open_window()
 		else:

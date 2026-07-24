@@ -10,12 +10,6 @@ var time: float = 49 * 60
 
 var tutorial: bool = true
 
-# Randomly generated stuff
-var messaging_password: String
-
-func _ready() -> void:
-	messaging_password = "egg" + str(randi_range(0, 999))
-
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
 		get_tree().root.get_node("Room").get_node("RealMusic").volume_db = 0
@@ -34,11 +28,6 @@ func _process(delta: float) -> void:
 			time_label.text = "11:" + str(int(time / 60.0)) + ":" + str(int(time) % 60) + " PM"
 	else:
 		time_label.text = "11:48 PM"
-
-# Finishing tasks functions
-func insert_drive():
-	var maze_num = randi_range(1, 5)
-	get_node("ApplicationLayer/Maze" + str(maze_num)).visible = true
 
 # tween window with mouse
 # window pos offset for minimal overlap
