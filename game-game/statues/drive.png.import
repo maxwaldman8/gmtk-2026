@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fusb0fo1eicm"
-path.bptc="res://.godot/imported/room.png-bbd32635eab41caa41e63a4b6663bade.bptc.ctex"
+uid="uid://dqqrjq4242ky4"
+path.s3tc="res://.godot/imported/drive.png-5b8ef624857887830a223e5bee5b24b3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,13 +11,13 @@ metadata={
 
 [deps]
 
-source_file="res://statues/room.png"
-dest_files=["res://.godot/imported/room.png-bbd32635eab41caa41e63a4b6663bade.bptc.ctex"]
+source_file="res://statues/drive.png"
+dest_files=["res://.godot/imported/drive.png-5b8ef624857887830a223e5bee5b24b3.s3tc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=true
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
