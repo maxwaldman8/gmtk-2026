@@ -22,7 +22,6 @@ func _on_tab_close_pressed(tab_index: int) -> void:
 	var child_to_remove = get_child(tab_index)
 	if child_to_remove:
 		child_to_remove.queue_free()
-	await RenderingServer.frame_post_draw
 	move_tab_add_button()
 
 
@@ -33,12 +32,11 @@ func _get_tabs_width():
 		var first_rect = tab_bar.get_tab_rect(0)
 		var last_rect = tab_bar.get_tab_rect(count - 1)
 		total_width = (last_rect.position.x - first_rect.position.x) + last_rect.size.x
-	print(total_width)
 	return total_width
 
 
 func move_tab_add_button():
-	await get_tree().process_frame
+	await RenderingServer.frame_post_draw
 	tab_add_button.position.x = _get_tabs_width() + 8 + 3
 	tab_add_button.visible = (get_child_count() < 4)
 
