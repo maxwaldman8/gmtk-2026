@@ -3,6 +3,18 @@
 [ext_resource type="Script" uid="uid://cla18djij2hq5" path="res://scripts/screen/browser websites/assignment_tab.gd" id="1_ew3v3"]
 [ext_resource type="Texture2D" uid="uid://ctqfrvcyok0dj" path="res://sprites/icon.svg" id="2_jm5qp"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fpww7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shu6c"]
+bg_color = Color(0, 0, 0, 0.039215688)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iw0ui"]
+bg_color = Color(0, 0, 0, 0.078431375)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oaf25"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cp1ug"]
+
 [node name="AssignmentTab" type="Control" unique_id=70326265 node_paths=PackedStringArray("color_box", "class_label", "assignment_label", "due_time_label")]
 custom_minimum_size = Vector2(404, 84)
 layout_mode = 3
@@ -73,3 +85,15 @@ offset_bottom = 71.0
 theme_override_colors/font_color = Color(1, 0.21568628, 0.21176471, 1)
 theme_override_font_sizes/font_size = 10
 text = "Due today at 11:50 (countdown?)"
+
+[node name="Button" type="Button" parent="." unique_id=325016206]
+layout_mode = 0
+offset_right = 404.0
+offset_bottom = 84.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fpww7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_shu6c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iw0ui")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_oaf25")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cp1ug")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

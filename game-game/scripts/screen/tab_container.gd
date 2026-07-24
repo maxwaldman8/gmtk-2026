@@ -48,4 +48,5 @@ func _on_tab_add_button_pressed() -> void:
 	var new_tab_instance = NEW_TAB_WEB_SCENE.instantiate()
 	margin_cont.add_child(new_tab_instance)
 	tab_bar.set_tab_title(get_tab_count() - 1, "New Tab")
+	tab_bar.current_tab = get_tab_count() - 1
 	move_tab_add_button()
