@@ -16,7 +16,7 @@ var messaging_password: String
 func _ready() -> void:
 	messaging_password = "egg" + str(randi_range(0, 999))
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
 		get_tree().root.get_node("Room").get_node("RealMusic").volume_db = 0
 		get_tree().root.get_node("Room").get_node("DigitalMusic").volume_db = -80

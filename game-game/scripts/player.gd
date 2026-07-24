@@ -35,6 +35,27 @@ func handle_raycast():
 		match area.name:
 			"ScreenArea":
 				switch_to_screen()
+			"AlarmArea":
+				area.get_parent().get_parent().get_node("CPUParticles3D").emitting = true
+				area.get_parent().get_parent().get_node("CPUParticles3D2").emitting = true
+				await get_tree().create_timer(0.0625).timeout
+				area.get_parent().get_node("OmniLight3D").light_energy = 7.0
+				await get_tree().create_timer(0.0625).timeout
+				area.get_parent().get_node("OmniLight3D").light_energy = 5.0
+				await get_tree().create_timer(0.0625).timeout
+				area.get_parent().get_node("OmniLight3D").light_energy = 3.0
+				await get_tree().create_timer(0.0625).timeout
+				area.get_parent().get_node("OmniLight3D").light_energy = 1.0
+				await get_tree().create_timer(0.0625).timeout
+				area.get_parent().get_parent().get_node("CPUParticles3D").emitting = false
+				area.get_parent().get_parent().get_node("CPUParticles3D2").emitting = false
+				area.get_parent().queue_free()
+			"DriveArea":
+				area.get_parent().queue_free()
+				var drive: MeshInstance3D = get_parent().get_node("Room/Drive2")
+				drive.visible = true
+				var tween = create_tween()
+				tween.tween_property(drive, "position", Vector3(3.7, 0.0, -1.0), 1.0)
 
 func switch_to_screen():
 	get_tree().root.get_node("Room").get_node("RealMusic").volume_db = -80
