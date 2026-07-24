@@ -62,4 +62,5 @@ func _on_video_stream_player_finished() -> void:
 			indicator.visible = true
 		video.play()
 	else:
+		get_parent().get_parent().get_parent().finish_ad_video()
 		get_parent().close()

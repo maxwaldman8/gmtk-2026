@@ -49,6 +49,7 @@ func _physics_process(_delta: float) -> void:
 			
 
 func _on_video_stream_player_finished() -> void:
+	get_parent().get_parent().get_parent().finish_question_video()
 	get_parent().close()
 
 func correct_answer() -> void:

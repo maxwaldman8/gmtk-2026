@@ -42,5 +42,11 @@ func insert_drive():
 	var maze_num = randi_range(1, 5)
 	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = true
 
+func finish_question_video():
+	pass
+
+func finish_ad_video():
+	pass
+
 # tween window with mouse
 # window pos offset for minimal overlap
