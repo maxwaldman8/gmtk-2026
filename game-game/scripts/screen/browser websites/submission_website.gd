@@ -37,3 +37,9 @@ func swap_to(...args):
 		assignment_page.set_up(args[0])
 	to_do_list.visible = not to_do_list.visible
 	assignment_page.visible = not assignment_page.visible
+
+
+func update_a_list():
+	for a_tab:AssignmentTab in assignments_list.get_children():
+		if a_tab.a_name not in assignments_to_do:
+			a_tab.queue_free()

@@ -10,6 +10,7 @@ extends Control
 # for drag purposes
 var original_click_pos : Vector2
 var is_hovered : bool = false
+@export var ghost_collision : CollisionShape2D
 
 @export var dragged_application_layer : CanvasLayer
 @export var window_layer : WindowLayer
@@ -33,6 +34,7 @@ func _ready() -> void:
 	if is_default_opened:
 		_open_window()
 	name_label.text = window_name
+	ghost_collision.disabled = true
 
 
 func set_up(w_name: String = "default", w_is_def_open: bool = true):
@@ -89,6 +91,7 @@ func _on_input_taker_gui_input(event: InputEvent) -> void:
 		await tween.finished
 		dragged_application_layer.remove_child(dragged_ghost)
 		add_child(dragged_ghost)
+		ghost_collision.disabled = true
 		for c in dragged_ghost.get_children():
 			if not c is Area2D:
 				c.queue_free()
@@ -110,6 +113,7 @@ func _process(_delta: float) -> void:
 		dragged_ghost.add_child(new_icon)
 		remove_child(dragged_ghost)
 		dragged_application_layer.add_child(dragged_ghost)
+		ghost_collision.disabled = false
 	var unclamped_pos : Vector2 = global_mouse_pos - offset
 	dragged_ghost.global_position = unclamped_pos.clamp(Vector2.ZERO, get_viewport_rect().size - size)
 

@@ -1,3 +1,4 @@
+class_name AssignmentTab
 extends Control
 
 signal swap_to(assignment_name: String)

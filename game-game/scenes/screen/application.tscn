@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fpww7"]
 size = Vector2(60, 80)
 
-[node name="Application" type="Control" unique_id=473881616 node_paths=PackedStringArray("selected_shadow", "dragged_ghost", "icon", "name_label", "input_taker")]
+[node name="Application" type="Control" unique_id=473881616 node_paths=PackedStringArray("selected_shadow", "dragged_ghost", "icon", "name_label", "input_taker", "ghost_collision")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -30.0
@@ -18,6 +18,7 @@ dragged_ghost = NodePath("DraggedGhost")
 icon = NodePath("TestIcon")
 name_label = NodePath("NameLabel")
 input_taker = NodePath("InputTaker")
+ghost_collision = NodePath("DraggedGhost/Area2D/CollisionShape2D")
 
 [node name="SelectedShadow" type="ColorRect" parent="." unique_id=283709724]
 layout_mode = 1
@@ -94,6 +95,7 @@ mouse_filter = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DraggedGhost/Area2D" unique_id=1687874059]
 position = Vector2(30, 40)
 shape = SubResource("RectangleShape2D_fpww7")
+disabled = true
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="gui_input" from="TestIcon" to="." method="_on_test_icon_gui_input"]
