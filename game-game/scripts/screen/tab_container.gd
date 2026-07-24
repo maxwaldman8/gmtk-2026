@@ -3,7 +3,7 @@ extends TabContainer
 @onready var tab_bar : TabBar = get_tab_bar()
 @export var tab_add_button : Button
 
-var window : GameWindow
+@onready var window : GameWindow = get_parent().get_parent()
 const NEW_TAB_WEB_SCENE = preload("res://scenes/screen/windows/browser websites/new_tab_website.tscn")
 
 
