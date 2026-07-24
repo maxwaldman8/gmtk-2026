@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b8fihxtag443g" path="res://scenes/player.tscn" id="1_36trf"]
 [ext_resource type="ArrayMesh" uid="uid://bct4h4aerapy0" path="res://statues/room.obj" id="2_7dqbv"]
 [ext_resource type="Texture2D" uid="uid://drhha3fdm314i" path="res://statues/pal3.png" id="2_tk5fv"]
-[ext_resource type="Sky" uid="uid://c5keyi0bbe61f" path="res://night.tres" id="2_w68ji"]
+[ext_resource type="Sky" uid="uid://c5keyi0bbe61f" path="res://shadings/night.tres" id="2_w68ji"]
 [ext_resource type="PackedScene" uid="uid://bm5ae52p08ktu" path="res://scenes/screen/screen.tscn" id="3_14vil"]
 [ext_resource type="Script" uid="uid://b61uvfxw46b5h" path="res://scripts/sub_viewport.gd" id="3_jxe34"]
 [ext_resource type="Texture2D" uid="uid://bx0hpkmnnefxj" path="res://sprites/Crosshair Draft.png" id="4_14vil"]
@@ -14,7 +14,9 @@
 [ext_resource type="AudioStream" uid="uid://dkrptts3myo2u" path="res://sounds/digital_1159.mp3" id="7_7dqbv"]
 [ext_resource type="ArrayMesh" uid="uid://bj5hjsbjubowk" path="res://statues/cat2.obj" id="7_dynfe"]
 [ext_resource type="Texture2D" uid="uid://dkc200e6mqx0u" path="res://sprites/screen/note.png" id="9_3j2fx"]
-[ext_resource type="Material" uid="uid://ca5do0p6rx780" path="res://moon.tres" id="14_23wr2"]
+[ext_resource type="Texture2D" uid="uid://dfupl6d57fcsc" path="res://sprites/vector/note.png" id="13_dynfe"]
+[ext_resource type="Material" uid="uid://ca5do0p6rx780" path="res://shadings/moon.tres" id="14_23wr2"]
+[ext_resource type="FontFile" uid="uid://p5d3ilwg8lqw" path="res://scribes/Maxmessy-Regular.ttf" id="14_vfrn5"]
 
 [sub_resource type="Environment" id="Environment_nrlmu"]
 background_mode = 2
@@ -60,6 +62,9 @@ albedo_texture = ExtResource("2_tk5fv")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dynfe"]
 albedo_texture = ExtResource("2_tk5fv")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mekka"]
+size = Vector3(0.060180664, 0.057739258, 0.020133972)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_14vil"]
 viewport_path = NodePath("SubViewportContainer/SubViewport")
@@ -181,6 +186,12 @@ transform = Transform3D(8, 0, 0, 0, 7.969558, -0.6972459, 0, 0.6972459, 7.969558
 texture_filter = 0
 texture = ExtResource("9_3j2fx")
 
+[node name="PasswordNoteArea" type="Area3D" parent="Room/PasswordNote" unique_id=1542668532]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/PasswordNote/PasswordNoteArea" unique_id=277511039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00091552734, 0.00091578066, -0.0004995465)
+shape = SubResource("BoxShape3D_mekka")
+
 [node name="TVNote" type="Sprite3D" parent="Room" unique_id=1533847124]
 transform = Transform3D(-8, -6.095517e-08, -6.9672086e-07, 0, 7.969558, -0.6972459, 6.993822e-07, -0.6972459, -7.969558, -6.4, 3.5, -9.35)
 texture_filter = 0
@@ -207,9 +218,10 @@ size = Vector2i(1152, 648)
 render_target_update_mode = 0
 script = ExtResource("3_jxe34")
 
-[node name="Screen" parent="SubViewportContainer/SubViewport" unique_id=2111894068 node_paths=PackedStringArray("player", "gui") instance=ExtResource("3_14vil")]
+[node name="Screen" parent="SubViewportContainer/SubViewport" unique_id=2111894068 node_paths=PackedStringArray("player", "gui", "password_note") instance=ExtResource("3_14vil")]
 player = NodePath("../../../Player")
 gui = NodePath("../../../GUI")
+password_note = NodePath("../../../PasswordNote")
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=1432570367]
 
@@ -232,6 +244,33 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "Click to Interact"
+
+[node name="PasswordNote" type="CanvasLayer" parent="." unique_id=1665470528]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="PasswordNote" unique_id=243463549]
+position = Vector2(576, 324)
+texture = ExtResource("13_dynfe")
+
+[node name="Label" type="Label" parent="PasswordNote" unique_id=1685535213]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -37.5
+offset_right = 93.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_vfrn5")
+theme_override_font_sizes/font_size = 56
+text = "logotmessage password
+
+egg"
+horizontal_alignment = 1
 
 [node name="RealMusic" type="AudioStreamPlayer3D" parent="." unique_id=1004856047]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6641552, -1.3832506)

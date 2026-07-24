@@ -3,6 +3,7 @@ extends Control
 
 @export var player: CharacterBody3D
 @export var gui: CanvasLayer
+@export var password_note: CanvasLayer
 
 @export var time_label: Label
 
@@ -14,12 +15,13 @@ var tutorial: bool = true
 var messaging_password: String
 
 func _ready() -> void:
-	messaging_password = "egg" + str(randi_range(0, 999))
+	messaging_password = "egg" + str(randi_range(0, 999)).replace("5", "6")
+	password_note.get_node("Label").text = "logotmessage password\n\n" + messaging_password
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
-		get_tree().root.get_node("Room").get_node("RealMusic").volume_db = 0
-		get_tree().root.get_node("Room").get_node("DigitalMusic").volume_db = -80
+		get_tree().root.get_node("Room/RealMusic").volume_db = 0
+		get_tree().root.get_node("Room/DigitalMusic").volume_db = -80
 		player.process_mode = Node.PROCESS_MODE_ALWAYS
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		get_parent().get_parent().visible = false

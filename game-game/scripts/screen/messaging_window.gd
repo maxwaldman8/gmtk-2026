@@ -10,8 +10,8 @@ var password: String
 
 var countdown_time_left: float = 5.0
 
-func set_password(new_password: String) -> void:
-	password = new_password
+func _ready() -> void:
+	password = get_parent().get_parent().get_parent().messaging_password
 
 func login() -> void:
 	if password_field.text == password:

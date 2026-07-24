@@ -61,7 +61,7 @@ text = "11:48:00"
 [node name="ApplicationLayer" type="CanvasLayer" parent="." unique_id=868816806]
 layer = 2
 
-[node name="Application" parent="ApplicationLayer" unique_id=473881616 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+[node name="AdVideo" parent="ApplicationLayer" unique_id=473881616 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 119.0
 offset_top = 76.0
 offset_right = 169.0
@@ -72,7 +72,7 @@ window_name = "Castlevania"
 window_scene_name = "ad_video_player_window"
 is_default_opened = false
 
-[node name="Application2" parent="ApplicationLayer" unique_id=775416395 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+[node name="BlueWindow" parent="ApplicationLayer" unique_id=775416395 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 116.0
 offset_top = 172.0
 offset_right = 166.0
@@ -83,7 +83,7 @@ window_name = "Blue Window"
 window_scene_name = "blue_window"
 is_default_opened = false
 
-[node name="Application3" parent="ApplicationLayer" unique_id=920115880 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+[node name="Browser" parent="ApplicationLayer" unique_id=920115880 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 113.0
 offset_top = 273.0
 offset_right = 163.0
@@ -93,12 +93,12 @@ window_layer = NodePath("../../WindowLayer")
 window_name = "HotDog Browser"
 window_scene_name = "browser_window"
 
-[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Application3" unique_id=2038866431]
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Browser" unique_id=2038866431]
 texture_filter = 1
 position = Vector2(25, 25)
 texture = ExtResource("3_ir3ut")
 
-[node name="Application4" parent="ApplicationLayer" unique_id=113608717 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+[node name="TaskManager" parent="ApplicationLayer" unique_id=113608717 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 116.0
 offset_top = 366.0
 offset_right = 166.0
@@ -109,12 +109,12 @@ window_name = "Task Manager"
 window_scene_name = "task_manager_game_window"
 is_default_opened = false
 
-[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Application4" unique_id=1949997502]
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/TaskManager" unique_id=1949997502]
 texture_filter = 1
 position = Vector2(25, 25)
 texture = ExtResource("3_nnrwk")
 
-[node name="Application5" parent="ApplicationLayer" unique_id=3382 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+[node name="HelpfulWebsites" parent="ApplicationLayer" unique_id=3382 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 258.0
 offset_top = 87.0
 offset_right = 308.0
@@ -186,7 +186,7 @@ window_name = "My Drive"
 window_scene_name = "maze_5_window"
 is_default_opened = false
 
-[node name="Application7" parent="ApplicationLayer" unique_id=882876864 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+[node name="QuestionVideo" parent="ApplicationLayer" unique_id=882876864 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 243.0
 offset_top = 404.0
 offset_right = 293.0
@@ -197,7 +197,7 @@ window_name = "Game Design Homework"
 window_scene_name = "question_video_player_window"
 is_default_opened = false
 
-[node name="Application8" parent="ApplicationLayer" unique_id=1465828310 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+[node name="Messaging" parent="ApplicationLayer" unique_id=1465828310 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 463.0
 offset_top = 353.0
 offset_right = 513.0
@@ -208,7 +208,7 @@ window_name = "LogotMessage"
 window_scene_name = "messaging_window"
 is_default_opened = false
 
-[node name="Logo5" type="Sprite2D" parent="ApplicationLayer/Application8" unique_id=2097726394]
+[node name="Logo5" type="Sprite2D" parent="ApplicationLayer/Messaging" unique_id=2097726394]
 position = Vector2(25, 25)
 texture = ExtResource("6_bqj6y")
 
