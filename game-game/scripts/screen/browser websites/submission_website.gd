@@ -15,6 +15,7 @@ const tab_name = "Submit"
 
 
 func _ready() -> void:
+	assignments_to_do.append("pop_up")
 	to_do_list.visible = true
 	assignment_page.visible = false
 	assignment_page.swap.connect(swap_to)

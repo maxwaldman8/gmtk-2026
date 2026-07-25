@@ -43,6 +43,8 @@ func set_up(new_a_name: String = "tutorial"):
 
 func _ready() -> void:
 	loading_bar.reset()
+	delete_file_button.visible = true
+	submit_button.visible = true
 	if data.is_empty():
 		return
 	name_label.text = data[INFO.NAME]
@@ -102,8 +104,27 @@ func _on_delete_file_button_pressed() -> void:
 	loading_bar.reset()
 
 
+const WINDOW_SCENE = preload("res://scenes/screen/window.tscn")
+func open_loading_pop_up_window():
+	var window_layer : WindowLayer = get_tree().get_first_node_in_group("window_layer")
+	var window_instance : GameWindow = WINDOW_SCENE.instantiate()
+	window_instance.set_up("pop_up_request", "File Loading Improvement Services", true)
+	window_layer.add_to_window_list(window_instance)
+	await window_layer.resume_loading_bar
+	loading_bar.stop_at = -1
+
+
 func _on_submit_button_pressed() -> void:
-	loading_bar.start()
+	if submitted_file_name == "":
+		return
+	if a_name == "pop_up":
+		loading_bar.stop_at = 50
+		if not loading_bar.stopped.is_connected(open_loading_pop_up_window):
+			loading_bar.stopped.connect(open_loading_pop_up_window)
+	elif loading_bar.stopped.is_connected(open_loading_pop_up_window):
+		loading_bar.stopped.disconnect(open_loading_pop_up_window)
+	if not loading_bar.started:
+		loading_bar.start()
 
 
 func _on_loading_bar_finished() -> void:

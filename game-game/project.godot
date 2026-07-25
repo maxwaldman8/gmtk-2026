@@ -21,6 +21,10 @@ window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
 
+[global_group]
+
+window_layer=""
+
 [gui]
 
 theme/custom="uid://sx8r7eylidoh"

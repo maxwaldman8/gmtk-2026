@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://cvulumm8omh5m"]
+
+[ext_resource type="Script" uid="uid://ddsvi7bmai0wr" path="res://scripts/screen/pop_up_request.gd" id="1_n4obw"]
+
+[node name="PopUpRequest" type="Control" unique_id=521389708]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 300.0
+offset_bottom = 200.0
+script = ExtResource("1_n4obw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2103473406]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=15202645]
+custom_minimum_size = Vector2(248, 48)
+layout_mode = 0
+offset_left = 25.0
+offset_top = 27.0
+offset_right = 273.0
+offset_bottom = 75.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=53401453]
+custom_minimum_size = Vector2(248, 48)
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 247.0
+offset_bottom = 47.0
+theme_override_constants/line_spacing = -4
+theme_override_font_sizes/font_size = 16
+text = "Improve file uploading
+ speed now?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Yes" type="Button" parent="." unique_id=146469918]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 110.0
+offset_right = 111.0
+offset_bottom = 141.0
+text = "YES"
+
+[node name="No" type="Button" parent="." unique_id=1489738956]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 111.0
+offset_right = 245.0
+offset_bottom = 142.0
+text = "NO"
+
+[connection signal="pressed" from="Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="No" to="." method="_on_no_pressed"]

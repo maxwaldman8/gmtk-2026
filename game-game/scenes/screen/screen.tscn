@@ -295,7 +295,7 @@ window_name = "spanish_essay.docx"
 window_scene_name = "files/spanish"
 is_default_opened = false
 
-[node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
+[node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984 groups=["window_layer"]]
 layer = 3
 script = ExtResource("3_6ukd0")
 
