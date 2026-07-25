@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bnfuu11gc1xo4"]
 
 [node name="Speech" type="Control" unique_id=521389708]
-custom_minimum_size = Vector2(250, 600)
+custom_minimum_size = Vector2(250, 520)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 250.0
@@ -23,9 +23,9 @@ offset_top = 1.0
 offset_right = 251.0
 offset_bottom = 166.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 13
-text = "        .tac ym kcip dluow I ,rebmem ylimaf etirovaf a kcip ot dah I fI .rebmem ylimaf tsetaerg eno eb ylno nac ereht ,sgniknar rebmem ylimaf fo dlrow eht ni tuB .reve sgniht tselooc eht fo eno si ylimaf ,deednI .nwod gnileef er'uoy nehw retteb leef uoy ekam nac yehT .sevil ruo ot tnatropmi yrev era srebmem ylimaF
-        .eno taht od t'ndluohs ehs ebyam lleW .em htiw ados sknird neve ehS .reh esahc I nehw esicrexe teg em sekam ehS .mrala ym erofeb pu em sekaw ehs gninrom eht ni pu ekaw ot deen I nehW .yad yreve yppah em sekam ehs dna lufituaeb os si ehs esuaceb rebmem ylimaf etirovaf ym sa tac ym kcip dluow I
-        .yad yreve klim ymmuy tac ym deef I yhw si sihT .krow ruoy od yeht fi elpoep deef ot doog si ti denrael syawla I .yrdnual ym seod dna krowemoh ym seod dna yad yreve em htiw sevil tac yM .gnorw tsuj era yehT .tcerrocni era yeht tub ,rebmem ylimaf a sa tac a redisnoc dluow elpoep ynam toN
-        D: !yasse ym gnidaer rof uoy knahT"
+theme_override_font_sizes/font_size = 11
+text = "        Los miembros de la familia son muy importantes en nuestras vidas. Pueden hacerte sentir mejor cuando te sientes decaído. Pero en el mundo de las clasificaciones familiares, solo puede haber un miembro favorito. Si tuviera que elegir a un miembro favorito de la familia, elegiría a mi pollo.
+        Elegiría a mi pollo como mi miembro favorito de la familia porque es muy \"chicrook\" y me hace feliz todos los días. Cuando necesito despertarme por la mañana, él me despierta antes de que me caiga al pozo. Me obliga a hacer ejercicio cuando la Roomba me persigue. Incluso bebe refresco conmigo. Bueno, tal vez eso último no debería hacerlo.
+        No mucha gente consideraría a un pollo como un miembro de la familia, pero tienen razón. No es que estén equivocados. Mi pollo vive sin mí todos los días, no hace mis deberes (porque es un pollo) y definitivamente no lava mi ropa. Siempre aprendí que es bueno alimentar a los pollos si cacarean lo suficientemente fuerte. Por eso le doy a mi pollo semillas deliciosas todos los días.
+        ¡Gracias por jugar a mi juego! :D"
 autowrap_mode = 3
