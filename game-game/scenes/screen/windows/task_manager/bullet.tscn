@@ -1,17 +1,8 @@
 [gd_scene format=3 uid="uid://5jfcblwwwa5r"]
 
-[ext_resource type="Texture2D" uid="uid://ctqfrvcyok0dj" path="res://sprites/icon.svg" id="1_nldbr"]
-
 [node name="Bullet" type="Area2D" unique_id=1385499249]
 collision_layer = 2
 collision_mask = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=935505462]
-visible = false
-texture_filter = 1
-position = Vector2(0, 16)
-scale = Vector2(0.065, 0.25)
-texture = ExtResource("1_nldbr")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2136347498]
 position = Vector2(0, 16)

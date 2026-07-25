@@ -5,11 +5,11 @@ extends Control
 # 10 to 140
 var pos: float = 10
 
-@export var player_speed = 0.03
-@export var bullet_speed = 5.0
-@export var enemy_speed = 1.0
-@export var enemy_acceleration = 1.0
-@export var cooldown_time = 0.5
+@export var player_speed = 0.02
+@export var bullet_speed = 15.0
+@export var enemy_speed = 2.0
+@export var enemy_acceleration = 0.5
+@export var cooldown_time = 0.4
 
 @export var bullet: PackedScene
 @export var enemy: PackedScene
@@ -43,13 +43,13 @@ func shoot():
 		add_child(new_bullet)
 		new_bullet.position = Vector2(player.position.x, player.position.y - 20)
 		bullets.append(new_bullet)
-		cooldown_time_left = 0.5
+		cooldown_time_left = 0.4
 
 func _physics_process(delta: float) -> void:
 	if enemies.size() == 0:
 		if wave < 3:
 			spawn_wave()
-			enemy_speed = 1.0 + wave * 2.0
+			enemy_speed = 3.0 + wave * 0.5
 		else:
 			# Game won
 			get_parent().close()
@@ -69,9 +69,7 @@ func _physics_process(delta: float) -> void:
 			enemy_speed += enemy_acceleration
 		if bullets[i].position.y <= 0 and to_delete.find(i) == -1:
 			to_delete.append(i)
-	#@warning_ignore("standalone_expression")
 	to_delete.sort_custom(func(a, b): return a > b)
-	print(to_delete)
 	for i in to_delete:
 		bullets[i].queue_free()
 		bullets.remove_at(i)

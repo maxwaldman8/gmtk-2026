@@ -91,7 +91,7 @@ dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "HotDog Browser"
 window_scene_name = "browser_window"
-is_default_opened = null
+is_default_opened = false
 
 [node name="TaskManager" parent="ApplicationLayer" unique_id=113608717 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 116.0
@@ -115,7 +115,7 @@ dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "helpful_websites.txt"
 window_scene_name = "files/helpful_websites"
-is_default_opened = null
+is_default_opened = false
 
 [node name="Mazes" type="Control" parent="ApplicationLayer" unique_id=848177518]
 layout_mode = 3
