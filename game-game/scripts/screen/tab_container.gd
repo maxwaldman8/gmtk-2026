@@ -2,6 +2,7 @@ extends TabContainer
 
 @onready var tab_bar : TabBar = get_tab_bar()
 @export var tab_add_button : Button
+@export var line_edit : LineEdit
 
 @onready var window : GameWindow = get_parent().get_parent()
 const NEW_TAB_WEB_SCENE = preload("res://scenes/screen/windows/browser websites/new_tab_website.tscn")
@@ -50,3 +51,7 @@ func _on_tab_add_button_pressed() -> void:
 	tab_bar.set_tab_title(get_tab_count() - 1, "New Tab")
 	tab_bar.current_tab = get_tab_count() - 1
 	move_tab_add_button()
+
+
+func _on_tab_changed(tab: int) -> void:
+	line_edit.text = get_child(tab).get_child(0).get_url()

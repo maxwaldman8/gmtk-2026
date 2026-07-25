@@ -20,7 +20,7 @@ offset_right = 482.0
 offset_bottom = 552.0
 color = Color(0.4027634, 0.46064627, 0.67970765, 1)
 
-[node name="TabContainer" type="TabContainer" parent="." unique_id=754288331 node_paths=PackedStringArray("tab_add_button")]
+[node name="TabContainer" type="TabContainer" parent="." unique_id=754288331 node_paths=PackedStringArray("tab_add_button", "line_edit")]
 layout_mode = 0
 offset_right = 482.0
 offset_bottom = 552.0
@@ -28,6 +28,7 @@ current_tab = 0
 drag_to_rearrange_enabled = true
 script = ExtResource("1_ojoi2")
 tab_add_button = NodePath("../TabAddButton")
+line_edit = NodePath("../LineEdit")
 
 [node name="New Tab" type="MarginContainer" parent="TabContainer" unique_id=1549954506]
 layout_mode = 2
@@ -46,7 +47,7 @@ metadata/_tab_index = 1
 [node name="SubmissionWebsite" parent="TabContainer/Submit" unique_id=687981471 instance=ExtResource("4_f5310")]
 layout_mode = 2
 
-[node name="TextEdit" type="LineEdit" parent="." unique_id=696103115]
+[node name="LineEdit" type="LineEdit" parent="." unique_id=696103115]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -67,4 +68,5 @@ offset_bottom = 28.0
 theme_override_font_sizes/font_size = 12
 text = "+"
 
+[connection signal="tab_changed" from="TabContainer" to="TabContainer" method="_on_tab_changed"]
 [connection signal="pressed" from="TabAddButton" to="TabContainer" method="_on_tab_add_button_pressed"]

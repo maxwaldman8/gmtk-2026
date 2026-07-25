@@ -12,13 +12,12 @@ const ASSIGNMENT_TAB_SCENE = preload("res://scenes/screen/windows/browser websit
 
 
 func _ready() -> void:
+	url = "submissionwebsite.com"
 	to_do_list.visible = true
 	assignment_page.visible = false
 	assignment_page.swap.connect(swap_to)
 	if assignments_to_do.is_empty() and finished_assignments.is_empty():
 		assignments_to_do = AssignmentsData.d.keys()
-	# removal is temp to not see tutorial
-	assignments_to_do.remove_at(0)
 	if "tutorial" in assignments_to_do:
 		var tutorial = ASSIGNMENT_TAB_SCENE.instantiate()
 		tutorial.set_up("tutorial")
@@ -43,3 +42,7 @@ func update_a_list():
 	for a_tab:AssignmentTab in assignments_list.get_children():
 		if a_tab.a_name not in assignments_to_do:
 			a_tab.queue_free()
+
+
+func get_url():
+	return super.get_url()

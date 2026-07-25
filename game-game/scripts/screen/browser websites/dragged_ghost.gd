@@ -1,6 +1,7 @@
 class_name DraggedGhost
 extends Control
 
+@warning_ignore("unused_signal")
 signal dropped_ghost
 
 @export var collision : CollisionShape2D
