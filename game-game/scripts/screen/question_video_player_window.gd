@@ -3,7 +3,7 @@ extends Control
 @export var question_percentages: Array[float]
 @export var questions: Array[Control]
 @export var skip_time_s = 3.0
-@export var indicator_width = 27
+@export var indicator_width = 24
 @export var stop_indicator: PackedScene
 
 var stop_indicators: Array[Control]

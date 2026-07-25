@@ -21,6 +21,7 @@ func _ready() -> void:
 	tab_bar.tab_close_pressed.connect(_on_tab_close_pressed)
 	move_tab_add_button()
 	tab_bar.current_tab = 0
+	set_tab_tooltip(0, "Submit")
 
 
 func _on_tab_close_pressed(tab_index: int) -> void:
@@ -57,6 +58,7 @@ func _on_tab_add_button_pressed() -> void:
 	var new_tab_instance = NEW_TAB_WEB_SCENE.instantiate()
 	margin_cont.add_child(new_tab_instance)
 	tab_bar.set_tab_title(get_tab_count() - 1, "New Tab")
+	set_tab_tooltip(get_tab_count() - 1, "New Tab")
 	tab_bar.current_tab = get_tab_count() - 1
 	move_tab_add_button()
 
@@ -76,15 +78,15 @@ func switch_tab(new_text: String) -> void:
 		get_child(current_tab).get_child(0).queue_free()
 		new_tab_instance = WEBSITE_404_SCENE.instantiate()
 		tab_bar.set_tab_title(current_tab, "Error 404")
+		set_tab_tooltip(current_tab, "Error 404")
 		get_child(current_tab).add_child(new_tab_instance)
 		return
 	if new_text == "":
 		return
 	get_child(current_tab).get_child(0).queue_free()
 	new_tab_instance = urls[new_text][0].instantiate()
-	#var full_tab_text = urls[new_text][1]
-	#if len()
 	tab_bar.set_tab_title(current_tab, urls[new_text][1])
+	set_tab_tooltip(current_tab, urls[new_text][1])
 	tab_bar.max_tab_width = 100
 	get_child(current_tab).add_child(new_tab_instance)
 	move_tab_add_button()
