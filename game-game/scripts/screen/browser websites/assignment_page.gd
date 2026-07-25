@@ -6,17 +6,21 @@ signal swap
 @export var name_label : Label
 @export var due_time_label : Label
 @export var desc_label : Label
-@export var button : Button
+@export var back_button : Button
 @export var sub_status_label : Label
 @export var sub_file : Label
+@export var delete_file_button : Button
 
 var submitted_file_name : String:
 	set(new_file):
 		submitted_file_name = new_file
 		if new_file == "":
 			sub_file.text = "drag file here"
+			delete_file_button.visible = false
 			return
 		sub_file.text = submitted_file_name
+		delete_file_button.visible = true
+var hovered_file_name : String = ""
 
 var a_name : String
 
@@ -47,14 +51,23 @@ func _on_button_pressed() -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	var ghost_app = area.get_parent()
-	var app_name_label : Label
-	for node in ghost_app.get_children():
-		if node is Label:
-			app_name_label = node
-			break
-	print(app_name_label.text)
+	var ghost_app : DraggedGhost = area.get_parent()
+	if ghost_app.was_dropped:
+		return
+	hovered_file_name = ghost_app.file_name
+	ghost_app.in_drop_space = true
+	ghost_app.dropped_ghost.connect(func(): 
+		submitted_file_name = hovered_file_name
+	)
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
-	pass # Replace with function body.
+	var ghost_app : DraggedGhost = area.get_parent()
+	if ghost_app.was_dropped:
+		return
+	hovered_file_name = ""
+	ghost_app.in_drop_space = false
+
+
+func _on_delete_file_button_pressed() -> void:
+	submitted_file_name = ""

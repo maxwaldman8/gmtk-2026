@@ -3,14 +3,13 @@ extends Control
 
 # shadow is on if clicked it once or is opened
 @export var selected_shadow : ColorRect
-@export var dragged_ghost : Control
+@export var dragged_ghost : DraggedGhost
 @export var icon : Control
 @export var name_label : Label
 @export var input_taker : ColorRect
 # for drag purposes
 var original_click_pos : Vector2
 var is_hovered : bool = false
-@export var ghost_collision : CollisionShape2D
 
 @export var dragged_application_layer : CanvasLayer
 @export var window_layer : WindowLayer
@@ -34,7 +33,7 @@ func _ready() -> void:
 	if is_default_opened:
 		_open_window()
 	name_label.text = window_name
-	ghost_collision.disabled = true
+	dragged_ghost.file_name = window_name
 
 
 func set_up(w_name: String = "default", w_is_def_open: bool = true):
@@ -85,13 +84,20 @@ func _on_input_taker_gui_input(event: InputEvent) -> void:
 		is_dragged = true
 		original_click_pos = get_global_mouse_position()
 	elif event.is_action_released("left_click"):
+		if not is_dragged:
+			return
 		is_dragged = false
-		var tween = create_tween()
-		tween.tween_property(dragged_ghost, "global_position", global_position, 0.25)
-		await tween.finished
+		if not dragged_ghost.in_drop_space:
+			var tween = create_tween()
+			# hard coded vector offset from ghost becoming a new scene
+			tween.tween_property(dragged_ghost, "global_position", global_position + Vector2(30, 40), 0.25)
+			await tween.finished
+		else:
+			dragged_ghost.was_dropped = true
+			dragged_ghost.dropped_ghost.emit()
 		dragged_application_layer.remove_child(dragged_ghost)
 		add_child(dragged_ghost)
-		ghost_collision.disabled = true
+		dragged_ghost.collision.disabled = true
 		for c in dragged_ghost.get_children():
 			if not c is Area2D:
 				c.queue_free()
@@ -104,6 +110,7 @@ func _process(_delta: float) -> void:
 	var global_mouse_pos = get_global_mouse_position()
 	# child count 1 because collider
 	if global_mouse_pos.distance_to(original_click_pos) > DRAG_DIST_THRESHOLD and dragged_ghost.get_child_count() == 1:
+		dragged_ghost.was_dropped = false
 		offset = get_local_mouse_position()
 		var new_label = name_label.duplicate()
 		new_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -113,8 +120,9 @@ func _process(_delta: float) -> void:
 		dragged_ghost.add_child(new_icon)
 		remove_child(dragged_ghost)
 		dragged_application_layer.add_child(dragged_ghost)
-		ghost_collision.disabled = false
-	var unclamped_pos : Vector2 = global_mouse_pos - offset
+		dragged_ghost.collision.disabled = false
+	# hard coded vector offset since made ghost a new scene
+	var unclamped_pos : Vector2 = global_mouse_pos - offset + Vector2(30, 40)
 	dragged_ghost.global_position = unclamped_pos.clamp(Vector2.ZERO, get_viewport_rect().size - size)
 
 

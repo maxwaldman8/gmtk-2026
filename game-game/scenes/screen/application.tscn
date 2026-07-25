@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://b5yslbaif30nv"]
 
 [ext_resource type="Script" uid="uid://byn3xshur1hia" path="res://scripts/screen/application.gd" id="1_vj7jk"]
+[ext_resource type="PackedScene" uid="uid://6q68tcepoxh5" path="res://scenes/screen/windows/browser websites/dragged_ghost.tscn" id="2_3amd7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpww7"]
-size = Vector2(60, 80)
-
-[node name="Application" type="Control" unique_id=473881616 node_paths=PackedStringArray("selected_shadow", "dragged_ghost", "icon", "name_label", "input_taker", "ghost_collision")]
+[node name="Application" type="Control" unique_id=473881616 node_paths=PackedStringArray("selected_shadow", "dragged_ghost", "icon", "name_label", "input_taker")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -30.0
@@ -14,11 +12,10 @@ offset_right = 30.0
 offset_bottom = 40.0
 script = ExtResource("1_vj7jk")
 selected_shadow = NodePath("SelectedShadow")
-dragged_ghost = NodePath("DraggedGhost")
+dragged_ghost = NodePath("DraggedGhost2")
 icon = NodePath("TestIcon")
 name_label = NodePath("NameLabel")
 input_taker = NodePath("InputTaker")
-ghost_collision = NodePath("DraggedGhost/Area2D/CollisionShape2D")
 
 [node name="SelectedShadow" type="ColorRect" parent="." unique_id=283709724]
 layout_mode = 1
@@ -83,19 +80,12 @@ offset_right = 60.0
 offset_bottom = 80.0
 color = Color(1, 1, 1, 0)
 
-[node name="DraggedGhost" type="Control" parent="." unique_id=333108213]
-modulate = Color(1, 1, 1, 0.47058824)
-anchors_preset = 0
-offset_right = 60.0
-offset_bottom = 80.0
-mouse_filter = 2
-
-[node name="Area2D" type="Area2D" parent="DraggedGhost" unique_id=1102904985]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DraggedGhost/Area2D" unique_id=1687874059]
-position = Vector2(30, 40)
-shape = SubResource("RectangleShape2D_fpww7")
-disabled = true
+[node name="DraggedGhost2" parent="." unique_id=1472613988 instance=ExtResource("2_3amd7")]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 40.0
+offset_right = 30.0
+offset_bottom = 40.0
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="gui_input" from="TestIcon" to="." method="_on_test_icon_gui_input"]
