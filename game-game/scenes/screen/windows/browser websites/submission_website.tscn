@@ -22,8 +22,8 @@ offset_bottom = 40.0
 
 [node name="ColorRect" type="ColorRect" parent="ToDoList" unique_id=2113614690]
 layout_mode = 0
-offset_right = 482.0
-offset_bottom = 481.0
+offset_right = 476.0
+offset_bottom = 472.0
 
 [node name="Line2D" type="Line2D" parent="ToDoList" unique_id=1363779345]
 position = Vector2(7.1955056, 58)

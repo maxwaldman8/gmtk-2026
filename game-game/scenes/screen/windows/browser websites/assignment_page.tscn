@@ -8,8 +8,8 @@ size = Vector2(158, 166)
 [node name="AssignmentPage" type="Control" unique_id=1344016726 node_paths=PackedStringArray("name_label", "due_time_label", "desc_label", "back_button", "sub_status_label", "sub_file", "delete_file_button")]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 482.0
-offset_bottom = 481.0
+offset_right = 476.0
+offset_bottom = 472.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bip1p")
@@ -23,8 +23,8 @@ delete_file_button = NodePath("SubmissionDrop/DeleteFileButton")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2113614690]
 layout_mode = 0
-offset_right = 482.0
-offset_bottom = 481.0
+offset_right = 476.0
+offset_bottom = 472.0
 
 [node name="Back" type="Button" parent="." unique_id=266585658]
 layout_mode = 0
@@ -50,7 +50,7 @@ theme_override_font_sizes/font_size = 32
 text = "Name of assignment"
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1363779345]
-position = Vector2(7.195505, 119)
+position = Vector2(4.1955047, 119)
 scale = Vector2(1.0651685, 1)
 points = PackedVector2Array(5, -1, 434, -1)
 width = 2.0
@@ -66,7 +66,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Due 11:xx (xx:xx left)"
 
 [node name="Line2D2" type="Line2D" parent="." unique_id=1311404317]
-position = Vector2(7.195505, 154)
+position = Vector2(4.1955047, 154)
 scale = Vector2(1.0651685, 1)
 points = PackedVector2Array(5, -1, 434, -1)
 width = 2.0
