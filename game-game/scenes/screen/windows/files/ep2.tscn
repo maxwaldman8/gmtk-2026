@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dcykbdlmfriaa" path="res://scripts/screen/image.gd" id="1_5xh30"]
 [ext_resource type="Texture2D" uid="uid://d3a37o00v6b02" path="res://sprites/screen/english_password2.png" id="2_5xh30"]
 
-[node name="GrassHills" type="Control" unique_id=521389708]
+[node name="EnglishPassword2" type="Control" unique_id=521389708]
 custom_minimum_size = Vector2(324, 324)
 layout_mode = 3
 anchors_preset = 0

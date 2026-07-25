@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bthyxkn5bbi8w"]
 
-[ext_resource type="Script" uid="uid://dcykbdlmfriaa" path="res://scripts/screen/image.gd" id="1_0dbn1"]
+[ext_resource type="Script" uid="uid://dqqkhhbceqjsr" path="res://scripts/screen/english_password.gd" id="1_0dbn1"]
 [ext_resource type="Texture2D" uid="uid://d1v05tmne5eeb" path="res://sprites/screen/english_password1_1.png" id="2_0dbn1"]
 
-[node name="GrassHills" type="Control" unique_id=521389708]
+[node name="EnglishPassword1" type="Control" unique_id=521389708]
 custom_minimum_size = Vector2(320, 180)
 layout_mode = 3
 anchors_preset = 0

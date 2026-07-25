@@ -12,7 +12,7 @@ extends Control
 const cat_names: Array[String] = ["Maxine", "Kaitlyn", "Bobette", "Kikki", "Jiji", "Momo", "Alice", "Ginger"]
 const cat_surnames: Array[String] = ["Catson", "Cattenbourg", "Catte", "Cattalia", "Catalan"]
 @export var spanish_password_textures: Array[Texture2D]
-const spanish_passwords: Array[String] = ["hola1234", "hola1234", "hola1234", "hola1234", "hola1234"]
+const spanish_passwords: Array[String] = ["hola1234", "hola5432", "hola6543", "hola4567", "hola5678", "hola9876"]
 @export var english_password_1s: Array[Texture2D]
 const english_password_endings: Array[String] = ["654321", "765432", "876543", "987654"]
 
