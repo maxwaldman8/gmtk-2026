@@ -53,7 +53,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			# Game won
 			get_parent().close()
-	$TasksRunning.text = "TASKS RUNNING\n" + str(enemies.size() + 8 * (3 - wave))
+	$TasksRunning.text = str(enemies.size() + 8 * (3 - wave))
 	cooldown_time_left = clamp(cooldown_time_left - delta, 0, cooldown_time)
 	pos = pos + (clamp(get_local_mouse_position().x, 60, 350) - pos) * player_speed
 	pos = clamp(pos, 60, 350)

@@ -1,0 +1,29 @@
+[gd_resource type="AnimatedTexture" format=3 uid="uid://do66q06xtj5r0"]
+
+[ext_resource type="Texture2D" uid="uid://be1bkxunynw71" path="res://sprites/screen/TaskManager/tm_0.png" id="1_gk7f0"]
+[ext_resource type="Texture2D" uid="uid://eqlxaovdjmu4" path="res://sprites/screen/TaskManager/tm_1.png" id="2_5lpek"]
+[ext_resource type="Texture2D" uid="uid://bme1ccw3t0lh2" path="res://sprites/screen/TaskManager/tm_2.png" id="3_bhbtk"]
+[ext_resource type="Texture2D" uid="uid://dasrxsrqo4k7w" path="res://sprites/screen/TaskManager/tm_3.png" id="4_ewfta"]
+[ext_resource type="Texture2D" uid="uid://bxgjg7kolyorm" path="res://sprites/screen/TaskManager/tm_4.png" id="5_2ppcv"]
+[ext_resource type="Texture2D" uid="uid://c143wrcpsamcs" path="res://sprites/screen/TaskManager/tm_5.png" id="6_grl0g"]
+[ext_resource type="Texture2D" uid="uid://3tieklbqdown" path="res://sprites/screen/TaskManager/tm_6.png" id="7_xtd50"]
+[ext_resource type="Texture2D" uid="uid://d3actvgx0fk45" path="res://sprites/screen/TaskManager/tm_7.png" id="8_ehvtl"]
+
+[resource]
+frames = 8
+frame_0/texture = ExtResource("1_gk7f0")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("2_5lpek")
+frame_1/duration = 0.25
+frame_2/texture = ExtResource("3_bhbtk")
+frame_2/duration = 0.25
+frame_3/texture = ExtResource("4_ewfta")
+frame_3/duration = 0.25
+frame_4/texture = ExtResource("5_2ppcv")
+frame_4/duration = 0.25
+frame_5/texture = ExtResource("6_grl0g")
+frame_5/duration = 0.25
+frame_6/texture = ExtResource("7_xtd50")
+frame_6/duration = 0.25
+frame_7/texture = ExtResource("8_ehvtl")
+frame_7/duration = 0.25
