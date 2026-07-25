@@ -22,6 +22,7 @@ mouse_filter = 2
 color = Color(0.646029, 0.646029, 0.646029, 1)
 
 [node name="MessagingPage" type="HBoxContainer" parent="." unique_id=1239428374]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,7 +77,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="LoginPage" type="CenterContainer" parent="." unique_id=1064760649]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

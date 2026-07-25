@@ -317,6 +317,21 @@ text = "logotmessage password
 egg"
 horizontal_alignment = 1
 
+[node name="Label2" type="Label" parent="PasswordNote" unique_id=999901551]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Tab to Leave"
+
 [node name="TVNote" type="CanvasLayer" parent="." unique_id=1094000394]
 visible = false
 
@@ -342,6 +357,21 @@ theme_override_font_sizes/font_size = 56
 text = "saving up to buy a tv!"
 horizontal_alignment = 1
 
+[node name="Label2" type="Label" parent="TVNote" unique_id=1854463560]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Tab to Leave"
+
 [node name="CatBowl" type="CanvasLayer" parent="." unique_id=533767121]
 visible = false
 
@@ -366,6 +396,21 @@ theme_override_fonts/font = ExtResource("14_vfrn5")
 theme_override_font_sizes/font_size = 81
 text = "Boyander"
 horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CatBowl" unique_id=764000487]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Tab to Leave"
 
 [node name="RealMusic" type="AudioStreamPlayer3D" parent="." unique_id=1004856047]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6641552, -1.3832506)
