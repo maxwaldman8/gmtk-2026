@@ -51,6 +51,8 @@ func _on_button_pressed() -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	if not area.get_parent() is DraggedGhost:
+		return
 	var ghost_app : DraggedGhost = area.get_parent()
 	if ghost_app.was_dropped:
 		return
@@ -62,6 +64,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
+	if not area.get_parent() is DraggedGhost:
+		return
 	var ghost_app : DraggedGhost = area.get_parent()
 	if ghost_app.was_dropped:
 		return

@@ -7,6 +7,11 @@ extends TabContainer
 @onready var window : GameWindow = get_parent().get_parent()
 const NEW_TAB_WEB_SCENE = preload("res://scenes/screen/windows/browser websites/new_tab_website.tscn")
 
+var urls : Dictionary = {
+	NewTabWebsite.url: preload("res://scenes/screen/windows/browser websites/new_tab_website.tscn"),
+	SubmissionWebsite.url: preload("res://scenes/screen/windows/browser websites/submission_website.tscn")
+}
+
 
 func _ready() -> void:
 	tab_bar.tab_close_display_policy = TabBar.CLOSE_BUTTON_SHOW_ALWAYS
@@ -58,4 +63,12 @@ func _on_tab_changed(tab: int) -> void:
 
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
-	pass # Replace with function body.
+	if new_text not in urls.keys():
+		print("Invalid url")
+		return
+	if new_text == "":
+		return
+	get_child(current_tab).get_child(0).queue_free()
+	var new_tab_instance = urls[new_text].instantiate()
+	tab_bar.set_tab_title(current_tab, "searched")
+	get_child(current_tab).add_child(new_tab_instance)
