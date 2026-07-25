@@ -16,7 +16,7 @@ func _ready() -> void:
 	stepMesh = get_node("Cat1")
 	tween = create_tween()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if !tween.is_running():
 		moving = false
 	stillMesh.visible = !moving

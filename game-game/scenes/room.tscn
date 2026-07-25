@@ -239,13 +239,24 @@ material_override = SubResource("StandardMaterial3D_3j2fx")
 mesh = ExtResource("6_3j2fx")
 
 [node name="PasswordNote" type="Sprite3D" parent="Room" unique_id=559663739]
-transform = Transform3D(8, 0, 0, 0, 7.969558, -0.6972459, 0, 0.6972459, 7.969558, 0, 1.6, -2.65)
+transform = Transform3D(7.961276, -0.7831893, 0.06852017, 0.7861809, 7.930981, -0.6938709, 0, 0.6972459, 7.969558, 0.5319749, 1.6, -2.65)
 texture_filter = 0
 texture = ExtResource("9_3j2fx")
 
 [node name="PasswordNoteArea" type="Area3D" parent="Room/PasswordNote" unique_id=1542668532]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/PasswordNote/PasswordNoteArea" unique_id=277511039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00091552734, 0.00091578066, -0.0004995465)
+shape = SubResource("BoxShape3D_mekka")
+
+[node name="AlarmNote" type="Sprite3D" parent="Room" unique_id=181899248]
+transform = Transform3D(7.6968718, 2.1730218, -0.19011475, -2.1813223, 7.667583, -0.67082655, 0, 0.6972459, 7.969558, -0.1275576, 1.8183461, -2.65)
+texture_filter = 0
+texture = ExtResource("9_3j2fx")
+
+[node name="AlarmNoteArea" type="Area3D" parent="Room/AlarmNote" unique_id=2055695061]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/AlarmNote/AlarmNoteArea" unique_id=1504943590]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00091552734, 0.00091578066, -0.0004995465)
 shape = SubResource("BoxShape3D_mekka")
 
@@ -287,10 +298,11 @@ size = Vector2i(1152, 648)
 render_target_update_mode = 0
 script = ExtResource("3_jxe34")
 
-[node name="Screen" parent="SubViewportContainer/SubViewport" unique_id=2111894068 node_paths=PackedStringArray("player", "gui", "password_note", "tv_note", "cat_bowl", "cat1", "cat2") instance=ExtResource("3_14vil")]
+[node name="Screen" parent="SubViewportContainer/SubViewport" unique_id=2111894068 node_paths=PackedStringArray("player", "gui", "password_note", "alarm_note", "tv_note", "cat_bowl", "cat1", "cat2") instance=ExtResource("3_14vil")]
 player = NodePath("../../../Player")
 gui = NodePath("../../../GUI")
 password_note = NodePath("../../../PasswordNote")
+alarm_note = NodePath("../../../AlarmNote")
 tv_note = NodePath("../../../TVNote")
 cat_bowl = NodePath("../../../CatBowl")
 cat1 = NodePath("../../../Cat1")
@@ -349,6 +361,47 @@ egg"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="PasswordNote" unique_id=999901551]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Tab to Leave"
+
+[node name="AlarmNote" type="CanvasLayer" parent="." unique_id=1318601537]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="AlarmNote" unique_id=421904882]
+position = Vector2(576, 324)
+texture = ExtResource("13_dynfe")
+
+[node name="Label" type="Label" parent="AlarmNote" unique_id=354586716]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -234.0
+offset_top = -56.5
+offset_right = 220.0
+offset_bottom = 56.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_vfrn5")
+theme_override_font_sizes/font_size = 56
+text = "reminder: flash drive under alarm"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="AlarmNote" unique_id=226359269]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0

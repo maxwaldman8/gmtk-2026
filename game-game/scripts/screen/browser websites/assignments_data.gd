@@ -31,15 +31,15 @@ const d : Dictionary = {
 	],
 	"image_puzzle_and_cat": [
 		"Family Member Essay", "English", Color(0.284, 0.695, 0.519, 1.0), "11:55", 
-		"Please ensure that you write the document on the proper website."
+		"Please ensure that you download the document from the proper website."
 	],
 	"task_invaders": [
 		"Final Capstone", "History", Color(0.913, 0.456, 0.29, 1.0), "11:59", 
-		"Please ensure that you write the document on the proper website."
+		"Please submit your project report here."
 	],
 	"wallpaper": [
 		"Ensayo de Miembros de Familia", "Spanish", Color(0.91, 0.247, 0.24, 1.0), "11:59", 
-		"Please ensure that you write the document on the proper website."
+		"Please ensure that you download the document from the proper website."
 	],
 	"alarm_clock": [
 		"Depth First Search Program", "Programming", Color(0.172, 0.578, 0.695, 1.0), "11:59", 

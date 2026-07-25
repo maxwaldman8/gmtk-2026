@@ -74,6 +74,11 @@ func handle_raycast():
 				active_layer = screen.password_note
 				active_layer.visible = true
 				gui.visible = false
+			"AlarmNoteArea":
+				viewing_vector = true
+				active_layer = screen.alarm_note
+				active_layer.visible = true
+				gui.visible = false
 			"TVNoteArea":
 				viewing_vector = true
 				active_layer = screen.tv_note

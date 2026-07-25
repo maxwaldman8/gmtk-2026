@@ -4,6 +4,7 @@ extends Control
 @export var player: CharacterBody3D
 @export var gui: CanvasLayer
 @export var password_note: CanvasLayer
+@export var alarm_note: CanvasLayer
 @export var tv_note: CanvasLayer
 @export var cat_bowl: CanvasLayer
 @export var cat1: CanvasLayer
