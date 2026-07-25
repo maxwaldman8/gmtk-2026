@@ -34,7 +34,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func handle_raycast():
 	if raycast.is_colliding():
 		var area: Node3D = raycast.get_collider()
-		if area == null: pass
+		if area == null: return
 		match area.name:
 			"ScreenArea":
 				switch_to_screen()
