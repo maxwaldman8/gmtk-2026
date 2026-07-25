@@ -8,7 +8,8 @@ extends Control
 @export var cat_bowl: CanvasLayer
 
 const cat_names: Array[String] = ["Maxine", "Kaitlyn", "Bobette", "Kikki", "Jiji", "Momo", "Alice", "Ginger"]
-var cat_name
+
+@export var spanish_passwords: Array[Texture2D]
 
 @export var time_label: Label
 
@@ -20,7 +21,9 @@ var tutorial: bool = false
 
 # Randomly generated stuff
 var messaging_password: String
+var cat_name
 var maze_num: int
+var spanish_password_texture: Texture2D
 
 func _enter_tree() -> void:
 	if !tutorial:
@@ -37,6 +40,7 @@ func _ready() -> void:
 	maze_num = randi_range(1, 5)
 	cat_name = cat_names[randi_range(0, cat_names.size() - 1)]
 	cat_bowl.get_node("Label").text = cat_name
+	spanish_password_texture = spanish_passwords[randi_range(0, 4)]
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):

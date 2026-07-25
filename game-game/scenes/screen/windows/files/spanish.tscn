@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bnfuu11gc1xo4"]
 
 [node name="Speech" type="Control" unique_id=521389708]
-custom_minimum_size = Vector2(250, 300)
+custom_minimum_size = Vector2(250, 600)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 250.0
@@ -12,7 +12,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 316.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
