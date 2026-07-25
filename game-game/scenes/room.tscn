@@ -94,6 +94,11 @@ JUMP_VELOCITY = 4.0
 screen = NodePath("../SubViewportContainer/SubViewport/Screen")
 gui = NodePath("../GUI")
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1942975526]
+transform = Transform3D(1, 0, 0, 0, -0.96898234, 0.24713022, 0, -0.24713022, -0.96898234, 0, 2.9246159, 6.8063064)
+light_energy = 0.25
+shadow_enabled = true
+sky_mode = 1
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=942846619]
 environment = SubResource("Environment_nrlmu")
 
