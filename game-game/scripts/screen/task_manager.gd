@@ -68,6 +68,7 @@ func _physics_process(delta: float) -> void:
 			enemy_speed += enemy_acceleration
 		if bullets[i].position.y <= 0:
 			to_delete.append(i)
+	to_delete.sort_custom(func(a, b): a > b)
 	for i in to_delete:
 		bullets[i].queue_free()
 		bullets.remove_at(i)

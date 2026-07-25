@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bl8po0gisrygb"]
+
+[ext_resource type="Script" uid="uid://dcykbdlmfriaa" path="res://scripts/screen/image.gd" id="1_8wfgt"]
+[ext_resource type="Texture2D" uid="uid://cekq2p7fg2kss" path="res://sprites/screen/grasshills.png" id="1_apthm"]
+
+[node name="GrassHills" type="Control" unique_id=521389708]
+custom_minimum_size = Vector2(320, 180)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_right = 319.0
+offset_bottom = 180.0
+script = ExtResource("1_8wfgt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2140042339]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_apthm")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="MakeWallpaperButton" type="Button" parent="." unique_id=863567571]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -134.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Make Wallpaper"
+
+[connection signal="pressed" from="MakeWallpaperButton" to="." method="_on_make_wallpaper_button_pressed"]

@@ -8,10 +8,12 @@ collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=935505462]
 texture_filter = 1
+position = Vector2(0, 16)
 scale = Vector2(0.065, 0.25)
 texture = ExtResource("1_nldbr")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2136347498]
+position = Vector2(0, 16)
 scale = Vector2(0.065, 0.25)
 polygon = PackedVector2Array(59.1, -64, -59, -64, -63.8, -59, -64, 61, -60.3, 64, 59.6, 64, 63.9, 59, 64, -61.1)
 

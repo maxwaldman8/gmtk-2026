@@ -5,6 +5,7 @@ extends Control
 
 func _physics_process(_delta: float) -> void:
 	if end_tile.get_overlapping_bodies().find(player) != -1:
+		get_parent().get_parent().get_parent().finish_maze()
 		get_parent().close()
 	var vector_to_mouse: Vector2 = get_local_mouse_position() - player.position
 	var dir: Vector2 = vector_to_mouse.normalized()

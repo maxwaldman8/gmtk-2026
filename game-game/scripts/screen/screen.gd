@@ -4,8 +4,11 @@ extends Control
 @export var player: CharacterBody3D
 @export var gui: CanvasLayer
 @export var password_note: CanvasLayer
+@export var tv_note: CanvasLayer
 
 @export var time_label: Label
+
+@export var custom_mouse: Resource
 
 var time: float = 49 * 60
 
@@ -13,10 +16,13 @@ var tutorial: bool = true
 
 # Randomly generated stuff
 var messaging_password: String
+var maze_num: int
 
 func _ready() -> void:
-	messaging_password = "egg" + str(randi_range(0, 999)).replace("5", "6")
+	Input.set_custom_mouse_cursor(custom_mouse, Input.CURSOR_ARROW)
+	messaging_password = "egg" + str(randi_range(100, 999)).replace("5", "6")
 	password_note.get_node("Label").text = "logotmessage password\n\n" + messaging_password
+	maze_num = randi_range(1, 5)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
@@ -37,10 +43,15 @@ func _process(delta: float) -> void:
 	else:
 		time_label.text = "11:48 PM"
 
+func set_wallpaper(texture: Texture2D):
+	$WallpaperLayer/Wallpaper.texture = texture
+
 # Finishing tasks functions
 func insert_drive():
-	var maze_num = randi_range(1, 5)
 	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = true
+
+func finish_maze():
+	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = false
 
 func finish_question_video():
 	pass

@@ -9,7 +9,7 @@
 size = Vector2(128, 128)
 
 [node name="TaskManager" type="Control" unique_id=521389708]
-custom_minimum_size = Vector2(400, 648)
+custom_minimum_size = Vector2(400, 600)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 150.0

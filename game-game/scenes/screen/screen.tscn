@@ -2,11 +2,15 @@
 
 [ext_resource type="Script" uid="uid://ccymnofn6ccr6" path="res://scripts/screen/screen.gd" id="1_6ukd0"]
 [ext_resource type="PackedScene" uid="uid://b5yslbaif30nv" path="res://scenes/screen/application.tscn" id="2_2d861"]
-[ext_resource type="Texture2D" uid="uid://msxjnxygjblq" path="res://sprites/screen/wallpaper.png" id="2_pwv6y"]
+[ext_resource type="Texture2D" uid="uid://cekq2p7fg2kss" path="res://sprites/screen/grasshills.png" id="2_gk43s"]
 [ext_resource type="Script" uid="uid://dommextr4ctrb" path="res://scripts/screen/window_layer.gd" id="3_6ukd0"]
 [ext_resource type="Texture2D" uid="uid://bk47fr3syf046" path="res://sprites/screen/logo_4.png" id="3_ir3ut"]
 [ext_resource type="Texture2D" uid="uid://dbt6uewfy4mcc" path="res://sprites/screen/logo_0.png" id="3_nnrwk"]
+[ext_resource type="Texture2D" uid="uid://cfa1cv3rhsk8w" path="res://sprites/screen/logo_10.png" id="4_jtcyu"]
 [ext_resource type="Texture2D" uid="uid://c7a8kf1ujn6if" path="res://sprites/screen/logo_5.png" id="6_bqj6y"]
+[ext_resource type="Texture2D" uid="uid://07oscu8p7i5u" path="res://sprites/screen/logo_08.png" id="7_wrpmo"]
+[ext_resource type="Texture2D" uid="uid://7mpyg7x3c5mx" path="res://sprites/screen/logo_11.png" id="8_gk43s"]
+[ext_resource type="Texture2D" uid="uid://bwo6i7rsiyaw7" path="res://sprites/screen/logo_09.png" id="9_62j8j"]
 
 [node name="Screen" type="Control" unique_id=2111894068 node_paths=PackedStringArray("time_label")]
 layout_mode = 3
@@ -28,7 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("2_pwv6y")
+texture = ExtResource("2_gk43s")
 metadata/_edit_use_anchors_ = true
 
 [node name="BottomBar" type="ColorRect" parent="WallpaperLayer" unique_id=1223447574]
@@ -68,20 +72,14 @@ offset_right = 169.0
 offset_bottom = 146.0
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
-window_name = "Castlevania"
-window_scene_name = "ad_video_player_window"
+window_name = "castlevania.mp4"
+window_scene_name = "files/ad_video_player_window"
 is_default_opened = false
 
-[node name="BlueWindow" parent="ApplicationLayer" unique_id=775416395 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
-offset_left = 116.0
-offset_top = 172.0
-offset_right = 166.0
-offset_bottom = 242.0
-dragged_application_layer = NodePath("../../MovedAppLayer")
-window_layer = NodePath("../../WindowLayer")
-window_name = "Blue Window"
-window_scene_name = "blue_window"
-is_default_opened = false
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/AdVideo" unique_id=196426307]
+texture_filter = 1
+position = Vector2(25, 25)
+texture = ExtResource("4_jtcyu")
 
 [node name="Browser" parent="ApplicationLayer" unique_id=920115880 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 113.0
@@ -122,12 +120,24 @@ offset_bottom = 157.0
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "helpful_websites.txt"
-window_scene_name = "helpful_websites"
+window_scene_name = "files/helpful_websites"
 
-[node name="Mazes" type="Node" parent="ApplicationLayer" unique_id=46323297]
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/HelpfulWebsites" unique_id=591116046]
+texture_filter = 1
+position = Vector2(25, 25)
+texture = ExtResource("7_wrpmo")
+
+[node name="Mazes" type="Control" parent="ApplicationLayer" unique_id=848177518]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -32.0
+offset_top = -40.0
+offset_right = -32.0
+offset_bottom = -40.0
 
 [node name="Maze1" parent="ApplicationLayer/Mazes" unique_id=1622758456 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 visible = false
+layout_mode = 0
 offset_left = 284.0
 offset_top = 254.0
 offset_right = 334.0
@@ -138,8 +148,14 @@ window_name = "My Drive"
 window_scene_name = "maze_1_window"
 is_default_opened = false
 
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Mazes/Maze1" unique_id=1413219210]
+texture_filter = 1
+position = Vector2(25, 25)
+texture = ExtResource("8_gk43s")
+
 [node name="Maze2" parent="ApplicationLayer/Mazes" unique_id=878895024 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 visible = false
+layout_mode = 0
 offset_left = 284.0
 offset_top = 254.0
 offset_right = 334.0
@@ -150,8 +166,14 @@ window_name = "My Drive"
 window_scene_name = "maze_2_window"
 is_default_opened = false
 
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Mazes/Maze2" unique_id=246712376]
+texture_filter = 1
+position = Vector2(25, 25)
+texture = ExtResource("8_gk43s")
+
 [node name="Maze3" parent="ApplicationLayer/Mazes" unique_id=206566243 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 visible = false
+layout_mode = 0
 offset_left = 284.0
 offset_top = 254.0
 offset_right = 334.0
@@ -162,8 +184,14 @@ window_name = "My Drive"
 window_scene_name = "maze_3_window"
 is_default_opened = false
 
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Mazes/Maze3" unique_id=125549332]
+texture_filter = 1
+position = Vector2(25, 25)
+texture = ExtResource("8_gk43s")
+
 [node name="Maze4" parent="ApplicationLayer/Mazes" unique_id=1592390834 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 visible = false
+layout_mode = 0
 offset_left = 284.0
 offset_top = 254.0
 offset_right = 334.0
@@ -174,8 +202,14 @@ window_name = "My Drive"
 window_scene_name = "maze_4_window"
 is_default_opened = false
 
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Mazes/Maze4" unique_id=659359888]
+texture_filter = 1
+position = Vector2(25, 25)
+texture = ExtResource("8_gk43s")
+
 [node name="Maze5" parent="ApplicationLayer/Mazes" unique_id=523909177 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 visible = false
+layout_mode = 0
 offset_left = 284.0
 offset_top = 254.0
 offset_right = 334.0
@@ -186,6 +220,11 @@ window_name = "My Drive"
 window_scene_name = "maze_5_window"
 is_default_opened = false
 
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Mazes/Maze5" unique_id=1554689554]
+texture_filter = 1
+position = Vector2(25, 25)
+texture = ExtResource("8_gk43s")
+
 [node name="QuestionVideo" parent="ApplicationLayer" unique_id=882876864 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 243.0
 offset_top = 404.0
@@ -193,9 +232,14 @@ offset_right = 293.0
 offset_bottom = 474.0
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
-window_name = "Game Design Homework"
-window_scene_name = "question_video_player_window"
+window_name = "game_design_homework.mp4"
+window_scene_name = "files/question_video_player_window"
 is_default_opened = false
+
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/QuestionVideo" unique_id=1236541197]
+texture_filter = 1
+position = Vector2(25, 25)
+texture = ExtResource("4_jtcyu")
 
 [node name="Messaging" parent="ApplicationLayer" unique_id=1465828310 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 463.0
@@ -211,6 +255,38 @@ is_default_opened = false
 [node name="Logo5" type="Sprite2D" parent="ApplicationLayer/Messaging" unique_id=2097726394]
 position = Vector2(25, 25)
 texture = ExtResource("6_bqj6y")
+
+[node name="PosterAd" parent="ApplicationLayer" unique_id=2090213573 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+offset_left = 324.0
+offset_top = 327.0
+offset_right = 374.0
+offset_bottom = 397.0
+dragged_application_layer = NodePath("../../MovedAppLayer")
+window_layer = NodePath("../../WindowLayer")
+window_name = "POSTER_AD.pdf"
+window_scene_name = "files/poster_ad"
+is_default_opened = false
+
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/PosterAd" unique_id=2098291044]
+texture_filter = 1
+position = Vector2(25, 24)
+texture = ExtResource("9_62j8j")
+
+[node name="WallpaperFolder" parent="ApplicationLayer" unique_id=947716325 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+offset_left = 1075.0
+offset_top = 528.0
+offset_right = 1125.0
+offset_bottom = 598.0
+dragged_application_layer = NodePath("../../MovedAppLayer")
+window_layer = NodePath("../../WindowLayer")
+window_name = "Wallpapers"
+window_scene_name = "files/wallpaper_folder"
+is_default_opened = false
+
+[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/WallpaperFolder" unique_id=315935582]
+texture_filter = 1
+position = Vector2(25, 24)
+texture = ExtResource("9_62j8j")
 
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]
 layer = 3

@@ -35,7 +35,6 @@ func _ready() -> void:
 	name_label.text = window_name
 	dragged_ghost.file_name = window_name
 
-
 func set_up(w_name: String = "default", w_is_def_open: bool = true):
 	window_name = w_name
 	is_default_opened = w_is_def_open
