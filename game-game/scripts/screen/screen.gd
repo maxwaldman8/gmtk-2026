@@ -10,9 +10,9 @@ extends Control
 @export var cat2: CanvasLayer
 
 const cat_names: Array[String] = ["Maxine", "Kaitlyn", "Bobette", "Kikki", "Jiji", "Momo", "Alice", "Ginger"]
-const cat_surnames: Array[String] = ["Catson", "Cattenbourough", "Catte", "Cattalia", "Catalan"]
+const cat_surnames: Array[String] = ["Catson", "Cattenbourg", "Catte", "Cattalia", "Catalan"]
 @export var spanish_password_textures: Array[Texture2D]
-const spanish_passwords: Array[String] = ["QUERTYasdfgh654321", "QUERTYasdfgh654321", "QUERTYasdfgh654321", "QUERTYasdfgh654321", "QUERTYasdfgh654321"]
+const spanish_passwords: Array[String] = ["hola1234", "hola1234", "hola1234", "hola1234", "hola1234"]
 @export var english_password_1s: Array[Texture2D]
 const english_password_endings: Array[String] = ["654321", "765432", "876543", "987654"]
 
@@ -55,8 +55,11 @@ func _ready() -> void:
 	password_note.get_node("Label").text = "logotmessage password\n\n" + messaging_password
 	maze_num = randi_range(1, 5)
 	cat_name = cat_names[randi_range(0, cat_names.size() - 1)]
-	cat_bowl.get_node("Label").text = cat_name
 	cat_surname = cat_surnames[randi_range(0, cat_surnames.size() - 1)]
+	cat_bowl.get_node("Label").text = cat_name
+	cat1.get_node("Label").text = cat_name
+	cat2.get_node("Label").text = cat_name
+	cat2.get_node("Label2").text = cat_surname
 	var spanish_password_num = randi_range(0, spanish_password_textures.size() - 1)
 	spanish_password_texture = spanish_password_textures[spanish_password_num]
 	spanish_password = spanish_passwords[spanish_password_num]
@@ -113,7 +116,7 @@ func submit_ad_video():
 
 func submit_english_essay():
 	SubmissionWebsite.assignments_to_do = ["task_invaders", "wallpaper", "alarm_clock"]
-
+	Cat.flying = true
 
 
 func insert_drive():

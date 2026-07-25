@@ -1,3 +1,4 @@
+class_name Cat
 extends Node3D
 
 @export var locations : Array[Vector3]
@@ -20,7 +21,7 @@ func _process(delta: float) -> void:
 		moving = false
 	stillMesh.visible = !moving
 	stepMesh.visible = moving
-	if locations[index].distance_to(player.position) < 6.4 and !moving and player.position.y < 2.4:
+	if locations[index].distance_to(player.position) < 10.0 and !moving and player.position.y < 2.4:
 		if !flying:
 			moving = true
 		var prevPos = fposmod(index - 1, locations.size())
