@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfp7ji65ap2n6"]
 
-[ext_resource type="Texture2D" uid="uid://dgdy5tl7i2656" path="res://sprites/screen/logo_1.png" id="1_bhwn5"]
+[ext_resource type="Texture2D" uid="uid://bux40yeuffr0a" path="res://sprites/screen/logo_07.png" id="1_h4177"]
 [ext_resource type="Texture2D" uid="uid://bv0jigfcy47in" path="res://sprites/screen/pointlight.webp" id="2_h4177"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nrlmu"]
@@ -13,7 +13,7 @@ shape = SubResource("CircleShape2D_nrlmu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1909340175]
 texture_filter = 1
-texture = ExtResource("1_bhwn5")
+texture = ExtResource("1_h4177")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=729092091]
 energy = 15.0
