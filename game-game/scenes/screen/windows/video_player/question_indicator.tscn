@@ -10,6 +10,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=537244667]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -2.0
+offset_right = 16.0
+offset_bottom = 24.0
+color = Color(0.30980393, 0.56078434, 1, 0.5019608)
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1523800077]
 texture_filter = 1
 layout_mode = 0
