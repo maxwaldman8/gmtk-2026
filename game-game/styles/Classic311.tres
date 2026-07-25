@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://i1dmp18q0afm" path="res://Themes/Classic311/Styles/Window/close_highlight.png" id="16"]
 [ext_resource type="Texture2D" uid="uid://0q5j8k7kw7q7" path="res://Themes/Classic311/Styles/Window/close.png" id="17"]
 [ext_resource type="StyleBox" uid="uid://c7176ciomvhd3" path="res://Themes/Classic311/Styles/ProgressBar/Foreground.tres" id="18"]
-[ext_resource type="StyleBox" path="res://Themes/Classic311/Styles/General/DisableMask.tres" id="19"]
+[ext_resource type="StyleBox" uid="uid://y64p7lc0iuie" path="res://Themes/Classic311/Styles/General/DisableMask.tres" id="19"]
 [ext_resource type="StyleBox" uid="uid://dl0myxwxkably" path="res://Themes/Classic311/Styles/Panel/Panel.tres" id="20"]
 [ext_resource type="StyleBox" uid="uid://dlg1ufs1ksikh" path="res://Themes/Classic311/Styles/Panel/TabForeground.tres" id="21"]
 [ext_resource type="StyleBox" uid="uid://b18yybjdaixt5" path="res://Themes/Classic311/Styles/Panel/TabBackground.tres" id="22"]
