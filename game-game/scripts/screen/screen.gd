@@ -7,7 +7,7 @@ extends Control
 @export var tv_note: CanvasLayer
 @export var cat_bowl: CanvasLayer
 
-const cat_names: Array[String] = ["Maxine", "Kaitlyn", "Bobette", "Fluffy", "Lucky", "Momo", "Alice", "Ginger"]
+const cat_names: Array[String] = ["Maxine", "Kaitlyn", "Bobette", "Kikki", "Jiji", "Momo", "Alice", "Ginger"]
 var cat_name
 
 @export var time_label: Label
@@ -62,10 +62,11 @@ func set_wallpaper(texture: Texture2D):
 
 # Finishing tasks functions
 func download_pdf():
-	pass
+	$ApplicationLayer/SpeechPDF.visible = true
 
 func finish_public_speaking():
-	pass
+	SubmissionWebsite.assignments_to_do = ["message_3d"]
+	
 
 func insert_drive():
 	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = true

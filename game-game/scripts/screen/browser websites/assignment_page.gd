@@ -109,3 +109,4 @@ func _on_submit_button_pressed() -> void:
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
 				get_parent().update_a_list()
 				get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().finish_public_speaking()
+				get_parent().update_a_list()

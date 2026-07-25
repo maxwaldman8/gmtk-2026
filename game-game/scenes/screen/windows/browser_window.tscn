@@ -18,7 +18,7 @@ propagate_maximum_size = true
 layout_mode = 1
 offset_right = 482.0
 offset_bottom = 552.0
-color = Color(0.4027634, 0.46064627, 0.67970765, 1)
+color = Color(0.46229059, 0.46229059, 0.46229059, 1)
 
 [node name="TabContainer" type="TabContainer" parent="." unique_id=754288331 node_paths=PackedStringArray("tab_add_button", "line_edit")]
 layout_mode = 0

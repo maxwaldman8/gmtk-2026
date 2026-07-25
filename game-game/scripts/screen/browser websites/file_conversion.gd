@@ -2,6 +2,7 @@ class_name FileConversionWebsite
 extends BrowserWebsite
 
 const url = "fileconversiondocx2pdfnotpdf2txt.org"
+const tab_name = "File Converter"
 
 var download_time_left: float = 5.0
 var countdown_started = false

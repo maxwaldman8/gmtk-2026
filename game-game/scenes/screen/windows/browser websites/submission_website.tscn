@@ -59,5 +59,7 @@ theme_override_constants/separation = 8
 
 [node name="AssignmentPage" parent="." unique_id=1434096699 instance=ExtResource("2_h40al")]
 layout_mode = 0
+offset_right = 482.0
+offset_bottom = 481.0
 grow_horizontal = 1
 grow_vertical = 1

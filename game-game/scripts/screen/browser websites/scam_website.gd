@@ -2,6 +2,7 @@ class_name ScamWebsite
 extends BrowserWebsite
 
 const url = "freelogotshirts.tk"
+const tab_name = "FR33SH1RT$$$$$$$$"
 
 var time_left: float = 1.0
 

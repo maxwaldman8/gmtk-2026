@@ -9,10 +9,10 @@ const NEW_TAB_WEB_SCENE = preload("res://scenes/screen/windows/browser websites/
 const WEBSITE_404_SCENE = preload("res://scenes/screen/windows/browser websites/404.tscn")
 
 var urls : Dictionary = {
-	NewTabWebsite.url: preload("res://scenes/screen/windows/browser websites/new_tab_website.tscn"),
-	SubmissionWebsite.url: preload("res://scenes/screen/windows/browser websites/submission_website.tscn"),
-	FileConversionWebsite.url: preload("res://scenes/screen/windows/browser websites/file_conversion.tscn"),
-	ScamWebsite.url: preload("res://scenes/screen/windows/browser websites/scam_website.tscn")
+	NewTabWebsite.url: [preload("res://scenes/screen/windows/browser websites/new_tab_website.tscn"), NewTabWebsite.tab_name],
+	SubmissionWebsite.url: [preload("res://scenes/screen/windows/browser websites/submission_website.tscn"), SubmissionWebsite.tab_name],
+	FileConversionWebsite.url: [preload("res://scenes/screen/windows/browser websites/file_conversion.tscn"), FileConversionWebsite.tab_name],
+	ScamWebsite.url: [preload("res://scenes/screen/windows/browser websites/scam_website.tscn"), ScamWebsite.tab_name]
 }
 
 
@@ -79,6 +79,6 @@ func switch_tab(new_text: String) -> void:
 	if new_text == "":
 		return
 	get_child(current_tab).get_child(0).queue_free()
-	var new_tab_instance = urls[new_text].instantiate()
-	tab_bar.set_tab_title(current_tab, "searched")
+	var new_tab_instance = urls[new_text][0].instantiate()
+	tab_bar.set_tab_title(current_tab, urls[new_text][1])
 	get_child(current_tab).add_child(new_tab_instance)

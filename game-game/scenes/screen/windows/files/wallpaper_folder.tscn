@@ -35,14 +35,10 @@ offset_left = 29.0
 offset_top = 31.0
 offset_right = 89.0
 offset_bottom = 111.0
+icon_image = ExtResource("3_bsajj")
 window_name = "logot_os.png"
 window_scene_name = "files/logot_os"
 is_default_opened = false
-
-[node name="Logo0" type="Sprite2D" parent="Apps/Application" unique_id=433523267]
-texture_filter = 1
-position = Vector2(30, 30)
-texture = ExtResource("3_bsajj")
 
 [node name="Application2" parent="Apps" unique_id=695388394 instance=ExtResource("1_qwiuc")]
 layout_mode = 0
@@ -50,11 +46,7 @@ offset_left = 119.0
 offset_top = 31.0
 offset_right = 179.0
 offset_bottom = 111.0
+icon_image = ExtResource("3_bsajj")
 window_name = "grasshills.png"
 window_scene_name = "files/grasshills"
 is_default_opened = false
-
-[node name="Logo0" type="Sprite2D" parent="Apps/Application2" unique_id=2006071984]
-texture_filter = 1
-position = Vector2(30, 30)
-texture = ExtResource("3_bsajj")

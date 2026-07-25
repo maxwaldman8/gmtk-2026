@@ -11,6 +11,7 @@ static var missing_assignments : PackedStringArray = []
 
 const ASSIGNMENT_TAB_SCENE = preload("res://scenes/screen/windows/browser websites/assignment_tab.tscn")
 const url = "submissionwebsite.com"
+const tab_name = "Submit"
 
 
 func _ready() -> void:
