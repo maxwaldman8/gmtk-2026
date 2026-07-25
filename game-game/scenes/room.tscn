@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b8fihxtag443g" path="res://scenes/player.tscn" id="1_36trf"]
 [ext_resource type="ArrayMesh" uid="uid://bct4h4aerapy0" path="res://statues/room.obj" id="2_7dqbv"]
 [ext_resource type="Texture2D" uid="uid://drhha3fdm314i" path="res://statues/pal3.png" id="2_tk5fv"]
-[ext_resource type="Sky" uid="uid://c5keyi0bbe61f" path="res://shadings/night.tres" id="2_w68ji"]
+[ext_resource type="Sky" uid="uid://c5keyi0bbe61f" path="res://styles/night.tres" id="2_w68ji"]
 [ext_resource type="PackedScene" uid="uid://bm5ae52p08ktu" path="res://scenes/screen/screen.tscn" id="3_14vil"]
 [ext_resource type="Script" uid="uid://b61uvfxw46b5h" path="res://scripts/sub_viewport.gd" id="3_jxe34"]
 [ext_resource type="Texture2D" uid="uid://bx0hpkmnnefxj" path="res://sprites/Crosshair Draft.png" id="4_14vil"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dkc200e6mqx0u" path="res://sprites/screen/note.png" id="9_3j2fx"]
 [ext_resource type="Texture2D" uid="uid://cu4ijb1trwax0" path="res://sprites/screen/logo_06.png" id="12_katsu"]
 [ext_resource type="Texture2D" uid="uid://dfupl6d57fcsc" path="res://sprites/vector/note.png" id="13_dynfe"]
-[ext_resource type="Material" uid="uid://ca5do0p6rx780" path="res://shadings/moon.tres" id="14_23wr2"]
+[ext_resource type="Material" uid="uid://ca5do0p6rx780" path="res://styles/moon.tres" id="14_23wr2"]
 [ext_resource type="FontFile" uid="uid://p5d3ilwg8lqw" path="res://scribes/Maxmessy-Regular.ttf" id="14_vfrn5"]
 
 [sub_resource type="Environment" id="Environment_nrlmu"]
