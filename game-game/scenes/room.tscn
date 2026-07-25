@@ -195,7 +195,7 @@ mesh = ExtResource("5_23wr2")
 shape = SubResource("ConvexPolygonShape3D_23wr2")
 
 [node name="Drive2" type="MeshInstance3D" parent="Room" unique_id=1534729971]
-transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 3.9, 0, -0.4)
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 1.8, 0.8, -0.7)
 visible = false
 material_override = SubResource("StandardMaterial3D_vfrn5")
 mesh = ExtResource("5_23wr2")

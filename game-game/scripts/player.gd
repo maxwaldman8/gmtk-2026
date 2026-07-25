@@ -62,7 +62,11 @@ func handle_raycast():
 				var drive: MeshInstance3D = get_parent().get_node("Room/Drive2")
 				drive.visible = true
 				var tween = create_tween()
+				tween.tween_property(drive, "position", Vector3(3.9, 0.8, -0.40), 0.5)
+				tween.tween_property(drive, "position", Vector3(3.9, 0.0, -0.40), 0.5)
 				tween.tween_property(drive, "position", Vector3(3.9, 0.0, -0.60), 1.0)
+				tween.play()
+				await get_tree().create_timer(2).timeout
 				screen.insert_drive()
 			"PasswordNoteArea":
 				viewing_vector = true
