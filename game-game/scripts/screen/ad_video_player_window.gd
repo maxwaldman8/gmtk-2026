@@ -2,8 +2,8 @@ extends Control
 
 @export var ad_percentages: Array[float]
 @export var ads: Array[VideoStream]
-@export var skip_time_s = 3.0
-@export var indicator_width = 27
+@export var skip_time_s = 6.0
+@export var indicator_width = 32
 @export var stop_indicator: PackedScene
 
 var stop_indicators: Array[Control]

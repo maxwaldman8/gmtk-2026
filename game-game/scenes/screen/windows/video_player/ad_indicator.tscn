@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dfp77625mbeqg"]
+
+[ext_resource type="Texture2D" uid="uid://c85top55m5k7x" path="res://sprites/screen/AD Icon.png" id="1_dafjg"]
+
+[node name="AdIndicator" type="Control" unique_id=858273873]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1523800077]
+texture_filter = 1
+layout_mode = 0
+offset_left = -16.0
+offset_top = -4.0
+offset_right = -8.0
+offset_bottom = 4.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_dafjg")
