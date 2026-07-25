@@ -5,8 +5,8 @@
 [node name="NewTabWebsite" type="Control" unique_id=1344016726]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 482.0
-offset_bottom = 481.0
+offset_right = 476.0
+offset_bottom = 472.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5oxio")

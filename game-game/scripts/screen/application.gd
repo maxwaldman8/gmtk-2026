@@ -44,7 +44,7 @@ func set_up(w_name: String = "default", w_is_def_open: bool = true):
 
 func _open_window():
 	window_instance = WINDOW_SCENE.instantiate()
-	window_instance.set_up(window_scene_name, window_name, self)
+	window_instance.set_up(window_scene_name, window_name, false, self)
 	window_layer.add_to_window_list(window_instance)
 	is_opened = true
 
