@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dfupl6d57fcsc" path="res://sprites/vector/note.png" id="13_dynfe"]
 [ext_resource type="Material" uid="uid://ca5do0p6rx780" path="res://styles/moon.tres" id="14_23wr2"]
 [ext_resource type="FontFile" uid="uid://p5d3ilwg8lqw" path="res://scribes/Maxmessy-Regular.ttf" id="14_vfrn5"]
+[ext_resource type="Texture2D" uid="uid://edp8ubh0sddl" path="res://sprites/vector/bowl.png" id="16_jxwrd"]
 
 [sub_resource type="Environment" id="Environment_nrlmu"]
 background_mode = 2
@@ -69,6 +70,9 @@ size = Vector3(0.060180664, 0.057739258, 0.020133972)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xul4a"]
 size = Vector3(0.068769455, 0.061649323, 0.031230927)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lkryo"]
+size = Vector3(1.2037582, 1.026474, 1.1717072)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_14vil"]
 viewport_path = NodePath("SubViewportContainer/SubViewport")
@@ -207,6 +211,12 @@ texture = ExtResource("9_3j2fx")
 transform = Transform3D(1, -8.2867047e-13, 0, 0, 1, 0, 0, 0, 1, -0.00071543455, -0.00022292137, 0.005975485)
 shape = SubResource("BoxShape3D_xul4a")
 
+[node name="CatBowlArea" type="Area3D" parent="Room" unique_id=101075060]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/CatBowlArea" unique_id=1008424649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7153378, -0.48200226, 2.4229531)
+shape = SubResource("BoxShape3D_lkryo")
+
 [node name="ScreenSprite" type="Sprite3D" parent="." unique_id=187814192]
 transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0.004466966, 1.6515527, -1.4412645)
 texture = SubResource("ViewportTexture_14vil")
@@ -228,11 +238,12 @@ size = Vector2i(1152, 648)
 render_target_update_mode = 0
 script = ExtResource("3_jxe34")
 
-[node name="Screen" parent="SubViewportContainer/SubViewport" unique_id=2111894068 node_paths=PackedStringArray("player", "gui", "password_note", "tv_note") instance=ExtResource("3_14vil")]
+[node name="Screen" parent="SubViewportContainer/SubViewport" unique_id=2111894068 node_paths=PackedStringArray("player", "gui", "password_note", "tv_note", "cat_bowl") instance=ExtResource("3_14vil")]
 player = NodePath("../../../Player")
 gui = NodePath("../../../GUI")
 password_note = NodePath("../../../PasswordNote")
 tv_note = NodePath("../../../TVNote")
+cat_bowl = NodePath("../../../CatBowl")
 custom_mouse = ExtResource("12_katsu")
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=1432570367]
@@ -307,6 +318,31 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_vfrn5")
 theme_override_font_sizes/font_size = 56
 text = "saving up to buy a tv!"
+horizontal_alignment = 1
+
+[node name="CatBowl" type="CanvasLayer" parent="." unique_id=533767121]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="CatBowl" unique_id=232385282]
+position = Vector2(576, 324)
+texture = ExtResource("16_jxwrd")
+
+[node name="Label" type="Label" parent="CatBowl" unique_id=1368209428]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = 155.0
+offset_right = 267.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_vfrn5")
+theme_override_font_sizes/font_size = 81
+text = "Boyander"
 horizontal_alignment = 1
 
 [node name="RealMusic" type="AudioStreamPlayer3D" parent="." unique_id=1004856047]

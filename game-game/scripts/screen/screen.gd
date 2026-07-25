@@ -5,6 +5,10 @@ extends Control
 @export var gui: CanvasLayer
 @export var password_note: CanvasLayer
 @export var tv_note: CanvasLayer
+@export var cat_bowl: CanvasLayer
+
+const cat_names: Array[String] = ["Maxine", "Kaitlyn", "Bobette", "Fluffy", "Lucky", "Momo", "Alice", "Ginger"]
+var cat_name
 
 @export var time_label: Label
 
@@ -23,6 +27,8 @@ func _ready() -> void:
 	messaging_password = "egg" + str(randi_range(100, 999)).replace("5", "6")
 	password_note.get_node("Label").text = "logotmessage password\n\n" + messaging_password
 	maze_num = randi_range(1, 5)
+	cat_name = cat_names[randi_range(0, cat_names.size() - 1)]
+	cat_bowl.get_node("Label").text = cat_name
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
@@ -47,6 +53,9 @@ func set_wallpaper(texture: Texture2D):
 	$WallpaperLayer/Wallpaper.texture = texture
 
 # Finishing tasks functions
+func finish_public_speaking():
+	pass
+
 func insert_drive():
 	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = true
 

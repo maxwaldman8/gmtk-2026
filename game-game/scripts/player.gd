@@ -71,6 +71,11 @@ func handle_raycast():
 				active_layer = screen.tv_note
 				active_layer.visible = true
 				gui.visible = false
+			"CatBowlArea":
+				viewing_vector = true
+				active_layer = screen.cat_bowl
+				active_layer.visible = true
+				gui.visible = false
 
 func switch_to_screen():
 	get_tree().root.get_node("Room").get_node("RealMusic").volume_db = -80

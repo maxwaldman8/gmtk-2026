@@ -71,3 +71,23 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 
 func _on_delete_file_button_pressed() -> void:
 	submitted_file_name = ""
+
+
+func _on_submit_button_pressed() -> void:
+	match a_name:
+		"conversion":
+			var regex = RegEx.new()
+			regex.compile(".*\\.pdf")
+			if !regex.search(sub_file.text):
+				sub_status_label.text = "Incorrect Filetype"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			elif sub_file.text != "speech.pdf":
+				sub_status_label.text = "Incorrect File"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			else:
+				sub_status_label.text = "Submitted"
+				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
+				get_parent().finished_assignments.append(a_name)
+				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				get_parent().update_a_list()
+				get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().finish_public_speaking()

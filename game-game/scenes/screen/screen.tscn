@@ -263,7 +263,7 @@ offset_right = 374.0
 offset_bottom = 397.0
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
-window_name = "POSTER_AD.pdf"
+window_name = "poster_ad.pdf"
 window_scene_name = "files/poster_ad"
 is_default_opened = false
 
