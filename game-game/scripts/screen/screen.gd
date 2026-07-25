@@ -14,7 +14,7 @@ const cat_surnames: Array[String] = ["Catson", "Cattenbourough", "Catte", "Catta
 @export var spanish_password_textures: Array[Texture2D]
 const spanish_passwords: Array[String] = ["QUERTYasdfgh654321", "QUERTYasdfgh654321", "QUERTYasdfgh654321", "QUERTYasdfgh654321", "QUERTYasdfgh654321"]
 @export var english_password_1s: Array[Texture2D]
-const english_password_endings: Array[String] = ["654321", "654321", "654321", "654321", "654321"]
+const english_password_endings: Array[String] = ["654321", "765432", "876543", "987654"]
 
 @export var time_label: Label
 

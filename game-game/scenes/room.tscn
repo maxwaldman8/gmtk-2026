@@ -18,12 +18,15 @@
 [ext_resource type="ArrayMesh" uid="uid://bj5hjsbjubowk" path="res://statues/cat2.obj" id="7_dynfe"]
 [ext_resource type="Texture2D" uid="uid://dkc200e6mqx0u" path="res://sprites/screen/note.png" id="9_3j2fx"]
 [ext_resource type="Script" uid="uid://dfn7mumhqi8v7" path="res://scripts/cat.gd" id="10_mc3m6"]
-[ext_resource type="Texture2D" uid="uid://cu4ijb1trwax0" path="res://sprites/screen/logo_06.png" id="12_katsu"]
 [ext_resource type="Texture2D" uid="uid://dfupl6d57fcsc" path="res://sprites/vector/note.png" id="13_dynfe"]
 [ext_resource type="Material" uid="uid://ca5do0p6rx780" path="res://styles/moon.tres" id="14_23wr2"]
 [ext_resource type="FontFile" uid="uid://p5d3ilwg8lqw" path="res://scribes/Maxmessy-Regular.ttf" id="14_vfrn5"]
-[ext_resource type="Texture2D" uid="uid://bgcooaa38sec4" path="res://sprites/screen/spanish_password.png" id="15_kk8bn"]
+[ext_resource type="Texture2D" uid="uid://bgcooaa38sec4" path="res://sprites/screen/spanish_password1.png" id="15_kk8bn"]
 [ext_resource type="Texture2D" uid="uid://edp8ubh0sddl" path="res://sprites/vector/bowl.png" id="16_jxwrd"]
+[ext_resource type="Texture2D" uid="uid://d1v05tmne5eeb" path="res://sprites/screen/english_password1_1.png" id="17_5o3hq"]
+[ext_resource type="Texture2D" uid="uid://cfytnrxbwwwr" path="res://sprites/screen/english_password1_2.png" id="18_7r6do"]
+[ext_resource type="Texture2D" uid="uid://xksx7ibs3ftj" path="res://sprites/screen/english_password1_3.png" id="19_1wmww"]
+[ext_resource type="Texture2D" uid="uid://0pvy7avo6ba6" path="res://sprites/screen/english_password1_4.png" id="20_ftego"]
 [ext_resource type="Texture2D" uid="uid://ct6q4a4qdfl71" path="res://sprites/vector/cat1.png" id="21_0tws2"]
 [ext_resource type="Texture2D" uid="uid://dhhqhws16583d" path="res://sprites/vector/cat2.png" id="22_2ftkj"]
 [ext_resource type="FontFile" uid="uid://d37qrxpoerqku" path="res://scribes/mazenumbers.ttf" id="23_kk8bn"]
@@ -287,8 +290,8 @@ tv_note = NodePath("../../../TVNote")
 cat_bowl = NodePath("../../../CatBowl")
 cat1 = NodePath("../../../Cat1")
 cat2 = NodePath("../../../Cat2")
-custom_mouse = ExtResource("12_katsu")
 spanish_password_textures = Array[Texture2D]([ExtResource("15_kk8bn"), ExtResource("15_kk8bn"), ExtResource("15_kk8bn"), ExtResource("15_kk8bn"), ExtResource("15_kk8bn")])
+english_password_1s = Array[Texture2D]([ExtResource("17_5o3hq"), ExtResource("18_7r6do"), ExtResource("19_1wmww"), ExtResource("20_ftego")])
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=1432570367]
 
@@ -420,6 +423,21 @@ theme_override_font_sizes/font_size = 81
 text = "Boyander"
 horizontal_alignment = 1
 
+[node name="Label2" type="Label" parent="CatBowl" unique_id=764000487]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Tab to Leave"
+
 [node name="Cat1" type="CanvasLayer" parent="." unique_id=417682548]
 visible = false
 
@@ -469,20 +487,6 @@ theme_override_fonts/font = ExtResource("14_vfrn5")
 theme_override_font_sizes/font_size = 81
 text = "Boyander"
 horizontal_alignment = 1
-[node name="Label2" type="Label" parent="CatBowl" unique_id=764000487]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -23.0
-offset_right = 20.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 40
-text = "Tab to Leave"
 
 [node name="RealMusic" type="AudioStreamPlayer3D" parent="." unique_id=1004856047]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6641552, -1.3832506)

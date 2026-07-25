@@ -3,12 +3,10 @@
 [ext_resource type="Script" uid="uid://ccymnofn6ccr6" path="res://scripts/screen/screen.gd" id="1_6ukd0"]
 [ext_resource type="PackedScene" uid="uid://b5yslbaif30nv" path="res://scenes/screen/application.tscn" id="2_2d861"]
 [ext_resource type="Texture2D" uid="uid://cekq2p7fg2kss" path="res://sprites/screen/grasshills.png" id="2_gk43s"]
-[ext_resource type="Texture2D" uid="uid://bgcooaa38sec4" path="res://sprites/screen/spanish_password.png" id="2_tbkdm"]
 [ext_resource type="Script" uid="uid://dommextr4ctrb" path="res://scripts/screen/window_layer.gd" id="3_6ukd0"]
 [ext_resource type="Texture2D" uid="uid://cu4ijb1trwax0" path="res://sprites/screen/logo_06.png" id="3_ecmuf"]
 [ext_resource type="Texture2D" uid="uid://bk47fr3syf046" path="res://sprites/screen/logo_4.png" id="3_ir3ut"]
 [ext_resource type="Texture2D" uid="uid://dbt6uewfy4mcc" path="res://sprites/screen/logo_0.png" id="3_nnrwk"]
-[ext_resource type="Texture2D" uid="uid://vkb8qfh218nm" path="res://sprites/screen/english_password1.png" id="3_ttmu0"]
 [ext_resource type="Texture2D" uid="uid://cfa1cv3rhsk8w" path="res://sprites/screen/logo_10.png" id="4_jtcyu"]
 [ext_resource type="Texture2D" uid="uid://c7a8kf1ujn6if" path="res://sprites/screen/logo_5.png" id="6_bqj6y"]
 [ext_resource type="Texture2D" uid="uid://07oscu8p7i5u" path="res://sprites/screen/logo_08.png" id="7_wrpmo"]
@@ -24,8 +22,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6ukd0")
-spanish_passwords = Array[Texture2D]([ExtResource("2_tbkdm"), ExtResource("2_tbkdm"), ExtResource("2_tbkdm"), ExtResource("2_tbkdm"), ExtResource("2_tbkdm")])
-english_password_1s = Array[Texture2D]([ExtResource("3_ttmu0"), ExtResource("3_ttmu0"), ExtResource("3_ttmu0"), ExtResource("3_ttmu0"), ExtResource("3_ttmu0")])
 time_label = NodePath("WallpaperLayer/BottomBar/Time")
 custom_mouse = ExtResource("3_ecmuf")
 
