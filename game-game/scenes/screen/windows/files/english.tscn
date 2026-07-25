@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://q7fv5f24fpqc"]
+[gd_scene format=3 uid="uid://b155jmkspmcy4"]
 
 [node name="Speech" type="Control" unique_id=521389708]
 custom_minimum_size = Vector2(250, 300)
@@ -15,6 +15,7 @@ anchor_bottom = 1.0
 offset_bottom = 316.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.0164047, 0.96579397)
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="." unique_id=430627503]
@@ -28,5 +29,5 @@ theme_override_font_sizes/font_size = 13
 text = "        Family members are very important to our lives. They can make you feel better when you're feeling down. Indeed, family is one of the coolest things ever. But in the world of family member rankings, there can only be one greatest family member. If I had to pick a favorite family member, I would pick my cat.
         I would pick my cat as my favorite family member because she is so beautiful and she makes me happy every day. When I need to wake up in the morning she wakes me up before my alarm. She makes me get exercise when I chase her. She even drinks soda with me. Well maybe she shouldn't do that one.
         Not many people would consider a cat as a family member, but they are incorrect. They are just wrong. My cat lives with me every day and does my homework and does my laundry. I always learned it is good to feed people if they do your work. This is why I feed my cat yummy milk every day.
-        Thank you for reading my speech! :D"
+        Thank you for reading my essay! :D"
 autowrap_mode = 3
