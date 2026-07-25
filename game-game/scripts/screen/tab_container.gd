@@ -6,10 +6,13 @@ extends TabContainer
 
 @onready var window : GameWindow = get_parent().get_parent()
 const NEW_TAB_WEB_SCENE = preload("res://scenes/screen/windows/browser websites/new_tab_website.tscn")
+const WEBSITE_404_SCENE = preload("res://scenes/screen/windows/browser websites/404.tscn")
 
 var urls : Dictionary = {
 	NewTabWebsite.url: preload("res://scenes/screen/windows/browser websites/new_tab_website.tscn"),
-	SubmissionWebsite.url: preload("res://scenes/screen/windows/browser websites/submission_website.tscn")
+	SubmissionWebsite.url: preload("res://scenes/screen/windows/browser websites/submission_website.tscn"),
+	FileConversionWebsite.url: preload("res://scenes/screen/windows/browser websites/file_conversion.tscn"),
+	ScamWebsite.url: preload("res://scenes/screen/windows/browser websites/scam_website.tscn")
 }
 
 
@@ -63,8 +66,15 @@ func _on_tab_changed(tab: int) -> void:
 
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
+	switch_tab(new_text)
+
+func switch_tab(new_text: String) -> void:
+	line_edit.text = new_text
 	if new_text not in urls.keys():
-		print("Invalid url")
+		get_child(current_tab).get_child(0).queue_free()
+		var new_tab_instance = WEBSITE_404_SCENE.instantiate()
+		tab_bar.set_tab_title(current_tab, "Error 404")
+		get_child(current_tab).add_child(new_tab_instance)
 		return
 	if new_text == "":
 		return

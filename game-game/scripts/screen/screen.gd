@@ -61,6 +61,9 @@ func set_wallpaper(texture: Texture2D):
 	$WallpaperLayer/Wallpaper.texture = texture
 
 # Finishing tasks functions
+func download_pdf():
+	pass
+
 func finish_public_speaking():
 	pass
 

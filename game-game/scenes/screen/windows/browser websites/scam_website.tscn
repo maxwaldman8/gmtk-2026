@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dygb16qrty0ni"]
+
+[ext_resource type="Script" uid="uid://bgtsu0m88vh64" path="res://scripts/screen/browser websites/scam_website.gd" id="1_ytch2"]
+[ext_resource type="Texture2D" uid="uid://ctqfrvcyok0dj" path="res://sprites/icon.svg" id="2_ytch2"]
+
+[node name="ScamWebsite" type="Control" unique_id=1344016726]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 482.0
+offset_bottom = 481.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ytch2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2113614690]
+layout_mode = 0
+offset_right = 482.0
+offset_bottom = 481.0
+color = Color(0.664309, 0.21617016, 0.24770927, 1)
+
+[node name="Label" type="Label" parent="." unique_id=585499873]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.0
+offset_top = 49.0
+offset_right = 230.0
+offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1.0829419e-06, 0.35199958, 0.2369014, 1)
+theme_override_font_sizes/font_size = 45
+text = "FREE LOGOT SHIRTS"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1241175847]
+modulate = Color(1.2513996e-06, 0.92121094, 0.4520449, 1)
+layout_mode = 1
+offset_left = 301.0
+offset_top = 278.0
+offset_right = 429.0
+offset_bottom = 406.0
+rotation = 3.1415927
+texture = ExtResource("2_ytch2")
+
+[node name="Label2" type="Label" parent="." unique_id=444952231]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 305.0
+offset_right = 423.0
+offset_bottom = 328.0
+text = "BUY FREE LOGOT SHIRTS TODAY (100 BITCOIN)"
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=697547663]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 334.0
+offset_right = 332.0
+offset_bottom = 365.0
+placeholder_text = "Social Security Number"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Button" type="Button" parent="." unique_id=1142365934]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 376.0
+offset_right = 299.0
+offset_bottom = 460.0
+theme_override_font_sizes/font_size = 60
+text = "BUY"

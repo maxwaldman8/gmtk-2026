@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://cu2v7ljaactue"]
+
+[ext_resource type="Script" uid="uid://chkl0taqrtv1h" path="res://scripts/screen/browser websites/file_conversion.gd" id="1_cfdcu"]
+[ext_resource type="Theme" uid="uid://vth6lp2von46" path="res://styles/theme.tres" id="2_hbn6p"]
+
+[node name="FileConversion" type="Control" unique_id=1344016726]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 482.0
+offset_bottom = 481.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cfdcu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2113614690]
+layout_mode = 0
+offset_right = 482.0
+offset_bottom = 481.0
+color = Color(0.10014329, 0.56633514, 0.42946416, 1)
+
+[node name="Label" type="Label" parent="." unique_id=585499873]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.0
+offset_top = 19.0
+offset_right = 230.0
+offset_bottom = 107.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Convert DOCX to PDF"
+horizontal_alignment = 1
+
+[node name="ConvertFileButton" type="Button" parent="." unique_id=1720223175]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -103.0
+offset_top = 150.0
+offset_right = 101.0
+offset_bottom = 181.0
+grow_horizontal = 2
+text = "Convert File: speech.docx"
+
+[node name="DownloadButton" type="Button" parent="." unique_id=323627013]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -15.5
+offset_right = 66.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_hbn6p")
+text = "Download In 5..."
+
+[node name="DownloadNowButton" type="Button" parent="." unique_id=1906599403]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 59.5
+offset_right = 150.0
+offset_bottom = 209.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "Download NOW!!!"
+
+[connection signal="pressed" from="ConvertFileButton" to="." method="_on_convert_file_button_pressed"]
+[connection signal="pressed" from="DownloadButton" to="." method="_on_download_button_pressed"]
+[connection signal="pressed" from="DownloadNowButton" to="." method="_on_download_now_button_pressed"]
