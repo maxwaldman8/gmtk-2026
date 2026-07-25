@@ -40,6 +40,9 @@ func handle_raycast():
 			"AlarmArea":
 				if area.visible:
 					area.visible = false
+					var sound : AudioStreamPlayer = area.get_parent().get_parent().get_node("Boom")
+					sound.play()
+					area.get_parent().get_parent().explode()
 					area.get_parent().get_parent().get_node("CPUParticles3D").emitting = true
 					area.get_parent().get_parent().get_node("CPUParticles3D2").emitting = true
 					await get_tree().create_timer(0.0625).timeout

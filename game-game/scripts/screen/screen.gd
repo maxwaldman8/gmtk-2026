@@ -14,7 +14,7 @@ var cat_name
 
 @export var custom_mouse: Resource
 
-var time: float = 49 * 60
+static var time: float = 49 * 60
 
 var tutorial: bool = false
 

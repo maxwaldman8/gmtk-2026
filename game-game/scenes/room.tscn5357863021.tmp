@@ -22,7 +22,6 @@
 [ext_resource type="Material" uid="uid://ca5do0p6rx780" path="res://styles/moon.tres" id="14_23wr2"]
 [ext_resource type="FontFile" uid="uid://p5d3ilwg8lqw" path="res://scribes/Maxmessy-Regular.ttf" id="14_vfrn5"]
 [ext_resource type="Texture2D" uid="uid://edp8ubh0sddl" path="res://sprites/vector/bowl.png" id="16_jxwrd"]
-[ext_resource type="FontFile" uid="uid://d37qrxpoerqku" path="res://scribes/mazenumbers.ttf" id="23_kk8bn"]
 
 [sub_resource type="Environment" id="Environment_nrlmu"]
 background_mode = 2
@@ -125,7 +124,6 @@ alarmText = NodePath("../../AlarmViewport/Label")
 
 [node name="AlarmLoop" type="AudioStreamPlayer" parent="Room/Alarm" unique_id=1002693885]
 stream = ExtResource("6_kk8bn")
-pitch_scale = 2.0
 
 [node name="Mesh" type="MeshInstance3D" parent="Room/Alarm" unique_id=848148281]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038107634, 0.3832556, -3.2272465)
@@ -394,8 +392,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("23_kk8bn")
-theme_override_font_sizes/font_size = 128
+theme_override_font_sizes/font_size = 200
 text = "11:48"
 horizontal_alignment = 1
 vertical_alignment = 1
