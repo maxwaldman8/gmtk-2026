@@ -79,12 +79,15 @@ func _on_submit_button_pressed() -> void:
 			var regex = RegEx.new()
 			regex.compile(".*\\.pdf")
 			if !regex.search(sub_file.text):
+				print("not pdf")
 				sub_status_label.text = "Incorrect Filetype"
 				sub_status_label.add_theme_color_override("font_color", Color.RED)
 			elif sub_file.text != "speech.pdf":
+				print("wrong pdf")
 				sub_status_label.text = "Incorrect File"
 				sub_status_label.add_theme_color_override("font_color", Color.RED)
 			else:
+				print("right pdf")
 				sub_status_label.text = "Submitted"
 				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
 				get_parent().finished_assignments.append(a_name)

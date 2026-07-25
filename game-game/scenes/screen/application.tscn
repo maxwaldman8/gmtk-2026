@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://byn3xshur1hia" path="res://scripts/screen/application.gd" id="1_vj7jk"]
 [ext_resource type="PackedScene" uid="uid://6q68tcepoxh5" path="res://scenes/screen/windows/browser websites/dragged_ghost.tscn" id="2_3amd7"]
+[ext_resource type="Texture2D" uid="uid://07oscu8p7i5u" path="res://sprites/screen/logo_08.png" id="2_cnu38"]
 
 [node name="Application" type="Control" unique_id=473881616 node_paths=PackedStringArray("selected_shadow", "dragged_ghost", "icon", "name_label", "input_taker")]
 layout_mode = 3
@@ -13,7 +14,7 @@ offset_bottom = 40.0
 script = ExtResource("1_vj7jk")
 selected_shadow = NodePath("SelectedShadow")
 dragged_ghost = NodePath("DraggedGhost2")
-icon = NodePath("TestIcon")
+icon = NodePath("Icon")
 name_label = NodePath("NameLabel")
 input_taker = NodePath("InputTaker")
 
@@ -32,7 +33,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.3137255)
 
-[node name="TestIcon" type="ColorRect" parent="." unique_id=1016756199]
+[node name="Icon" type="TextureRect" parent="." unique_id=165972893]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -45,14 +46,7 @@ offset_right = 25.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Icon" type="TextureButton" parent="." unique_id=1583566569]
-visible = false
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 45.0
-offset_bottom = 45.0
+texture = ExtResource("2_cnu38")
 
 [node name="NameLabel" type="Label" parent="." unique_id=1660888683]
 custom_minimum_size = Vector2(50, 25)
@@ -88,7 +82,7 @@ offset_right = 30.0
 offset_bottom = 40.0
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
-[connection signal="gui_input" from="TestIcon" to="." method="_on_test_icon_gui_input"]
+[connection signal="gui_input" from="Icon" to="." method="_on_test_icon_gui_input"]
 [connection signal="gui_input" from="NameLabel" to="." method="_on_name_label_gui_input"]
 [connection signal="gui_input" from="InputTaker" to="." method="_on_input_taker_gui_input"]
 [connection signal="mouse_entered" from="InputTaker" to="." method="_on_input_taker_mouse_entered"]

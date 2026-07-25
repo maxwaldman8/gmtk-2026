@@ -70,47 +70,35 @@ offset_left = 119.0
 offset_top = 76.0
 offset_right = 169.0
 offset_bottom = 146.0
+icon_image = ExtResource("4_jtcyu")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "castlevania.mp4"
 window_scene_name = "files/ad_video_player_window"
 is_default_opened = false
 
-[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/AdVideo" unique_id=196426307]
-texture_filter = 1
-position = Vector2(25, 25)
-texture = ExtResource("4_jtcyu")
-
 [node name="Browser" parent="ApplicationLayer" unique_id=920115880 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 113.0
 offset_top = 273.0
 offset_right = 163.0
 offset_bottom = 343.0
+icon_image = ExtResource("3_ir3ut")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "HotDog Browser"
 window_scene_name = "browser_window"
-
-[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/Browser" unique_id=2038866431]
-texture_filter = 1
-position = Vector2(25, 25)
-texture = ExtResource("3_ir3ut")
 
 [node name="TaskManager" parent="ApplicationLayer" unique_id=113608717 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 116.0
 offset_top = 366.0
 offset_right = 166.0
 offset_bottom = 436.0
+icon_image = ExtResource("3_nnrwk")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "Task Manager"
 window_scene_name = "task_manager_game_window"
 is_default_opened = false
-
-[node name="Logo0" type="Sprite2D" parent="ApplicationLayer/TaskManager" unique_id=1949997502]
-texture_filter = 1
-position = Vector2(25, 25)
-texture = ExtResource("3_nnrwk")
 
 [node name="HelpfulWebsites" parent="ApplicationLayer" unique_id=3382 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 258.0

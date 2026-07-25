@@ -5,6 +5,7 @@ extends Control
 @export var selected_shadow : ColorRect
 @export var dragged_ghost : DraggedGhost
 @export var icon : Control
+@export var icon_image: Texture2D
 @export var name_label : Label
 @export var input_taker : ColorRect
 # for drag purposes
@@ -29,6 +30,7 @@ var offset : Vector2
 
 
 func _ready() -> void:
+	icon.texture = icon_image
 	selected_shadow.visible = is_default_opened
 	if is_default_opened:
 		_open_window()
