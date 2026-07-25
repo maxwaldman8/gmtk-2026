@@ -24,11 +24,11 @@ offset_right = 251.0
 offset_bottom = 166.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 13
-text = "convert ffiles:
+text = "convert files:
 fileconversiondocx2pdfnotpdf2txt.org
-docs websiteds:
+docs websites:
 english:
 dirediredocs.com
-spansh:
+spanish:
 dirediredocs.es
 "

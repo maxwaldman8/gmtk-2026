@@ -79,6 +79,17 @@ func _on_delete_file_button_pressed() -> void:
 
 func _on_submit_button_pressed() -> void:
 	match a_name:
+		"tutorial":
+			if !sub_file.text != "math_homework.pdf":
+				sub_status_label.text = "Incorrect File"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			else:
+				sub_status_label.text = "Submitted"
+				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
+				get_parent().finished_assignments.append(a_name)
+				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				get_parent().update_a_list()
+				get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().finish_tutorial()
 		"conversion":
 			var regex = RegEx.new()
 			regex.compile(".*\\.pdf")
@@ -97,4 +108,4 @@ func _on_submit_button_pressed() -> void:
 				get_parent().finished_assignments.append(a_name)
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
 				get_parent().update_a_list()
-				get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().finish_public_speaking()
+				get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().finish_public_speaking()

@@ -7,6 +7,7 @@ extends BrowserWebsite
 
 static var assignments_to_do : PackedStringArray = []
 static var finished_assignments : PackedStringArray = []
+static var missing_assignments : PackedStringArray = []
 
 const ASSIGNMENT_TAB_SCENE = preload("res://scenes/screen/windows/browser websites/assignment_tab.tscn")
 const url = "submissionwebsite.com"
@@ -16,19 +17,17 @@ func _ready() -> void:
 	to_do_list.visible = true
 	assignment_page.visible = false
 	assignment_page.swap.connect(swap_to)
-	if assignments_to_do.is_empty() and finished_assignments.is_empty():
-		assignments_to_do = AssignmentsData.d.keys()
-	if "tutorial" in assignments_to_do:
+	if get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().tutorial:
 		var tutorial = ASSIGNMENT_TAB_SCENE.instantiate()
 		tutorial.set_up("tutorial")
 		tutorial.swap_to.connect(swap_to)
 		assignments_list.add_child(tutorial)
-		return
-	for a in assignments_to_do:
-		var a_tab = ASSIGNMENT_TAB_SCENE.instantiate()
-		a_tab.set_up(a)
-		a_tab.swap_to.connect(swap_to)
-		assignments_list.add_child(a_tab)
+	else:
+		for a in assignments_to_do:
+			var a_tab = ASSIGNMENT_TAB_SCENE.instantiate()
+			a_tab.set_up(a)
+			a_tab.swap_to.connect(swap_to)
+			assignments_list.add_child(a_tab)
 
 
 func swap_to(...args):

@@ -16,12 +16,20 @@ var cat_name
 
 var time: float = 49 * 60
 
-var tutorial: bool = true
+var tutorial: bool = false
 
 # Randomly generated stuff
 var messaging_password: String
 var maze_num: int
 
+func _enter_tree() -> void:
+	if !tutorial:
+		SubmissionWebsite.assignments_to_do = ["conversion"]
+	else:
+		SubmissionWebsite.assignments_to_do = ["tutorial"]
+	SubmissionWebsite.finished_assignments = []
+	SubmissionWebsite.missing_assignments = []
+	
 func _ready() -> void:
 	Input.set_custom_mouse_cursor(custom_mouse, Input.CURSOR_ARROW)
 	messaging_password = "egg" + str(randi_range(100, 999)).replace("5", "6")
