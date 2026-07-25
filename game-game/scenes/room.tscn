@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dfupl6d57fcsc" path="res://sprites/vector/note.png" id="13_dynfe"]
 [ext_resource type="Material" uid="uid://ca5do0p6rx780" path="res://styles/moon.tres" id="14_23wr2"]
 [ext_resource type="FontFile" uid="uid://p5d3ilwg8lqw" path="res://scribes/Maxmessy-Regular.ttf" id="14_vfrn5"]
+[ext_resource type="Texture2D" uid="uid://bgcooaa38sec4" path="res://sprites/screen/spanish_password.png" id="15_kk8bn"]
 [ext_resource type="Texture2D" uid="uid://edp8ubh0sddl" path="res://sprites/vector/bowl.png" id="16_jxwrd"]
 [ext_resource type="Texture2D" uid="uid://ct6q4a4qdfl71" path="res://sprites/vector/cat1.png" id="21_0tws2"]
 [ext_resource type="Texture2D" uid="uid://dhhqhws16583d" path="res://sprites/vector/cat2.png" id="22_2ftkj"]
@@ -287,6 +288,7 @@ cat_bowl = NodePath("../../../CatBowl")
 cat1 = NodePath("../../../Cat1")
 cat2 = NodePath("../../../Cat2")
 custom_mouse = ExtResource("12_katsu")
+spanish_password_textures = Array[Texture2D]([ExtResource("15_kk8bn"), ExtResource("15_kk8bn"), ExtResource("15_kk8bn"), ExtResource("15_kk8bn"), ExtResource("15_kk8bn")])
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=1432570367]
 
@@ -338,6 +340,21 @@ text = "logotmessage password
 egg"
 horizontal_alignment = 1
 
+[node name="Label2" type="Label" parent="PasswordNote" unique_id=999901551]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Tab to Leave"
+
 [node name="TVNote" type="CanvasLayer" parent="." unique_id=1094000394]
 visible = false
 
@@ -362,6 +379,21 @@ theme_override_fonts/font = ExtResource("14_vfrn5")
 theme_override_font_sizes/font_size = 56
 text = "saving up to buy a tv!"
 horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TVNote" unique_id=1854463560]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Tab to Leave"
 
 [node name="CatBowl" type="CanvasLayer" parent="." unique_id=533767121]
 visible = false
@@ -437,6 +469,20 @@ theme_override_fonts/font = ExtResource("14_vfrn5")
 theme_override_font_sizes/font_size = 81
 text = "Boyander"
 horizontal_alignment = 1
+[node name="Label2" type="Label" parent="CatBowl" unique_id=764000487]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Tab to Leave"
 
 [node name="RealMusic" type="AudioStreamPlayer3D" parent="." unique_id=1004856047]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6641552, -1.3832506)

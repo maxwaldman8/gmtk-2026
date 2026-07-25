@@ -3,15 +3,17 @@
 [ext_resource type="Script" uid="uid://ccymnofn6ccr6" path="res://scripts/screen/screen.gd" id="1_6ukd0"]
 [ext_resource type="PackedScene" uid="uid://b5yslbaif30nv" path="res://scenes/screen/application.tscn" id="2_2d861"]
 [ext_resource type="Texture2D" uid="uid://cekq2p7fg2kss" path="res://sprites/screen/grasshills.png" id="2_gk43s"]
+[ext_resource type="Texture2D" uid="uid://bgcooaa38sec4" path="res://sprites/screen/spanish_password.png" id="2_tbkdm"]
 [ext_resource type="Script" uid="uid://dommextr4ctrb" path="res://scripts/screen/window_layer.gd" id="3_6ukd0"]
+[ext_resource type="Texture2D" uid="uid://cu4ijb1trwax0" path="res://sprites/screen/logo_06.png" id="3_ecmuf"]
 [ext_resource type="Texture2D" uid="uid://bk47fr3syf046" path="res://sprites/screen/logo_4.png" id="3_ir3ut"]
 [ext_resource type="Texture2D" uid="uid://dbt6uewfy4mcc" path="res://sprites/screen/logo_0.png" id="3_nnrwk"]
+[ext_resource type="Texture2D" uid="uid://vkb8qfh218nm" path="res://sprites/screen/english_password1.png" id="3_ttmu0"]
 [ext_resource type="Texture2D" uid="uid://cfa1cv3rhsk8w" path="res://sprites/screen/logo_10.png" id="4_jtcyu"]
 [ext_resource type="Texture2D" uid="uid://c7a8kf1ujn6if" path="res://sprites/screen/logo_5.png" id="6_bqj6y"]
 [ext_resource type="Texture2D" uid="uid://07oscu8p7i5u" path="res://sprites/screen/logo_08.png" id="7_wrpmo"]
 [ext_resource type="Texture2D" uid="uid://7mpyg7x3c5mx" path="res://sprites/screen/logo_11.png" id="8_gk43s"]
 [ext_resource type="Texture2D" uid="uid://cdjk11q65afl2" path="res://sprites/screen/Folder.png" id="11_2ovc6"]
-[ext_resource type="Texture2D" uid="uid://bwo6i7rsiyaw7" path="res://sprites/screen/logo_09.png" id="11_ecmuf"]
 [ext_resource type="Texture2D" uid="uid://dskjj48ukcxgx" path="res://sprites/screen/PDF logo.png" id="11_tbkdm"]
 
 [node name="Screen" type="Control" unique_id=2111894068 node_paths=PackedStringArray("time_label")]
@@ -22,7 +24,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6ukd0")
+spanish_passwords = Array[Texture2D]([ExtResource("2_tbkdm"), ExtResource("2_tbkdm"), ExtResource("2_tbkdm"), ExtResource("2_tbkdm"), ExtResource("2_tbkdm")])
+english_password_1s = Array[Texture2D]([ExtResource("3_ttmu0"), ExtResource("3_ttmu0"), ExtResource("3_ttmu0"), ExtResource("3_ttmu0"), ExtResource("3_ttmu0")])
 time_label = NodePath("WallpaperLayer/BottomBar/Time")
+custom_mouse = ExtResource("3_ecmuf")
 
 [node name="WallpaperLayer" type="CanvasLayer" parent="." unique_id=945818577]
 
@@ -68,6 +73,7 @@ text = "11:48:00"
 layer = 2
 
 [node name="AdVideo" parent="ApplicationLayer" unique_id=473881616 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+visible = false
 offset_left = 119.0
 offset_top = 76.0
 offset_right = 169.0
@@ -89,6 +95,7 @@ dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "HotDog Browser"
 window_scene_name = "browser_window"
+is_default_opened = null
 
 [node name="TaskManager" parent="ApplicationLayer" unique_id=113608717 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 offset_left = 116.0
@@ -112,6 +119,7 @@ dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "helpful_websites.txt"
 window_scene_name = "files/helpful_websites"
+is_default_opened = null
 
 [node name="Mazes" type="Control" parent="ApplicationLayer" unique_id=848177518]
 layout_mode = 3
@@ -192,14 +200,15 @@ window_scene_name = "maze_5_window"
 is_default_opened = false
 
 [node name="QuestionVideo" parent="ApplicationLayer" unique_id=882876864 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
-offset_left = 243.0
-offset_top = 404.0
-offset_right = 293.0
-offset_bottom = 474.0
+visible = false
+offset_left = 84.0
+offset_top = 471.0
+offset_right = 134.0
+offset_bottom = 541.0
 icon_image = ExtResource("4_jtcyu")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
-window_name = "game_design_homework.mp4"
+window_name = "space_invaders.mp4"
 window_scene_name = "files/question_video_player_window"
 is_default_opened = false
 
@@ -239,40 +248,16 @@ window_name = "Homework"
 window_scene_name = "files/homework_folder"
 is_default_opened = false
 
-[node name="EnglishPassword1" parent="ApplicationLayer" unique_id=1589346063 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
-offset_left = 1052.0
-offset_top = 70.0
-offset_right = 1102.0
-offset_bottom = 140.0
-icon_image = ExtResource("11_ecmuf")
+[node name="PasswordsFolder" parent="ApplicationLayer" unique_id=1215213456 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+offset_left = 619.0
+offset_top = 52.0
+offset_right = 669.0
+offset_bottom = 122.0
+icon_image = ExtResource("11_2ovc6")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
-window_name = "english_password1.png"
-window_scene_name = "files/ep1"
-is_default_opened = false
-
-[node name="EnglishPassword2" parent="ApplicationLayer" unique_id=621374788 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
-offset_left = 1052.0
-offset_top = 160.0
-offset_right = 1102.0
-offset_bottom = 230.0
-icon_image = ExtResource("11_ecmuf")
-dragged_application_layer = NodePath("../../MovedAppLayer")
-window_layer = NodePath("../../WindowLayer")
-window_name = "english_password2.png"
-window_scene_name = "files/ep2"
-is_default_opened = false
-
-[node name="EnglishPassword3" parent="ApplicationLayer" unique_id=1792739761 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
-offset_left = 1052.0
-offset_top = 250.0
-offset_right = 1102.0
-offset_bottom = 320.0
-icon_image = ExtResource("11_ecmuf")
-dragged_application_layer = NodePath("../../MovedAppLayer")
-window_layer = NodePath("../../WindowLayer")
-window_name = "english_password3.png"
-window_scene_name = "files/ep3"
+window_name = "Passwords"
+window_scene_name = "files/passwords_folder"
 is_default_opened = false
 
 [node name="SpeechPDF" parent="ApplicationLayer" unique_id=1557150626 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
@@ -286,6 +271,32 @@ dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "speech.pdf"
 window_scene_name = "files/speech"
+is_default_opened = false
+
+[node name="EnglishEssay" parent="ApplicationLayer" unique_id=93283999 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+visible = false
+offset_left = 38.0
+offset_top = 142.0
+offset_right = 98.0
+offset_bottom = 222.0
+icon_image = ExtResource("7_wrpmo")
+dragged_application_layer = NodePath("../../MovedAppLayer")
+window_layer = NodePath("../../WindowLayer")
+window_name = "english_essay.docx"
+window_scene_name = "files/english"
+is_default_opened = false
+
+[node name="SpanishEssay" parent="ApplicationLayer" unique_id=1439951701 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+visible = false
+offset_left = 367.0
+offset_top = 132.0
+offset_right = 427.0
+offset_bottom = 212.0
+icon_image = ExtResource("7_wrpmo")
+dragged_application_layer = NodePath("../../MovedAppLayer")
+window_layer = NodePath("../../WindowLayer")
+window_name = "spanish_essay.docx"
+window_scene_name = "files/spanish"
 is_default_opened = false
 
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]

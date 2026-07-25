@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://er8mvgj7rmof"]
+
+[ext_resource type="Script" uid="uid://cp2ik8svpmxx0" path="res://scripts/screen/browser websites/bestfilms.gd" id="1_3wr7s"]
+
+[node name="BestFilms" type="Control" unique_id=1344016726]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 476.0
+offset_bottom = 472.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3wr7s")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2113614690]
+layout_mode = 0
+offset_right = 476.0
+offset_bottom = 472.0
+color = Color(0.1313785, 0.13137862, 0.13137853, 1)
+
+[node name="Label" type="Label" parent="." unique_id=585499873]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.0
+offset_top = 19.0
+offset_right = 230.0
+offset_bottom = 107.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "Best Films"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1542603118]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.0
+offset_top = 96.0
+offset_right = 230.0
+offset_bottom = 184.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "The Go-To One-Stop Shop For All Things Film!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="." unique_id=858182780]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -233.0
+offset_top = 200.0
+offset_right = 229.0
+offset_bottom = 333.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Download Our Newest Film
+
+
+Castlevania: The Dark Night"
+horizontal_alignment = 1
+
+[node name="DownloadButton" type="Button" parent="." unique_id=1720223175]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -142.0
+offset_top = 356.0
+offset_right = 140.0
+offset_bottom = 387.0
+grow_horizontal = 2
+text = "Download File: castlevania.mp4"
+
+[connection signal="pressed" from="DownloadButton" to="." method="_on_download_button_pressed"]

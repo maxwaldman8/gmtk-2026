@@ -43,6 +43,7 @@ func _physics_process(_delta: float) -> void:
 				indicator.visible = false
 			video.play()
 		elif percentage - question_percentages[0] >= indicator_width_percentage / 2.0:
+			stop_indicators[0].visible = false
 			questions.remove_at(0)
 			question_percentages.remove_at(0)
 			stop_indicators.remove_at(0)

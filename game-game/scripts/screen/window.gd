@@ -13,6 +13,7 @@ var body_scene : PackedScene
 var body_name : String
 var dimensions : Vector2: set = _set_dimensions
 var application : Application
+var is_standalone : bool
 
 var body_instance
 
@@ -38,8 +39,11 @@ func _ready() -> void:
 	body_instance.process_mode = PROCESS_MODE_ALWAYS
 
 
-func set_up(body_scene_name, w_body_name = "default_window", parent = get_parent()):
+func set_up(body_scene_name, w_body_name, w_is_standalone = false, app = ""):
+	is_standalone = w_is_standalone
 	body_name = w_body_name
+	if not is_standalone:
+		application = app
 	body_scene = load("res://scenes/screen/windows/" + body_scene_name + ".tscn")
 	body_instance = body_scene.instantiate()
 	body_instance.position.y += TITLE_BAR_THICKNESS
@@ -48,7 +52,6 @@ func set_up(body_scene_name, w_body_name = "default_window", parent = get_parent
 	add_child(body_instance)
 	## pos will be set in window layer later
 	#global_position = Vector2i(500, 300)
-	application = parent
 
 
 func _set_dimensions(new_dimensions: Vector2i) -> void:
@@ -78,7 +81,8 @@ func close() -> void:
 		tween.set_trans(Tween.TRANS_SPRING)
 		tween.tween_property(self, "scale", Vector2(0,0), 0.5)
 		await tween.finished
-		application.is_opened = false
+		if not is_standalone:
+			application.is_opened = false
 		closed.emit()
 		queue_free()
 

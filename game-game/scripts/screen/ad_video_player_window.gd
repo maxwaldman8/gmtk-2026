@@ -46,6 +46,7 @@ func _physics_process(_delta: float) -> void:
 				indicator.visible = false
 			video.paused = false
 		elif percentage - ad_percentages[0] >= indicator_width_percentage / 2.0:
+			stop_indicators[0].visible = false
 			ads.remove_at(0)
 			ad_percentages.remove_at(0)
 			stop_indicators.remove_at(0)

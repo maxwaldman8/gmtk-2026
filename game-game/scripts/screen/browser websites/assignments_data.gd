@@ -19,7 +19,7 @@ const d : Dictionary = {
 	],
 	"question_video": [
 		"Watch Space Invaders Video", "Game Design with Mark Brown", Color(0.342, 0.357, 0.335, 1.0), "11:52", 
-		"Please go to _ to download the video.\nSubmit the video file when you are done watching it."
+		"Please go to gtkm.com to download the video.\nSubmit the video file when you are done watching it."
 	],
 	"pop_up": [
 		"Poster Submission", "Graphic Design", Color(0.069, 0.607, 0.609, 1.0), "11:53", 
@@ -27,10 +27,10 @@ const d : Dictionary = {
 	],
 	"movie_ads": [
 		"Watch Vampire Movie", "Film-making", Color(0.946, 0.702, 0.251, 1.0), "11:54", 
-		"Finish this movie, no other homework.\nSubmit the video file when you're done."
+		"Finish this movie (download at bestfilms.net), no other homework.\nSubmit the video file when you're done (you can skip past the ads with the skip forward button)."
 	],
 	"image_puzzle_and_cat": [
-		"_ Essay", "English", Color(0.284, 0.695, 0.519, 1.0), "11:55", 
+		"Family Member Essay", "English", Color(0.284, 0.695, 0.519, 1.0), "11:55", 
 		"Please ensure that you write the document on the proper website."
 	],
 	"task_invaders": [
@@ -38,7 +38,7 @@ const d : Dictionary = {
 		"Please ensure that you write the document on the proper website."
 	],
 	"wallpaper": [
-		"Ensayo de _", "Spanish", Color(0.91, 0.247, 0.24, 1.0), "11:59", 
+		"Ensayo de Miembros de Familia", "Spanish", Color(0.91, 0.247, 0.24, 1.0), "11:59", 
 		"Please ensure that you write the document on the proper website."
 	],
 	"alarm_clock": [

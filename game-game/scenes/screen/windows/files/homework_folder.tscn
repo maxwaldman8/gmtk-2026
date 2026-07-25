@@ -41,28 +41,6 @@ window_name = "speech.docx"
 window_scene_name = "files/speech"
 is_default_opened = false
 
-[node name="EnglishEssay" parent="Apps" unique_id=1641413153 instance=ExtResource("2_0taup")]
-layout_mode = 0
-offset_left = 190.0
-offset_top = 189.0
-offset_right = 250.0
-offset_bottom = 269.0
-icon_image = ExtResource("3_0taup")
-window_name = "english_essay.docx"
-window_scene_name = "files/english"
-is_default_opened = false
-
-[node name="SpanishEssay" parent="Apps" unique_id=611665962 instance=ExtResource("2_0taup")]
-layout_mode = 0
-offset_left = 282.0
-offset_top = 11.0
-offset_right = 342.0
-offset_bottom = 91.0
-icon_image = ExtResource("3_0taup")
-window_name = "spanish_essay.docx"
-window_scene_name = "files/spanish"
-is_default_opened = false
-
 [node name="PosterAd" parent="Apps" unique_id=512687144 instance=ExtResource("2_0taup")]
 layout_mode = 0
 offset_left = 405.0

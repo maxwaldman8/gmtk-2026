@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bgxq6tbjior6r"]
 
 [ext_resource type="Script" uid="uid://bxsigx4l40ly7" path="res://scripts/screen/messaging_window.gd" id="1_1n47y"]
+[ext_resource type="PackedScene" uid="uid://b0whsbjri84le" path="res://scenes/screen/windows/contact.tscn" id="2_05203"]
 
 [node name="MessagingWindow" type="Control" unique_id=521389708]
 custom_minimum_size = Vector2(400, 300)
@@ -22,6 +23,7 @@ mouse_filter = 2
 color = Color(0.646029, 0.646029, 0.646029, 1)
 
 [node name="MessagingPage" type="HBoxContainer" parent="." unique_id=1239428374]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,40 +32,28 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Contacts" type="ItemList" parent="MessagingPage" unique_id=940860470]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 
-[node name="Control" type="ColorRect" parent="MessagingPage/Contacts" unique_id=1436861216]
-custom_minimum_size = Vector2(0, 50)
+[node name="Contact" parent="MessagingPage/Contacts" unique_id=2089221125 instance=ExtResource("2_05203")]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 50.0
-grow_horizontal = 2
-color = Color(0.5370113, 0.5370113, 0.5370113, 1)
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = -912.0
+offset_bottom = -288.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="Label" type="Label" parent="MessagingPage/Contacts/Control" unique_id=1591316008]
+[node name="Contact2" parent="MessagingPage/Contacts" unique_id=1114807106 instance=ExtResource("2_05203")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Name"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="MessagingPage/Contacts/Control" unique_id=1022253058]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 8
-text = "11:48"
-horizontal_alignment = 2
-vertical_alignment = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = -912.0
+offset_bottom = -288.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MessagingPage" unique_id=470982687]
 layout_mode = 2
@@ -76,7 +66,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="LoginPage" type="CenterContainer" parent="." unique_id=1064760649]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

@@ -82,7 +82,7 @@ offset_left = 81.0
 offset_top = 57.0
 offset_right = 240.0
 offset_bottom = 71.0
-theme_override_colors/font_color = Color(1, 0.21568628, 0.21176471, 1)
+theme_override_colors/font_color = Color(1, 0.64705884, 0, 1)
 theme_override_font_sizes/font_size = 10
 text = "Due today at 11:50 (countdown?)"
 
