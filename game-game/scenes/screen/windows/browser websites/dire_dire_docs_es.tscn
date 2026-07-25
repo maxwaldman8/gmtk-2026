@@ -1,14 +1,14 @@
-[gd_scene format=3 uid="uid://csqtw1u8w08rm"]
+[gd_scene format=3 uid="uid://fwdldx26hsvg"]
 
-[ext_resource type="Script" uid="uid://b0it2hkbbdfbt" path="res://scripts/screen/browser websites/dire_dire_docs_com.gd" id="1_t3jda"]
+[ext_resource type="Script" uid="uid://cftnecheiw41a" path="res://scripts/screen/browser websites/dire_dire_docs_es.gd" id="1_baxq1"]
 
-[node name="DireDireDocsCom" type="Control" unique_id=1344016726]
+[node name="DireDireDocsEs" type="Control" unique_id=1344016726]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1.0
 offset_right = 477.0
 offset_bottom = 472.0
-script = ExtResource("1_t3jda")
+script = ExtResource("1_baxq1")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2113614690]
 layout_mode = 1
@@ -17,13 +17,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.6474452, 0.8741634, 0.97454923, 1)
+color = Color(0.313105, 0.82450515, 0.7352873, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=214931873]
 layout_mode = 0
 offset_right = 476.0
 offset_bottom = 95.0
-color = Color(0.56252545, 0.4824623, 0.3451592, 1)
+color = Color(0.50980395, 0.25490198, 0.16862746, 1)
 
 [node name="Label" type="Label" parent="." unique_id=585499873]
 layout_mode = 1
@@ -42,6 +42,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LoginPage1" type="Control" parent="." unique_id=1691935063]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -101,8 +102,7 @@ theme_override_colors/font_color = Color(0.3328807, 0.33288068, 0.33288068, 1)
 theme_override_font_sizes/font_size = 30
 text = "Log In"
 
-[node name="LoginPage2" type="Control" parent="." unique_id=1000166831]
-visible = false
+[node name="LoginPage2" type="Control" parent="." unique_id=1981536528]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -110,7 +110,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="LoginPage2" unique_id=554821293]
+[node name="Label" type="Label" parent="LoginPage2" unique_id=339884105]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -130,7 +130,7 @@ horizontal_alignment = 1
 vertical_alignment = 2
 autowrap_mode = 2
 
-[node name="Label2" type="Label" parent="LoginPage2" unique_id=478339554]
+[node name="Label2" type="Label" parent="LoginPage2" unique_id=329766263]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -145,12 +145,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.42365062, 0.42365065, 0.42365062, 1)
 theme_override_font_sizes/font_size = 20
-text = "What is your cat's name?"
+text = "What is your cat's surname?"
 horizontal_alignment = 1
 vertical_alignment = 2
 autowrap_mode = 2
 
-[node name="NameField" type="LineEdit" parent="LoginPage2" unique_id=283730635]
+[node name="SurnameField" type="LineEdit" parent="LoginPage2" unique_id=876572837]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -164,9 +164,9 @@ offset_bottom = 131.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 22
-placeholder_text = "Name"
+placeholder_text = "Surname"
 
-[node name="LogIn2Button" type="Button" parent="LoginPage2" unique_id=845170892]
+[node name="LogIn2Button" type="Button" parent="LoginPage2" unique_id=1788232336]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -211,10 +211,10 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-text = "        Family members are very important to our lives. They can make you feel better when you're feeling down. Indeed, family is one of the coolest things ever. But in the world of family member rankings, there can only be one greatest family member. If I had to pick a favorite family member, I would pick my cat.
-        I would pick my cat as my favorite family member because she is so beautiful and she makes me happy every day. When I need to wake up in the morning she wakes me up before my alarm. She makes me get exercise when I chase her. She even drinks soda with me. Well maybe she shouldn't do that one.
-        Not many people would consider a cat as a family member, but they are incorrect. They are just wrong. My cat lives with me every day and does my homework and does my laundry. I always learned it is good to feed people if they do your work. This is why I feed my cat yummy milk every day.
-        Thank you for reading my essay! :D"
+text = "        Los miembros de la familia son muy importantes en nuestras vidas. Pueden hacerte sentir mejor cuando te sientes decaído. Pero en el mundo de las clasificaciones familiares, solo puede haber un miembro favorito. Si tuviera que elegir a un miembro favorito de la familia, elegiría a mi pollo.
+        Elegiría a mi pollo como mi miembro favorito de la familia porque es muy \"chicrook\" y me hace feliz todos los días. Cuando necesito despertarme por la mañana, él me despierta antes de que me caiga al pozo. Me obliga a hacer ejercicio cuando la Roomba me persigue. Incluso bebe refresco conmigo. Bueno, tal vez eso último no debería hacerlo.
+        No mucha gente consideraría a un pollo como un miembro de la familia, pero tienen razón. No es que estén equivocados. Mi pollo vive sin mí todos los días, no hace mis deberes (porque es un pollo) y definitivamente no lava mi ropa. Siempre aprendí que es bueno alimentar a los pollos si cacarean lo suficientemente fuerte. Por eso le doy a mi pollo semillas deliciosas todos los días.
+        ¡Gracias por jugar a mi juego! :D"
 autowrap_mode = 3
 
 [node name="DownloadButton" type="Button" parent="Essay" unique_id=466354757]

@@ -73,6 +73,7 @@ text = "11:48:00"
 layer = 2
 
 [node name="AdVideo" parent="ApplicationLayer" unique_id=473881616 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+visible = false
 offset_left = 119.0
 offset_top = 76.0
 offset_right = 169.0
@@ -197,14 +198,15 @@ window_scene_name = "maze_5_window"
 is_default_opened = false
 
 [node name="QuestionVideo" parent="ApplicationLayer" unique_id=882876864 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
-offset_left = 243.0
-offset_top = 404.0
-offset_right = 293.0
-offset_bottom = 474.0
+visible = false
+offset_left = 84.0
+offset_top = 471.0
+offset_right = 134.0
+offset_bottom = 541.0
 icon_image = ExtResource("4_jtcyu")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
-window_name = "game_design_homework.mp4"
+window_name = "space_invaders.mp4"
 window_scene_name = "files/question_video_player_window"
 is_default_opened = false
 
@@ -269,24 +271,28 @@ window_name = "speech.pdf"
 window_scene_name = "files/speech"
 is_default_opened = false
 
-[node name="EnglishEssay" parent="ApplicationLayer" unique_id=93283999 instance=ExtResource("2_2d861")]
+[node name="EnglishEssay" parent="ApplicationLayer" unique_id=93283999 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 visible = false
-offset_left = 13.0
-offset_top = 126.0
-offset_right = 73.0
-offset_bottom = 206.0
+offset_left = 38.0
+offset_top = 142.0
+offset_right = 98.0
+offset_bottom = 222.0
 icon_image = ExtResource("7_wrpmo")
+dragged_application_layer = NodePath("../../MovedAppLayer")
+window_layer = NodePath("../../WindowLayer")
 window_name = "english_essay.docx"
 window_scene_name = "files/english"
 is_default_opened = false
 
-[node name="SpanishEssay" parent="ApplicationLayer" unique_id=1439951701 instance=ExtResource("2_2d861")]
+[node name="SpanishEssay" parent="ApplicationLayer" unique_id=1439951701 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 visible = false
-offset_left = 338.0
-offset_top = 53.0
-offset_right = 398.0
-offset_bottom = 133.0
+offset_left = 367.0
+offset_top = 132.0
+offset_right = 427.0
+offset_bottom = 212.0
 icon_image = ExtResource("7_wrpmo")
+dragged_application_layer = NodePath("../../MovedAppLayer")
+window_layer = NodePath("../../WindowLayer")
 window_name = "spanish_essay.docx"
 window_scene_name = "files/spanish"
 is_default_opened = false

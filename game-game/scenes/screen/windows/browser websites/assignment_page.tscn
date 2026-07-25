@@ -113,15 +113,17 @@ text = "SUBMIT"
 
 [node name="SubmissionStatus" type="Label" parent="SubmissionDrop" unique_id=1923703181]
 layout_mode = 0
-offset_left = 278.0
-offset_top = 293.0
-offset_right = 406.0
+offset_left = 229.0
+offset_top = 265.0
+offset_right = 468.0
 offset_bottom = 316.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "NOT SUBMITTED"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="SubmittedFile" type="Label" parent="SubmissionDrop" unique_id=1134996457]
+custom_maximum_size = Vector2(-1, 150)
 layout_mode = 0
 offset_left = 85.0
 offset_top = 322.0
@@ -129,6 +131,10 @@ offset_right = 188.0
 offset_bottom = 345.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "drag file here"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 5
 
 [node name="DeleteFileButton" type="Button" parent="SubmissionDrop" unique_id=2079706930]
 visible = false

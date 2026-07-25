@@ -20,6 +20,9 @@ static var time: float = 49 * 60
 
 var tutorial: bool = false
 
+var watched_question_video: bool = false
+var watched_ad_video: bool = false
+
 # Randomly generated stuff
 var messaging_password: String
 var cat_name
@@ -30,7 +33,7 @@ var english_password: String
 
 func _enter_tree() -> void:
 	if !tutorial:
-		SubmissionWebsite.assignments_to_do = ["conversion"]
+		SubmissionWebsite.assignments_to_do = ["conversion", "question_video"]
 	else:
 		SubmissionWebsite.assignments_to_do = ["tutorial"]
 	SubmissionWebsite.finished_assignments = []
@@ -77,6 +80,15 @@ func download_pdf():
 func download_english_essay():
 	$ApplicationLayer/EnglishEssay.visible = true
 
+func download_spanish_essay():
+	$ApplicationLayer/SpanishEssay.visible = true
+
+func download_question_video():
+	$ApplicationLayer/QuestionVideo.visible = true
+
+func download_ad_video():
+	$ApplicationLayer/AdVideo.visible = true
+
 func finish_public_speaking():
 	SubmissionWebsite.assignments_to_do = ["message_3d"]
 
@@ -87,10 +99,10 @@ func finish_maze():
 	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = false
 
 func finish_question_video():
-	pass
+	watched_question_video = true
 
 func finish_ad_video():
-	pass
+	watched_ad_video = true
 
 # tween window with mouse
 # window pos offset for minimal overlap

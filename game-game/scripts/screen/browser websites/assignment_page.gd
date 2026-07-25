@@ -11,6 +11,8 @@ signal swap
 @export var sub_file : Label
 @export var delete_file_button : Button
 
+@onready var screen: Screen = get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent()
+
 var submitted_file_name : String:
 	set(new_file):
 		submitted_file_name = new_file
@@ -93,24 +95,42 @@ func _on_submit_button_pressed() -> void:
 				get_parent().finished_assignments.append(a_name)
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
 				get_parent().update_a_list()
-				get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().finish_tutorial()
+				screen.finish_tutorial()
 		"conversion":
 			var regex = RegEx.new()
 			regex.compile(".*\\.pdf")
 			if !regex.search(sub_file.text):
-				print("not pdf")
 				sub_status_label.text = "Incorrect Filetype"
 				sub_status_label.add_theme_color_override("font_color", Color.RED)
 			elif sub_file.text != "speech.pdf":
-				print("wrong pdf")
 				sub_status_label.text = "Incorrect File"
 				sub_status_label.add_theme_color_override("font_color", Color.RED)
 			else:
-				print("right pdf")
 				sub_status_label.text = "Submitted"
 				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
 				get_parent().finished_assignments.append(a_name)
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
 				get_parent().update_a_list()
-				get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().finish_public_speaking()
+				screen.finish_public_speaking()
+				get_parent().update_a_list()
+		#TODO: Message 3d
+		"question_video":
+			var regex = RegEx.new()
+			regex.compile(".*\\.mp4")
+			if !regex.search(sub_file.text):
+				sub_status_label.text = "Incorrect Filetype"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			elif sub_file.text != "space_invaders.mp4":
+				sub_status_label.text = "Incorrect File"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			elif !screen.watched_question_video:
+				sub_status_label.text = "Video Has Not Been Completed"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			else:
+				sub_status_label.text = "Submitted"
+				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
+				get_parent().finished_assignments.append(a_name)
+				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				get_parent().update_a_list()
+				screen.finish_public_speaking()
 				get_parent().update_a_list()

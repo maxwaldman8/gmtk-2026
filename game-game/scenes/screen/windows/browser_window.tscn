@@ -47,6 +47,7 @@ offset_top = 35.0
 offset_right = 237.0
 offset_bottom = 67.0
 grow_horizontal = 2
+text = "submissionwebsite.com"
 placeholder_text = "search"
 
 [node name="TabAddButton" type="Button" parent="." unique_id=5560633]
