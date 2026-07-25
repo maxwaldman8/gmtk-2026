@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://c0s5ld45giybj"]
+
+[ext_resource type="Script" uid="uid://de6oe4spv6x2l" path="res://scripts/screen/cool_bob_games.gd" id="1_72tkx"]
+[ext_resource type="Texture2D" uid="uid://dqkq2q0dctj6s" path="res://sprites/screen/bob.png" id="2_flvi2"]
+[ext_resource type="Texture2D" uid="uid://8kw7help7x3x" path="res://sprites/screen/fallaway.png" id="3_72tkx"]
+
+[node name="CoolBobGames" type="Control" unique_id=1344016726]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 476.0
+offset_bottom = 472.0
+script = ExtResource("1_72tkx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2113614690]
+layout_mode = 0
+offset_right = 476.0
+offset_bottom = 472.0
+color = Color(0.3254902, 0.6156863, 0.80784315, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1241175847]
+layout_mode = 1
+offset_left = 78.0
+offset_top = -45.0
+offset_right = 398.0
+offset_bottom = 275.0
+texture = ExtResource("2_flvi2")
+
+[node name="Label2" type="RichTextLabel" parent="." unique_id=1194349197]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 186.0
+offset_right = 473.0
+offset_bottom = 295.0
+bbcode_enabled = true
+text = "Hi, I'm Bob!
+
+I make short, mostly 2D games in [s]Unity[/s] Godot that are hopefully fun to play."
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=173429479]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 305.0
+offset_right = 335.0
+offset_bottom = 452.0
+texture = ExtResource("3_72tkx")
+expand_mode = 1
+stretch_mode = 4

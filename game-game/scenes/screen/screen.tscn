@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cu4ijb1trwax0" path="res://sprites/screen/logo_06.png" id="3_ecmuf"]
 [ext_resource type="Texture2D" uid="uid://bk47fr3syf046" path="res://sprites/screen/logo_4.png" id="3_ir3ut"]
 [ext_resource type="Texture2D" uid="uid://dbt6uewfy4mcc" path="res://sprites/screen/logo_0.png" id="3_nnrwk"]
+[ext_resource type="Texture2D" uid="uid://vkb8qfh218nm" path="res://sprites/screen/english_password1.png" id="3_ttmu0"]
 [ext_resource type="Texture2D" uid="uid://cfa1cv3rhsk8w" path="res://sprites/screen/logo_10.png" id="4_jtcyu"]
 [ext_resource type="Texture2D" uid="uid://c7a8kf1ujn6if" path="res://sprites/screen/logo_5.png" id="6_bqj6y"]
 [ext_resource type="Texture2D" uid="uid://07oscu8p7i5u" path="res://sprites/screen/logo_08.png" id="7_wrpmo"]
@@ -24,6 +25,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6ukd0")
 spanish_passwords = Array[Texture2D]([ExtResource("2_tbkdm"), ExtResource("2_tbkdm"), ExtResource("2_tbkdm"), ExtResource("2_tbkdm"), ExtResource("2_tbkdm")])
+english_password_1s = Array[Texture2D]([ExtResource("3_ttmu0"), ExtResource("3_ttmu0"), ExtResource("3_ttmu0"), ExtResource("3_ttmu0"), ExtResource("3_ttmu0")])
 time_label = NodePath("WallpaperLayer/BottomBar/Time")
 custom_mouse = ExtResource("3_ecmuf")
 
@@ -265,6 +267,28 @@ dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "speech.pdf"
 window_scene_name = "files/speech"
+is_default_opened = false
+
+[node name="EnglishEssay" parent="ApplicationLayer" unique_id=93283999 instance=ExtResource("2_2d861")]
+visible = false
+offset_left = 13.0
+offset_top = 126.0
+offset_right = 73.0
+offset_bottom = 206.0
+icon_image = ExtResource("7_wrpmo")
+window_name = "english_essay.docx"
+window_scene_name = "files/english"
+is_default_opened = false
+
+[node name="SpanishEssay" parent="ApplicationLayer" unique_id=1439951701 instance=ExtResource("2_2d861")]
+visible = false
+offset_left = 338.0
+offset_top = 53.0
+offset_right = 398.0
+offset_bottom = 133.0
+icon_image = ExtResource("7_wrpmo")
+window_name = "spanish_essay.docx"
+window_scene_name = "files/spanish"
 is_default_opened = false
 
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984]

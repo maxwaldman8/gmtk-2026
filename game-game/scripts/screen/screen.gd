@@ -8,8 +8,9 @@ extends Control
 @export var cat_bowl: CanvasLayer
 
 const cat_names: Array[String] = ["Maxine", "Kaitlyn", "Bobette", "Kikki", "Jiji", "Momo", "Alice", "Ginger"]
-
 @export var spanish_passwords: Array[Texture2D]
+@export var english_password_1s: Array[Texture2D]
+const english_password_endings: Array[String] = ["654321", "654321", "654321", "654321", "654321"]
 
 @export var time_label: Label
 
@@ -24,6 +25,8 @@ var messaging_password: String
 var cat_name
 var maze_num: int
 var spanish_password_texture: Texture2D
+var english_password_1_texture: Texture2D
+var english_password: String
 
 func _enter_tree() -> void:
 	if !tutorial:
@@ -40,7 +43,10 @@ func _ready() -> void:
 	maze_num = randi_range(1, 5)
 	cat_name = cat_names[randi_range(0, cat_names.size() - 1)]
 	cat_bowl.get_node("Label").text = cat_name
-	spanish_password_texture = spanish_passwords[randi_range(0, 4)]
+	spanish_password_texture = spanish_passwords[randi_range(0, spanish_passwords.size() - 1)]
+	var english_password_num = randi_range(0, english_password_1s.size() - 1)
+	english_password_1_texture = english_password_1s[english_password_num]
+	english_password = "QUERTYasdfgh" + english_password_endings[english_password_num]
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
@@ -68,9 +74,11 @@ func set_wallpaper(texture: Texture2D):
 func download_pdf():
 	$ApplicationLayer/SpeechPDF.visible = true
 
+func download_english_essay():
+	$ApplicationLayer/EnglishEssay.visible = true
+
 func finish_public_speaking():
 	SubmissionWebsite.assignments_to_do = ["message_3d"]
-	
 
 func insert_drive():
 	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = true
