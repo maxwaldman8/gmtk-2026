@@ -480,6 +480,7 @@ theme_override_font_sizes/font_size = 40
 text = "Tab to Leave"
 
 [node name="Cat2" type="CanvasLayer" parent="." unique_id=306651330]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Cat2" unique_id=194147301]
 position = Vector2(576, 324)
