@@ -10,6 +10,8 @@ signal swap
 @export var sub_status_label : Label
 @export var sub_file : Label
 @export var delete_file_button : Button
+@export var submit_button : Button
+@export var loading_bar : LoadingBar
 
 @onready var screen: Screen = get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent()
 
@@ -40,6 +42,7 @@ func set_up(new_a_name: String = "tutorial"):
 
 
 func _ready() -> void:
+	loading_bar.reset()
 	if data.is_empty():
 		return
 	name_label.text = data[INFO.NAME]
@@ -49,6 +52,7 @@ func _ready() -> void:
 
 
 func _on_button_pressed() -> void:
+	loading_bar.reset()
 	swap.emit()
 
 
@@ -62,6 +66,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	ghost_app.in_drop_space = true
 	ghost_app.dropped_ghost.connect(func(): 
 		submitted_file_name = hovered_file_name
+		loading_bar.reset()
 	)
 
 
@@ -77,9 +82,14 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 
 func _on_delete_file_button_pressed() -> void:
 	submitted_file_name = ""
+	loading_bar.reset()
 
 
 func _on_submit_button_pressed() -> void:
+	loading_bar.start()
+
+
+func _on_loading_bar_finished() -> void:
 	if sub_file.text == "drag file here":
 		sub_status_label.text = "No File to Submit"
 		sub_status_label.add_theme_color_override("font_color", Color.RED)
@@ -134,3 +144,8 @@ func _on_submit_button_pressed() -> void:
 				get_parent().update_a_list()
 				screen.finish_public_speaking()
 				get_parent().update_a_list()
+	if sub_status_label.text == "Submitted":
+		delete_file_button.visible = false
+		delete_file_button.disabled = true
+		submit_button.visible = false
+		submit_button.disabled = true
