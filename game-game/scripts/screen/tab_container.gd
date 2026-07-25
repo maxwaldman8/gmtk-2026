@@ -22,6 +22,7 @@ func _ready() -> void:
 	move_tab_add_button()
 	tab_bar.current_tab = 0
 	set_tab_tooltip(0, "Submit")
+	tab_bar.max_tab_width = 115
 
 
 func _on_tab_close_pressed(tab_index: int) -> void:
@@ -87,6 +88,5 @@ func switch_tab(new_text: String) -> void:
 	new_tab_instance = urls[new_text][0].instantiate()
 	tab_bar.set_tab_title(current_tab, urls[new_text][1])
 	set_tab_tooltip(current_tab, urls[new_text][1])
-	tab_bar.max_tab_width = 100
 	get_child(current_tab).add_child(new_tab_instance)
 	move_tab_add_button()

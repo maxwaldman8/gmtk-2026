@@ -78,6 +78,10 @@ func _on_delete_file_button_pressed() -> void:
 
 
 func _on_submit_button_pressed() -> void:
+	if sub_file.text == "drag file here":
+		sub_status_label.text = "No File to Submit"
+		sub_status_label.add_theme_color_override("font_color", Color.RED)
+		return
 	match a_name:
 		"tutorial":
 			if !sub_file.text != "math_homework.pdf":
