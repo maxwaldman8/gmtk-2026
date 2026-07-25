@@ -62,14 +62,16 @@ func _physics_process(delta: float) -> void:
 	for i in range(0, bullets.size()):
 		bullets[i].position.y -= bullet_speed
 		for area in bullets[i].get_overlapping_areas():
-			to_delete.append(i)
+			if to_delete.find(i) == -1:
+				to_delete.append(i)
 			enemies.remove_at(enemies.find(area))
 			area.queue_free()
 			enemy_speed += enemy_acceleration
-		if bullets[i].position.y <= 0:
+		if bullets[i].position.y <= 0 and to_delete.find(i) == -1:
 			to_delete.append(i)
 	#@warning_ignore("standalone_expression")
 	to_delete.sort_custom(func(a, b): return a > b)
+	print(to_delete)
 	for i in to_delete:
 		bullets[i].queue_free()
 		bullets.remove_at(i)
