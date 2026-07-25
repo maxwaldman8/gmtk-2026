@@ -94,8 +94,8 @@ func _on_input_taker_gui_input(event: InputEvent) -> void:
 		else:
 			dragged_ghost.was_dropped = true
 			dragged_ghost.dropped_ghost.emit()
-		dragged_application_layer.remove_child(dragged_ghost)
-		add_child(dragged_ghost)
+		#dragged_application_layer.remove_child(dragged_ghost)
+		dragged_ghost.reparent(self)
 		dragged_ghost.collision.disabled = true
 		for c in dragged_ghost.get_children():
 			if not c is Area2D:
@@ -117,8 +117,9 @@ func _process(_delta: float) -> void:
 		var new_icon = icon.duplicate()
 		new_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		dragged_ghost.add_child(new_icon)
-		remove_child(dragged_ghost)
-		dragged_application_layer.add_child(dragged_ghost)
+		#remove_child(dragged_ghost)
+		#dragged_application_layer.add_child(dragged_ghost)
+		dragged_ghost.reparent(dragged_application_layer)
 		dragged_ghost.collision.disabled = false
 	# hard coded vector offset since made ghost a new scene
 	var unclamped_pos : Vector2 = global_mouse_pos - offset + Vector2(30, 40)
