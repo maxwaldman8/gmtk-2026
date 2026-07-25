@@ -295,6 +295,19 @@ window_name = "spanish_essay.docx"
 window_scene_name = "files/spanish"
 is_default_opened = false
 
+[node name="DFSJava" parent="ApplicationLayer" unique_id=2038132978 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+visible = false
+offset_left = 838.0
+offset_top = 481.0
+offset_right = 898.0
+offset_bottom = 561.0
+icon_image = ExtResource("7_wrpmo")
+dragged_application_layer = NodePath("../../MovedAppLayer")
+window_layer = NodePath("../../WindowLayer")
+window_name = "dfs.java"
+window_scene_name = "files/dfs_java"
+is_default_opened = false
+
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984 groups=["window_layer"]]
 layer = 3
 script = ExtResource("3_6ukd0")

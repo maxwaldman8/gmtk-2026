@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c0515axbrup46"]
+
+[node name="DFSJava" type="Control" unique_id=521389708]
+custom_minimum_size = Vector2(500, 400)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 250.0
+offset_bottom = 300.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2103473406]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.20691353, 0.20691356, 0.20691347, 1)
+
+[node name="Label" type="Label" parent="." unique_id=430627503]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 2.0
+offset_right = 368.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.35202098, 0.6149607, 0.9232745, 1)
+theme_override_font_sizes/font_size = 21
+text = "Invisible Studio Code
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=963011182]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 362.0
+offset_right = 499.0
+offset_bottom = 399.0
+theme_override_colors/font_color = Color(0.3529412, 0.6156863, 0.92156863, 1)
+theme_override_font_sizes/font_size = 8
+text = "(you can't see the code because it's invisible)"
+horizontal_alignment = 2
+vertical_alignment = 2

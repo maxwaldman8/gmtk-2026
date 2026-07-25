@@ -40,7 +40,7 @@ var english_password: String
 
 func _enter_tree() -> void:
 	if !tutorial:
-		SubmissionWebsite.assignments_to_do = ["conversion", "image_puzzle_and_cat"]
+		SubmissionWebsite.assignments_to_do = ["conversion", "task_invaders"]
 	else:
 		SubmissionWebsite.assignments_to_do = ["tutorial"]
 	SubmissionWebsite.finished_assignments = []
@@ -111,6 +111,9 @@ func submit_public_speaking():
 
 func submit_question_video():
 	SubmissionWebsite.assignments_to_do = ["pop_up"]
+
+func submit_popup():
+	SubmissionWebsite.assignments_to_do = ["movie_ads"]
 
 func submit_ad_video():
 	SubmissionWebsite.assignments_to_do = ["image_puzzle_and_cat"]

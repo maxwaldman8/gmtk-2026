@@ -181,6 +181,22 @@ func _on_loading_bar_finished() -> void:
 				screen.submit_question_video()
 				get_parent().update_a_list()
 		#TODO: popup
+		"pop_up":
+			var regex = RegEx.new()
+			regex.compile(".*\\.pdf")
+			if !regex.search(sub_file.text):
+				sub_status_label.text = "Incorrect Filetype"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			elif sub_file.text != "poster_ad.pdf":
+				sub_status_label.text = "Incorrect File"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			else:
+				sub_status_label.text = "Submitted"
+				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
+				get_parent().finished_assignments.append(a_name)
+				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				screen.submit_popup()
+				get_parent().update_a_list()
 		"movie_ads":
 			var regex = RegEx.new()
 			regex.compile(".*\\.mp4")
@@ -216,6 +232,21 @@ func _on_loading_bar_finished() -> void:
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
 				screen.submit_english_essay()
 				get_parent().update_a_list()
+		"task_invaders":
+			var regex = RegEx.new()
+			regex.compile(".*\\.pdf")
+			if !regex.search(sub_file.text):
+				sub_status_label.text = "Incorrect Filetype"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			elif sub_file.text != "project_report.pdf":
+				sub_status_label.text = "Incorrect File"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			else:
+				sub_status_label.text = "Submitted"
+				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
+				get_parent().finished_assignments.append(a_name)
+				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				get_parent().update_a_list()
 		"wallpaper":
 			var regex = RegEx.new()
 			regex.compile(".*\\.docx")
@@ -223,6 +254,21 @@ func _on_loading_bar_finished() -> void:
 				sub_status_label.text = "Incorrect Filetype"
 				sub_status_label.add_theme_color_override("font_color", Color.RED)
 			elif sub_file.text != "spanish_essay.docx":
+				sub_status_label.text = "Incorrect File"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			else:
+				sub_status_label.text = "Submitted"
+				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
+				get_parent().finished_assignments.append(a_name)
+				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				get_parent().update_a_list()
+		"alarm_clock":
+			var regex = RegEx.new()
+			regex.compile(".*\\.java")
+			if !regex.search(sub_file.text):
+				sub_status_label.text = "Incorrect Filetype"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			elif sub_file.text != "dfs.java":
 				sub_status_label.text = "Incorrect File"
 				sub_status_label.add_theme_color_override("font_color", Color.RED)
 			else:
