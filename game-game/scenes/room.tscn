@@ -40,6 +40,9 @@ albedo_texture = ExtResource("2_tk5fv")
 [sub_resource type="BoxShape3D" id="BoxShape3D_nrlmu"]
 size = Vector3(1, 0.6, 0.6)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_nrlmu"]
+viewport_path = NodePath("AlarmViewport")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23wr2"]
 vertex_color_use_as_albedo = true
 
@@ -120,7 +123,10 @@ shape = SubResource("BoxShape3D_nrlmu")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Room/Alarm/Mesh" unique_id=1066334149]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7082047, 0.7257383, 2.3595288)
-light_energy = 0.0
+
+[node name="AlarmTime" type="Sprite3D" parent="Room/Alarm/Mesh" unique_id=1860538619]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 1.7111293, 0.55400765, 2.6194036)
+texture = SubResource("ViewportTexture_nrlmu")
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="Room/Alarm" unique_id=1208157814]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7225776, 0.93032324, -0.62605)
@@ -259,6 +265,7 @@ offset_top = -23.0
 offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 40
 text = "Click to Interact"
 
@@ -355,3 +362,18 @@ autoplay = true
 transform = Transform3D(63.999996, 0, 0, 0, 61.170753, -18.81858, 0, 18.81858, 61.170753, 0, 97.943, -231.015)
 material_override = ExtResource("14_23wr2")
 mesh = SubResource("BoxMesh_bf83q")
+
+[node name="AlarmViewport" type="SubViewport" parent="." unique_id=860021773]
+transparent_bg = true
+
+[node name="Label" type="Label" parent="AlarmViewport" unique_id=619528831]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 200
+text = "11:48"
+horizontal_alignment = 1
+vertical_alignment = 1
