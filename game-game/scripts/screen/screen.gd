@@ -6,6 +6,8 @@ extends Control
 @export var password_note: CanvasLayer
 @export var tv_note: CanvasLayer
 @export var cat_bowl: CanvasLayer
+@export var cat1: CanvasLayer
+@export var cat2: CanvasLayer
 
 const cat_names: Array[String] = ["Maxine", "Kaitlyn", "Bobette", "Kikki", "Jiji", "Momo", "Alice", "Ginger"]
 var cat_name

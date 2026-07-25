@@ -12,6 +12,7 @@ extends CharacterBody3D
 
 @export var screen: Control
 @export var gui: CanvasLayer
+@export var cat: Node3D
 
 var viewing_vector: bool = false
 var active_layer: CanvasLayer
@@ -81,6 +82,14 @@ func handle_raycast():
 			"CatBowlArea":
 				viewing_vector = true
 				active_layer = screen.cat_bowl
+				active_layer.visible = true
+				gui.visible = false
+			"CatArea":
+				viewing_vector = true
+				if cat.flying:
+					active_layer = screen.cat2
+				else:
+					active_layer = screen.cat1
 				active_layer.visible = true
 				gui.visible = false
 
