@@ -55,3 +55,7 @@ func _on_tab_add_button_pressed() -> void:
 
 func _on_tab_changed(tab: int) -> void:
 	line_edit.text = get_child(tab).get_child(0).get_url()
+
+
+func _on_line_edit_text_submitted(new_text: String) -> void:
+	pass # Replace with function body.

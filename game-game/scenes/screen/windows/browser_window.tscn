@@ -69,4 +69,5 @@ theme_override_font_sizes/font_size = 12
 text = "+"
 
 [connection signal="tab_changed" from="TabContainer" to="TabContainer" method="_on_tab_changed"]
+[connection signal="text_submitted" from="LineEdit" to="TabContainer" method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="TabAddButton" to="TabContainer" method="_on_tab_add_button_pressed"]
