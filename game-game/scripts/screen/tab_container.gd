@@ -68,17 +68,23 @@ func _on_tab_changed(tab: int) -> void:
 func _on_line_edit_text_submitted(new_text: String) -> void:
 	switch_tab(new_text)
 
+
 func switch_tab(new_text: String) -> void:
 	line_edit.text = new_text
+	var new_tab_instance
 	if new_text not in urls.keys():
 		get_child(current_tab).get_child(0).queue_free()
-		var new_tab_instance = WEBSITE_404_SCENE.instantiate()
+		new_tab_instance = WEBSITE_404_SCENE.instantiate()
 		tab_bar.set_tab_title(current_tab, "Error 404")
 		get_child(current_tab).add_child(new_tab_instance)
 		return
 	if new_text == "":
 		return
 	get_child(current_tab).get_child(0).queue_free()
-	var new_tab_instance = urls[new_text][0].instantiate()
+	new_tab_instance = urls[new_text][0].instantiate()
+	#var full_tab_text = urls[new_text][1]
+	#if len()
 	tab_bar.set_tab_title(current_tab, urls[new_text][1])
+	tab_bar.max_tab_width = 100
 	get_child(current_tab).add_child(new_tab_instance)
+	move_tab_add_button()

@@ -34,6 +34,8 @@ func _ready() -> void:
 func swap_to(...args):
 	if not args.is_empty():
 		assignment_page.set_up(args[0])
+		assignment_page.sub_status_label.text = "NOT SUBMITTED"
+		assignment_page.sub_status_label.add_theme_color_override("font_color", Color.BLACK)
 	to_do_list.visible = not to_do_list.visible
 	assignment_page.visible = not assignment_page.visible
 
