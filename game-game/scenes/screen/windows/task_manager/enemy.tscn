@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://biqx2k2jd0ed4" path="res://sprites/screen/exe.tres" id="2_tyvvd"]
 
 [node name="Enemy" type="Area2D" unique_id=1774869807]
+scale = Vector2(1.25, 1.25)
 collision_layer = 2
 script = ExtResource("1_tyvvd")
 

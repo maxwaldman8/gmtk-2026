@@ -8,8 +8,8 @@ var pos: float = 10
 @export var player_speed = 0.02
 @export var bullet_speed = 15.0
 @export var enemy_speed = 2.0
-@export var enemy_acceleration = 0.5
-@export var cooldown_time = 0.4
+@export var enemy_acceleration = 0.45
+@export var cooldown_time = 0.5
 
 @export var bullet: PackedScene
 @export var enemy: PackedScene
@@ -43,13 +43,13 @@ func shoot():
 		add_child(new_bullet)
 		new_bullet.position = Vector2(player.position.x, player.position.y - 20)
 		bullets.append(new_bullet)
-		cooldown_time_left = 0.4
+		cooldown_time_left = 0.5
 
 func _physics_process(delta: float) -> void:
 	if enemies.size() == 0:
 		if wave < 3:
 			spawn_wave()
-			enemy_speed = 3.0 + wave * 0.5
+			enemy_speed = 3.0 + wave * 0.45
 		else:
 			# Game won
 			get_parent().close()
@@ -81,11 +81,11 @@ func _physics_process(delta: float) -> void:
 		if enemies[i].position.x < 60:
 			enemies[i].position.x = 60
 			enemies[i].going_right = true
-			enemies[i].position.y += 40
+			enemies[i].position.y += 70
 		elif enemies[i].position.x > 350:
 			enemies[i].position.x = 350
 			enemies[i].going_right = false
-			enemies[i].position.y += 40
+			enemies[i].position.y += 70
 		if enemies[i].position.y >= 550:
 			# Game over
 			get_parent().close()
