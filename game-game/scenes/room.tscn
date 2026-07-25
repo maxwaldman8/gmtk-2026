@@ -17,10 +17,10 @@
 [ext_resource type="AudioStream" uid="uid://dkrptts3myo2u" path="res://sounds/digital_1159.mp3" id="7_7dqbv"]
 [ext_resource type="ArrayMesh" uid="uid://bj5hjsbjubowk" path="res://statues/cat2.obj" id="7_dynfe"]
 [ext_resource type="Texture2D" uid="uid://dkc200e6mqx0u" path="res://sprites/screen/note.png" id="9_3j2fx"]
-[ext_resource type="Texture2D" uid="uid://cu4ijb1trwax0" path="res://sprites/screen/logo_06.png" id="12_katsu"]
 [ext_resource type="Texture2D" uid="uid://dfupl6d57fcsc" path="res://sprites/vector/note.png" id="13_dynfe"]
 [ext_resource type="Material" uid="uid://ca5do0p6rx780" path="res://styles/moon.tres" id="14_23wr2"]
 [ext_resource type="FontFile" uid="uid://p5d3ilwg8lqw" path="res://scribes/Maxmessy-Regular.ttf" id="14_vfrn5"]
+[ext_resource type="Texture2D" uid="uid://bgcooaa38sec4" path="res://sprites/screen/spanish_password.png" id="15_kk8bn"]
 [ext_resource type="Texture2D" uid="uid://edp8ubh0sddl" path="res://sprites/vector/bowl.png" id="16_jxwrd"]
 [ext_resource type="FontFile" uid="uid://d37qrxpoerqku" path="res://scribes/mazenumbers.ttf" id="23_kk8bn"]
 
@@ -265,7 +265,7 @@ gui = NodePath("../../../GUI")
 password_note = NodePath("../../../PasswordNote")
 tv_note = NodePath("../../../TVNote")
 cat_bowl = NodePath("../../../CatBowl")
-custom_mouse = ExtResource("12_katsu")
+spanish_password_textures = Array[Texture2D]([ExtResource("15_kk8bn"), ExtResource("15_kk8bn"), ExtResource("15_kk8bn"), ExtResource("15_kk8bn"), ExtResource("15_kk8bn")])
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=1432570367]
 

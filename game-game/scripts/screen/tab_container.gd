@@ -15,7 +15,9 @@ var urls : Dictionary = {
 	ScamWebsite.url: [preload("res://scenes/screen/windows/browser websites/scam_website.tscn"), ScamWebsite.tab_name],
 	DireDireDocsComWebsite.url: [preload("res://scenes/screen/windows/browser websites/dire_dire_docs_com.tscn"), DireDireDocsComWebsite.tab_name],
 	CoolBobGamesWebsite.url: [preload("res://scenes/screen/windows/browser websites/cool_bob_games.tscn"), CoolBobGamesWebsite.tab_name],
-	GTKMWebsite.url: [preload("res://scenes/screen/windows/browser websites/gtkm.tscn"), GTKMWebsite.tab_name]
+	GTKMWebsite.url: [preload("res://scenes/screen/windows/browser websites/gtkm.tscn"), GTKMWebsite.tab_name],
+	BestFilmsWebsite.url: [preload("res://scenes/screen/windows/browser websites/bestfilms.tscn"), BestFilmsWebsite.tab_name],
+	DireDireDocsEsWebsite.url: [preload("res://scenes/screen/windows/browser websites/dire_dire_docs_es.tscn"), DireDireDocsEsWebsite.tab_name]
 }
 
 

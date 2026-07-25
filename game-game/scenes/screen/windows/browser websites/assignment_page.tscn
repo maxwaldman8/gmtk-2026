@@ -84,6 +84,7 @@ offset_right = 464.0
 offset_bottom = 182.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 1
+theme_override_font_sizes/font_size = 15
 text = "this is an assignment"
 autowrap_mode = 2
 

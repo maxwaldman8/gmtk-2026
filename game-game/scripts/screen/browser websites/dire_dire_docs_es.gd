@@ -8,7 +8,7 @@ func get_url():
 	return url
 
 func _on_log_in_1_button_pressed() -> void:
-	if $LoginPage1/PasswordField.text == get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().english_password:
+	if $LoginPage1/PasswordField.text == get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().spanish_password:
 		$LoginPage1.visible = false
 		$LoginPage2.visible = true
 

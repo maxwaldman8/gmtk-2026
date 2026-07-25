@@ -29,6 +29,14 @@ func _ready() -> void:
 			a_tab.set_up(a)
 			a_tab.swap_to.connect(swap_to)
 			assignments_list.add_child(a_tab)
+		for a in missing_assignments:
+			var a_tab = ASSIGNMENT_TAB_SCENE.instantiate()
+			a_tab.set_up(a, "missing")
+			assignments_list.add_child(a_tab)
+		for a in finished_assignments:
+			var a_tab = ASSIGNMENT_TAB_SCENE.instantiate()
+			a_tab.set_up(a, "completed")
+			assignments_list.add_child(a_tab)
 
 
 func swap_to(...args):
@@ -53,6 +61,25 @@ func update_a_list():
 			var a_tab = ASSIGNMENT_TAB_SCENE.instantiate()
 			a_tab.set_up(a_name)
 			a_tab.swap_to.connect(swap_to)
+			assignments_list.add_child(a_tab)
+	await RenderingServer.frame_post_draw
+	for a_name in missing_assignments:
+		var already_there : bool = false
+		for a_tab:AssignmentTab in assignments_list.get_children():
+			if a_tab.a_name == a_name:
+				already_there = true
+		if not already_there:
+			var a_tab = ASSIGNMENT_TAB_SCENE.instantiate()
+			a_tab.set_up(a_name, "missing")
+			assignments_list.add_child(a_tab)
+	for a_name in finished_assignments:
+		var already_there : bool = false
+		for a_tab:AssignmentTab in assignments_list.get_children():
+			if a_tab.a_name == a_name:
+				already_there = true
+		if not already_there:
+			var a_tab = ASSIGNMENT_TAB_SCENE.instantiate()
+			a_tab.set_up(a_name, "completed")
 			assignments_list.add_child(a_tab)
 
 

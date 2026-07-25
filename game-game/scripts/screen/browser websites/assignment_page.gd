@@ -50,6 +50,23 @@ func _ready() -> void:
 	desc_label.text = data[INFO.DESC]
 	submitted_file_name = ""
 
+func _process(_delta: float) -> void:
+	if data.size() == 0: return
+	var current_time: float = screen.time
+	var due_time: float = data[INFO.DUE_DATE].substr(3, 2).to_int() * 60.0
+	var time_left = int(ceil(due_time - current_time))
+	var minutes = "0"
+	if time_left / 60 < 10:
+		minutes = "0" + str(time_left / 60)
+	else:
+		minutes = str(time_left / 60)
+	var seconds = "0"
+	if time_left % 60 < 10:
+		seconds = "0" + str(time_left % 60)
+	else:
+		seconds = str(time_left % 60)
+	due_time_label.text = "Due today at " + data[INFO.DUE_DATE] + " in " + minutes + ":" + seconds
+
 
 func _on_button_pressed() -> void:
 	loading_bar.reset()
@@ -104,8 +121,8 @@ func _on_loading_bar_finished() -> void:
 				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
 				get_parent().finished_assignments.append(a_name)
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
-				get_parent().update_a_list()
 				screen.finish_tutorial()
+				get_parent().update_a_list()
 		"conversion":
 			var regex = RegEx.new()
 			regex.compile(".*\\.pdf")
@@ -120,8 +137,7 @@ func _on_loading_bar_finished() -> void:
 				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
 				get_parent().finished_assignments.append(a_name)
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
-				get_parent().update_a_list()
-				screen.finish_public_speaking()
+				screen.submit_public_speaking()
 				get_parent().update_a_list()
 		#TODO: Message 3d
 		"question_video":
@@ -141,8 +157,58 @@ func _on_loading_bar_finished() -> void:
 				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
 				get_parent().finished_assignments.append(a_name)
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				screen.submit_question_video()
 				get_parent().update_a_list()
-				screen.finish_public_speaking()
+		#TODO: popup
+		"movie_ads":
+			var regex = RegEx.new()
+			regex.compile(".*\\.mp4")
+			if !regex.search(sub_file.text):
+				sub_status_label.text = "Incorrect Filetype"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			elif sub_file.text != "castlevania.mp4":
+				sub_status_label.text = "Incorrect File"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			elif !screen.watched_ad_video:
+				sub_status_label.text = "Video Has Not Been Completed"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			else:
+				sub_status_label.text = "Submitted"
+				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
+				get_parent().finished_assignments.append(a_name)
+				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				screen.submit_ad_video()
+				get_parent().update_a_list()
+		"image_puzzle_and_cat":
+			var regex = RegEx.new()
+			regex.compile(".*\\.docx")
+			if !regex.search(sub_file.text):
+				sub_status_label.text = "Incorrect Filetype"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			elif sub_file.text != "english_essay.docx":
+				sub_status_label.text = "Incorrect File"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			else:
+				sub_status_label.text = "Submitted"
+				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
+				get_parent().finished_assignments.append(a_name)
+				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				screen.submit_english_essay()
+				get_parent().update_a_list()
+		"wallpaper":
+			var regex = RegEx.new()
+			regex.compile(".*\\.docx")
+			if !regex.search(sub_file.text):
+				sub_status_label.text = "Incorrect Filetype"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			elif sub_file.text != "spanish_essay.docx":
+				sub_status_label.text = "Incorrect File"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			else:
+				sub_status_label.text = "Submitted"
+				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
+				get_parent().finished_assignments.append(a_name)
+				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
 				get_parent().update_a_list()
 	if sub_status_label.text == "Submitted":
 		delete_file_button.visible = false
