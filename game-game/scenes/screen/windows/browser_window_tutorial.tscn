@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://fmbco4sj011m"]
+
+[ext_resource type="Script" uid="uid://da4t5unp5na8h" path="res://scripts/screen/browser_window.gd" id="1_kphkw"]
+[ext_resource type="Script" uid="uid://c5dvsdajhiiq5" path="res://scripts/screen/tab_container_tutorial.gd" id="2_kphkw"]
+[ext_resource type="PackedScene" uid="uid://bwi71p458pe2" path="res://scenes/screen/windows/browser websites/submission_website.tscn" id="3_xuoti"]
+
+[node name="BrowserWindowTutorial" type="Control" unique_id=1699168601 node_paths=PackedStringArray("tab_container")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 482.0
+offset_bottom = 552.0
+script = ExtResource("1_kphkw")
+tab_container = NodePath("TabContainer")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1816412757]
+propagate_maximum_size = true
+layout_mode = 1
+offset_right = 482.0
+offset_bottom = 552.0
+color = Color(0.46229059, 0.46229059, 0.46229059, 1)
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=754288331 node_paths=PackedStringArray("tab_add_button", "line_edit")]
+layout_mode = 0
+offset_right = 482.0
+offset_bottom = 552.0
+current_tab = 0
+drag_to_rearrange_enabled = true
+script = ExtResource("2_kphkw")
+tab_add_button = NodePath("../TabAddButton")
+line_edit = NodePath("../LineEdit")
+
+[node name="Submit" type="MarginContainer" parent="TabContainer" unique_id=2144486131]
+layout_mode = 2
+theme_override_constants/margin_top = 40
+metadata/_tab_index = 0
+
+[node name="SubmissionWebsite" parent="TabContainer/Submit" unique_id=687981471 instance=ExtResource("3_xuoti")]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=696103115]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -237.0
+offset_top = 35.0
+offset_right = 237.0
+offset_bottom = 67.0
+grow_horizontal = 2
+text = "submissionwebsite.com"
+placeholder_text = "search"
+
+[node name="TabAddButton" type="Button" parent="." unique_id=5560633]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 3.0
+offset_right = 192.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 12
+text = "+"
+
+[connection signal="tab_changed" from="TabContainer" to="TabContainer" method="_on_tab_changed"]
+[connection signal="text_submitted" from="LineEdit" to="TabContainer" method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="TabAddButton" to="TabContainer" method="_on_tab_add_button_pressed"]

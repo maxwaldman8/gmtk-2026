@@ -84,10 +84,9 @@ icon_image = ExtResource("6_j1imy")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "HotDog Browser"
-window_scene_name = "browser_window"
-is_default_opened = false
+window_scene_name = "browser_window_tutorial"
 
-[node name="MathHomework" parent="ApplicationLayer" unique_id=473881616 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("4_qrk7u")]
+[node name="MathHomework" parent="ApplicationLayer" unique_id=695964163 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("4_qrk7u")]
 offset_left = 249.0
 offset_top = 333.0
 offset_right = 309.0

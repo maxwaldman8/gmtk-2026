@@ -79,7 +79,7 @@ func _process(_delta: float) -> void:
 	due_time_label.text = "Due today at " + data[INFO.DUE_DATE] + " in " + minutes + ":" + seconds
 	if time_left <= 0:
 		SubmissionWebsite.missing_assignments.append(a_name)
-		screen.handle_missin(a_name)
+		screen.handle_missing(a_name)
 		swap.emit()
 		data = []
 
@@ -161,7 +161,7 @@ func _on_loading_bar_finished() -> void:
 		return
 	match a_name:
 		"tutorial":
-			if !sub_file.text != "math_homework.pdf":
+			if sub_file.text != "math_homework.pdf":
 				sub_status_label.text = "Incorrect File"
 				sub_status_label.add_theme_color_override("font_color", Color.RED)
 			else:
