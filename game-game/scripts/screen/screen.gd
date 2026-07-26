@@ -166,6 +166,7 @@ func insert_drive():
 
 func finish_maze():
 	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = false
+	$ApplicationLayer/DFSJava.visible = true
 
 func finish_question_video():
 	watched_question_video = true

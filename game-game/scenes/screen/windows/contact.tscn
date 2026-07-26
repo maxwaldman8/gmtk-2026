@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0whsbjri84le"]
 
-[ext_resource type="Script" uid="uid://dv73vvub8ugyl" path="res://scenes/screen/windows/contact.gd" id="1_kkksv"]
+[ext_resource type="Script" uid="uid://dv73vvub8ugyl" path="res://scripts/screen/contact.gd" id="1_kkksv"]
 
 [node name="Contact" type="Control" unique_id=2089221125]
 custom_minimum_size = Vector2(120, 60)
