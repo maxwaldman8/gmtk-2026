@@ -54,14 +54,14 @@ func _physics_process(_delta: float) -> void:
 func _on_video_stream_player_finished() -> void:
 	if ad_playing:
 		video.stream = saved_video_stream
-		video.stream_position = saved_percentage * video.get_stream_length()
+		video.play()
+		video.stream_position = saved_percentage / 100.0 * video.get_stream_length()
 		ad_playing = false
 		ads.remove_at(0)
 		ad_percentages.remove_at(0)
 		stop_indicators.remove_at(0)
 		for indicator in stop_indicators:
 			indicator.visible = true
-		video.paused = false
 	else:
 		get_parent().get_parent().get_parent().finish_ad_video()
 		get_parent().close()
