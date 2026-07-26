@@ -82,7 +82,7 @@ func _input(event: InputEvent) -> void:
 			gui.visible = true
 
 func _process(delta: float) -> void:
-	if time >= 60.0 * 60.0:
+	if time >= 59.0 * 60.0:
 		# Fail
 		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 	if !tutorial:
