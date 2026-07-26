@@ -31,7 +31,7 @@ static var d : Dictionary = {
 	],
 	"image_puzzle_and_cat": [
 		"English Family Member Essay", "English", Color(0.284, 0.695, 0.519, 1.0), load("res://sprites/screen/classicons/classicons06.png"), "11:56", 
-		"Please ensure that you download the document from the proper website.\nIf you need a break, press TAB."
+		"Please ensure that you download the document from the proper website.\nIf you need a break, press TAB and step away from the computer."
 	],
 	"task_invaders": [
 		"Final History Project", "History", Color(0.913, 0.456, 0.29, 1.0), load("res://sprites/screen/classicons/classicons07.png"), "11:59", 
@@ -43,6 +43,6 @@ static var d : Dictionary = {
 	],
 	"alarm_clock": [
 		"Depth First Search Program", "Programming", Color(0.172, 0.578, 0.695, 1.0), load("res://sprites/screen/classicons/classicons09.png"), "11:59", 
-		"Retrieve your code (dfs.java) from your flash drive and submit it here. It must be on your desk somewhere...\n(Press TAB to view desk)"
+		"Retrieve your code (dfs.java) from your flash drive and submit it here. \n(You might need to press TAB for this assignment...)"
 	]
 }
