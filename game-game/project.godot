@@ -29,6 +29,7 @@ task_manager_app=""
 [gui]
 
 theme/custom="uid://sx8r7eylidoh"
+theme/custom_font="uid://c3b8yypoucle6"
 
 [input]
 

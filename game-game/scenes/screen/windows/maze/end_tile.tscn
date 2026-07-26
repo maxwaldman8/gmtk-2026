@@ -16,8 +16,7 @@ offset_bottom = 16.0
 texture = ExtResource("1_3e0ny")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=945955979]
-color = Color(0, 1, 0, 1)
-energy = 16.0
+energy = 8.0
 range_layer_min = 3
 range_layer_max = 3
 texture = ExtResource("1_6sxcf")
