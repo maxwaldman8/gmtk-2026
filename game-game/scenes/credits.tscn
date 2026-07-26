@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://blj0xev02p5o2"]
 
 [ext_resource type="Script" uid="uid://38hfaqrjoai5" path="res://scripts/credits.gd" id="1_0ctdu"]
-[ext_resource type="FontFile" uid="uid://c3b8yypoucle6" path="res://scenes/screen/windows/Consolas/consolas.ttf" id="2_2fbfq"]
 [ext_resource type="Texture2D" uid="uid://bnen0pduoel20" path="res://sprites/creditsbg.png" id="2_8gwij"]
 [ext_resource type="AudioStream" uid="uid://crws8m0swiklx" path="res://sounds/Main Menu Theme.mp3" id="3_8gwij"]
 [ext_resource type="FontFile" uid="uid://c3b8yypoucle6" path="res://scribes/Consolas/consolas.ttf" id="3_mah5v"]
@@ -38,7 +37,7 @@ offset_right = -346.0
 offset_bottom = 205.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_2fbfq")
+theme_override_fonts/font = ExtResource("3_mah5v")
 theme_override_font_sizes/font_size = 32
 text = "Credits"
 horizontal_alignment = 1
@@ -54,13 +53,14 @@ offset_right = -654.0
 offset_bottom = 130.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_2fbfq")
+theme_override_fonts/font = ExtResource("3_mah5v")
 theme_override_font_sizes/font_size = 8
 text = "credits.pdf"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=108953743]
+visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -90,6 +90,41 @@ OLD WINDOWS THEME
 violinbg (GitHub)
 CONSOLAS (FONT)
 Luc(as) de Groot (Microsoft)
+
+Thank you for playing!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="RichTextLabel" parent="." unique_id=782191563]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 442.0
+offset_top = 205.0
+offset_right = -335.0
+offset_bottom = 602.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[b]STORY & 3D MODELING[/b]
+CoolBobGames
+[b]2D ART[/b]
+CoolBobGames, KNantMan
+[b]PROGRAMING[/b]
+CoolBobGames, KNantMan, MaxWaldman
+[b]MUSIC[/b]
+MaxWaldman
+[b]VIDEOS USED[/b]
+GMTK (YouTube), ZSlyzer (YouTube)
+[b]GAME ENGINE[/b]
+Godot
+[b]SPEECHES[/b]
+Abraham Lincoln, MaxWaldman
+[b]OLD WINDOWS THEME[/b]
+violinbg (GitHub)
+[b]CONSOLAS (FONT)[/b]
+Luc(as) de Groot (Microsoft)
+
 
 Thank you for playing!"
 horizontal_alignment = 1
