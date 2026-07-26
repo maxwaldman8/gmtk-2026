@@ -52,7 +52,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 47
 text = "Start Game"
 
-[node name="SettingsButton" type="Button" parent="." unique_id=567387532]
+[node name="MusicButton" type="Button" parent="." unique_id=567387532]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -66,7 +66,7 @@ offset_bottom = 87.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 47
-text = "Settings"
+text = "Music: ON"
 
 [node name="CreditsButton" type="Button" parent="." unique_id=64683985]
 layout_mode = 1
@@ -89,5 +89,5 @@ stream = ExtResource("3_8ln24")
 autoplay = true
 
 [connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
-[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MusicButton" to="." method="_on_music_button_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]

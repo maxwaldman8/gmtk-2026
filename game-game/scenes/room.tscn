@@ -602,12 +602,12 @@ text = "Tab to Leave"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6641552, -1.3832506)
 stream = ExtResource("6_qvc4m")
 attenuation_model = 3
+volume_db = -80.0
 autoplay = true
 
 [node name="DigitalMusic" type="AudioStreamPlayer3D" parent="." unique_id=1013461513]
 stream = ExtResource("7_7dqbv")
 attenuation_model = 3
-volume_db = -80.0
 autoplay = true
 
 [node name="Moon" type="MeshInstance3D" parent="." unique_id=854635543]
