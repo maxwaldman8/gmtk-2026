@@ -16,6 +16,9 @@ extends CharacterBody3D
 
 var viewing_vector: bool = false
 var active_layer: CanvasLayer
+
+func _ready() -> void:
+	switch_to_screen()
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:

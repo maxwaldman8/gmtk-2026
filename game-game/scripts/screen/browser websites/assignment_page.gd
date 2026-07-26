@@ -169,7 +169,7 @@ func _on_loading_bar_finished() -> void:
 				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
 				get_parent().finished_assignments.append(a_name)
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
-				screen.finish_tutorial()
+				screen.submit_math_homework()
 				get_parent().update_a_list()
 		"conversion":
 			var regex = RegEx.new()

@@ -70,12 +70,16 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
-		get_tree().root.get_node("Room/RealMusic").volume_db = 0
-		get_tree().root.get_node("Room/DigitalMusic").volume_db = -80
-		player.process_mode = Node.PROCESS_MODE_ALWAYS
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		get_parent().get_parent().visible = false
-		gui.visible = true
+		if !tutorial:
+			get_tree().root.get_node("Room/RealMusic").volume_db = 0
+			get_tree().root.get_node("Room/DigitalMusic").volume_db = -80
+			player.process_mode = Node.PROCESS_MODE_ALWAYS
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			get_parent().get_parent().visible = false
+			gui.visible = true
+		else:
+			# Open settings
+			pass
 
 func _process(delta: float) -> void:
 	if !tutorial:
@@ -125,6 +129,9 @@ func download_question_video():
 
 func download_ad_video():
 	$ApplicationLayer/AdVideo.visible = true
+
+func submit_math_homework():
+	pass
 
 func submit_public_speaking():
 	SubmissionWebsite.assignments_to_do = ["message_3d"]
