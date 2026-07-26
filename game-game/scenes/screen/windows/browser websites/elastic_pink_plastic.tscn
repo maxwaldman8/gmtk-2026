@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dnp4yqycyr4q5"]
 
 [ext_resource type="Script" uid="uid://de6oe4spv6x2l" path="res://scripts/screen/cool_bob_games.gd" id="1_04pd7"]
+[ext_resource type="VideoStream" uid="uid://cjl6uu6jk4ov8" path="res://shows/elastic_pink_plastic.ogv" id="2_vex1f"]
 
 [node name="ElasticPinkPlastic" type="Control" unique_id=1344016726]
 layout_mode = 3
@@ -38,3 +39,14 @@ Well you should play this game (https://knantman.itch.io/elastic-pink-plastic)"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=674523889]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 263.0
+offset_right = 1953.0
+offset_bottom = 1709.0
+scale = Vector2(0.125, 0.125)
+stream = ExtResource("2_vex1f")
+autoplay = true
+loop = true

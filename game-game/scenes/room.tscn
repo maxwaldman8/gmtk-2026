@@ -608,6 +608,7 @@ autoplay = true
 [node name="DigitalMusic" type="AudioStreamPlayer3D" parent="." unique_id=1013461513]
 stream = ExtResource("7_7dqbv")
 attenuation_model = 3
+volume_db = -15.0
 autoplay = true
 
 [node name="Moon" type="MeshInstance3D" parent="." unique_id=854635543]

@@ -74,7 +74,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
 		if !tutorial:
 			if MusicSetting.music:
-				get_tree().root.get_node("Room/RealMusic").volume_db = 0
+				get_tree().root.get_node("Room/RealMusic").volume_db = -15
 				get_tree().root.get_node("Room/DigitalMusic").volume_db = -80
 			player.process_mode = Node.PROCESS_MODE_ALWAYS
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
