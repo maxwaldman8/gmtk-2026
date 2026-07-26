@@ -7,6 +7,8 @@ var nextBlinkTimer : float = 0
 @export var beeping = false
 var sound : AudioStreamPlayer
 
+var sound_on: bool = false
+
 func _ready() -> void:
 	sound = get_node("AlarmLoop")
 
@@ -23,7 +25,7 @@ func _process(delta: float) -> void:
 				nextBlinkTimer = nextBlink
 		elif nextBlinkTimer > nextBlink:
 			alarmText.text = "11:56"
-			if !sound.playing:
+			if !sound.playing and sound_on:
 				sound.play()
 			nextBlink += 0.25
 			alarmText.visible = !alarmText.visible
