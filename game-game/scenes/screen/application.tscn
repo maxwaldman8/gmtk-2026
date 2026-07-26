@@ -75,6 +75,7 @@ theme_override_constants/line_spacing = -5
 theme_override_font_sizes/font_size = 12
 text = "Temp"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="InputTaker" type="ColorRect" parent="." unique_id=1338569912]
 layout_mode = 0
