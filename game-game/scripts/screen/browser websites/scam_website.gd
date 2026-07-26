@@ -23,5 +23,19 @@ func _process(delta: float) -> void:
 
 
 func _on_buy_button_pressed() -> void:
-	if $SSN.text == "1225":
-		$Label2.text = "no"
+	match $SSN.text.to_lower():
+		"1225":
+			$Label2.text = "ooh cool easter egg"
+		"1234":
+			$Label2.text = "abcd"
+		"0":
+			$Label2.text = "thats not a social security number"
+		"infinity":
+			$Label2.text = "too high"
+		"1159":
+			$Label2.text = "great game you should play"
+		"1148":
+			$Label2.text = "great team you should alliance"
+		"11024":
+			$Label2.text = "excellent team you should DEFINITELY alliance"
+			
