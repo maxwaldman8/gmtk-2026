@@ -30,12 +30,15 @@ func _ready() -> void:
 	class_label.add_theme_color_override("font_color", data[INFO.COLOR])
 	if status == "to-do":
 		due_time_label.text = "Due today at " + data[INFO.DUE_DATE]
+		$Button.disabled = false
 	elif status == "completed":
 		due_time_label.text = "Completed"
 		due_time_label.add_theme_color_override("font_color", Color.GREEN)
+		$Button.disabled = true
 	elif status == "missing":
 		due_time_label.text = "Missing"
 		due_time_label.add_theme_color_override("font_color", Color.RED)
+		$Button.disabled = true
 	color_box.color = data[INFO.COLOR]
 
 

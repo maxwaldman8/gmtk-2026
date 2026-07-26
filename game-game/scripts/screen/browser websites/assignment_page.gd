@@ -42,6 +42,13 @@ func set_up(new_a_name: String = "tutorial"):
 
 
 func _ready() -> void:
+	var window_layer : WindowLayer = get_tree().get_first_node_in_group("window_layer")
+	window_layer.resume_loading_bar.connect(func():
+		loading_bar.stop_at = -1
+	)
+	window_layer.restart_loading_bar.connect(func():
+		loading_bar.progress_bar.value = 0
+	)
 	loading_bar.reset()
 	delete_file_button.visible = true
 	submit_button.visible = true
@@ -68,6 +75,10 @@ func _process(_delta: float) -> void:
 	else:
 		seconds = str(time_left % 60)
 	due_time_label.text = "Due today at " + data[INFO.DUE_DATE] + " in " + minutes + ":" + seconds
+	if time_left <= 0:
+		SubmissionWebsite.missing_assignments.append(a_name)
+		swap.emit()
+		data = []
 
 
 func _on_button_pressed() -> void:
@@ -84,6 +95,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	hovered_file_name = ghost_app.file_name
 	ghost_app.in_drop_space = true
 	ghost_app.dropped_ghost.connect(func(): 
+		if sub_status_label.text == "Submitted":
+			return
 		submitted_file_name = hovered_file_name
 		loading_bar.reset()
 	)
@@ -105,24 +118,35 @@ func _on_delete_file_button_pressed() -> void:
 
 
 const WINDOW_SCENE = preload("res://scenes/screen/window.tscn")
-func open_loading_pop_up_window():
+func open_interrupting_window(...args):
 	var window_layer : WindowLayer = get_tree().get_first_node_in_group("window_layer")
+	#if len(args) == 1 and args[0] == "task_manager":
+		#get_tree().get_first_node_in_group("task_manager_app")._open_window()
+		#return
+	var body_name
+	var header_name
+	if len(args) == 2:
+		body_name = args[0]
+		header_name = args[1]
+	else:
+		return
 	var window_instance : GameWindow = WINDOW_SCENE.instantiate()
-	window_instance.set_up("pop_up_request", "File Loading Improvement Services", true)
+	window_instance.set_up(body_name, header_name, true)
 	window_layer.add_to_window_list(window_instance)
-	await window_layer.resume_loading_bar
-	loading_bar.stop_at = -1
 
 
 func _on_submit_button_pressed() -> void:
 	if submitted_file_name == "":
 		return
-	if a_name == "pop_up":
+	loading_bar.stop_at = -1
+	if loading_bar.stopped.is_connected(open_interrupting_window):
+		loading_bar.stopped.disconnect(open_interrupting_window)
+	if a_name == "pop_up" and submitted_file_name == "poster_ad.pdf":
 		loading_bar.stop_at = 50
-		if not loading_bar.stopped.is_connected(open_loading_pop_up_window):
-			loading_bar.stopped.connect(open_loading_pop_up_window)
-	elif loading_bar.stopped.is_connected(open_loading_pop_up_window):
-		loading_bar.stopped.disconnect(open_loading_pop_up_window)
+		loading_bar.stopped.connect(open_interrupting_window.bind("pop_up_request", "File Loading Improvement Services"))
+	if a_name == "task_invaders" and submitted_file_name == "project_report.pdf":
+		loading_bar.stop_at = 50
+		loading_bar.stopped.connect(open_interrupting_window.bind("task_manager_open_note", "Error"))
 	if not loading_bar.started:
 		loading_bar.start()
 
@@ -180,7 +204,6 @@ func _on_loading_bar_finished() -> void:
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
 				screen.submit_question_video()
 				get_parent().update_a_list()
-		#TODO: popup
 		"pop_up":
 			var regex = RegEx.new()
 			regex.compile(".*\\.pdf")

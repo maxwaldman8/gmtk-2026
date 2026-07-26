@@ -5,7 +5,7 @@ signal finished
 signal stopped
 
 @onready var progress_bar : ProgressBar = $ProgressBar
-var stop_at : int = 50
+var stop_at : int = -1
 var started : bool = false
 var paused : bool = false
 

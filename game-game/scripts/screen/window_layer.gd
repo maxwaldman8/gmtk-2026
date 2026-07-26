@@ -2,6 +2,7 @@ class_name WindowLayer
 extends CanvasLayer
 
 signal resume_loading_bar
+signal restart_loading_bar
 
 
 func _ready() -> void:

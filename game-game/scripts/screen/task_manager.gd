@@ -53,6 +53,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			# Game won
 			get_parent().close()
+			get_tree().get_first_node_in_group("window_layer").resume_loading_bar.emit()
 	$TasksRunning.text = str(enemies.size() + 8 * (3 - wave))
 	cooldown_time_left = clamp(cooldown_time_left - delta, 0, cooldown_time)
 	pos = pos + (clamp(get_local_mouse_position().x, 60, 350) - pos) * player_speed
@@ -89,3 +90,4 @@ func _physics_process(delta: float) -> void:
 		if enemies[i].position.y >= 550:
 			# Game over
 			get_parent().close()
+			#get_tree().get_first_node_in_group("window_layer").restart_loading_bar.emit()

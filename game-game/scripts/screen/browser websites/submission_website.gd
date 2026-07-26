@@ -15,7 +15,6 @@ const tab_name = "Submit"
 
 
 func _ready() -> void:
-	assignments_to_do.append("pop_up")
 	to_do_list.visible = true
 	assignment_page.visible = false
 	assignment_page.swap.connect(swap_to)
@@ -47,6 +46,7 @@ func swap_to(...args):
 		assignment_page.sub_status_label.add_theme_color_override("font_color", Color.BLACK)
 	to_do_list.visible = not to_do_list.visible
 	assignment_page.visible = not assignment_page.visible
+	update_a_list()
 
 
 func update_a_list():
@@ -66,13 +66,18 @@ func update_a_list():
 	await RenderingServer.frame_post_draw
 	for a_name in missing_assignments:
 		var already_there : bool = false
+		var existing_tab : AssignmentTab
 		for a_tab:AssignmentTab in assignments_list.get_children():
 			if a_tab.a_name == a_name:
 				already_there = true
+				existing_tab = a_tab
 		if not already_there:
-			var a_tab = ASSIGNMENT_TAB_SCENE.instantiate()
+			var a_tab : AssignmentTab = ASSIGNMENT_TAB_SCENE.instantiate()
 			a_tab.set_up(a_name, "missing")
 			assignments_list.add_child(a_tab)
+		else:
+			existing_tab.set_up(a_name, "missing")
+			existing_tab._ready()
 	for a_name in finished_assignments:
 		var already_there : bool = false
 		for a_tab:AssignmentTab in assignments_list.get_children():
