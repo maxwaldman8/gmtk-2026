@@ -1,3 +1,4 @@
+class_name MessagingWindow
 extends Control
 
 @onready var login_page = $LoginPage
@@ -12,6 +13,7 @@ extends Control
 @export var option2_button : Button
 @export var download_button : Button
 var current_message = 0
+static var finished_dialog : bool = false
 
 var password: String
 
@@ -55,8 +57,10 @@ func get_response():
 	message_box_list[current_message].message = return_message
 	current_message += 1
 	if MessageDialog.is_bad_end(return_message):
+		finished_dialog = true
 		return
 	if MessageDialog.is_good_end(return_message):
+		finished_dialog = true
 		download_button.visible = true
 		return
 	set_all_buttons(true)

@@ -48,6 +48,7 @@ func _enter_tree() -> void:
 	SubmissionWebsite.missing_assignments = []
 	
 func _ready() -> void:
+	MessagingWindow.finished_dialog = false
 	Input.set_custom_mouse_cursor(custom_mouse, Input.CURSOR_ARROW)
 	if tutorial:
 		time = 48 * 60

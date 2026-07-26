@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b3j3eqi4pior"]
+
+[ext_resource type="FontFile" uid="uid://c3b8yypoucle6" path="res://scribes/Consolas/consolas.ttf" id="1_4rbgf"]
+
+[node name="FinishedMessageAppWindow" type="Control" unique_id=2022834960]
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 145.0
+offset_bottom = 94.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=31923415]
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 120.0
+
+[node name="Panel" type="Panel" parent="." unique_id=1288573267]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.5
+offset_top = -48.0
+offset_right = 79.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1559984214]
+custom_minimum_size = Vector2(155, 91)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 14.0
+offset_right = 177.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("1_4rbgf")
+theme_override_font_sizes/font_size = 15
+text = "LogotMessage is currently unavailable at this time."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
