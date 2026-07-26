@@ -82,7 +82,8 @@ func close() -> void:
 		tween.tween_property(self, "scale", Vector2(0,0), 0.5)
 		await tween.finished
 		if not is_standalone:
-			application.is_opened = false
+			if application != null:
+				application.is_opened = false
 		closed.emit()
 		queue_free()
 

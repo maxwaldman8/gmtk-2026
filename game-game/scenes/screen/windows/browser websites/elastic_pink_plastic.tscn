@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dnp4yqycyr4q5"]
 
-[ext_resource type="Script" uid="uid://de6oe4spv6x2l" path="res://scripts/screen/cool_bob_games.gd" id="1_04pd7"]
+[ext_resource type="Script" uid="uid://ueg5eetf2x67" path="res://scripts/screen/browser websites/elastic_pink_plastic.gd" id="1_vex1f"]
 [ext_resource type="VideoStream" uid="uid://cjl6uu6jk4ov8" path="res://shows/elastic_pink_plastic.ogv" id="2_vex1f"]
 
 [node name="ElasticPinkPlastic" type="Control" unique_id=1344016726]
@@ -8,7 +8,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 476.0
 offset_bottom = 472.0
-script = ExtResource("1_04pd7")
+script = ExtResource("1_vex1f")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2113614690]
 layout_mode = 0
@@ -31,11 +31,12 @@ layout_mode = 0
 offset_left = 2.0
 offset_top = 91.0
 offset_right = 473.0
-offset_bottom = 228.0
+offset_bottom = 266.0
 bbcode_enabled = true
 text = "Have you ever wanted to play Sokoban, but it's Herd, but it's also made in 2026 but is based on the 2024 GMTK theme for some reason?
 No?
-Well you should play this game (https://knantman.itch.io/elastic-pink-plastic)"
+Well you should play this game (https://knantman.itch.io/elastic-pink-plastic)
+Also check out coolbobgames.itch.io"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1

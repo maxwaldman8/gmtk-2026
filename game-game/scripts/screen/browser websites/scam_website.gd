@@ -10,13 +10,18 @@ func get_url():
 	return url
 	
 func _ready() -> void:
-	$Button.add_theme_color_override("font_color", Color.GREEN)
+	$BuyButton.add_theme_color_override("font_color", Color.GREEN)
 
 func _process(delta: float) -> void:
 	if time_left <= 0:
 		time_left = 1.0
-		if $Button.get_theme_color("font_color") == Color.GREEN:
-			$Button.add_theme_color_override("font_color", Color.RED)
+		if $BuyButton.get_theme_color("font_color") == Color.GREEN:
+			$BuyButton.add_theme_color_override("font_color", Color.RED)
 		else:
-			$Button.add_theme_color_override("font_color", Color.GREEN)
+			$BuyButton.add_theme_color_override("font_color", Color.GREEN)
 	time_left -= delta
+
+
+func _on_buy_button_pressed() -> void:
+	if $SSN.text == "1225":
+		$Label2.text = "no"

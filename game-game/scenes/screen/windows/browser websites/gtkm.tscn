@@ -43,9 +43,10 @@ offset_right = 230.0
 offset_bottom = 184.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 20
 text = "The Best Place To Do Game-Related Things!"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="." unique_id=858182780]
 layout_mode = 1

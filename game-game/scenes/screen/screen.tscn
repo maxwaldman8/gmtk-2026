@@ -104,7 +104,6 @@ dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "HotDog Browser"
 window_scene_name = "browser_window"
-is_default_opened = false
 
 [node name="TaskManager" parent="ApplicationLayer" unique_id=113608717 node_paths=PackedStringArray("dragged_application_layer", "window_layer") groups=["task_manager_app"] instance=ExtResource("2_2d861")]
 offset_left = 901.0

@@ -51,17 +51,17 @@ offset_right = 423.0
 offset_bottom = 308.0
 text = "BUY FREE LOGOT SHIRTS TODAY (100 BITCOIN)"
 
-[node name="LineEdit" type="LineEdit" parent="." unique_id=697547663]
+[node name="SSN" type="LineEdit" parent="." unique_id=697547663]
 layout_mode = 0
-offset_left = 143.0
+offset_left = 133.0
 offset_top = 322.0
-offset_right = 334.0
+offset_right = 324.0
 offset_bottom = 355.0
 placeholder_text = "Social Security Number"
 alignment = 1
 expand_to_text_length = true
 
-[node name="Button" type="Button" parent="." unique_id=1142365934]
+[node name="BuyButton" type="Button" parent="." unique_id=1142365934]
 layout_mode = 0
 offset_left = 165.0
 offset_top = 366.0
@@ -69,3 +69,5 @@ offset_right = 299.0
 offset_bottom = 457.0
 theme_override_font_sizes/font_size = 60
 text = "BUY"
+
+[connection signal="pressed" from="BuyButton" to="." method="_on_buy_button_pressed"]
