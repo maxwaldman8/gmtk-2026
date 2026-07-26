@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bu6l3xayttk7b" path="res://scripts/screen/ad_video_player_window.gd" id="1_di36k"]
 [ext_resource type="VideoStream" uid="uid://cjl6uu6jk4ov8" path="res://shows/elastic_pink_plastic.ogv" id="2_fsodd"]
+[ext_resource type="VideoStream" uid="uid://cwjqwo773ykk2" path="res://shows/MagicaVoxel.ogv" id="2_uo3b0"]
 [ext_resource type="PackedScene" uid="uid://dfp77625mbeqg" path="res://scenes/screen/windows/video_player/ad_indicator.tscn" id="3_fsodd"]
 [ext_resource type="VideoStream" uid="uid://cragwy1xog5g" path="res://shows/ad_video.ogv" id="4_ykbvw"]
 
@@ -19,7 +20,7 @@ offset_right = 150.0
 offset_bottom = 100.0
 script = ExtResource("1_di36k")
 ad_percentages = Array[float]([33.3, 66.67])
-ads = Array[VideoStream]([ExtResource("2_fsodd"), ExtResource("2_fsodd")])
+ads = Array[VideoStream]([ExtResource("2_uo3b0"), ExtResource("2_fsodd")])
 stop_indicator = ExtResource("3_fsodd")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2103473406]
