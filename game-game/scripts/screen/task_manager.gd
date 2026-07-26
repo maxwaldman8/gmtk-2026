@@ -57,8 +57,7 @@ func _physics_process(delta: float) -> void:
 			get_tree().get_first_node_in_group("task_manager_app").window_scene_name = "task_manager_window"
 	$TasksRunning.text = str(enemies.size() + 8 * (3 - wave))
 	cooldown_time_left = clamp(cooldown_time_left - delta, 0, cooldown_time)
-	pos = pos + (clamp(get_local_mouse_position().x, 60, 350) - pos) * player_speed
-	pos = clamp(pos, 60, 350)
+	pos = clamp(get_local_mouse_position().x, 60, 350)
 	player.position.x = round(pos)
 	var to_delete = []
 	for i in range(0, bullets.size()):
