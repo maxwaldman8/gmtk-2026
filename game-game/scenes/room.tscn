@@ -239,7 +239,7 @@ material_override = SubResource("StandardMaterial3D_3j2fx")
 mesh = ExtResource("6_3j2fx")
 
 [node name="MovementNote" type="Sprite3D" parent="Room" unique_id=1565340097]
-transform = Transform3D(7.999999, 0, 0, 0, 7.9538097, 0.8584316, 0, -0.8584314, 7.953811, 0.4239607, 0.95060146, -1.3403077)
+transform = Transform3D(7.999999, 0, 0, 0, -3.4969108e-07, 8.000001, 0, -7.9999995, -3.4969113e-07, -1.34, 0.64, -0.5)
 texture_filter = 0
 texture = ExtResource("9_3j2fx")
 
