@@ -150,6 +150,7 @@ func _on_submit_button_pressed() -> void:
 	if a_name == "task_invaders" and submitted_file_name == "project_report.pdf":
 		loading_bar.stop_at = 50
 		loading_bar.stopped.connect(open_interrupting_window.bind("task_manager_open_note", "Error"))
+		get_tree().get_first_node_in_group("task_manager_app").window_scene_name = "task_manager_game_window"
 	if not loading_bar.started:
 		loading_bar.start()
 

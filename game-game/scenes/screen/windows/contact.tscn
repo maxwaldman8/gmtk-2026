@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b0whsbjri84le"]
 
+[ext_resource type="Script" uid="uid://dv73vvub8ugyl" path="res://scenes/screen/windows/contact.gd" id="1_kkksv"]
+
 [node name="Contact" type="Control" unique_id=2089221125]
 custom_minimum_size = Vector2(120, 60)
 layout_mode = 3
@@ -10,9 +12,18 @@ offset_right = -1032.0
 offset_bottom = -588.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_kkksv")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2118927449]
+[node name="Shadow" type="ColorRect" parent="." unique_id=2118927449]
 custom_minimum_size = Vector2(120, 60)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 120.0
+offset_bottom = 60.0
+color = Color(0, 0, 0, 0.078431375)
+
+[node name="Body" type="ColorRect" parent="." unique_id=1076412524]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 118.0
+offset_bottom = 58.0

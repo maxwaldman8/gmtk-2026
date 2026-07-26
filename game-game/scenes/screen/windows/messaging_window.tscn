@@ -23,7 +23,6 @@ mouse_filter = 2
 color = Color(0.646029, 0.646029, 0.646029, 1)
 
 [node name="MessagingPage" type="HBoxContainer" parent="." unique_id=1239428374]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,29 +30,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Contacts" type="ItemList" parent="MessagingPage" unique_id=940860470]
+[node name="Contacts" type="VBoxContainer" parent="MessagingPage" unique_id=1310856627]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
+theme_override_constants/separation = 0
 
 [node name="Contact" parent="MessagingPage/Contacts" unique_id=2089221125 instance=ExtResource("2_05203")]
-layout_mode = 1
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = -912.0
-offset_bottom = -288.0
-grow_horizontal = 1
-grow_vertical = 1
+layout_mode = 2
 
 [node name="Contact2" parent="MessagingPage/Contacts" unique_id=1114807106 instance=ExtResource("2_05203")]
-layout_mode = 1
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = -912.0
-offset_bottom = -288.0
-grow_horizontal = 1
-grow_vertical = 1
+layout_mode = 2
+
+[node name="Contact3" parent="MessagingPage/Contacts" unique_id=825032811 instance=ExtResource("2_05203")]
+layout_mode = 2
+
+[node name="Contact4" parent="MessagingPage/Contacts" unique_id=1551668233 instance=ExtResource("2_05203")]
+layout_mode = 2
+
+[node name="Contact5" parent="MessagingPage/Contacts" unique_id=1918546554 instance=ExtResource("2_05203")]
+layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MessagingPage" unique_id=470982687]
 layout_mode = 2
@@ -66,6 +61,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="LoginPage" type="CenterContainer" parent="." unique_id=1064760649]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

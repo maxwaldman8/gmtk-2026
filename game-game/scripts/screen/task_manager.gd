@@ -54,6 +54,7 @@ func _physics_process(delta: float) -> void:
 			# Game won
 			get_parent().close()
 			get_tree().get_first_node_in_group("window_layer").resume_loading_bar.emit()
+			get_tree().get_first_node_in_group("task_manager_app").window_scene_name = "task_manager_window"
 	$TasksRunning.text = str(enemies.size() + 8 * (3 - wave))
 	cooldown_time_left = clamp(cooldown_time_left - delta, 0, cooldown_time)
 	pos = pos + (clamp(get_local_mouse_position().x, 60, 350) - pos) * player_speed
