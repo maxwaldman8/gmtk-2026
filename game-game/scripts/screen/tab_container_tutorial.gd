@@ -20,7 +20,7 @@ func _ready() -> void:
 	move_tab_add_button()
 	tab_bar.current_tab = 0
 	set_tab_tooltip(0, "Submit")
-	tab_bar.max_tab_width = 115
+	tab_bar.max_tab_width = 106
 
 
 func _on_tab_close_pressed(tab_index: int) -> void:
