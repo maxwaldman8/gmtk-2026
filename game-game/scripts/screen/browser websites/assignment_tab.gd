@@ -4,6 +4,7 @@ extends Control
 signal swap_to(assignment_name: String)
 
 @export var color_box : ColorRect
+@export var icon : TextureRect
 @export var class_label : Label
 @export var assignment_label : Label
 @export var due_time_label : Label
@@ -14,7 +15,7 @@ var status: String
 
 var data : Array
 enum INFO {
-	NAME, CLASS, COLOR, DUE_DATE, DESC
+	NAME, CLASS, COLOR, ICON, DUE_DATE, DESC
 }
 
 
@@ -40,6 +41,7 @@ func _ready() -> void:
 		due_time_label.add_theme_color_override("font_color", Color.RED)
 		$Button.disabled = true
 	color_box.color = data[INFO.COLOR]
+	icon.texture = data[INFO.ICON]
 
 
 func _on_button_pressed() -> void:

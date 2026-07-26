@@ -15,7 +15,7 @@ bg_color = Color(0, 0, 0, 0.078431375)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cp1ug"]
 
-[node name="AssignmentTab" type="Control" unique_id=70326265 node_paths=PackedStringArray("color_box", "class_label", "assignment_label", "due_time_label")]
+[node name="AssignmentTab" type="Control" unique_id=70326265 node_paths=PackedStringArray("color_box", "icon", "class_label", "assignment_label", "due_time_label")]
 custom_minimum_size = Vector2(404, 84)
 layout_mode = 3
 anchors_preset = 0
@@ -23,6 +23,7 @@ offset_right = 404.0
 offset_bottom = 84.0
 script = ExtResource("1_ew3v3")
 color_box = NodePath("ColorBox")
+icon = NodePath("ColorBox/Icon")
 class_label = NodePath("ClassName")
 assignment_label = NodePath("AssignmentName")
 due_time_label = NodePath("DueTimeLabel")

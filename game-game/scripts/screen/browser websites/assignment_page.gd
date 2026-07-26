@@ -30,7 +30,7 @@ var a_name : String
 
 var data : Array
 enum INFO {
-	NAME, CLASS, COLOR, DUE_DATE, DESC
+	NAME, CLASS, COLOR, ICON, DUE_DATE, DESC
 }
 
 
