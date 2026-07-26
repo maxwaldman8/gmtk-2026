@@ -102,8 +102,9 @@ func handle_raycast():
 				gui.visible = false
 
 func switch_to_screen():
-	get_tree().root.get_node("Room").get_node("RealMusic").volume_db = -80
-	get_tree().root.get_node("Room").get_node("DigitalMusic").volume_db = 0
+	if MusicSetting.music:
+		get_tree().root.get_node("Room").get_node("RealMusic").volume_db = -80
+		get_tree().root.get_node("Room").get_node("DigitalMusic").volume_db = 0
 	self.process_mode = Node.PROCESS_MODE_DISABLED
 	gui.visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

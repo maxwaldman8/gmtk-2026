@@ -51,6 +51,8 @@ func _ready() -> void:
 	if tutorial:
 		time = 48 * 60
 	else:
+		if !MusicSetting.music:
+			get_tree().root.get_node("Room/DigitalMusic").volume_db = -85
 		time = 49 * 60
 		messaging_password = "egg" + str(randi_range(100, 999)).replace("5", "6")
 		password_note.get_node("Label").text = "logotmessage password\n\n" + messaging_password
@@ -71,15 +73,13 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
 		if !tutorial:
-			get_tree().root.get_node("Room/RealMusic").volume_db = 0
-			get_tree().root.get_node("Room/DigitalMusic").volume_db = -80
+			if MusicSetting.music:
+				get_tree().root.get_node("Room/RealMusic").volume_db = 0
+				get_tree().root.get_node("Room/DigitalMusic").volume_db = -80
 			player.process_mode = Node.PROCESS_MODE_ALWAYS
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			get_parent().get_parent().visible = false
 			gui.visible = true
-		else:
-			# Open settings
-			pass
 
 func _process(delta: float) -> void:
 	if time >= 60.0 * 60.0:
