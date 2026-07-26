@@ -11,6 +11,7 @@
 [ext_resource type="ArrayMesh" uid="uid://d37ss5tha7nqc" path="res://statues/drive.obj" id="9_7jbpa"]
 [ext_resource type="ArrayMesh" uid="uid://bj5hjsbjubowk" path="res://statues/cat2.obj" id="11_dmkkb"]
 [ext_resource type="Texture2D" uid="uid://dkc200e6mqx0u" path="res://sprites/screen/note.png" id="13_j85yj"]
+[ext_resource type="AudioStream" uid="uid://b2bf4sjq20ku4" path="res://sounds/snoring.mp3" id="14_htkky"]
 [ext_resource type="Material" uid="uid://ca5do0p6rx780" path="res://styles/moon.tres" id="34_bg6om"]
 [ext_resource type="FontFile" uid="uid://d37qrxpoerqku" path="res://scribes/mazenumbers.ttf" id="35_ys83o"]
 
@@ -72,6 +73,115 @@ viewport_path = NodePath("SubViewportContainer/SubViewport")
 size = Vector3(12, 6.75, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_bf83q"]
+
+[sub_resource type="Animation" id="Animation_cp7fe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1152, 324)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 324)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect2:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1152, 324)]
+}
+
+[sub_resource type="Animation" id="Animation_htkky"]
+resource_name = "open_eyes"
+length = 1.5333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 324), Vector2(0, 648)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1152, 324), Vector2(1152, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect2:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1152, 324), Vector2(1152, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cp7fe"]
+_data = {
+&"RESET": SubResource("Animation_cp7fe"),
+&"open_eyes": SubResource("Animation_htkky")
+}
 
 [node name="Room Win" type="Node3D" unique_id=553723905]
 script = ExtResource("1_nm2kr")
@@ -265,3 +375,23 @@ current = true
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=180278060]
 target_position = Vector3(0, 0, -5)
 collide_with_areas = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1502512664]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1206359802]
+offset_right = 1152.0
+offset_bottom = 324.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=1048898918]
+offset_top = 324.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=740289167]
+libraries/ = SubResource("AnimationLibrary_cp7fe")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1222912265]
+stream = ExtResource("14_htkky")
+attenuation_model = 3
