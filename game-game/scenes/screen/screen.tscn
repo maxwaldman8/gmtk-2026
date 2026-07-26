@@ -59,23 +59,27 @@ anchor_left = 0.983
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -11.5
-offset_bottom = 11.5
+offset_left = -64.416016
+offset_top = -8.200012
+offset_right = -7.4160156
+offset_bottom = 14.799988
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "11:48:00"
+horizontal_alignment = 2
 
 [node name="WindowsOpenLabel" type="Label" parent="WallpaperLayer" unique_id=94606529]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 7.0
 offset_top = 618.0
 offset_right = -933.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Windows Running: 0"
-horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ApplicationLayer" type="CanvasLayer" parent="." unique_id=868816806]
@@ -309,10 +313,10 @@ is_default_opened = false
 
 [node name="DFSJava" parent="ApplicationLayer" unique_id=2038132978 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
 visible = false
-offset_left = 838.0
-offset_top = 481.0
-offset_right = 898.0
-offset_bottom = 561.0
+offset_left = 249.0
+offset_top = 212.0
+offset_right = 309.0
+offset_bottom = 292.0
 icon_image = ExtResource("13_ecmuf")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
