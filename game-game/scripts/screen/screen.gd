@@ -141,6 +141,9 @@ func download_question_video():
 func download_ad_video():
 	$ApplicationLayer/AdVideo.visible = true
 
+func download_dfs():
+	$ApplicationLayer/DFSJava.visible = true
+
 func submit_math_homework():
 	$ApplicationLayer/TutorialComplete._open_window()
 
@@ -166,7 +169,6 @@ func submit_english_essay():
 
 func submit_other_assignment():
 	if SubmissionWebsite.finished_assignments.size() >= 9:
-		# TODO: Play end cutscene
 		get_tree().change_scene_to_file("res://scenes/room_win.tscn")
 
 func insert_drive():
@@ -174,7 +176,7 @@ func insert_drive():
 
 func finish_maze():
 	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = false
-	$ApplicationLayer/DFSJava.visible = true
+	$ApplicationLayer/DFSDownload._open_window()
 
 func finish_question_video():
 	watched_question_video = true
