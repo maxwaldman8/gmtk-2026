@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://blj0xev02p5o2"]
 
-[ext_resource type="Script" uid="uid://bic4qhyyjvytn" path="res://scripts/end_screen.gd" id="1_0ctdu"]
+[ext_resource type="Script" uid="uid://38hfaqrjoai5" path="res://scripts/credits.gd" id="1_0ctdu"]
 [ext_resource type="FontFile" uid="uid://d37qrxpoerqku" path="res://scribes/mazenumbers.ttf" id="2_2fbfq"]
 [ext_resource type="AudioStream" uid="uid://crws8m0swiklx" path="res://sounds/Main Menu Theme.mp3" id="3_8gwij"]
 
@@ -80,4 +80,4 @@ text = "Main Menu"
 stream = ExtResource("3_8gwij")
 autoplay = true
 
-[connection signal="pressed" from="BackToMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]
