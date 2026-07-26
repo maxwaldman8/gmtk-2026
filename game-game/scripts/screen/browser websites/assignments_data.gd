@@ -11,7 +11,7 @@ static var d : Dictionary = {
 	],
 	"conversion": [
 		"Speech Final Draft", "Public Speaking", Color(0.901, 0.208, 0.471, 1.0), load("res://sprites/screen/classicons/classicons01.png"), "11:51", 
-		"Submit your speech!\nSubmission type: PDF ONLY"
+		"Submit your speech!\nSubmission type: PDF ONLY. I gave you a helpful website to convert the files in class."
 	],
 	"message_3d": [
 		"Chemistry Group Project", "Science", Color(0.64, 0.377, 0.868, 1.0), load("res://sprites/screen/classicons/classicons02.png"), "11:52", 
