@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cekq2p7fg2kss" path="res://sprites/screen/grasshills.png" id="3_um0k2"]
 [ext_resource type="PackedScene" uid="uid://b5yslbaif30nv" path="res://scenes/screen/application.tscn" id="4_qrk7u"]
 [ext_resource type="Texture2D" uid="uid://bk47fr3syf046" path="res://sprites/screen/logo_4.png" id="6_j1imy"]
+[ext_resource type="Texture2D" uid="uid://dvs5uo58q357h" path="res://sprites/screen/exe_2.png" id="7_gvqs4"]
 [ext_resource type="Texture2D" uid="uid://dskjj48ukcxgx" path="res://sprites/screen/PDF logo.png" id="12_xqmv3"]
 [ext_resource type="Script" uid="uid://dommextr4ctrb" path="res://scripts/screen/window_layer.gd" id="13_oqcct"]
 
@@ -116,11 +117,11 @@ window_scene_name = "tutorial_complete"
 is_default_opened = false
 
 [node name="TutorialComplete2" parent="ApplicationLayer" unique_id=1666564929 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("4_qrk7u")]
-offset_left = 501.0
-offset_top = 418.0
-offset_right = 561.0
-offset_bottom = 498.0
-icon_image = ExtResource("12_xqmv3")
+offset_left = 546.0
+offset_top = 302.0
+offset_right = 606.0
+offset_bottom = 382.0
+icon_image = ExtResource("7_gvqs4")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "Skip Tutorial"

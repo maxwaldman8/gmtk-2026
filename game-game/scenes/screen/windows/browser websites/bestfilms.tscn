@@ -63,7 +63,7 @@ theme_override_font_sizes/font_size = 22
 text = "Download Our Newest Film
 
 
-Castlevania: The Dark Night"
+\"Count Downed!\""
 horizontal_alignment = 1
 
 [node name="DownloadButton" type="Button" parent="." unique_id=1720223175]

@@ -93,6 +93,7 @@ func handle_raycast():
 				active_layer.visible = true
 				gui.visible = false
 			"CatArea":
+				cat.visible = false;
 				viewing_vector = true
 				if cat.flying:
 					active_layer = screen.cat2
@@ -147,3 +148,4 @@ func _physics_process(delta: float) -> void:
 			active_layer.visible = false
 			gui.visible = true
 			viewing_vector = false
+			cat.visible = true;
