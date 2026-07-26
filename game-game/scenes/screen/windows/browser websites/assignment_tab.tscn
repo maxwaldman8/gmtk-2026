@@ -50,11 +50,12 @@ offset_bottom = 82.0
 color = Color(0, 0.36078432, 1, 1)
 
 [node name="Icon" type="TextureRect" parent="ColorBox" unique_id=215911973]
+texture_filter = 1
 layout_mode = 0
-offset_left = 15.0
-offset_top = 23.0
-offset_right = 53.0
-offset_bottom = 58.0
+offset_left = 3.0
+offset_top = 8.0
+offset_right = 67.0
+offset_bottom = 72.0
 texture = ExtResource("2_jm5qp")
 expand_mode = 1
 
