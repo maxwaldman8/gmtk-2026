@@ -52,13 +52,13 @@ window_name = "poster_ad.pdf"
 window_scene_name = "files/poster_ad"
 is_default_opened = false
 
-[node name="ProjectReport" parent="Apps" unique_id=1296181543 instance=ExtResource("2_0taup")]
+[node name="HistoryProjectReport" parent="Apps" unique_id=1296181543 instance=ExtResource("2_0taup")]
 layout_mode = 0
 offset_left = 204.0
 offset_top = 167.0
 offset_right = 254.0
 offset_bottom = 237.0
 icon_image = ExtResource("4_0taup")
-window_name = "project_report.pdf"
+window_name = "history_project_report.pdf"
 window_scene_name = "files/project_report"
 is_default_opened = false

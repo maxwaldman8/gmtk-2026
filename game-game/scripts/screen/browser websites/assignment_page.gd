@@ -147,7 +147,7 @@ func _on_submit_button_pressed() -> void:
 	if a_name == "pop_up" and submitted_file_name == "poster_ad.pdf":
 		loading_bar.stop_at = 50
 		loading_bar.stopped.connect(open_interrupting_window.bind("pop_up_request", "File Loading Improvement Services"))
-	if a_name == "task_invaders" and submitted_file_name == "project_report.pdf":
+	if a_name == "task_invaders" and submitted_file_name == "history_project_report.pdf":
 		loading_bar.stop_at = 50
 		loading_bar.stopped.connect(open_interrupting_window.bind("task_manager_open_note", "Error"))
 		get_tree().get_first_node_in_group("task_manager_app").window_scene_name = "task_manager_game_window"
@@ -280,7 +280,7 @@ func _on_loading_bar_finished() -> void:
 			if !regex.search(sub_file.text):
 				sub_status_label.text = "Incorrect Filetype"
 				sub_status_label.add_theme_color_override("font_color", Color.RED)
-			elif sub_file.text != "project_report.pdf":
+			elif sub_file.text != "history_project_report.pdf":
 				sub_status_label.text = "Incorrect File"
 				sub_status_label.add_theme_color_override("font_color", Color.RED)
 			else:
