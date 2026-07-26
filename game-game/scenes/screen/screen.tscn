@@ -362,19 +362,6 @@ window_name = "math_homework.pdf"
 window_scene_name = "files/math_homework"
 is_default_opened = false
 
-[node name="DFSDownload" parent="ApplicationLayer" unique_id=147847076 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
-visible = false
-offset_left = 249.0
-offset_top = 333.0
-offset_right = 309.0
-offset_bottom = 413.0
-icon_image = ExtResource("11_tbkdm")
-dragged_application_layer = NodePath("../../MovedAppLayer")
-window_layer = NodePath("../../WindowLayer")
-window_name = "Download dfs.java"
-window_scene_name = "maze_download_window"
-is_default_opened = false
-
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984 groups=["window_layer"]]
 layer = 3
 script = ExtResource("3_6ukd0")
