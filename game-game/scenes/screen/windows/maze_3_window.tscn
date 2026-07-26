@@ -44,7 +44,7 @@ anchors_preset = 0
 script = ExtResource("1_uddhl")
 
 [node name="Darkness" type="Node2D" parent="." unique_id=1680196625]
-modulate = Color(0.019607844, 0.019607844, 0.019607844, 1)
+modulate = Color(0.039215688, 0.039215688, 0.039215688, 1)
 
 [node name="Background" type="ColorRect" parent="Darkness" unique_id=2103473406]
 anchors_preset = 8

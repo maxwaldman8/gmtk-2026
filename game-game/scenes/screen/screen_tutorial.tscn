@@ -89,6 +89,7 @@ dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "HotDog Browser"
 window_scene_name = "browser_window_tutorial"
+is_default_opened = false
 
 [node name="MathHomework" parent="ApplicationLayer" unique_id=695964163 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("4_qrk7u")]
 offset_left = 249.0
