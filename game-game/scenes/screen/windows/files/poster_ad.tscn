@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://dao2i5uxldknq"]
 
+[ext_resource type="Texture2D" uid="uid://ffkqdulku28g" path="res://sprites/screen/1159poster.png" id="1_av5k4"]
+
 [node name="PosterAd" type="Control" unique_id=521389708]
-custom_minimum_size = Vector2(250, 300)
+custom_minimum_size = Vector2(250, 250)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 250.0
-offset_bottom = 300.0
+offset_right = 256.0
+offset_bottom = 256.0
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2103473406]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +20,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="." unique_id=430627503]
+visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = 1.0
@@ -26,3 +30,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 13
 text = "PLACEHOLDER FOR POSTER AD
 "
+
+[node name="1159Poster" type="Sprite2D" parent="." unique_id=1653392267]
+texture_filter = 1
+position = Vector2(128, 128)
+scale = Vector2(4, 4)
+texture = ExtResource("1_av5k4")
