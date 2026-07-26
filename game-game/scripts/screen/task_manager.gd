@@ -8,8 +8,8 @@ var pos: float = 10
 @export var player_speed = 0.02
 @export var bullet_speed = 15.0
 @export var enemy_speed = 2.0
-@export var enemy_acceleration = 0.45
-@export var cooldown_time = 0.5
+@export var enemy_acceleration = 0.5
+@export var cooldown_time = 0.3
 
 @export var bullet: PackedScene
 @export var enemy: PackedScene
@@ -43,7 +43,7 @@ func shoot():
 		add_child(new_bullet)
 		new_bullet.position = Vector2(player.position.x, player.position.y - 20)
 		bullets.append(new_bullet)
-		cooldown_time_left = 0.5
+		cooldown_time_left = 0.3
 
 func _physics_process(delta: float) -> void:
 	if enemies.size() == 0:
