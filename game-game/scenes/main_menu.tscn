@@ -98,6 +98,19 @@ stream = ExtResource("3_8ln24")
 volume_db = 12.0
 autoplay = true
 
+[node name="Timer" type="Timer" parent="." unique_id=733186294]
+wait_time = 0.5
+autostart = true
+
+[node name="ColonBlocker" type="ColorRect" parent="Timer" unique_id=1324647392]
+visible = false
+offset_left = 544.0
+offset_top = 141.0
+offset_right = 607.0
+offset_bottom = 261.0
+color = Color(0, 0, 0, 1)
+
 [connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="MusicButton" to="." method="_on_music_button_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

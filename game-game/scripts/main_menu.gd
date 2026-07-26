@@ -14,3 +14,7 @@ func _on_music_button_pressed() -> void:
 
 func _on_credits_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/credits.tscn")
+
+
+func _on_timer_timeout() -> void:
+	$Timer/ColonBlocker.visible = not $Timer/ColonBlocker.visible
