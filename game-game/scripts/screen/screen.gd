@@ -86,7 +86,7 @@ func _process(delta: float) -> void:
 		# Fail
 		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 	if !tutorial:
-		time += delta
+		#time += delta
 		if int(floor(time)) % 60 < 10:
 			time_label.text = "11:" + str(int(time / 60.0)) + ":0" + str(int(time) % 60) + " PM"
 		else:
