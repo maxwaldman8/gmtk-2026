@@ -65,7 +65,7 @@ func _process(_delta: float) -> void:
 	if data.size() == 0: return
 	var current_time: float = screen.time
 	var due_time: float = data[INFO.DUE_DATE].substr(3, 2).to_int() * 60.0
-	var time_left = int(ceil(due_time - current_time))
+	var time_left = max(int(ceil(due_time - current_time)), 0)
 	var minutes = "0"
 	if time_left / 60 < 10:
 		minutes = "0" + str(time_left / 60)
@@ -79,6 +79,7 @@ func _process(_delta: float) -> void:
 	due_time_label.text = "Due today at " + data[INFO.DUE_DATE] + " in " + minutes + ":" + seconds
 	if time_left <= 0:
 		SubmissionWebsite.missing_assignments.append(a_name)
+		screen.handle_missin(a_name)
 		swap.emit()
 		data = []
 
