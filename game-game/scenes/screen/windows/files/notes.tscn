@@ -21,13 +21,15 @@ layout_mode = 0
 offset_left = 1.0
 offset_top = 1.0
 offset_right = 251.0
-offset_bottom = 166.0
+offset_bottom = 180.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 9
 text = "Notes:
-Remember, I have my notes on the back of my monitor
+Remember, I have more notes on the back of my monitor
 
 I just got a new browser (HotDogBrowser), need to make sure to use that to submit my assignments
 
-My school just added due dates to my assignments, so if I miss one I can't submit it again!"
+My school just added due dates to my assignments, so if I miss one I can't submit it again!
+
+I keep my passwords in the passwords folder, but I had to separate my english one into 3 images because my mom told me that was more \"secure\", now I can't figure it out anymore :("
 autowrap_mode = 3

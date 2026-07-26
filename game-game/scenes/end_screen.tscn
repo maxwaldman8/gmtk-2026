@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bic4qhyyjvytn" path="res://scripts/end_screen.gd" id="1_jc7ji"]
 [ext_resource type="FontFile" uid="uid://d37qrxpoerqku" path="res://scribes/mazenumbers.ttf" id="2_87vmq"]
+[ext_resource type="FontFile" uid="uid://c3b8yypoucle6" path="res://scribes/Consolas/consolas.ttf" id="3_87vmq"]
 [ext_resource type="AudioStream" uid="uid://crws8m0swiklx" path="res://sounds/Main Menu Theme.mp3" id="3_g44xs"]
 
 [node name="EndScreen" type="Control" unique_id=1377011157]
@@ -44,7 +45,7 @@ offset_top = 157.0
 offset_bottom = 285.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_87vmq")
+theme_override_fonts/font = ExtResource("3_87vmq")
 theme_override_font_sizes/font_size = 32
 text = "Thank You For Playing!"
 horizontal_alignment = 1
@@ -55,9 +56,9 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_left = 1.0
-offset_top = 206.0
+offset_top = 205.0
 offset_right = 1.0
-offset_bottom = 334.0
+offset_bottom = 333.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32

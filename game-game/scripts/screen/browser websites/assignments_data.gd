@@ -11,7 +11,7 @@ static var d : Dictionary = {
 	],
 	"conversion": [
 		"Speech Final Draft", "Public Speaking", Color(0.901, 0.208, 0.471, 1.0), load("res://sprites/screen/classicons/classicons01.png"), "11:51", 
-		"Submit your speech!\nSubmission type: PDF ONLY"
+		"Submit your speech!\nSubmission type: PDF ONLY\n(Conversion can be done through all sorts of helpful websites.)"
 	],
 	"message_3d": [
 		"Chemistry Group Project", "Science", Color(0.64, 0.377, 0.868, 1.0), load("res://sprites/screen/classicons/classicons02.png"), "11:52", 
@@ -19,7 +19,7 @@ static var d : Dictionary = {
 	],
 	"question_video": [
 		"Watch Space Invaders Video", "Game Design with Mark Brown", Color(0.342, 0.357, 0.335, 1.0), load("res://sprites/screen/classicons/classicons03.png"), "11:53", 
-		"Please go to gtkm.com to download the video.\nSubmit the video file when you are done watching it."
+		"Please go to gtkm.com to download the video.\nSubmit the video file when you are done watching it. If you find a part we already watched in class, you can use the arrow keys to skip ahead."
 	],
 	"pop_up": [
 		"Poster Submission", "Graphic Design", Color(0.069, 0.607, 0.609, 1.0), load("res://sprites/screen/classicons/classicons04.png"), "11:54", 
@@ -31,7 +31,7 @@ static var d : Dictionary = {
 	],
 	"image_puzzle_and_cat": [
 		"English Family Member Essay", "English", Color(0.284, 0.695, 0.519, 1.0), load("res://sprites/screen/classicons/classicons06.png"), "11:56", 
-		"Please ensure that you download the document from the proper website."
+		"Please ensure that you download the document from the proper website.\nIf you need a break, press TAB and step away from the computer."
 	],
 	"task_invaders": [
 		"Final History Project", "History", Color(0.913, 0.456, 0.29, 1.0), load("res://sprites/screen/classicons/classicons07.png"), "11:59", 
@@ -39,10 +39,10 @@ static var d : Dictionary = {
 	],
 	"wallpaper": [
 		"Ensayo de Miembros de Familia", "Spanish", Color(0.91, 0.247, 0.24, 1.0), load("res://sprites/screen/classicons/classicons08.png"), "11:59", 
-		"Please ensure that you download the document from the proper website."
+		"Please ensure that you download the document from the proper website.\nDon't stay on your computer too long, make sure to TAB out every once in a while..."
 	],
 	"alarm_clock": [
 		"Depth First Search Program", "Programming", Color(0.172, 0.578, 0.695, 1.0), load("res://sprites/screen/classicons/classicons09.png"), "11:59", 
-		"Retrieve your code (dfs.java) from your flash drive and submit it here."
+		"Retrieve your code (dfs.java) from your flash drive and submit it here. \n(You might need to press TAB for this assignment...)"
 	]
 }

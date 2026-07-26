@@ -4,6 +4,7 @@ extends Control
 @onready var end_tile: Area2D = $Darkness/EndTile
 
 func _physics_process(_delta: float) -> void:
+	if game_over: return
 	if end_tile.get_overlapping_bodies().find(player) != -1:
 		get_parent().get_parent().get_parent().finish_maze()
 		get_parent().close()
