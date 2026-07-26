@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://6q68tcepoxh5" path="res://scenes/screen/windows/browser websites/dragged_ghost.tscn" id="2_3amd7"]
 [ext_resource type="Texture2D" uid="uid://07oscu8p7i5u" path="res://sprites/screen/logo_08.png" id="2_cnu38"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mx7sy"]
+
 [node name="Application" type="Control" unique_id=473881616 node_paths=PackedStringArray("selected_shadow", "dragged_ghost", "icon", "name_label", "input_taker")]
 layout_mode = 3
 anchors_preset = 0
@@ -63,9 +65,10 @@ offset_right = 25.0
 offset_bottom = 43.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/line_spacing = -5
 theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_mx7sy")
 text = "Temp"
 horizontal_alignment = 1
 autowrap_mode = 2

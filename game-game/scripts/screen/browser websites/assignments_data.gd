@@ -15,7 +15,7 @@ const d : Dictionary = {
 	],
 	"message_3d": [
 		"Chemistry Group Project", "Science", Color(0.64, 0.377, 0.868, 1.0), "11:51", 
-		"All groups must have everyone submit their lab data."
+		"All groups must have everyone submit their data. Please ask your partner for it if you don't have it."
 	],
 	"question_video": [
 		"Watch Space Invaders Video", "Game Design with Mark Brown", Color(0.342, 0.357, 0.335, 1.0), "11:52", 
@@ -27,14 +27,14 @@ const d : Dictionary = {
 	],
 	"movie_ads": [
 		"Watch Vampire Movie", "Film-making", Color(0.946, 0.702, 0.251, 1.0), "11:54", 
-		"Finish this movie (download at bestfilms.net), no other homework. Submit the video file when you're done (you can skip past the ads with the arrow keys)."
+		"Finish this movie (download at bestfilms.net), no other homework. Submit the video file when you're done (you can skip past the ads with well-timed arrow key presses)."
 	],
 	"image_puzzle_and_cat": [
-		"Family Member Essay", "English", Color(0.284, 0.695, 0.519, 1.0), "11:55", 
+		"English Family Member Essay", "English", Color(0.284, 0.695, 0.519, 1.0), "11:55", 
 		"Please ensure that you download the document from the proper website."
 	],
 	"task_invaders": [
-		"Final Capstone", "History", Color(0.913, 0.456, 0.29, 1.0), "11:59", 
+		"Final History Project", "History", Color(0.913, 0.456, 0.29, 1.0), "11:59", 
 		"Please submit your project report here."
 	],
 	"wallpaper": [

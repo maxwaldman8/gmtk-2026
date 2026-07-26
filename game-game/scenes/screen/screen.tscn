@@ -224,6 +224,7 @@ window_scene_name = "maze_5_window"
 is_default_opened = false
 
 [node name="QuestionVideo" parent="ApplicationLayer" unique_id=882876864 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+visible = false
 offset_left = 84.0
 offset_top = 513.0
 offset_right = 134.0
