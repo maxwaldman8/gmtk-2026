@@ -39,6 +39,7 @@ func _process(_delta: float) -> void:
 		tween.tween_property(self, "position", locations[index], 0.5)
 		nextStep = Screen.time + 0.125
 		tween.play()
+		$Meow.play()
 	elif moving:
 		if Screen.time > nextStep:
 			nextStep += 0.125

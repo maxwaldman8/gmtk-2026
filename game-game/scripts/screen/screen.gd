@@ -88,10 +88,12 @@ func _input(event: InputEvent) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _process(delta: float) -> void:
-	if time >= 59.0 * 60.0:
+	if SubmissionWebsite.finished_assignments.size() == 9:
+		get_tree().change_scene_to_file("res://scenes/room_win.tscn")
+	elif time >= 59.0 * 60.0:
 		# Fail
 		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
-	if !tutorial:
+	elif !tutorial:
 		time += delta
 		if int(floor(time)) % 60 < 10:
 			time_label.text = "11:" + str(int(time / 60.0)) + ":0" + str(int(time) % 60) + " PM"
@@ -165,7 +167,7 @@ func submit_english_essay():
 func submit_other_assignment():
 	if SubmissionWebsite.finished_assignments.size() >= 9:
 		# TODO: Play end cutscene
-		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
+		get_tree().change_scene_to_file("res://scenes/win_room.tscn")
 
 func insert_drive():
 	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = true
