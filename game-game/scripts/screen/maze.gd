@@ -6,6 +6,7 @@ extends Control
 var game_over: bool = false
 
 func _physics_process(_delta: float) -> void:
+	if game_over: return
 	if end_tile.get_overlapping_bodies().find(player) != -1:
 		get_parent().get_parent().get_parent().finish_maze()
 		player.queue_free()
