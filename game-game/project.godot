@@ -29,6 +29,7 @@ window/stretch/scale_mode="integer"
 
 window_layer=""
 task_manager_app=""
+lab_data_app=""
 
 [gui]
 

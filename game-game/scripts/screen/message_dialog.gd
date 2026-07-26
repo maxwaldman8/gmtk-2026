@@ -1,8 +1,8 @@
 class_name MessageDialog
-extends RefCounted
+extends Node
 
 
-func get_response_to(message: String):
+static func get_response_to(message: String):
 	match message:
 		"Hey Bob, you submitted the lab, right?", "Hi Bob, do you have the lab data?":
 			return "What???? I thought you submitted it already?!! We have like a minute to submit!!"
@@ -14,7 +14,7 @@ func get_response_to(message: String):
 			return "Ok, whatever you say then I guess"
 
 
-func get_options_to(message: String):
+static func get_options_to(message: String):
 	match message:
 		"":
 			return ["Hey Bob, you submitted the lab, right?", "Hi Bob, do you have the lab data?"]
@@ -24,9 +24,9 @@ func get_options_to(message: String):
 			return ["Ok, then send it to me please", "Trust me, it’s fine"]
 
 
-func is_good_end(message: String):
+static func is_good_end(message: String):
 	return message == "Sure, here’s the file"
 
 
-func is_bad_end(message: String):
+static func is_bad_end(message: String):
 	return message == "Ok, whatever you say then I guess"

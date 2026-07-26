@@ -320,11 +320,12 @@ window_name = "dfs.java"
 window_scene_name = "files/dfs_java"
 is_default_opened = false
 
-[node name="LabData" parent="ApplicationLayer" unique_id=1261506855 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
-offset_left = 637.0
-offset_top = 482.0
-offset_right = 697.0
-offset_bottom = 562.0
+[node name="LabData" parent="ApplicationLayer" unique_id=1261506855 node_paths=PackedStringArray("dragged_application_layer", "window_layer") groups=["lab_data_app"] instance=ExtResource("2_2d861")]
+visible = false
+offset_left = 89.0
+offset_top = 406.0
+offset_right = 149.0
+offset_bottom = 486.0
 icon_image = ExtResource("7_wrpmo")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")

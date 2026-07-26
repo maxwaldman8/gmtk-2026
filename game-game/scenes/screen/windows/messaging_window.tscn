@@ -2,14 +2,34 @@
 
 [ext_resource type="Script" uid="uid://bxsigx4l40ly7" path="res://scripts/screen/messaging_window.gd" id="1_1n47y"]
 [ext_resource type="PackedScene" uid="uid://b0whsbjri84le" path="res://scenes/screen/windows/contact.tscn" id="2_05203"]
+[ext_resource type="PackedScene" uid="uid://dhda6mtqqec8" path="res://scenes/screen/windows/message_box.tscn" id="3_vapt6"]
 
-[node name="MessagingWindow" type="Control" unique_id=521389708]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vapt6"]
+bg_color = Color(0.353, 0.627, 0.98, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33b35"]
+bg_color = Color(0.353, 0.627, 0.98, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_re8w7"]
+bg_color = Color(0.3529412, 0.627451, 0.98039216, 0.85490197)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j2ef"]
+bg_color = Color(0.353, 0.627, 0.98, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sqb8f"]
+bg_color = Color(0.353, 0.627, 0.98, 1)
+
+[node name="MessagingWindow" type="Control" unique_id=521389708 node_paths=PackedStringArray("message_box_holder", "option1_button", "option2_button", "download_button")]
 custom_minimum_size = Vector2(400, 300)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 150.0
 offset_bottom = 100.0
 script = ExtResource("1_1n47y")
+message_box_holder = NodePath("MessagingPage/VBoxContainer/ScrollContainer/MessageBoxHolder")
+option1_button = NodePath("MessagingPage/VBoxContainer/ColorRect/Option1")
+option2_button = NodePath("MessagingPage/VBoxContainer/ColorRect/Option2")
+download_button = NodePath("MessagingPage/VBoxContainer/ColorRect/DownloadButton")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2103473406]
 custom_minimum_size = Vector2(200, 0)
@@ -27,6 +47,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -37,28 +58,106 @@ theme_override_constants/separation = 0
 
 [node name="Contact" parent="MessagingPage/Contacts" unique_id=2089221125 instance=ExtResource("2_05203")]
 layout_mode = 2
+person_name = "Alice"
 
 [node name="Contact2" parent="MessagingPage/Contacts" unique_id=1114807106 instance=ExtResource("2_05203")]
 layout_mode = 2
+disabled = false
+person_name = "Bob"
 
 [node name="Contact3" parent="MessagingPage/Contacts" unique_id=825032811 instance=ExtResource("2_05203")]
 layout_mode = 2
+person_name = "Charlie"
 
 [node name="Contact4" parent="MessagingPage/Contacts" unique_id=1551668233 instance=ExtResource("2_05203")]
 layout_mode = 2
+person_name = "David"
 
 [node name="Contact5" parent="MessagingPage/Contacts" unique_id=1918546554 instance=ExtResource("2_05203")]
 layout_mode = 2
+person_name = "Echo"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MessagingPage" unique_id=470982687]
+[node name="VBoxContainer" type="VBoxContainer" parent="MessagingPage" unique_id=1613341776]
+custom_minimum_size = Vector2(272, 0)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MessagingPage/VBoxContainer" unique_id=1003727437]
+custom_minimum_size = Vector2(268, 200)
+layout_mode = 2
+
+[node name="MessageBoxHolder" type="VBoxContainer" parent="MessagingPage/VBoxContainer/ScrollContainer" unique_id=470982687]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Messages" type="ScrollContainer" parent="MessagingPage/VBoxContainer" unique_id=481387647]
+[node name="MessageBox" parent="MessagingPage/VBoxContainer/ScrollContainer/MessageBoxHolder" unique_id=1921137717 instance=ExtResource("3_vapt6")]
+visible = false
+layout_mode = 2
+is_you = true
+
+[node name="MessageBox2" parent="MessagingPage/VBoxContainer/ScrollContainer/MessageBoxHolder" unique_id=997544624 instance=ExtResource("3_vapt6")]
+visible = false
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MessagingPage/VBoxContainer" unique_id=874811279]
+[node name="MessageBox3" parent="MessagingPage/VBoxContainer/ScrollContainer/MessageBoxHolder" unique_id=444785508 instance=ExtResource("3_vapt6")]
+visible = false
 layout_mode = 2
+is_you = true
+
+[node name="MessageBox4" parent="MessagingPage/VBoxContainer/ScrollContainer/MessageBoxHolder" unique_id=2031320644 instance=ExtResource("3_vapt6")]
+visible = false
+layout_mode = 2
+
+[node name="MessageBox5" parent="MessagingPage/VBoxContainer/ScrollContainer/MessageBoxHolder" unique_id=825063925 instance=ExtResource("3_vapt6")]
+visible = false
+layout_mode = 2
+is_you = true
+
+[node name="MessageBox6" parent="MessagingPage/VBoxContainer/ScrollContainer/MessageBoxHolder" unique_id=1357987590 instance=ExtResource("3_vapt6")]
+visible = false
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MessagingPage/VBoxContainer" unique_id=405402351]
+custom_minimum_size = Vector2(272, 90)
+layout_mode = 2
+
+[node name="Option1" type="Button" parent="MessagingPage/VBoxContainer/ColorRect" unique_id=1562988210]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 9.0
+offset_right = 126.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_vapt6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_33b35")
+theme_override_styles/hover = SubResource("StyleBoxFlat_re8w7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4j2ef")
+theme_override_styles/focus = SubResource("StyleBoxFlat_sqb8f")
+text = "stuff"
+autowrap_mode = 2
+
+[node name="Option2" type="Button" parent="MessagingPage/VBoxContainer/ColorRect" unique_id=2031360891]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 9.0
+offset_right = 255.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_vapt6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_33b35")
+theme_override_styles/hover = SubResource("StyleBoxFlat_re8w7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4j2ef")
+theme_override_styles/focus = SubResource("StyleBoxFlat_sqb8f")
+text = "stuff"
+autowrap_mode = 2
+
+[node name="DownloadButton" type="Button" parent="MessagingPage/VBoxContainer/ColorRect" unique_id=1965292668]
+visible = false
+layout_mode = 0
+offset_left = 23.0
+offset_top = 20.0
+offset_right = 240.0
+offset_bottom = 68.0
+text = "DOWNLOAD BOB'S FILE"
 
 [node name="LoginPage" type="CenterContainer" parent="." unique_id=1064760649]
 visible = false
@@ -111,4 +210,7 @@ text = "5"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="pressed" from="MessagingPage/VBoxContainer/ColorRect/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="MessagingPage/VBoxContainer/ColorRect/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="MessagingPage/VBoxContainer/ColorRect/DownloadButton" to="." method="_on_download_button_pressed"]
 [connection signal="pressed" from="LoginPage/VBoxContainer/VBoxContainer/Button" to="." method="login"]
