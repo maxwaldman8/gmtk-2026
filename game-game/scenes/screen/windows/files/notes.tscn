@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dmlkenqsmp2um"]
+
+[node name="Notes" type="Control" unique_id=521389708]
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 250.0
+offset_bottom = 200.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2103473406]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="." unique_id=430627503]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 251.0
+offset_bottom = 166.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Notes:
+Remember, I have my notes on the back of my monitor
+
+I just got a new browser (HotDogBrowser), need to make sure to use that to submit my assignments
+
+My school just added due dates to my assignments, so if I miss one I can't submit it again!"
+autowrap_mode = 3
