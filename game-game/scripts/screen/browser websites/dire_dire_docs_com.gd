@@ -23,3 +23,4 @@ func _on_log_in_2_button_pressed() -> void:
 
 func _on_download_button_pressed() -> void:
 	get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().download_english_essay()
+	$Essay/DownloadButton.text = "Downloaded!"
