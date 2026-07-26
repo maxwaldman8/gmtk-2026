@@ -167,7 +167,7 @@ func submit_english_essay():
 func submit_other_assignment():
 	if SubmissionWebsite.finished_assignments.size() >= 9:
 		# TODO: Play end cutscene
-		get_tree().change_scene_to_file("res://scenes/win_room.tscn")
+		get_tree().change_scene_to_file("res://scenes/room_win.tscn")
 
 func insert_drive():
 	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = true
