@@ -52,6 +52,8 @@ func _ready() -> void:
 	loading_bar.reset()
 	delete_file_button.visible = true
 	submit_button.visible = true
+	delete_file_button.disabled = false
+	submit_button.disabled = false
 	if data.is_empty():
 		return
 	name_label.text = data[INFO.NAME]
