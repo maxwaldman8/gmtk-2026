@@ -19,7 +19,7 @@ static var d : Dictionary = {
 	],
 	"question_video": [
 		"Watch Space Invaders Video", "Game Design with Mark Brown", Color(0.342, 0.357, 0.335, 1.0), load("res://sprites/screen/classicons/classicons03.png"), "11:53", 
-		"Please go to gtkm.com to download the video.\nSubmit the video file when you are done watching it."
+		"Please go to gtkm.com to download the video.\nSubmit the video file when you are done watching it. If you find a part we already watched in class, you can use the arrow keys to skip ahead."
 	],
 	"pop_up": [
 		"Poster Submission", "Graphic Design", Color(0.069, 0.607, 0.609, 1.0), load("res://sprites/screen/classicons/classicons04.png"), "11:54", 
