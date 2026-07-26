@@ -28,6 +28,7 @@ func start():
 	progress_bar.value = 0
 	$Timer.start()
 	$Label.visible = true
+	$Label.text = "Uploading File..."
 
 
 func _process(delta: float) -> void:
@@ -51,7 +52,7 @@ func _on_progress_bar_gui_input(event: InputEvent) -> void:
 	if stop_at != -1 and progress_bar.value > stop_at:
 		progress_bar.value = stop_at
 		return
-	progress_bar.value += 1
+	progress_bar.value += 2
 
 
 func _on_progress_bar_value_changed(value: float) -> void:

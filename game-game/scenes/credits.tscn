@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://blj0xev02p5o2"]
 
 [ext_resource type="Script" uid="uid://38hfaqrjoai5" path="res://scripts/credits.gd" id="1_0ctdu"]
-[ext_resource type="FontFile" uid="uid://d37qrxpoerqku" path="res://scribes/mazenumbers.ttf" id="2_2fbfq"]
+[ext_resource type="FontFile" uid="uid://homd6didiyeo" path="res://scenes/screen/windows/Consolas/consolas.ttf" id="2_2fbfq"]
 [ext_resource type="AudioStream" uid="uid://crws8m0swiklx" path="res://sounds/Main Menu Theme.mp3" id="3_8gwij"]
+[ext_resource type="FontFile" uid="uid://c3b8yypoucle6" path="res://scribes/Consolas/consolas.ttf" id="3_mah5v"]
 
 [node name="Credits" type="Control" unique_id=1377011157]
 layout_mode = 3
@@ -40,10 +41,13 @@ vertical_alignment = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 120.0
-offset_bottom = 590.0
+offset_left = 1160.0
+offset_top = -12.0
+offset_right = 1160.0
+offset_bottom = 458.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_mah5v")
 theme_override_font_sizes/font_size = 29
 text = "Story Development - CoolBobGames
 3d Modeling - CoolBobGames
@@ -79,5 +83,212 @@ text = "Main Menu"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=437455651]
 stream = ExtResource("3_8gwij")
 autoplay = true
+
+[node name="Sdev" type="Panel" parent="." unique_id=1376450685]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 116.0
+offset_right = 264.0
+offset_bottom = 211.0
+
+[node name="Label" type="Label" parent="Sdev" unique_id=1087851880]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 23.0
+offset_right = 178.0
+offset_bottom = 72.0
+text = "STORY DEVELOPMENT
+CoolBobGames"
+horizontal_alignment = 1
+
+[node name="3dmodel" type="Panel" parent="." unique_id=1098727287]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 274.0
+offset_right = 276.0
+offset_bottom = 369.0
+
+[node name="Label" type="Label" parent="3dmodel" unique_id=1046041755]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 23.0
+offset_right = 178.0
+offset_bottom = 72.0
+text = "3D MODELING
+CoolBobGames"
+horizontal_alignment = 1
+
+[node name="2dart" type="Panel" parent="." unique_id=1668430229]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 396.0
+offset_right = 276.0
+offset_bottom = 491.0
+
+[node name="Label" type="Label" parent="2dart" unique_id=688943213]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 178.0
+offset_bottom = 85.0
+text = "2D ART
+CoolBobGames,
+KNantMan"
+horizontal_alignment = 1
+
+[node name="Music" type="Panel" parent="." unique_id=1449413358]
+layout_mode = 0
+offset_left = 887.0
+offset_top = 149.0
+offset_right = 1070.0
+offset_bottom = 244.0
+
+[node name="Label" type="Label" parent="Music" unique_id=903308180]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 178.0
+offset_bottom = 85.0
+text = "MUSIC
+MaxWaldman"
+horizontal_alignment = 1
+
+[node name="Castlevania" type="Panel" parent="." unique_id=930441940]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 16.0
+offset_right = 1020.0
+offset_bottom = 111.0
+
+[node name="Label" type="Label" parent="Castlevania" unique_id=1047572256]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 178.0
+offset_bottom = 85.0
+text = "CASTLEVANIA GAMEPLAY
+ZSlyzer (YouTube"
+horizontal_alignment = 1
+
+[node name="InvVid" type="Panel" parent="." unique_id=783502450]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 336.0
+offset_right = 1104.0
+offset_bottom = 431.0
+
+[node name="Label" type="Label" parent="InvVid" unique_id=1572944072]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 178.0
+offset_bottom = 85.0
+text = "SPACE INVADERS VIDEO
+GMTK (YouTube)"
+horizontal_alignment = 1
+
+[node name="Engine" type="Panel" parent="." unique_id=1618812461]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 549.0
+offset_right = 919.0
+offset_bottom = 644.0
+
+[node name="Label" type="Label" parent="Engine" unique_id=1185490517]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 178.0
+offset_bottom = 85.0
+text = "GAME ENGINE
+Godot"
+horizontal_alignment = 1
+
+[node name="Speech" type="Panel" parent="." unique_id=1284470783]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 542.0
+offset_right = 439.0
+offset_bottom = 637.0
+
+[node name="Label" type="Label" parent="Speech" unique_id=358231568]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 178.0
+offset_bottom = 85.0
+text = "SPEECH
+Abraham Lincoln,
+MaxWaldman"
+horizontal_alignment = 1
+
+[node name="theme" type="Panel" parent="." unique_id=250501653]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 282.0
+offset_right = 622.0
+offset_bottom = 377.0
+
+[node name="Label" type="Label" parent="theme" unique_id=1162229310]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 178.0
+offset_bottom = 85.0
+text = "OLD WINDOWS THEME
+violinbg (GitHub)"
+horizontal_alignment = 1
+
+[node name="Consolas" type="Panel" parent="." unique_id=351518201]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 565.0
+offset_right = 656.0
+offset_bottom = 660.0
+
+[node name="Label" type="Label" parent="Consolas" unique_id=778697662]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 178.0
+offset_bottom = 85.0
+text = "CONSOLAS (FONT)
+Luc(as) de Groot (Microsoft)"
+horizontal_alignment = 1
+
+[node name="thanks" type="Panel" parent="." unique_id=2119498437]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 565.0
+offset_right = 656.0
+offset_bottom = 660.0
+
+[node name="Label" type="Label" parent="thanks" unique_id=58497592]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 178.0
+offset_bottom = 85.0
+text = "THANK YOU FOR PLAYING!"
+horizontal_alignment = 1
+
+[node name="Programming" type="Panel" parent="." unique_id=579112141]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 486.0
+offset_right = 1207.0
+offset_bottom = 607.0
+
+[node name="Label" type="Label" parent="Programming" unique_id=2087184916]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 178.0
+offset_bottom = 111.0
+text = "PROGRAMMING
+CoolBobGames,
+KNantMan,
+MaxWaldman"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]

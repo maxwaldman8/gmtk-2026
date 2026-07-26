@@ -14,7 +14,7 @@ const d : Dictionary = {
 		"Submit your speech!\nSubmission type: PDF ONLY"
 	],
 	"message_3d": [
-		"_ Group Project", "Science", Color(0.64, 0.377, 0.868, 1.0), "11:51", 
+		"Chemistry Group Project", "Science", Color(0.64, 0.377, 0.868, 1.0), "11:51", 
 		"All groups must have everyone submit their presentation."
 	],
 	"question_video": [
