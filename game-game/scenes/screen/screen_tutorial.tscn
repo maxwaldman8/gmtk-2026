@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b5yslbaif30nv" path="res://scenes/screen/application.tscn" id="4_qrk7u"]
 [ext_resource type="Texture2D" uid="uid://bk47fr3syf046" path="res://sprites/screen/logo_4.png" id="6_j1imy"]
 [ext_resource type="Texture2D" uid="uid://dvs5uo58q357h" path="res://sprites/screen/exe_2.png" id="7_gvqs4"]
+[ext_resource type="AudioStream" uid="uid://cmcn054gbqo24" path="res://sounds/left_click.wav" id="9_u5smu"]
 [ext_resource type="Texture2D" uid="uid://dskjj48ukcxgx" path="res://sprites/screen/PDF logo.png" id="12_xqmv3"]
 [ext_resource type="Script" uid="uid://dommextr4ctrb" path="res://scripts/screen/window_layer.gd" id="13_oqcct"]
 
@@ -134,3 +135,6 @@ script = ExtResource("13_oqcct")
 
 [node name="MovedAppLayer" type="CanvasLayer" parent="." unique_id=975754738]
 layer = 4
+
+[node name="LeftClickSoundEffect" type="AudioStreamPlayer2D" parent="." unique_id=1982789879]
+stream = ExtResource("9_u5smu")

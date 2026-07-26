@@ -76,12 +76,16 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
 		if !tutorial:
 			if MusicSetting.music:
-				get_tree().root.get_node("Room/RealMusic").volume_db = -15
+				get_tree().root.get_node("Room/RealMusic").volume_db = 15
 				get_tree().root.get_node("Room/DigitalMusic").volume_db = -80
 			player.process_mode = Node.PROCESS_MODE_ALWAYS
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			get_parent().get_parent().visible = false
 			gui.visible = true
+	if event.is_action_pressed("left_click"):
+		$LeftClickSoundEffect.play()
+	if event.is_action_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _process(delta: float) -> void:
 	if time >= 59.0 * 60.0:
