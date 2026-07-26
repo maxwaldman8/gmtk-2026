@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dhda6mtqqec8"]
+
+[ext_resource type="Script" uid="uid://d1kp3k4s1w1f5" path="res://scripts/screen/message_box.gd" id="1_abxdj"]
+
+[node name="MessageBox" type="Control" unique_id=1921137717]
+custom_minimum_size = Vector2(272, 63)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 268.0
+offset_bottom = 63.0
+script = ExtResource("1_abxdj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2022775887]
+custom_minimum_size = Vector2(183, 63)
+layout_mode = 1
+offset_right = 183.0
+offset_bottom = 63.0
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1236710220]
+custom_minimum_size = Vector2(179, 60)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 183.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 12
+text = "What???? I thought you submitted it already?!! We have like a minute to submit!!"
+autowrap_mode = 2
