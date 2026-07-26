@@ -23,7 +23,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6ukd0")
-time_label = NodePath("WallpaperLayer/BottomBar/Time")
+time_label = NodePath("WallpaperLayer/Time")
 custom_mouse = ExtResource("3_ecmuf")
 
 [node name="WallpaperLayer" type="CanvasLayer" parent="." unique_id=945818577]
@@ -52,21 +52,20 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.15686275, 0.15686275, 0.15686275, 0.74509805)
 
-[node name="Time" type="Label" parent="WallpaperLayer/BottomBar" unique_id=1720766815]
-layout_mode = 1
+[node name="Time" type="Label" parent="WallpaperLayer" unique_id=1720766815]
 anchors_preset = -1
 anchor_left = 0.983
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -64.416016
-offset_top = -8.200012
-offset_right = -7.4160156
-offset_bottom = 14.799988
+offset_left = -87.416016
+offset_top = 300.0
+offset_right = -10.0
+offset_bottom = 323.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "11:48:00"
+text = "11:48:00 PM"
 horizontal_alignment = 2
 
 [node name="WindowsOpenLabel" type="Label" parent="WallpaperLayer" unique_id=94606529]
