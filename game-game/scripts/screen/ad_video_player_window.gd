@@ -3,7 +3,7 @@ extends Control
 @export var ad_percentages: Array[float]
 @export var ads: Array[VideoStream]
 @export var skip_time_s = 6.0
-@export var indicator_width = 32
+@export var indicator_width: float = 32
 @export var stop_indicator: PackedScene
 
 var stop_indicators: Array[Control]
@@ -11,7 +11,7 @@ var saved_video_stream
 var saved_percentage = 0
 var ad_playing: bool = false
 
-@onready var full_width = custom_minimum_size.x
+@onready var full_width: float = custom_minimum_size.x
 @onready var indicator_width_percentage = indicator_width / full_width * 100.0
 @onready var video := $VideoStreamPlayer
 @onready var progress_bar := $VideoStreamPlayer/ProgressBar
@@ -45,7 +45,8 @@ func _physics_process(_delta: float) -> void:
 			for indicator in stop_indicators:
 				indicator.visible = false
 			video.play()
-		elif percentage - ad_percentages[0] >= indicator_width_percentage / 2.0:
+		elif !ad_playing and percentage - ad_percentages[0] >= indicator_width_percentage / 2.0:
+			print("skipped")
 			stop_indicators[0].visible = false
 			ads.remove_at(0)
 			ad_percentages.remove_at(0)
@@ -60,6 +61,7 @@ func _on_video_stream_player_finished() -> void:
 		ads.remove_at(0)
 		ad_percentages.remove_at(0)
 		stop_indicators.remove_at(0)
+		print(stop_indicators)
 		for indicator in stop_indicators:
 			indicator.visible = true
 	else:

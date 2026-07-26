@@ -1,7 +1,7 @@
 extends Control
 
 func _ready() -> void:
-	$ProgressLabel.text = "You Completed " + str(SubmissionWebsite.finished_assignments.size()) + "/10 Assignments!"
+	$ProgressLabel.text = "You Completed " + str(SubmissionWebsite.finished_assignments.size()) + "/9 Assignments!"
 	if !MusicSetting.music:
 		$AudioStreamPlayer2D.volume_db = -85
 

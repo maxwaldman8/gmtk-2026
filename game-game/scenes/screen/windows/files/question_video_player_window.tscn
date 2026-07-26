@@ -67,8 +67,9 @@ offset_right = 39.0
 offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Time Left: "
+vertical_alignment = 1
 
 [node name="Question1" type="ColorRect" parent="VideoStreamPlayer" unique_id=833574502]
 visible = false
