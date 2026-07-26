@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c5e1vxf82lrrp"]
+
+[ext_resource type="Texture2D" uid="uid://n7mb5ds2gn5x" path="res://sprites/screen/lab_data.png" id="1_nyc1k"]
+
+[node name="LabData" type="Control" unique_id=521389708]
+custom_minimum_size = Vector2(450, 583.2)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 250.0
+offset_bottom = 300.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1926265335]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nyc1k")
+expand_mode = 1
+stretch_mode = 4

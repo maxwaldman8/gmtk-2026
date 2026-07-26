@@ -62,3 +62,16 @@ icon_image = ExtResource("4_0taup")
 window_name = "project_report.pdf"
 window_scene_name = "files/project_report"
 is_default_opened = false
+
+[node name="MathHomework" parent="Apps" unique_id=1081270733 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_0taup")]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 24.0
+offset_right = 356.0
+offset_bottom = 104.0
+icon_image = ExtResource("4_0taup")
+dragged_application_layer = NodePath("")
+window_layer = NodePath("")
+window_name = "math_homework.pdf"
+window_scene_name = "files/math_homework"
+is_default_opened = false

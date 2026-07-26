@@ -184,7 +184,22 @@ func _on_loading_bar_finished() -> void:
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
 				screen.submit_public_speaking()
 				get_parent().update_a_list()
-		#TODO: Message 3d
+		"message_3d":
+			var regex = RegEx.new()
+			regex.compile(".*\\.docx")
+			if !regex.search(sub_file.text):
+				sub_status_label.text = "Incorrect Filetype"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			elif sub_file.text != "lab_data.docx":
+				sub_status_label.text = "Incorrect File"
+				sub_status_label.add_theme_color_override("font_color", Color.RED)
+			else:
+				sub_status_label.text = "Submitted"
+				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
+				get_parent().finished_assignments.append(a_name)
+				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				screen.submit_lab_data()
+				get_parent().update_a_list()
 		"question_video":
 			var regex = RegEx.new()
 			regex.compile(".*\\.mp4")

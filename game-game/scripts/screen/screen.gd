@@ -23,7 +23,7 @@ const english_password_endings: Array[String] = ["654321", "765432", "876543", "
 
 static var time: float = 49 * 60
 
-var tutorial: bool = false
+@export var tutorial: bool = false
 
 var watched_question_video: bool = false
 var watched_ad_video: bool = false
@@ -47,26 +47,26 @@ func _enter_tree() -> void:
 	SubmissionWebsite.missing_assignments = []
 	
 func _ready() -> void:
+	Input.set_custom_mouse_cursor(custom_mouse, Input.CURSOR_ARROW)
 	if tutorial:
 		time = 48 * 60
 	else:
 		time = 49 * 60
-	Input.set_custom_mouse_cursor(custom_mouse, Input.CURSOR_ARROW)
-	messaging_password = "egg" + str(randi_range(100, 999)).replace("5", "6")
-	password_note.get_node("Label").text = "logotmessage password\n\n" + messaging_password
-	maze_num = randi_range(1, 5)
-	cat_name = cat_names[randi_range(0, cat_names.size() - 1)]
-	cat_surname = cat_surnames[randi_range(0, cat_surnames.size() - 1)]
-	cat_bowl.get_node("Label").text = cat_name
-	cat1.get_node("Label").text = cat_name
-	cat2.get_node("Label").text = cat_name
-	cat2.get_node("Label2").text = cat_surname
-	var spanish_password_num = randi_range(0, spanish_password_textures.size() - 1)
-	spanish_password_texture = spanish_password_textures[spanish_password_num]
-	spanish_password = spanish_passwords[spanish_password_num]
-	var english_password_num = randi_range(0, english_password_1s.size() - 1)
-	english_password_1_texture = english_password_1s[english_password_num]
-	english_password = "QUERTYasdfgh" + english_password_endings[english_password_num]
+		messaging_password = "egg" + str(randi_range(100, 999)).replace("5", "6")
+		password_note.get_node("Label").text = "logotmessage password\n\n" + messaging_password
+		maze_num = randi_range(1, 5)
+		cat_name = cat_names[randi_range(0, cat_names.size() - 1)]
+		cat_surname = cat_surnames[randi_range(0, cat_surnames.size() - 1)]
+		cat_bowl.get_node("Label").text = cat_name
+		cat1.get_node("Label").text = cat_name
+		cat2.get_node("Label").text = cat_name
+		cat2.get_node("Label2").text = cat_surname
+		var spanish_password_num = randi_range(0, spanish_password_textures.size() - 1)
+		spanish_password_texture = spanish_password_textures[spanish_password_num]
+		spanish_password = spanish_passwords[spanish_password_num]
+		var english_password_num = randi_range(0, english_password_1s.size() - 1)
+		english_password_1_texture = english_password_1s[english_password_num]
+		english_password = "QUERTYasdfgh" + english_password_endings[english_password_num]
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
@@ -86,6 +86,7 @@ func _process(delta: float) -> void:
 			time_label.text = "11:" + str(int(time / 60.0)) + ":" + str(int(time) % 60) + " PM"
 	else:
 		time_label.text = "11:48 PM"
+	$WallpaperLayer/WindowsOpenLabel.text = "Windows Open: " + str($WindowLayer.get_child_count())
 
 func set_wallpaper(texture: Texture2D):
 	$WallpaperLayer/Wallpaper.texture = texture
@@ -109,6 +110,9 @@ func download_ad_video():
 func submit_public_speaking():
 	SubmissionWebsite.assignments_to_do = ["message_3d"]
 
+func submit_lab_data():
+	SubmissionWebsite.assignments_to_do = ["question_video"]
+
 func submit_question_video():
 	SubmissionWebsite.assignments_to_do = ["pop_up"]
 
@@ -120,6 +124,7 @@ func submit_ad_video():
 
 func submit_english_essay():
 	SubmissionWebsite.assignments_to_do = ["task_invaders", "wallpaper", "alarm_clock"]
+	$ApplicationLayer/TaskManager.window_scene_name = "task_manager_game_window"
 	Cat.flying = true
 
 

@@ -65,6 +65,18 @@ grow_horizontal = 0
 grow_vertical = 2
 text = "11:48:00"
 
+[node name="WindowsOpenLabel" type="Label" parent="WallpaperLayer" unique_id=94606529]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 618.0
+offset_right = -933.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Windows Running: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ApplicationLayer" type="CanvasLayer" parent="." unique_id=868816806]
 layer = 2
 
@@ -102,7 +114,7 @@ icon_image = ExtResource("3_nnrwk")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "Task Manager"
-window_scene_name = "task_manager_game_window"
+window_scene_name = "task_manager_window"
 is_default_opened = false
 
 [node name="HelpfulWebsites" parent="ApplicationLayer" unique_id=3382 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
@@ -306,6 +318,18 @@ dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "dfs.java"
 window_scene_name = "files/dfs_java"
+is_default_opened = false
+
+[node name="LabData" parent="ApplicationLayer" unique_id=1261506855 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("2_2d861")]
+offset_left = 637.0
+offset_top = 482.0
+offset_right = 697.0
+offset_bottom = 562.0
+icon_image = ExtResource("7_wrpmo")
+dragged_application_layer = NodePath("../../MovedAppLayer")
+window_layer = NodePath("../../WindowLayer")
+window_name = "lab_data.docx"
+window_scene_name = "files/lab_data"
 is_default_opened = false
 
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984 groups=["window_layer"]]

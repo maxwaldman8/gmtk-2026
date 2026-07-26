@@ -24,6 +24,7 @@ offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+color = Color(0.39118537, 0.39118534, 0.39118534, 1)
 
 [node name="Panel" type="Panel" parent="." unique_id=15202645]
 custom_minimum_size = Vector2(248, 48)

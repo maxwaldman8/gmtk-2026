@@ -32,7 +32,7 @@ func generate_popups(...args):
 	var count = args[0] if len(args) == 1 else DEFAULT_POPUP_NUM
 	for c in range(count):
 		var popup_instance = WINDOW_SCENE.instantiate()
-		popup_instance.set_up("default_window", "Error", true)
+		popup_instance.set_up("error_popup", "Error", true)
 		add_child(popup_instance)
 		if not popup_instance.is_node_ready():
 			await popup_instance.ready

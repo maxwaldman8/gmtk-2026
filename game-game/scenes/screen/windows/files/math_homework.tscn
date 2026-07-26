@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cdfrpm3xoo8qp"]
+
+[ext_resource type="Texture2D" uid="uid://dxufk83q411q8" path="res://sprites/screen/math_homework.png" id="1_1effl"]
+
+[node name="MathHomework" type="Control" unique_id=521389708]
+custom_minimum_size = Vector2(375, 486)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 250.0
+offset_bottom = 300.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1926265335]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1effl")
+expand_mode = 1
+stretch_mode = 4

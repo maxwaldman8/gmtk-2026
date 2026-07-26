@@ -1,28 +1,21 @@
-[gd_scene format=3 uid="uid://dpykae3nwng10"]
+[gd_scene format=3 uid="uid://dagoe1qgreqbn"]
+
+[ext_resource type="Texture2D" uid="uid://dmprbpcldnnvi" path="res://sprites/screen/history_project_report.png" id="1_6f4if"]
 
 [node name="ProjectReport" type="Control" unique_id=521389708]
-custom_minimum_size = Vector2(350, 200)
+custom_minimum_size = Vector2(437.5, 567)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 350.0
-offset_bottom = 200.0
+offset_right = 250.0
+offset_bottom = 300.0
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2103473406]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1926265335]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-
-[node name="Label" type="Label" parent="." unique_id=430627503]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 251.0
-offset_bottom = 166.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 13
-text = "PLACEHOLDER FOR PROJECT REPORT
-"
+texture = ExtResource("1_6f4if")
+expand_mode = 1
+stretch_mode = 4

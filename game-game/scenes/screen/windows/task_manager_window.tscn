@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://olq2bgh6py3k"]
+
+[node name="TaskManagerWindow" type="Control" unique_id=521389708]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 300.0
+offset_bottom = 50.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2103473406]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="." unique_id=1767026284]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Yep your tasks are pretty good"
+
+[node name="Label2" type="Label" parent="." unique_id=962984657]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "no need to come back later, it's all good"
+horizontal_alignment = 2
+vertical_alignment = 2

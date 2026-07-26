@@ -6,8 +6,8 @@ extends Resource
 
 const d : Dictionary = {
 	"tutorial": [
-		"_ Worksheet", "Math", Color(0.446, 0.574, 0.921, 1.0), "11:49", 
-		"Upload your math homework"
+		"Worksheet 1.1", "Math", Color(0.446, 0.574, 0.921, 1.0), "11:49", 
+		"Upload your math homework.\nDrag the file into the slot to upload it."
 	],
 	"conversion": [
 		"Speech Final Draft", "Public Speaking", Color(0.901, 0.208, 0.471, 1.0), "11:50", 

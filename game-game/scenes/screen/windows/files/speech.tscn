@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://q7fv5f24fpqc"]
 
 [node name="Speech" type="Control" unique_id=521389708]
-custom_minimum_size = Vector2(250, 300)
+custom_minimum_size = Vector2(300, 600)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 250.0
@@ -12,21 +12,25 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 316.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="." unique_id=430627503]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 251.0
-offset_bottom = 166.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -2.5
+offset_right = 1.0
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 13
-text = "        Family members are very important to our lives. They can make you feel better when you're feeling down. Indeed, family is one of the coolest things ever. But in the world of family member rankings, there can only be one greatest family member. If I had to pick a favorite family member, I would pick my cat.
-        I would pick my cat as my favorite family member because she is so beautiful and she makes me happy every day. When I need to wake up in the morning she wakes me up before my alarm. She makes me get exercise when I chase her. She even drinks soda with me. Well maybe she shouldn't do that one.
-        Not many people would consider a cat as a family member, but they are incorrect. They are just wrong. My cat lives with me every day and does my homework and does my laundry. I always learned it is good to feed people if they do your work. This is why I feed my cat yummy milk every day.
+theme_override_font_sizes/font_size = 11
+text = "        Four years plus seven years ago, Mark Brown brought forth on this continent, a new game jam, conceived in Liberty, and dedicated to the proposition that all developers are created equal.
+        Now we are engaged in that great game jam, testing whether Itch's servers, or any servers so conceived and so dedicated, can long endure. We are met on a great battle-field of that jam. We have come to dedicate a portion of that jam, as a final resting place for those who here gave their sleep that their game might be submitted on time. It is altogether fitting and proper that we should do this.
+        But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this site. The brave devs, rested and sleepless, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember this jam, but it can never forget the games that were made. It is for us, the people who have submitted, rather, to be dedicated here to the unfinished games which they who did not submit here have thus far so nobly developed. It is rather for us to be here dedicated to the great task remaining before us -- that from these honored devs we take increased devotion to that cause for which they gave the last full measure of development -- that we here highly resolve that these unfinished games shall not have died in vain -- that this jam, under GMTK, shall have a new birth of games -- and that servers of the people, by the people, for the people (itch.io), shall not perish from the earth.
         Thank you for reading my speech! :D"
 autowrap_mode = 3
