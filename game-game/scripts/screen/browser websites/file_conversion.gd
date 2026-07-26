@@ -26,6 +26,7 @@ func _on_convert_file_button_pressed() -> void:
 func _on_download_button_pressed() -> void:
 	if download_time_left <= 0:
 		get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().download_pdf()
+		$DownloadButton.text = "Downloaded!"
 
 func _on_download_now_button_pressed() -> void:
 	get_parent().get_parent().switch_tab("freelogotshirts.tk")

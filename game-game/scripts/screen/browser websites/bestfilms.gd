@@ -9,3 +9,4 @@ func get_url():
 
 func _on_download_button_pressed() -> void:
 	get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().download_ad_video()
+	$DownloadButton.text = "Downloaded!"

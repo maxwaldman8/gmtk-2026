@@ -257,9 +257,9 @@ autowrap_mode = 3
 
 [node name="DownloadButton" type="Button" parent="Essay" unique_id=466354757]
 layout_mode = 0
-offset_left = 385.0
+offset_left = 369.0
 offset_top = 10.0
-offset_right = 472.0
+offset_right = 456.0
 offset_bottom = 41.0
 text = "Download"
 
