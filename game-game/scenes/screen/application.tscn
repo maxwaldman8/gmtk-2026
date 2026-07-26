@@ -7,7 +7,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yuv1s"]
 bg_color = Color(0.19614309, 0.19614312, 0.19614297, 1)
 
-[node name="Application" type="Control" unique_id=473881616 node_paths=PackedStringArray("selected_shadow", "dragged_ghost", "icon", "name_label", "input_taker")]
+[node name="Application" type="Control" unique_id=473881616 node_paths=PackedStringArray("selected_shadow", "dragged_ghost", "icon", "name_label", "panel_container", "input_taker")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -30.0
@@ -19,6 +19,7 @@ selected_shadow = NodePath("SelectedShadow")
 dragged_ghost = NodePath("DraggedGhost2")
 icon = NodePath("Icon")
 name_label = NodePath("PanelContainer/NameLabel")
+panel_container = NodePath("PanelContainer")
 input_taker = NodePath("InputTaker")
 
 [node name="SelectedShadow" type="ColorRect" parent="." unique_id=283709724]
@@ -55,17 +56,17 @@ texture = ExtResource("2_cnu38")
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=963992662]
 propagate_maximum_size = false
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 offset_left = -25.0
-offset_top = -18.0
+offset_top = 20.0
 offset_right = 25.0
-offset_bottom = -3.0
+offset_bottom = 37.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yuv1s")
 
 [node name="NameLabel" type="Label" parent="PanelContainer" unique_id=1660888683]

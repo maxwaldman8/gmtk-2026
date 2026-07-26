@@ -7,6 +7,7 @@ extends Control
 @export var icon : Control
 @export var icon_image: Texture2D
 @export var name_label : Label
+@export var panel_container : PanelContainer
 @export var input_taker : ColorRect
 # for drag purposes
 var original_click_pos : Vector2
@@ -113,9 +114,9 @@ func _process(_delta: float) -> void:
 	if global_mouse_pos.distance_to(original_click_pos) > DRAG_DIST_THRESHOLD and dragged_ghost.get_child_count() == 1:
 		dragged_ghost.was_dropped = false
 		offset = get_local_mouse_position()
-		var new_label = name_label.duplicate()
-		new_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		dragged_ghost.add_child(new_label)
+		var new_label_panel = panel_container.duplicate()
+		new_label_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		dragged_ghost.add_child(new_label_panel)
 		var new_icon = icon.duplicate()
 		new_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		dragged_ghost.add_child(new_icon)
