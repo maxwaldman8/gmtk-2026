@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bum8geakonusi"]
 
+[ext_resource type="Texture2D" uid="uid://8psf574dlps2" path="res://sprites/screen/JavaIcon.png" id="1_3e0ny"]
 [ext_resource type="Texture2D" uid="uid://bv0jigfcy47in" path="res://sprites/screen/pointlight.webp" id="1_6sxcf"]
-[ext_resource type="Texture2D" uid="uid://07oscu8p7i5u" path="res://sprites/screen/logo_08.png" id="2_3e0ny"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrlmu"]
 size = Vector2(32, 32)
@@ -13,7 +13,7 @@ offset_left = -16.0
 offset_top = -16.0
 offset_right = 16.0
 offset_bottom = 16.0
-texture = ExtResource("2_3e0ny")
+texture = ExtResource("1_3e0ny")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=945955979]
 color = Color(0, 1, 0, 1)

@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://7mpyg7x3c5mx" path="res://sprites/screen/logo_11.png" id="8_gk43s"]
 [ext_resource type="Texture2D" uid="uid://cdjk11q65afl2" path="res://sprites/screen/Folder.png" id="11_2ovc6"]
 [ext_resource type="Texture2D" uid="uid://dskjj48ukcxgx" path="res://sprites/screen/PDF logo.png" id="11_tbkdm"]
+[ext_resource type="Texture2D" uid="uid://8psf574dlps2" path="res://sprites/screen/JavaIcon.png" id="13_ecmuf"]
 
 [node name="Screen" type="Control" unique_id=2111894068 node_paths=PackedStringArray("time_label")]
 layout_mode = 3
@@ -313,7 +314,7 @@ offset_left = 838.0
 offset_top = 481.0
 offset_right = 898.0
 offset_bottom = 561.0
-icon_image = ExtResource("7_wrpmo")
+icon_image = ExtResource("13_ecmuf")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
 window_name = "dfs.java"
