@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dkr7pbfcgbpld"]
 
 [ext_resource type="Script" uid="uid://b6h48fms3o1jr" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://dnsuayov1gdju" path="res://sprites/Monitor.png" id="2_8ln24"]
 [ext_resource type="FontFile" uid="uid://d37qrxpoerqku" path="res://scribes/mazenumbers.ttf" id="2_wu84c"]
 [ext_resource type="AudioStream" uid="uid://crws8m0swiklx" path="res://sounds/Main Menu Theme.mp3" id="3_8ln24"]
 
@@ -14,6 +15,7 @@ grow_vertical = 2
 script = ExtResource("1_bqqt6")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1923718181]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,12 +24,16 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.38928655, 0.38928664, 0.38928658, 1)
 
+[node name="Monitor" type="Sprite2D" parent="." unique_id=2050091339]
+position = Vector2(576, 324)
+texture = ExtResource("2_8ln24")
+
 [node name="Label" type="Label" parent="." unique_id=78566812]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 50.0
-offset_bottom = 178.0
+offset_top = 136.0
+offset_bottom = 264.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_wu84c")
@@ -43,12 +49,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -149.0
-offset_top = -80.0
-offset_right = 150.0
-offset_bottom = -7.0
+offset_left = -111.75
+offset_top = -30.5
+offset_right = 187.25
+offset_bottom = 42.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.75, 0.75)
 theme_override_font_sizes/font_size = 47
 text = "Start Game"
 
@@ -59,12 +66,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -149.0
-offset_top = 14.0
-offset_right = 150.0
-offset_bottom = 87.0
+offset_left = -111.75
+offset_top = 33.5
+offset_right = 187.25
+offset_bottom = 106.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.75, 0.75)
 theme_override_font_sizes/font_size = 47
 text = "Music: ON"
 
@@ -75,12 +83,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -149.0
-offset_top = 113.0
-offset_right = 150.0
-offset_bottom = 186.0
+offset_left = -111.75
+offset_top = 97.5
+offset_right = 187.25
+offset_bottom = 170.5
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.75, 0.75)
 theme_override_font_sizes/font_size = 47
 text = "Credits"
 

@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgcooaa38sec4"
-path.s3tc="res://.godot/imported/spanish_password1.png-7a8ba56dcb83f63e8b3021985419bbbb.s3tc.ctex"
+uid="uid://d12rjyu1pfimp"
+path="res://.godot/imported/Logo2.png-8fd6775695fb4e31df3b241664cc5a70.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/screen/spanish_password1.png"
-dest_files=["res://.godot/imported/spanish_password1.png-7a8ba56dcb83f63e8b3021985419bbbb.s3tc.ctex"]
+source_file="res://sprites/Logo2.png"
+dest_files=["res://.godot/imported/Logo2.png-8fd6775695fb4e31df3b241664cc5a70.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -24,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -38,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

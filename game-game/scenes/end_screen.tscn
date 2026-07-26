@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="." unique_id=78566812]
 layout_mode = 1
@@ -115,6 +115,7 @@ text = "Credits"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=437455651]
 stream = ExtResource("3_g44xs")
+volume_db = 12.0
 autoplay = true
 
 [connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]

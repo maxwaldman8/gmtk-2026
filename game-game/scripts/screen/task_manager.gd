@@ -28,7 +28,7 @@ func spawn_wave() -> void:
 	for i in range(0, 8):
 		var new_enemy = enemy.instantiate()
 		add_child(new_enemy)
-		new_enemy.position.y = 50
+		new_enemy.position.y = 50 + 70 * wave # bigger wave closer
 		new_enemy.position.x = 60 + 40 * i
 		enemies.append(new_enemy)
 	wave += 1
@@ -50,7 +50,8 @@ func _physics_process(delta: float) -> void:
 	if enemies.size() == 0:
 		if wave < 3:
 			spawn_wave()
-			enemy_speed = 3.0 + wave * 0.45
+			# Difficulty is added to space invaders by making the enemies start lower
+			enemy_speed = 3.0 #+ wave * 0.45
 		else:
 			# Game won
 			get_parent().close()
