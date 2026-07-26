@@ -238,6 +238,17 @@ visible = false
 material_override = SubResource("StandardMaterial3D_3j2fx")
 mesh = ExtResource("6_3j2fx")
 
+[node name="MovementNote" type="Sprite3D" parent="Room" unique_id=1565340097]
+transform = Transform3D(7.9968033, 0.15027386, 0.16895042, -0.16734505, 7.9533067, 0.8467003, -0.15205973, -0.8498964, 7.9532743, 1.4134586, 0.27901125, 0.03384465)
+texture_filter = 0
+texture = ExtResource("9_3j2fx")
+
+[node name="MovementNoteArea" type="Area3D" parent="Room/MovementNote" unique_id=254278694]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/MovementNote/MovementNoteArea" unique_id=1237074716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00091552734, 0.00091578066, -0.0004995465)
+shape = SubResource("BoxShape3D_mekka")
+
 [node name="PasswordNote" type="Sprite3D" parent="Room" unique_id=559663739]
 transform = Transform3D(7.961276, -0.7831893, 0.06852017, 0.7861809, 7.930981, -0.6938709, 0, 0.6972459, 7.969558, 0.5319749, 1.6, -2.65)
 texture_filter = 0
@@ -298,9 +309,10 @@ size = Vector2i(1152, 648)
 render_target_update_mode = 0
 script = ExtResource("3_jxe34")
 
-[node name="Screen" parent="SubViewportContainer/SubViewport" unique_id=2111894068 node_paths=PackedStringArray("player", "gui", "password_note", "alarm_note", "tv_note", "cat_bowl", "cat1", "cat2") instance=ExtResource("3_14vil")]
+[node name="Screen" parent="SubViewportContainer/SubViewport" unique_id=2111894068 node_paths=PackedStringArray("player", "gui", "movement_note", "password_note", "alarm_note", "tv_note", "cat_bowl", "cat1", "cat2") instance=ExtResource("3_14vil")]
 player = NodePath("../../../Player")
 gui = NodePath("../../../GUI")
+movement_note = NodePath("../../../MovementNote")
 password_note = NodePath("../../../PasswordNote")
 alarm_note = NodePath("../../../AlarmNote")
 tv_note = NodePath("../../../TVNote")
@@ -332,6 +344,39 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 40
 text = "Click to Interact"
+
+[node name="MovementNote" type="CanvasLayer" parent="." unique_id=1611748999]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="MovementNote" unique_id=890107851]
+position = Vector2(576, 324)
+texture = ExtResource("13_dynfe")
+
+[node name="Label" type="Label" parent="MovementNote" unique_id=1054736707]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -219.0
+offset_right = 222.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_vfrn5")
+theme_override_font_sizes/font_size = 56
+text = "reminder:
+controls for cool new game i just got are
+
+wasd to move
+space to jump
+shift to run
+"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
 
 [node name="PasswordNote" type="CanvasLayer" parent="." unique_id=1665470528]
 visible = false

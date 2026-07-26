@@ -30,7 +30,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			if event is InputEventMouseMotion:
 				self.rotate_y(-event.relative.x * sensitivity)
 				camera.rotate_x(-event.relative.y * sensitivity)
-				camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-55), deg_to_rad(60))
+				camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
 		if event.is_action_pressed("left_click"):
 			handle_raycast()
 
@@ -72,6 +72,11 @@ func handle_raycast():
 				tween.play()
 				await get_tree().create_timer(2).timeout
 				screen.insert_drive()
+			"MovementNoteArea":
+				viewing_vector = true
+				active_layer = screen.movement_note
+				active_layer.visible = true
+				gui.visible = false
 			"PasswordNoteArea":
 				viewing_vector = true
 				active_layer = screen.password_note
