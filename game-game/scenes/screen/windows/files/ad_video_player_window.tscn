@@ -18,8 +18,8 @@ anchors_preset = 0
 offset_right = 150.0
 offset_bottom = 100.0
 script = ExtResource("1_di36k")
-ad_percentages = Array[float]([33.3])
-ads = Array[VideoStream]([ExtResource("2_cvf6d")])
+ad_percentages = Array[float]([33.3, 66.67])
+ads = Array[VideoStream]([ExtResource("2_cvf6d"), ExtResource("2_cvf6d")])
 stop_indicator = ExtResource("3_fsodd")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2103473406]

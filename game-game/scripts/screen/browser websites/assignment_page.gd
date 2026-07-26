@@ -288,6 +288,7 @@ func _on_loading_bar_finished() -> void:
 				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
 				get_parent().finished_assignments.append(a_name)
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				screen.submit_other_assignment()
 				get_parent().update_a_list()
 		"wallpaper":
 			var regex = RegEx.new()
@@ -303,6 +304,7 @@ func _on_loading_bar_finished() -> void:
 				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
 				get_parent().finished_assignments.append(a_name)
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				screen.submit_other_assignment()
 				get_parent().update_a_list()
 		"alarm_clock":
 			var regex = RegEx.new()
@@ -318,6 +320,7 @@ func _on_loading_bar_finished() -> void:
 				sub_status_label.add_theme_color_override("font_color", Color.GREEN)
 				get_parent().finished_assignments.append(a_name)
 				get_parent().assignments_to_do.remove_at(get_parent().assignments_to_do.find(a_name))
+				screen.submit_other_assignment()
 				get_parent().update_a_list()
 	if sub_status_label.text == "Submitted":
 		delete_file_button.visible = false

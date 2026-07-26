@@ -27,7 +27,7 @@ const d : Dictionary = {
 	],
 	"movie_ads": [
 		"Watch Vampire Movie", "Film-making", Color(0.946, 0.702, 0.251, 1.0), "11:54", 
-		"Finish this movie (download at bestfilms.net), no other homework.\nSubmit the video file when you're done (you can skip past the ads with the skip forward button)."
+		"Finish this movie (download at bestfilms.net), no other homework. Submit the video file when you're done (you can skip past the ads with the skip forward button)."
 	],
 	"image_puzzle_and_cat": [
 		"Family Member Essay", "English", Color(0.284, 0.695, 0.519, 1.0), "11:55", 

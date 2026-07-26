@@ -82,6 +82,9 @@ func _input(event: InputEvent) -> void:
 			pass
 
 func _process(delta: float) -> void:
+	if time >= 60.0 * 60.0:
+		# Fail
+		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 	if !tutorial:
 		time += delta
 		if int(floor(time)) % 60 < 10:
@@ -153,6 +156,10 @@ func submit_english_essay():
 	$ApplicationLayer/TaskManager.window_scene_name = "task_manager_game_window"
 	Cat.flying = true
 
+func submit_other_assignment():
+	if SubmissionWebsite.finished_assignments.size() >= 9:
+		# TODO: Play end cutscene
+		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 
 func insert_drive():
 	get_node("ApplicationLayer/Mazes/Maze" + str(maze_num)).visible = true
