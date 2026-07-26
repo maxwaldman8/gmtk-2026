@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bx2aw2024feq" path="res://scenes/screen/windows/task_manager/enemy.tscn" id="3_u6ovh"]
 [ext_resource type="Texture2D" uid="uid://do66q06xtj5r0" path="res://sprites/screen/TaskManager/tm.tres" id="4_1sw7c"]
 [ext_resource type="FontFile" uid="uid://d37qrxpoerqku" path="res://scribes/mazenumbers.ttf" id="5_aytpe"]
+[ext_resource type="AudioStream" uid="uid://ds1noghtip7c6" path="res://sounds/Task Manager/laserShoot (1).wav" id="6_u6ovh"]
+[ext_resource type="AudioStream" uid="uid://b88485pfcrj1i" path="res://sounds/Task Manager/explosion.wav" id="7_esyv8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrlmu"]
 size = Vector2(128, 128)
@@ -73,3 +75,9 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "TASKS RUNNING:"
 horizontal_alignment = 1
+
+[node name="ShootSound" type="AudioStreamPlayer" parent="." unique_id=304974484]
+stream = ExtResource("6_u6ovh")
+
+[node name="EnemyDieSound" type="AudioStreamPlayer" parent="." unique_id=29599882]
+stream = ExtResource("7_esyv8")

@@ -36,6 +36,7 @@ func spawn_wave() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_click"):
 		shoot()
+		$ShootSound.play()
 
 func shoot():
 	if cooldown_time_left <= 0.0:
@@ -67,6 +68,7 @@ func _physics_process(delta: float) -> void:
 				to_delete.append(i)
 			enemies.remove_at(enemies.find(area))
 			area.queue_free()
+			$EnemyDieSound.play()
 			enemy_speed += enemy_acceleration
 		if bullets[i].position.y <= 0 and to_delete.find(i) == -1:
 			to_delete.append(i)
