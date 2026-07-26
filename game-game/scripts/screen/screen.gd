@@ -40,7 +40,7 @@ var english_password: String
 
 func _enter_tree() -> void:
 	if !tutorial:
-		SubmissionWebsite.assignments_to_do = ["conversion", "task_invaders"]
+		SubmissionWebsite.assignments_to_do = ["conversion"]
 	else:
 		SubmissionWebsite.assignments_to_do = ["tutorial"]
 	SubmissionWebsite.finished_assignments = []
@@ -90,6 +90,25 @@ func _process(delta: float) -> void:
 
 func set_wallpaper(texture: Texture2D):
 	$WallpaperLayer/Wallpaper.texture = texture
+
+func handle_missing(a_name: String):
+	match a_name:
+		"tutorial":
+			print("this is impossible")
+		"conversion":
+			SubmissionWebsite.assignments_to_do = ["message_3d"]
+		"message_3d":
+			SubmissionWebsite.assignments_to_do = ["question_video"]
+		"question_video":
+			SubmissionWebsite.assignments_to_do = ["pop_up"]
+		"pop_up":
+			SubmissionWebsite.assignments_to_do = ["movie_ads"]
+		"movie_ads":
+			SubmissionWebsite.assignments_to_do = ["image_puzzle_and_cat"]
+		"image_puzzle_and_cat":
+			SubmissionWebsite.assignments_to_do = ["task_invaders", "wallpaper", "alarm_clock"]
+			$ApplicationLayer/TaskManager.window_scene_name = "task_manager_game_window"
+			Cat.flying = true
 
 # Finishing tasks functions
 func download_pdf():
