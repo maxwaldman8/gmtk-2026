@@ -21,7 +21,8 @@ MusicSetting="*uid://dco5akvkem0mj"
 
 [display]
 
-window/stretch/mode="viewport"
+window/size/mode=3
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
 
