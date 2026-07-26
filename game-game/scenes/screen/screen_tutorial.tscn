@@ -111,6 +111,18 @@ window_name = "Continue"
 window_scene_name = "tutorial_complete"
 is_default_opened = false
 
+[node name="TutorialComplete2" parent="ApplicationLayer" unique_id=1666564929 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("4_qrk7u")]
+offset_left = 501.0
+offset_top = 519.0
+offset_right = 561.0
+offset_bottom = 599.0
+icon_image = ExtResource("12_xqmv3")
+dragged_application_layer = NodePath("../../MovedAppLayer")
+window_layer = NodePath("../../WindowLayer")
+window_name = "Skip Tutorial"
+window_scene_name = "tutorial_complete"
+is_default_opened = false
+
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984 groups=["window_layer"]]
 layer = 3
 script = ExtResource("13_oqcct")
