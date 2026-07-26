@@ -68,7 +68,7 @@ func _ready() -> void:
 		spanish_password = spanish_passwords[spanish_password_num]
 		var english_password_num = randi_range(0, english_password_1s.size() - 1)
 		english_password_1_texture = english_password_1s[english_password_num]
-		english_password = "QUERTYasdfgh" + english_password_endings[english_password_num]
+		english_password = "QWERTYasdfgh" + english_password_endings[english_password_num]
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape_screen"):
