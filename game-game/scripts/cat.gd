@@ -14,6 +14,7 @@ var stepMesh : MeshInstance3D
 func _ready() -> void:
 	stillMesh = get_node("Cat2")
 	stepMesh = get_node("Cat1")
+	flying = false
 
 func _process(_delta: float) -> void:
 	if flying and locations[0].y < 0:
