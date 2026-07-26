@@ -131,7 +131,7 @@ func download_ad_video():
 	$ApplicationLayer/AdVideo.visible = true
 
 func submit_math_homework():
-	pass
+	$ApplicationLayer/TutorialComplete._open_window()
 
 func submit_public_speaking():
 	SubmissionWebsite.assignments_to_do = ["message_3d"]

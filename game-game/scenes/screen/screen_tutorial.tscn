@@ -98,6 +98,19 @@ window_name = "math_homework.pdf"
 window_scene_name = "files/math_homework"
 is_default_opened = false
 
+[node name="TutorialComplete" parent="ApplicationLayer" unique_id=473881616 node_paths=PackedStringArray("dragged_application_layer", "window_layer") instance=ExtResource("4_qrk7u")]
+visible = false
+offset_left = 249.0
+offset_top = 333.0
+offset_right = 309.0
+offset_bottom = 413.0
+icon_image = ExtResource("12_xqmv3")
+dragged_application_layer = NodePath("../../MovedAppLayer")
+window_layer = NodePath("../../WindowLayer")
+window_name = "Continue"
+window_scene_name = "tutorial_complete"
+is_default_opened = false
+
 [node name="WindowLayer" type="CanvasLayer" parent="." unique_id=929576984 groups=["window_layer"]]
 layer = 3
 script = ExtResource("13_oqcct")

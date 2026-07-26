@@ -107,10 +107,10 @@ window_scene_name = "browser_window"
 is_default_opened = false
 
 [node name="TaskManager" parent="ApplicationLayer" unique_id=113608717 node_paths=PackedStringArray("dragged_application_layer", "window_layer") groups=["task_manager_app"] instance=ExtResource("2_2d861")]
-offset_left = 116.0
-offset_top = 366.0
-offset_right = 166.0
-offset_bottom = 436.0
+offset_left = 901.0
+offset_top = 134.0
+offset_right = 951.0
+offset_bottom = 204.0
 icon_image = ExtResource("3_nnrwk")
 dragged_application_layer = NodePath("../../MovedAppLayer")
 window_layer = NodePath("../../WindowLayer")
