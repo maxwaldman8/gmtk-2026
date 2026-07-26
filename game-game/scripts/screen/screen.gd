@@ -87,7 +87,26 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
+#const WINDOW_SCENE = preload("res://scenes/screen/window.tscn")
 func _process(delta: float) -> void:
+	
+	#if not tutorial:
+		#for key in AssignmentsData.d.keys():
+			#print(key)
+			##if key == "tutorial": break
+			#var due_time: float = AssignmentsData.d[key][4].substr(3, 2).to_int() * 60.0
+			#print(due_time)
+			#var time_left = due_time - time
+			#if time_left <= 0:
+				#print("missng")
+				#SubmissionWebsite.missing_assignments.append(key)
+				#var window_instance : GameWindow = WINDOW_SCENE.instantiate()
+				#window_instance.set_up("missing_notification", "Missing Assignment", true)
+				#get_tree().get_first_node_in_group("window_layer").add_to_window_list(window_instance)
+				#handle_missing(key)
+				#var submit_web = get_tree().get_first_node_in_group("submission_website")
+				#if submit_web != null:
+					#submit_web.update_a_list()
 	if SubmissionWebsite.finished_assignments.size() == 9:
 		get_tree().change_scene_to_file("res://scenes/room_win.tscn")
 	elif time >= 59.0 * 60.0:
@@ -95,6 +114,9 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 	elif !tutorial:
 		time += delta
+		var submit_web = get_tree().get_first_node_in_group("submission_website")
+		if submit_web != null:
+			submit_web.update_a_list()
 		if int(floor(time)) % 60 < 10:
 			time_label.text = "11:" + str(int(time / 60.0)) + ":0" + str(int(time) % 60) + " PM"
 		else:

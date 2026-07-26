@@ -15,6 +15,15 @@ signal swap
 
 @onready var screen: Screen = get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent()
 
+const COLORS : Dictionary = {
+	"normal":
+		Color("a1a1a1"),
+	"hover":
+		Color("c7c7c7ff"),
+	"submit":
+		Color(0.45, 0.45, 0.45, 1.0)
+}
+
 var submitted_file_name : String:
 	set(new_file):
 		submitted_file_name = new_file
@@ -61,6 +70,7 @@ func _ready() -> void:
 	desc_label.text = data[INFO.DESC]
 	submitted_file_name = ""
 
+
 func _process(_delta: float) -> void:
 	if data.size() == 0: return
 	var current_time: float = screen.time
@@ -79,6 +89,9 @@ func _process(_delta: float) -> void:
 	due_time_label.text = "Due today at " + data[INFO.DUE_DATE] + " in " + minutes + ":" + seconds
 	if time_left <= 0:
 		SubmissionWebsite.missing_assignments.append(a_name)
+		var window_instance : GameWindow = WINDOW_SCENE.instantiate()
+		window_instance.set_up("missing_notification", "Missing Assignment", true)
+		get_tree().get_first_node_in_group("window_layer").add_to_window_list(window_instance)
 		screen.handle_missing(a_name)
 		get_parent().update_a_list()
 		if visible:

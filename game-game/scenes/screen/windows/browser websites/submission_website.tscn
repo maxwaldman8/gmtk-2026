@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cf1w6gqmfhwty" path="res://scripts/screen/browser websites/submission_website.gd" id="1_nkkqr"]
 [ext_resource type="PackedScene" uid="uid://cr4urr343pa4l" path="res://scenes/screen/windows/browser websites/assignment_page.tscn" id="2_h40al"]
 
-[node name="SubmissionWebsite" type="Control" unique_id=1344016726 node_paths=PackedStringArray("assignments_list", "to_do_list", "assignment_page")]
+[node name="SubmissionWebsite" type="Control" unique_id=1344016726 node_paths=PackedStringArray("assignments_list", "to_do_list", "assignment_page") groups=["submission_website"]]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 476.0

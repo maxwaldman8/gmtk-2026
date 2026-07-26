@@ -52,6 +52,7 @@ func swap_to(...args):
 func update_a_list():
 	for a_tab:AssignmentTab in assignments_list.get_children():
 		if a_tab.a_name not in assignments_to_do:
+			print("queue free")
 			a_tab.queue_free()
 	for a_name in assignments_to_do:
 		var already_there : bool = false
@@ -74,6 +75,7 @@ func update_a_list():
 		if not already_there:
 			var a_tab : AssignmentTab = ASSIGNMENT_TAB_SCENE.instantiate()
 			a_tab.set_up(a_name, "missing")
+			print("not there")
 			assignments_list.add_child(a_tab)
 		else:
 			existing_tab.set_up(a_name, "missing")

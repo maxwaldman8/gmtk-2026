@@ -24,12 +24,15 @@ MusicSetting="*uid://dco5akvkem0mj"
 window/size/mode=3
 window/size/borderless=true
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/stretch/scale_mode="integer"
 
 [global_group]
 
 window_layer=""
 task_manager_app=""
 lab_data_app=""
+submission_website=""
 
 [gui]
 
