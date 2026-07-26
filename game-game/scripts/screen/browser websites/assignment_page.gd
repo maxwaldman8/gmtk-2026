@@ -80,7 +80,9 @@ func _process(_delta: float) -> void:
 	if time_left <= 0:
 		SubmissionWebsite.missing_assignments.append(a_name)
 		screen.handle_missing(a_name)
-		swap.emit()
+		get_parent().update_a_list()
+		if visible:
+			swap.emit()
 		data = []
 
 
